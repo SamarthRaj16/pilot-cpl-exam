@@ -1,0 +1,45 @@
+{
+  "passMark": 70,
+  "negativeMarking": false,
+  "negativeMarkValue": 0,
+  "note": "DGCA CPL exams are conducted via the Pariksha portal (pariksha.dgca.gov.in) as Computer-Based Tests (CBTs). Each paper must be passed independently at 70% minimum. Cleared papers are valid for 5 years.",
+  "subjects": {
+    "Air Navigation": {
+      "questions": 100,
+      "durationMinutes": 180,
+      "passMark": 70,
+      "split": {
+        "General Navigation": "~55%",
+        "Radio Navigation": "~35%",
+        "Instruments & Flight Planning": "~10%"
+      }
+    },
+    "Aviation Meteorology": {
+      "questions": 50,
+      "durationMinutes": 120,
+      "passMark": 70
+    },
+    "Air Regulations": {
+      "questions": 50,
+      "durationMinutes": 90,
+      "passMark": 70
+    },
+    "Technical General": {
+      "questions": 100,
+      "durationMinutes": 150,
+      "passMark": 70
+    },
+    "Technical Specific": {
+      "questions": 50,
+      "durationMinutes": 90,
+      "passMark": 70
+    },
+    "RTR": {
+      "questions": 50,
+      "durationMinutes": 60,
+      "passMark": 70,
+      "note": "RTR(A) is a separate licensing exam, not part of the standard DGCA CPL written papers."
+    }
+  }
+}
+

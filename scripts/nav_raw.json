@@ -1,0 +1,4802 @@
+[
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "For navigation calculations, what is the Earth’s approximate compression?",
+      "o": [
+        "3 per cent",
+        "0.03 per cent",
+        "0.3 per cent, about 1 in 300",
+        "1 in 3000"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "The working compression is about 0.3 per cent, which is approximately 1 in 300; Bali gives the more exact ratio near 1 in 297."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "What does the term graticule describe?",
+      "o": [
+        "Every line printed on a chart",
+        "The network of meridians and parallels on a globe, map or chart",
+        "Only the small circles near a pole",
+        "A magnetic compass correction card"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "The graticule is the network formed by meridians and parallels, including the prime meridian and equator as its reference lines."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "A great circle has its northern vertex at 70 degrees N, 130 degrees E. Where is the southern vertex?",
+      "o": [
+        "70 degrees S, 130 degrees W",
+        "20 degrees S, 050 degrees W",
+        "70 degrees N, 050 degrees W",
+        "70 degrees S, 050 degrees W"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Opposite vertices are antipodal, so the latitude changes to 70 degrees S and longitude changes by 180 degrees to 050 degrees W."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "Using a semi-major axis of 6378.4 km and compression of 1/297, what is the approximate semi-minor axis?",
+      "o": [
+        "6356.9 km",
+        "6399.9 km",
+        "6378.4 km",
+        "6367.0 km"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The reduction is 6378.4 divided by 297, about 21.5 km, so the semi-minor axis is approximately 6356.9 km."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "Which datum is used for measuring latitude?",
+      "o": [
+        "The prime meridian",
+        "The equator",
+        "The North Pole only",
+        "The Greenwich anti-meridian"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Latitude is the angular distance north or south of the equatorial plane, so the equator is its datum."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "Where is the difference between geocentric and geodetic latitude greatest?",
+      "o": [
+        "At the equator",
+        "At both geographic poles",
+        "At 23.5 degrees N and S",
+        "Near 45 degrees N and S"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "The difference is greatest near 45 degrees north and south, where it reaches about 11.6 minutes of arc."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "An aircraft moves from 165 degrees W to 103 degrees W. What is the shorter change of longitude?",
+      "o": [
+        "62 degrees E",
+        "62 degrees W",
+        "268 degrees E",
+        "268 degrees W"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The longitudes have the same name, so subtract to obtain 62 degrees; 103 degrees W lies east of 165 degrees W, giving 62 degrees E."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "An aircraft holds compass heading 355 degrees with deviation 2 degrees west and variation 6 degrees east. What is the true heading?",
+      "o": [
+        "347 degrees T",
+        "005 degrees T",
+        "359 degrees T",
+        "353 degrees T"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Compass plus deviation gives magnetic: 355 minus 2 is 353 degrees M. Magnetic plus easterly variation gives true: 353 plus 6 is 359 degrees T."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "True heading is 015 degrees, variation is 9 degrees west and deviation is 3 degrees east. What compass heading should the pilot steer?",
+      "o": [
+        "009 degrees C",
+        "021 degrees C",
+        "027 degrees C",
+        "003 degrees C"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Reverse the chain by subtracting the signed corrections. True minus westerly variation: 015 minus minus 9 is 024 degrees M. Then 024 minus 3 degrees easterly deviation is 021 degrees C."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "What is the reciprocal of a true direction of 353 degrees?",
+      "o": [
+        "173 degrees T",
+        "153 degrees T",
+        "163 degrees T",
+        "183 degrees T"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "A reciprocal is 180 degrees away. Subtracting 180 from 353 gives 173 degrees T."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "What latitude resolution is implied by quoting a position to one decimal minute?",
+      "o": [
+        "About 1 NM",
+        "About 30 m",
+        "About 3 m",
+        "About 0.1 NM, or 185 m"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "One decimal minute is 0.1 minute of great-circle arc, about 0.1 NM or 185 m along a meridian."
+    }
+  },
+  {
+    "chapter": "The Earth, Direction and Position",
+    "slug": "study-gennav-01-direction-latitude-longitude",
+    "data": {
+      "q": "If a great circle has its southern vertex at 63 degrees S, 170 degrees W, where is its northern vertex?",
+      "o": [
+        "63 degrees N, 170 degrees E",
+        "27 degrees N, 010 degrees E",
+        "63 degrees N, 010 degrees E",
+        "63 degrees S, 010 degrees E"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "The antipodal vertex has the opposite latitude name and a longitude 180 degrees away, giving 63 degrees N, 010 degrees E."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "Which description defines a great circle?",
+      "o": [
+        "Any circle drawn on the Earth's surface",
+        "A surface circle whose plane passes through the Earth's centre",
+        "Any parallel of latitude",
+        "A route that keeps a constant direction"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "A great circle has the same centre and radius as the Earth because its plane passes through the Earth's centre."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "What is the defining property of a rhumb line?",
+      "o": [
+        "It always passes through both poles",
+        "It is always the shortest surface route",
+        "It has two vertices",
+        "It cuts every meridian at the same angle"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "A rhumb line cuts every meridian at the same angle, which makes it a line of constant direction."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "A meridian, considered from one pole to the other, is",
+      "o": [
+        "a semi-great circle and a rhumb line",
+        "a small circle only",
+        "a complete great circle by itself",
+        "neither a great circle nor a rhumb line"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "A meridian is one half of a great circle and gives a constant north or south direction, so it is also a rhumb line."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "One minute of longitude represents one nautical mile",
+      "o": [
+        "at every latitude",
+        "only at 45 degrees latitude",
+        "only at the Equator",
+        "only at either pole"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "One minute of longitude equals one nautical mile only at the Equator, where the parallel is itself a great circle."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "What is the exact ICAO value of one nautical mile?",
+      "o": [
+        "1852 m",
+        "1609 m",
+        "2000 m",
+        "6080 m"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The ICAO nautical mile is exactly 1852 metres. The traditional 6080 figure is in feet."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "How many feet are in one statute mile?",
+      "o": [
+        "5000 ft",
+        "6076 ft",
+        "5280 ft",
+        "6080 ft"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "One statute mile is 5280 ft. It must not be confused with the traditional 6080 ft nautical mile."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "An aircraft flies from 72 degrees north, 002 degrees 30 minutes east to 72 degrees north, 177 degrees 30 minutes west by the shortest route. What is its initial true track?",
+      "o": [
+        "090 degrees",
+        "180 degrees",
+        "270 degrees",
+        "360 degrees"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "The points lie on a meridian and anti-meridian. The shorter great-circle route initially goes north over the North Pole, so the initial track is 360 degrees true."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "Relative to the corresponding great circle, a rhumb line between two ordinary points lies",
+      "o": [
+        "on the polar side",
+        "on the equatorial side",
+        "on the same path in every case",
+        "through the nearest pole"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The rhumb line lies on the equatorial side of the great circle, which bows towards the nearer pole."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "Two points on the same meridian are at 41 degrees 25 minutes north and 79 degrees 30 minutes north. Their separation is",
+      "o": [
+        "1905 NM",
+        "2135 NM",
+        "2285 NM",
+        "4232 NM"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The change of latitude is 38 degrees 05 minutes, equal to 2285 minutes of arc and therefore 2285 NM."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "What is the great-circle distance between antipodal points on the spherical navigation model?",
+      "o": [
+        "10 800 NM",
+        "5400 NM",
+        "21 600 NM",
+        "18 000 NM"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Antipodes are separated by 180 degrees. Multiplying by 60 gives 10 800 NM, half the Earth's 21 600 NM circumference."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "If the convergency between the end meridians is 14 degrees, the conversion angle is",
+      "o": [
+        "14 degrees",
+        "7 degrees",
+        "28 degrees",
+        "3.5 degrees"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Conversion angle is half the meridian convergency, so half of 14 degrees is 7 degrees."
+    }
+  },
+  {
+    "chapter": "Great Circles and Rhumb Lines",
+    "slug": "study-gennav-02-great-circles-rhumb-lines",
+    "data": {
+      "q": "Which statement about parallels of latitude is correct?",
+      "o": [
+        "Every parallel is a great circle",
+        "No parallel is a rhumb line",
+        "Only the poles are small circles",
+        "Every parallel except the Equator is a small circle and a rhumb line"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Every non-equatorial parallel is a small circle, and it is also a rhumb line because it cuts each meridian at 90 degrees."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "In the red and blue pole convention, the Earth behaves as if which polarity lies in the northern magnetic region?",
+      "o": [
+        "A blue pole",
+        "A red pole",
+        "Two red poles",
+        "No magnetic pole"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The northern magnetic region behaves as a blue polarity, which attracts the red north-seeking end of a compass magnet."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "Magnetic variation is the angle between",
+      "o": [
+        "compass north and aircraft heading",
+        "magnetic north and compass north",
+        "true north and magnetic north",
+        "the horizontal and the total magnetic field"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Variation is the horizontal angle between true north and magnetic north at a stated place and time."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "What is the angle of dip at the magnetic equator?",
+      "o": [
+        "90 degrees",
+        "0 degrees",
+        "45 degrees",
+        "180 degrees"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Dip is 0 degrees at the magnetic equator because the total field is horizontal there."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "Which equation correctly relates total force T, horizontal force H and vertical force Z?",
+      "o": [
+        "T = H + Z",
+        "H² = T² + Z²",
+        "Z = T + H",
+        "T² = H² + Z²"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "The three forces form a right triangle, so the correct relationship is T² = H² + Z²."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "Which component of the Earth's magnetic field supplies a heading compass with directive force?",
+      "o": [
+        "The vertical component Z",
+        "The horizontal component H",
+        "The total force only",
+        "The secular component"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The horizontal component H is the directive force that aligns the compass with the magnetic meridian."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "What does an agonic line join?",
+      "o": [
+        "Places of zero variation",
+        "Places of equal dip",
+        "The geographic poles",
+        "Places of maximum horizontal force"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "An agonic line is the zero-value isogonal, so it joins places where magnetic variation is zero."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "A line joining places of equal magnetic dip is called",
+      "o": [
+        "an isogonal",
+        "an agonic line",
+        "a magnetic meridian",
+        "an isoclinal"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "An isoclinal joins places of equal magnetic dip. Its zero-dip special case is the aclinic line."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "What is the maximum possible magnitude of magnetic dip?",
+      "o": [
+        "45 degrees",
+        "60 degrees",
+        "90 degrees",
+        "180 degrees"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Dip reaches 90 degrees at a magnetic pole, where the field is vertical."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "If H is 30 microteslas and Z is 40 microteslas, what is T?",
+      "o": [
+        "50 microteslas",
+        "70 microteslas",
+        "35 microteslas",
+        "10 microteslas"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Using T² = H² + Z² gives T = √(900 + 1600) = 50 microteslas."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "Which description best matches secular change?",
+      "o": [
+        "The compass error caused by aircraft electrical equipment",
+        "The daily cycle lasting about 24 hours",
+        "A sudden receiver failure during a magnetic storm",
+        "The slow long-term drift of the Earth's main magnetic field"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "Secular change is the slow long-term change of the main field, which moves poles and isogonals over years and decades."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "What does an isogonal join?",
+      "o": [
+        "Places of equal magnetic dip",
+        "Places of zero dip only",
+        "Places of equal magnetic variation",
+        "Places with equal geographic latitude"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "An isogonal joins places of equal magnetic variation for the stated chart epoch."
+    }
+  },
+  {
+    "chapter": "Earth Magnetism",
+    "slug": "study-gennav-03-earth-magnetism",
+    "data": {
+      "q": "Why does a direct-reading magnetic compass become unreliable near a magnetic pole?",
+      "o": [
+        "Total field T becomes zero",
+        "Horizontal component H approaches zero",
+        "Vertical component Z approaches zero",
+        "Variation must always be zero"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Near a magnetic pole the field is nearly vertical, so the horizontal directive component H approaches zero and cannot establish a dependable heading."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "Compass deviation is the angle between",
+      "o": [
+        "true north and magnetic north",
+        "grid north and true north",
+        "aircraft heading and track",
+        "magnetic north and compass north"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Deviation is the angle between magnetic north and compass north, produced by magnetic influences within the aircraft."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "A constant deviation on every heading is normally represented by which coefficient?",
+      "o": [
+        "Coefficient C",
+        "Coefficient A",
+        "Coefficient D",
+        "Coefficient B"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Coefficient A is the constant term and commonly represents a displaced lubber line or detector alignment error."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "On which pair of headings is coefficient B normally corrected?",
+      "o": [
+        "East and west",
+        "North and south",
+        "North-east and south-west",
+        "Any two headings 30 degrees apart"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Coefficient B has its maximum semicircular effect on east and west headings, so those headings are used for its correction."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "Observed deviations are north +6 degrees and south minus 2 degrees. What is coefficient C?",
+      "o": [
+        "minus 4 degrees",
+        "+2 degrees",
+        "+4 degrees",
+        "+8 degrees"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "C = (deviation north minus deviation south) divided by 2, so C = [6 minus (minus 2)] divided by 2 = +4 degrees."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "Which item is one of the aims of a compass swing?",
+      "o": [
+        "To remove magnetic variation",
+        "To record the residual deviation",
+        "To align true north with grid north",
+        "To calculate wind velocity"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "A compass swing determines deviation, reduces correctable error and records the residual deviation on the aircraft compass card."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "In the northern hemisphere, acceleration on an easterly heading makes a direct compass show an apparent turn towards",
+      "o": [
+        "east",
+        "west",
+        "south",
+        "north"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "In the northern hemisphere, acceleration on an east or west heading causes an apparent turn towards north."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "What does UNOS mean for a direct compass in the northern hemisphere?",
+      "o": [
+        "Underread south, overread north",
+        "Use north only for setting",
+        "Undershoot north, overshoot south",
+        "Uniform north and opposite south"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "UNOS means undershoot north and overshoot south when rolling out using a direct magnetic compass in the northern hemisphere."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "At the magnetic equator, an aircraft accelerates on a westerly heading. What dip-induced indication should be expected?",
+      "o": [
+        "No apparent turn",
+        "An apparent turn north",
+        "An apparent turn south",
+        "A 90 degree compass swing"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "There is no dip-induced acceleration error at the magnetic equator because the vertical field component and dip are zero."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "A direct compass described as aperiodic is one that",
+      "o": [
+        "can indicate true heading directly",
+        "has no liquid in its bowl",
+        "requires no deviation card",
+        "settles quickly without prolonged oscillation"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Aperiodic, or dead beat, means the disturbed magnet system settles quickly without continuing to oscillate."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "A bubble in the liquid of a direct compass most strongly suggests",
+      "o": [
+        "a leaking seal",
+        "excess horizontal field H",
+        "a correct damping time",
+        "a displaced agonic line"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "A bubble commonly indicates a leaking seal and can move through the liquid, creating eddies that disturb the magnet assembly."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "Why is a remote magnetic detector commonly installed near a wingtip or fin?",
+      "o": [
+        "To increase magnetic dip",
+        "To reduce exposure to aircraft magnetic interference",
+        "To make the aircraft turn faster",
+        "To remove the need for electrical power"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "A remote location is chosen because aircraft magnetic and electrical interference is normally smaller there."
+    }
+  },
+  {
+    "chapter": "Aircraft Magnetism and the Compasses",
+    "slug": "study-gennav-04-aircraft-magnetism",
+    "data": {
+      "q": "What does a slaved gyro magnetic compass combine?",
+      "o": [
+        "True north with pressure altitude",
+        "A direct compass with a wind vane",
+        "Magnetic north-seeking with gyro stability",
+        "Grid convergence with liquid damping"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "The flux-valve reference supplies magnetic north-seeking, while the directional gyro supplies a stable short-term heading display."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "What is departure in navigation?",
+      "o": [
+        "The north-south distance between parallels",
+        "The angular difference between two meridians",
+        "The east-west distance between meridians along a stated parallel",
+        "The shortest great-circle distance between two positions"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "Departure is the east-west distance between two meridians measured along a specified parallel of latitude."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "Two meridians differ by 20 degrees at latitude 52 degrees. What is the departure?",
+      "o": [
+        "About 739 NM",
+        "About 1,200 NM",
+        "About 616 NM",
+        "About 400 NM"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Departure = 1,200 minutes × cos 52 degrees = 738.8 NM, which is about 739 NM."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "At the equator, a change of longitude of one minute corresponds to a departure of",
+      "o": [
+        "60 NM",
+        "1 kilometre",
+        "zero",
+        "1 NM"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "At the equator cosine latitude is 1, so one minute of longitude gives 1 NM of departure."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "What is the departure between any two meridians measured exactly at a pole?",
+      "o": [
+        "60 NM per degree",
+        "Zero",
+        "It equals the longitude difference",
+        "It cannot be determined"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "All meridians meet at each pole, so their east-west separation and departure are zero."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "At latitude 60 degrees, 600 NM of departure represents what change of longitude?",
+      "o": [
+        "20 degrees",
+        "10 degrees",
+        "30 degrees",
+        "5 degrees"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Change of longitude = 600 ÷ cos 60 degrees = 1,200 minutes, which is 20 degrees."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "An aircraft flies 165 km east at 60 degrees north. Approximately what change of longitude results?",
+      "o": [
+        "1 degree 29 minutes",
+        "5 degrees 56 minutes",
+        "2 degrees 58 minutes",
+        "8 degrees 54 minutes"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "165 km is about 89 NM. Dividing 89 by cos 60 degrees gives 178 minutes, or 2 degrees 58 minutes."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "A longitude difference of 44 degrees 11 minutes gives 2,000 NM departure. What is the latitude?",
+      "o": [
+        "About 49 degrees north only",
+        "About 41 degrees north or south",
+        "About 30 degrees north or south",
+        "About 60 degrees south only"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Cos latitude = 2,000 ÷ 2,651 = 0.7544, so the latitude is about 41 degrees north or south."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "For the same change of longitude, which statement is correct?",
+      "o": [
+        "Departure is greatest near a pole",
+        "Departure is independent of latitude",
+        "Departure changes sign at the equator",
+        "Departure decreases as latitude increases"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Departure varies with cosine latitude, so its magnitude decreases as a parallel lies farther from the equator."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "An aircraft flies 300 NM east at 45 degrees north, then later 300 NM west at 50 degrees north and returns to its original latitude. Relative to the start, it finishes",
+      "o": [
+        "east of the starting meridian",
+        "on the starting meridian",
+        "west of the starting meridian",
+        "at the opposite meridian"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The same distance at 50 degrees spans more longitude than at 45 degrees, so the westward longitude change is greater and the aircraft finishes west."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "A departure of 240 NM at 44 degrees south spans fixed meridians. What is the departure between them at 40 degrees south?",
+      "o": [
+        "About 225 NM",
+        "About 256 NM",
+        "Exactly 240 NM",
+        "About 288 NM"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Departure at 40 = 240 × cos 40 degrees ÷ cos 44 degrees = 255.6 NM, or about 256 NM."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "From 58 degrees 33 minutes north, 174 degrees west, an aircraft flies exactly 6 NM east. What longitude is reached?",
+      "o": [
+        "174 degrees 11.5 minutes west",
+        "173 degrees 40 minutes west",
+        "173 degrees 55 minutes west",
+        "173 degrees 48.5 minutes west"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "The longitude change is 6 ÷ cos 58 degrees 33 minutes = 11.5 minutes east, giving 173 degrees 48.5 minutes west."
+    }
+  },
+  {
+    "chapter": "Departure",
+    "slug": "study-gennav-05-departure",
+    "data": {
+      "q": "For a short 120 NM leg on track 060 degrees true, what is the eastward departure component?",
+      "o": [
+        "About 104 NM",
+        "60 NM",
+        "120 NM",
+        "About 208 NM"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Departure = distance × sin track = 120 × sin 60 degrees = 103.9 NM, which is about 104 NM east."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "Earth convergency is best defined as",
+      "o": [
+        "the distance between two meridians along a parallel",
+        "the angle of inclination between selected meridians at a stated latitude",
+        "half the difference between two rhumb-line tracks",
+        "the angle between true and magnetic north"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "Earth convergency is the angle of inclination between two selected meridians measured at a stated latitude."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "Two meridians are 40 degrees apart at latitude 30 degrees north. Their convergency is",
+      "o": [
+        "10 degrees",
+        "30 degrees",
+        "40 degrees",
+        "20 degrees"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "Convergency = 40 × sin 30 degrees = 20 degrees."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "At the equator, the convergency between two meridians is",
+      "o": [
+        "zero",
+        "equal to half their longitude difference",
+        "equal to their longitude difference",
+        "90 degrees"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The local directions of the meridians are parallel at the equator, so convergency is zero."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "At either geographic pole, earth convergency between two meridians is",
+      "o": [
+        "always zero",
+        "half the change of longitude",
+        "equal to the change of longitude",
+        "twice the change of longitude"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "At a pole the meridians meet, and their included angle equals their change of longitude."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "Positions A and B differ by 12 degrees of longitude and have a mean latitude of 45 degrees north. Approximate convergency is",
+      "o": [
+        "17.0 degrees",
+        "6.0 degrees",
+        "8.5 degrees",
+        "12.0 degrees"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Convergency = 12 × sin 45 degrees = 8.5 degrees."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "A great-circle track changes by 5 degrees between points whose mean latitude is 39 degrees. The longitude difference is approximately",
+      "o": [
+        "8 degrees",
+        "3 degrees",
+        "5 degrees",
+        "12 degrees"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Change of longitude = 5 ÷ sin 39 degrees, which is approximately 8 degrees."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "Conversion angle between a great-circle direction and the matching rhumb-line direction equals",
+      "o": [
+        "twice convergency",
+        "convergency divided by longitude",
+        "the full convergency",
+        "half the convergency"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Conversion angle is exactly one half of earth convergency."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "From 30 degrees north, 020 degrees west to 30 degrees north, 020 degrees east, the rhumb-line track is 090 degrees true. The initial great-circle track is",
+      "o": [
+        "100 degrees true",
+        "080 degrees true",
+        "090 degrees true",
+        "070 degrees true"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Convergency is 20 degrees and conversion angle is 10 degrees, so the eastbound Northern Hemisphere great circle starts on 080 degrees true."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "The initial great-circle track from A to B is 060 degrees true and convergency is 8.5 degrees in an eastbound Northern Hemisphere case. The initial great-circle track from B to A is",
+      "o": [
+        "248.5 degrees true",
+        "231.5 degrees true",
+        "240.0 degrees true",
+        "068.5 degrees true"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The track at B has increased to 068.5 degrees true; its reciprocal from B to A is 248.5 degrees true."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "Three waypoints lie at 53 degrees north and are spaced by 10 degrees of longitude. Each great-circle leg has a conversion angle near 4 degrees. At the middle waypoint the track command changes by",
+      "o": [
+        "4 degrees increase",
+        "zero",
+        "8 degrees decrease",
+        "8 degrees increase"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The first leg ends near 094 degrees and the next begins near 086 degrees, giving an 8 degree decrease."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "A is at 55 degrees north on the prime meridian and B is at 54 degrees north, 010 degrees east. If the initial great-circle track from A is 100 degrees true, the approximate rhumb-line track is",
+      "o": [
+        "096 degrees true",
+        "104 degrees true",
+        "100 degrees true",
+        "108 degrees true"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Conversion angle is about 4 degrees, so the eastbound Northern Hemisphere rhumb-line track is 104 degrees true."
+    }
+  },
+  {
+    "chapter": "Convergency and Conversion Angle",
+    "slug": "study-gennav-06-convergency-conversion-angle",
+    "data": {
+      "q": "A Southern Hemisphere route spans 16 degrees of longitude at a mean latitude of 42.5 degrees south. Approximate earth convergency is",
+      "o": [
+        "5.4 degrees",
+        "16.0 degrees",
+        "8.0 degrees",
+        "10.8 degrees"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Convergency = 16 × sin 42.5 degrees = approximately 10.8 degrees."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "Chart scale is the relationship between",
+      "o": [
+        "longitude and departure",
+        "chart area and Earth area",
+        "latitude spacing and longitude spacing",
+        "a chart length and the corresponding Earth distance"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Scale relates a measured chart length to the corresponding distance between the same positions on Earth."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "Which set gives the three common methods of expressing scale?",
+      "o": [
+        "Statement in words, graduated scale line, representative fraction",
+        "Latitude, longitude, departure",
+        "Large, medium, small",
+        "Metric, imperial, angular"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Scale is commonly expressed by a word statement, a graduated scale line or a representative fraction."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "If 1 centimetre on a chart represents 5 kilometres on Earth, the RF is",
+      "o": [
+        "1:50,000",
+        "1:5,000,000",
+        "1:500,000",
+        "1:185,200"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Five kilometres equals 500,000 centimetres, so the RF is 1:500,000."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "Five centimetres on a chart represents 7 nautical miles. The RF is closest to",
+      "o": [
+        "1:1,296,400",
+        "1:259,280",
+        "1:92,600",
+        "1:500,000"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Seven nautical miles is 1,296,400 centimetres; dividing by 5 gives an RF denominator of 259,280."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "Compared with a small-scale chart, a large-scale chart normally has",
+      "o": [
+        "a larger denominator and less detail",
+        "a smaller denominator and more detail",
+        "the same denominator and more coverage",
+        "a larger denominator and more coverage"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "A large-scale chart has a numerically larger fraction, therefore a smaller denominator, and it shows more detail over less area."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "On a 1:5,000,000 chart, a line is 1.7 centimetres long. The Earth distance is approximately",
+      "o": [
+        "8.5 NM",
+        "17.0 NM",
+        "85.0 NM",
+        "45.9 NM"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "The line represents 85 kilometres, which is approximately 45.9 nautical miles."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "A scale statement says 1 inch represents 10 nautical miles. The representative fraction is approximately",
+      "o": [
+        "1:729,600",
+        "1:60,800",
+        "1:185,200",
+        "1:1,000,000"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Ten nautical miles is 10 × 6,080 × 12 = 729,600 inches, giving 1:729,600."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "On a chart with RF 1:1,000,000, what chart length represents 50 kilometres?",
+      "o": [
+        "50 cm",
+        "0.5 cm",
+        "5 cm",
+        "1.97 cm"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "Fifty kilometres is 5,000,000 centimetres; dividing by 1,000,000 gives 5 centimetres."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "On a 1:500,000 chart, the chart length representing 30 kilometres is",
+      "o": [
+        "6 cm",
+        "15 cm",
+        "0.6 cm",
+        "60 cm"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Thirty kilometres is 3,000,000 centimetres; dividing by 500,000 gives 6 centimetres."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "If 3 centimetres on a chart represents 200 statute miles, the RF is closest to",
+      "o": [
+        "1:3,576,320",
+        "1:2,000,000",
+        "1:20,000,000",
+        "1:10,728,960"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Converting 200 statute miles to centimetres and dividing by 3 gives a denominator of about 10,728,960."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "At RF 1:2,000,000, a chart line of 4.2 inches represents approximately",
+      "o": [
+        "21.34 km",
+        "106.68 km",
+        "213.36 km",
+        "426.72 km"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "Earth distance = 4.2 × 2.54 × 2,000,000 centimetres = 213.36 kilometres."
+    }
+  },
+  {
+    "chapter": "Scale",
+    "slug": "study-gennav-07-scale",
+    "data": {
+      "q": "At RF 1:1,000,000, what chart length represents 400 kilometres?",
+      "o": [
+        "4.00 inches",
+        "15.74 inches",
+        "40.00 inches",
+        "157.40 inches"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Four hundred kilometres gives 40 centimetres on the chart, which is approximately 15.74 inches."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "In chart projection, the reduced Earth is",
+      "o": [
+        "the area omitted from a chart",
+        "a mathematically flattened hemisphere",
+        "a scale model of the Earth used as the projection basis",
+        "the part of the globe below the equator"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "The reduced Earth is the scale model of the globe on which the projection is based."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "The three general developable projection surfaces are",
+      "o": [
+        "plane, cylinder and cone",
+        "sphere, ellipse and plane",
+        "Mercator, Lambert and gnomonic",
+        "tangent, secant and orthomorphic"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "The three general families use a plane, a cylinder or a cone as the developable surface."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "On a polar azimuthal projection, the graticule normally shows",
+      "o": [
+        "parallel meridians and parallel latitudes",
+        "curved meridians and straight latitudes",
+        "parallel meridians and circular latitudes",
+        "straight meridians radiating from the pole and concentric latitude circles"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "A polar plane projection has straight radiating meridians and concentric circular parallels."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "A normal cylindrical graticule is characterised by",
+      "o": [
+        "radiating meridians and concentric circles",
+        "parallel straight meridians and parallel straight latitudes",
+        "converging meridians and circular latitudes",
+        "curved meridians and curved latitudes"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The normal cylindrical family opens into parallel straight meridians crossed by parallel straight latitudes."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "A typical conical graticule has",
+      "o": [
+        "parallel meridians and equally spaced latitudes",
+        "curved meridians and straight latitudes",
+        "one meridian and one latitude only",
+        "straight meridians converging towards an apex and parallels as circular arcs"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "On a conical chart the meridians converge towards the cone apex and the parallels are arcs centred on it."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "Which ideal property cannot remain both constant and correct over an extensive flat chart?",
+      "o": [
+        "Latitude labels",
+        "Longitude labels",
+        "Scale",
+        "Chart colour"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Constant correct scale over a large flat chart is impossible; it can be exact only at selected points or lines."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "An orthomorphic or conformal chart is one on which",
+      "o": [
+        "all areas are correct",
+        "local angles and bearings are represented correctly",
+        "scale is constant worldwide",
+        "every great circle and rhumb line is straight"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Conformality preserves local angles, allowing chart bearings to match directions on Earth."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "The first condition for conformality is that",
+      "o": [
+        "meridians and parallels intersect at 90 degrees",
+        "all parallels are equally spaced",
+        "all meridians are parallel",
+        "areas remain exactly proportional"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "A conformal graticule must preserve the right-angle crossing of meridians and parallels."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "The second condition for conformality requires scale at a point to",
+      "o": [
+        "be exactly 1:1,000,000",
+        "increase only northwards",
+        "be equal in every direction or change equally in every direction",
+        "remain constant over the whole chart"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "At one point, directional scale must match, or change at the same rate in every direction."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "Which statement correctly distinguishes projection construction?",
+      "o": [
+        "All operational charts are direct photographs",
+        "All projections must use a physical light source",
+        "Non-perspective means the chart has no graticule",
+        "Perspective uses geometric rays, while non-perspective construction is mathematical or mathematically modified"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Perspective construction uses projection rays; non-perspective charts are produced or corrected mathematically."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "Which pair belongs to the navigation requirements of an ideal chart?",
+      "o": [
+        "Straight rhumb lines and straight great circles",
+        "Correct political boundaries and colours",
+        "Equal areas and constant rainfall",
+        "A single worldwide RF and no graticule"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "An ideal navigation chart would show both rhumb lines and great circles as straight lines."
+    }
+  },
+  {
+    "chapter": "General Chart Properties",
+    "slug": "study-gennav-08-chart-properties",
+    "data": {
+      "q": "On a secant conical projection, scale is normally correct along",
+      "o": [
+        "the equator only",
+        "two standard parallels",
+        "every meridian",
+        "the cone apex"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "A secant cone cuts the reduced Earth along two standard parallels, where scale is correct."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "A normal Mercator chart is correctly described as",
+      "o": [
+        "a perspective conical equal-area projection",
+        "a non-perspective conformal cylindrical projection",
+        "a perspective polar projection",
+        "a non-conformal plane projection"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "The normal Mercator is cylindrical, mathematically modified and conformal, so it is non-perspective."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "The graticule of a direct Mercator chart is",
+      "o": [
+        "circular",
+        "convergent",
+        "radial",
+        "rectangular"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "Parallel straight meridians and parallel straight latitudes form a rectangular Mercator graticule."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "On a normal Mercator, meridians are",
+      "o": [
+        "straight, parallel and equally spaced",
+        "straight and convergent",
+        "curved towards the pole",
+        "parallel but increasingly spaced"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Mercator meridians are straight parallel lines with equal spacing."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "How are parallels of latitude shown on a normal Mercator?",
+      "o": [
+        "As concentric circles",
+        "As equally spaced straight lines",
+        "As straight parallel lines whose spacing increases towards the poles",
+        "As curves concave to the equator"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Mercator parallels are straight and parallel, with their separation increasing poleward."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "A rhumb line on a Mercator chart is represented by",
+      "o": [
+        "a curve concave to the equator",
+        "a curve convex to the equator",
+        "a complex curve except at low latitude",
+        "a straight line"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "A straight line cuts every parallel Mercator meridian at the same angle, so it is a rhumb line."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "On a direct Mercator, great circles are shown as",
+      "o": [
+        "straight lines only",
+        "straight lines for the equator and meridians, but curves for all others",
+        "curves only",
+        "rhumb lines at every latitude"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "The equator and meridians are straight great circles; every other great circle appears curved."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "Apart from the equator and meridians, a great circle on Mercator is a curve",
+      "o": [
+        "concave to the nearer pole",
+        "always concave northwards",
+        "concave to the equator",
+        "with no fixed relationship to the equator"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The Mercator great-circle curve is concave to the equator and lies poleward of the corresponding rhumb line."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "Chart convergence on a normal Mercator is",
+      "o": [
+        "zero everywhere",
+        "equal to Earth convergency",
+        "correct at every latitude",
+        "equal to longitude change"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "Mercator meridians are parallel, so their chart convergence is zero everywhere."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "Mercator conformality means that the chart preserves",
+      "o": [
+        "equal areas",
+        "local angles and bearings",
+        "one constant scale worldwide",
+        "the true shape of continents"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "A conformal Mercator preserves local angles and therefore locally correct bearings."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "Why can the geographic poles not be shown on a normal Mercator?",
+      "o": [
+        "Scale and latitude spacing become infinite as latitude approaches 90 degrees",
+        "The equator blocks the projection rays",
+        "The meridians stop at 80 degrees",
+        "The chart becomes equal-area"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Mercator scale and parallel spacing grow without limit towards 90 degrees, placing the poles at infinity."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "Compared with the equator, Mercator scale at 60 degrees latitude is",
+      "o": [
+        "half as large",
+        "unchanged",
+        "about 1.5 times as large",
+        "twice as large"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "Relative Mercator scale is secant latitude; sec 60 degrees equals 2."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Properties",
+    "slug": "study-gennav-09-mercator-properties",
+    "data": {
+      "q": "The rhumb-line track from Turin to Khartoum is 145 degrees true. With a conversion angle of 6 degrees, the initial great-circle track at Turin is",
+      "o": [
+        "151 degrees true",
+        "145 degrees true",
+        "139 degrees true",
+        "133 degrees true"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The Northern Hemisphere south-eastbound great circle starts poleward of the rhumb line, giving 145 minus 6 = 139 degrees true."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "The scale at latitude L on a normal Mercator is",
+      "o": [
+        "equatorial scale multiplied by sec L",
+        "equatorial scale multiplied by cos L",
+        "equatorial scale divided by tan L",
+        "constant at every latitude"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Mercator scale at latitude L is the equatorial scale multiplied by secant L."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "A Mercator has scale 1:1,000,000 at the equator. Its scale at 60 degrees north is",
+      "o": [
+        "1:2,000,000",
+        "1:1,000,000",
+        "1:500,000",
+        "1:250,000"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Secant 60 degrees is 2, so the scale doubles and the RF becomes 1:500,000."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "The scale at 52 degrees south is 1:2,000,000. The approximate equatorial scale is",
+      "o": [
+        "1:1,232,000",
+        "1:3,249,000",
+        "1:2,000,000",
+        "1:4,000,000"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The equatorial denominator is 2,000,000 divided by cos 52 degrees, approximately 3,249,000."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "Moving poleward on a normal Mercator causes",
+      "o": [
+        "scale to contract and the RF denominator to fall",
+        "scale to remain fixed",
+        "scale to expand and the RF denominator to rise",
+        "scale to expand and the RF denominator to fall"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Mercator scale expands poleward, which means the representative-fraction denominator falls."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "The scale is 1:2,000,000 at 54 degrees south. At 25 degrees north it is approximately",
+      "o": [
+        "1:1,121,000",
+        "1:2,000,000",
+        "1:3,084,000",
+        "1:3,825,000"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Using the cosine ratio gives a denominator of about 3,083,806, so 1:3,084,000 is correct."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "A short distance on a Mercator chart should be measured against",
+      "o": [
+        "latitude graduations at the mid-latitude of the leg",
+        "longitude graduations at the start",
+        "longitude graduations at the equator",
+        "latitude graduations at the nearest pole"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Use the graduated meridian at the leg's mid-latitude because that represents the appropriate local scale."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "Why must longitude graduations not be used as a general distance scale?",
+      "o": [
+        "Meridians are curved",
+        "Longitude is measured in radians",
+        "Latitude spacing never changes",
+        "One minute of longitude equals one NM only at the equator"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "A minute of longitude represents one nautical mile only on the equator, so longitude graduations are not a general distance scale."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "The chart distance between the same two meridians on a normal Mercator",
+      "o": [
+        "reduces towards the poles",
+        "is the same at every latitude",
+        "increases with cosine latitude",
+        "is zero at the equator"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Mercator meridians are parallel and equally spaced, so their chart separation is constant with latitude."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "On a Mercator, 160 east to 160 west measures 30 cm. At 30 degrees south, the scale is approximately",
+      "o": [
+        "1:6,416,000",
+        "1:14,816,000",
+        "1:24,000,000",
+        "1:12,831,000"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "The 40 degree departure at 30 degrees south is about 2,078 NM, giving an RF of about 1:12,831,000."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "A normal Mercator remains within about 1 percent of equatorial scale to",
+      "o": [
+        "30 degrees north and south",
+        "8 degrees north and south",
+        "45 degrees north and south",
+        "60 degrees north and south"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The practical one-percent band extends roughly 8 degrees, or about 480 to 500 NM, each side of the equator."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "On a secant Mercator, scale is exactly correct",
+      "o": [
+        "along the two standard parallels",
+        "only at the equator",
+        "at every latitude",
+        "only at the poles"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "A secant Mercator is correct in scale along its two standard parallels."
+    }
+  },
+  {
+    "chapter": "Mercator Charts: Scale",
+    "slug": "study-gennav-10-mercator-scale",
+    "data": {
+      "q": "Meridians 5 degrees apart measure 8 cm at 60 degrees north. The Mercator scale is nearest",
+      "o": [
+        "1:1,736,000",
+        "1:6,945,000",
+        "1:3,500,000",
+        "1:12,000,000"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "Five degrees of longitude at 60 degrees is 150 NM; over 8 cm this gives approximately 1:3,472,500, nearest 1:3,500,000."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "The principal navigation advantages sought in a Lambert conformal chart are",
+      "o": [
+        "straight rhumb lines and true area",
+        "constant scale at every point and straight meridians",
+        "a visible geographic pole and equal area",
+        "near constant scale and nearly straight great-circle routes"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Lambert was designed to give near constant scale and make a straight chart line a close approximation to a great circle."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "On a simple conic projection, scale is correct at",
+      "o": [
+        "the parallel of tangency",
+        "the equator only",
+        "every meridian",
+        "the pole of projection"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The simple cone touches the reduced Earth at its parallel of tangency, so scale is correct there."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "For a Lambert chart whose parallel of origin is 45 degrees north, the constant of the cone is approximately",
+      "o": [
+        "0.500",
+        "0.866",
+        "0.707",
+        "1.000"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The cone constant is sine 45 degrees, which is approximately 0.707."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "With n equal to 0.707, a change of longitude of 100 degrees gives chart convergence of",
+      "o": [
+        "141.4 degrees",
+        "70.7 degrees",
+        "50.0 degrees",
+        "7.07 degrees"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Chart convergence is longitude change multiplied by n, so 100 × 0.707 = 70.7 degrees."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "On a Lambert conformal chart, scale is exactly correct at",
+      "o": [
+        "the two standard parallels",
+        "the parallel of origin only",
+        "every parallel",
+        "the upper edge only"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The two circles where the modified cone intersects the reduced Earth are the standard parallels of correct scale."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "How does Lambert scale behave between and outside its standard parallels?",
+      "o": [
+        "Expanded between and contracted outside",
+        "Correct everywhere",
+        "Constant between and zero outside",
+        "Contracted between and expanded outside"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Lambert scale is contracted between the standard parallels and expanded outside them."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "The parallel of origin on a Lambert chart",
+      "o": [
+        "is always the equator",
+        "defines the cone constant and normally lies halfway between the standard parallels",
+        "is the only line of correct scale",
+        "is the upper standard parallel"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The parallel of origin is normally midway between the standard parallels and its sine defines n."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "Under the one-sixth rule, the standard parallels are placed",
+      "o": [
+        "together at the centre of the sheet",
+        "at the top and bottom edges",
+        "one sixth of the sheet in from the top and bottom",
+        "one sixth of a degree apart"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "The one-sixth rule places each standard parallel about one sixth of the sheet height in from its nearest edge."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "A Lambert chart has standard parallels at 63 degrees north and 41 degrees north. Its cone constant is nearest",
+      "o": [
+        "0.891",
+        "0.656",
+        "0.788",
+        "0.707"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The parallel of origin is 52 degrees north and sin 52 degrees is approximately 0.788."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "Standard parallels are 41 degrees 20 minutes north and 11 degrees 40 minutes north. The cone constant is nearest",
+      "o": [
+        "0.660",
+        "0.446",
+        "0.202",
+        "0.895"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Their midpoint is 26 degrees 30 minutes north; sin 26 degrees 30 minutes is approximately 0.446."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "Lambert's conformal conic is",
+      "o": [
+        "perspective and equal-area",
+        "perspective and non-conformal",
+        "cylindrical and perspective",
+        "non-perspective and conformal"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Lambert's chart is a mathematically modified, non-perspective, conformal conic projection."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 1",
+    "slug": "study-gennav-11-lambert-1",
+    "data": {
+      "q": "Lambert conformal charts are especially suitable for",
+      "o": [
+        "mid-latitude aeronautical route and plotting charts",
+        "a single world chart including both poles",
+        "equatorial marine rhumb-line navigation only",
+        "measuring exact global areas"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Their conformality, near constant scale and near-straight great circles suit mid-latitude aviation charting."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "For practical aviation use, a chart may be treated as constant scale when its scale distortion does not exceed about",
+      "o": [
+        "4 percent",
+        "2 percent",
+        "1 percent",
+        "0.01 percent"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "A Lambert sheet is treated as practically constant scale when its distortion remains within about 1 percent."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "A Lambert chart whose standard parallels are 16 degrees apart has an approximate maximum scale error of",
+      "o": [
+        "0.1 percent",
+        "1 percent",
+        "2 percent",
+        "4 percent"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "Oxford's guide gives about 1 percent maximum scale error for 16 degrees of standard-parallel separation."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "The difference between a rhumb-line direction and the corresponding great-circle direction is",
+      "o": [
+        "half Earth convergency",
+        "full chart convergence",
+        "half chart convergence",
+        "the cone constant"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Conversion angle is half Earth convergency and separates the rhumb line from the great circle."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "On Lambert, the difference between a rhumb line and a straight chart line is",
+      "o": [
+        "full Earth convergency",
+        "conversion angle only",
+        "the latitude difference",
+        "half chart convergence"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "A Lambert straight line differs from the rhumb-line direction by half chart convergence at an endpoint."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "Except at the parallel of origin, a great circle on Lambert appears as",
+      "o": [
+        "a curve concave to the pole",
+        "a shallow curve concave to the parallel of origin",
+        "a straight rhumb line",
+        "a curve concave to the equator in every case"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The Lambert great circle is a shallow curve concave to the parallel of origin."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "Apart from meridians, rhumb lines on a Lambert chart are",
+      "o": [
+        "straight",
+        "curved towards the equator",
+        "concentric circles",
+        "curves concave to the pole of projection"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "Lambert rhumb lines, except meridians, curve concave to the pole of projection."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "At the mid-meridian of a Lambert route, the straight line, great circle and rhumb line are",
+      "o": [
+        "separated by full chart convergence",
+        "at right angles",
+        "parallel to one another",
+        "equal only on a Mercator"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "The three route representations are parallel at the mid-meridian."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "A Lambert straight line from A to B measures 250 degrees true at A and chart convergence is 6 degrees north. The rhumb-line track is",
+      "o": [
+        "247 degrees true",
+        "253 degrees true",
+        "244 degrees true",
+        "256 degrees true"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "Half chart convergence is 3 degrees, so the rhumb line is 250 minus 3 = 247 degrees true."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "Distance on a Lambert chart should normally be measured using",
+      "o": [
+        "longitude graduations at the chart edge",
+        "the equatorial scale only",
+        "the convergency factor",
+        "latitude graduations along a suitable meridian"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "A graduated meridian supplies the latitude scale, with one minute of latitude representing one nautical mile."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "A true VOR bearing plotted on Lambert should be referenced to",
+      "o": [
+        "the VOR station's meridian",
+        "the aircraft's meridian",
+        "the mid-meridian only",
+        "a parallel of latitude"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "VOR bearing is established at the ground station, so it is plotted from the station's meridian using variation at the station."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "An aircraft heads 330 degrees true and observes an NDB at relative bearing 090 degrees. The reciprocal position line through the NDB is plotted as",
+      "o": [
+        "060 degrees from the NDB meridian",
+        "240 degrees from a line parallel to the aircraft's meridian",
+        "243 degrees from the aircraft position",
+        "270 degrees from the mid-meridian"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The bearing to the NDB is 060 degrees true, so its reciprocal is 240 degrees plotted from a transferred aircraft meridian through the NDB."
+    }
+  },
+  {
+    "chapter": "Lambert's Conformal Chart: Part 2",
+    "slug": "study-gennav-12-lambert-2",
+    "data": {
+      "q": "On a Lambert chart n is 0.80. Initial straight-line track is 070 degrees true and rhumb-line track is 082 degrees true. From 4 degrees west, the destination longitude is",
+      "o": [
+        "34 degrees west",
+        "11 degrees east",
+        "26 degrees east",
+        "15 degrees east"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "The 12 degree track difference is half chart convergence; full convergence is 24 degrees, giving 30 degrees of longitude and destination 26 degrees east."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "For a North Polar stereographic chart, the plane touches the North Pole and the projection point is at",
+      "o": [
+        "the Earth's centre",
+        "the equator",
+        "the North Pole",
+        "the South Pole"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "A North Polar stereographic is projected from the diametrically opposite South Pole onto a plane tangent at the North Pole."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "The co-latitude of 70 degrees north is",
+      "o": [
+        "70 degrees",
+        "10 degrees",
+        "20 degrees",
+        "160 degrees"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Co-latitude equals 90 minus latitude, so 90 minus 70 gives 20 degrees."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "Polar stereographic scale away from the pole varies approximately as",
+      "o": [
+        "secant squared of half the co-latitude",
+        "secant latitude",
+        "cosine of co-latitude",
+        "sine of mean latitude"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "The polar scale factor is sec² of half the co-latitude."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "Polar stereographic scale remains within about 1 percent of polar scale from the pole to",
+      "o": [
+        "70 degrees latitude",
+        "78 degrees latitude",
+        "60 degrees latitude",
+        "45 degrees latitude"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The scale is within about 1 percent between 90 and 78 degrees latitude."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "On a polar stereographic chart, chart convergence between two meridians equals",
+      "o": [
+        "longitude change times cosine latitude",
+        "half the longitude change",
+        "the full change of longitude",
+        "zero"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The polar convergence factor n is 1, so chart convergence equals the full longitude difference."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "On a polar stereographic, the initial straight-line track from 75 north 60 west to 75 north 60 east is",
+      "o": [
+        "030 degrees true",
+        "090 degrees true",
+        "120 degrees true",
+        "330 degrees true"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The meridians differ by 120 degrees and form an isosceles polar triangle, leaving a 30 degree initial track angle."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "Grid navigation is used at high latitude mainly because",
+      "o": [
+        "parallels become straight",
+        "local True North changes rapidly as converging meridians are crossed",
+        "scale becomes exactly zero",
+        "magnetic variation is always constant"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Rapid meridian convergence rotates local True North, while parallel grid lines provide a fixed direction datum."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "On a standard North Polar grid, the convergence at 45 degrees west is",
+      "o": [
+        "45 degrees west",
+        "zero",
+        "90 degrees east",
+        "45 degrees east"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "North Polar standard-grid convergence has the longitude's magnitude and the opposite east or west name, giving 45 degrees east."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "A grid direction of 105 degrees with convergence 20 degrees west converts to true direction",
+      "o": [
+        "125 degrees",
+        "085 degrees",
+        "105 degrees",
+        "145 degrees"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "With west convergence, true is greater than grid, so 105 plus 20 gives 125 degrees true."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "Grivation is the algebraic sum of",
+      "o": [
+        "deviation and drift",
+        "grid track and heading",
+        "Earth rate and transport wander",
+        "variation and convergence"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "Grivation combines magnetic variation and grid convergence algebraically."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "Grid heading is 090 degrees and grivation is 20 degrees east. The corresponding magnetic heading is",
+      "o": [
+        "110 degrees",
+        "090 degrees",
+        "070 degrees",
+        "250 degrees"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "From Grid to Magnetic, east grivation is subtracted, giving 090 minus 20 = 070 degrees magnetic."
+    }
+  },
+  {
+    "chapter": "Polar Stereographic and Grid Navigation",
+    "slug": "study-gennav-13-polar-grid-charts",
+    "data": {
+      "q": "When a directional gyro is used for grid steering, the normal treatment is to",
+      "o": [
+        "correct transport wander but ignore Earth rate",
+        "correct Earth rate but not normal transport wander",
+        "ignore both Earth rate and real drift",
+        "slave it continuously to Magnetic North"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "The gyro is aligned to Grid North and corrected for Earth rate; normal transport-wander correction is not applied because the grid is fixed."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "Which of these chart scales normally gives the greater ground detail?",
+      "o": [
+        "1:2,000,000",
+        "1:500,000",
+        "1:1,000,000",
+        "1:5,000,000"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "The 1:500,000 chart is the larger scale among these choices and normally shows more ground detail."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "On a contour chart, very closely spaced contours indicate",
+      "o": [
+        "a steep slope",
+        "a gentle slope",
+        "flat ground at sea level",
+        "an unknown contour interval"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "A steep slope produces a large elevation change over a short horizontal distance, so its contours lie close together."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "A Maximum Elevation Figure shown in a grid square should be treated as",
+      "o": [
+        "a mandatory cruising altitude",
+        "an aerodrome circuit altitude",
+        "a pressure altitude",
+        "terrain and obstacle information, not automatically a safe altitude"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "A Maximum Elevation Figure reports the dominant elevation under the chart's stated method; it is not automatically a safe altitude."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "To interpret an airspace boundary correctly, the pilot must read",
+      "o": [
+        "only its colour",
+        "only its line thickness",
+        "its symbol, label, vertical limits and effective details",
+        "only the nearest navigation aid"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The complete meaning comes from the boundary symbol together with its label, vertical limits and effective details."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "Which feature is normally the most useful precise visual checkpoint?",
+      "o": [
+        "a large motorway junction",
+        "a long featureless beach",
+        "a broad area of forest",
+        "one village among many similar villages"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "A large motorway junction is conspicuous, accurately positioned and usually more unique than the other choices."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "Reading map to ground is the normal method when the aircraft is",
+      "o": [
+        "known to be lost",
+        "inside cloud",
+        "near planned track and time",
+        "using only radio navigation"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "When near track and time, map to ground predicts what should appear next and directs the outside search."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "When position is uncertain, ground to map means",
+      "o": [
+        "turning the chart upside down",
+        "following a road without identifying it",
+        "ignoring the planned route",
+        "matching an observed arrangement of features to the chart"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Ground to map starts with a distinctive observed pattern and searches for that same arrangement on the chart."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "At a groundspeed of 150 kt, the aircraft travels how far in 6 minutes?",
+      "o": [
+        "10 NM",
+        "15 NM",
+        "25 NM",
+        "90 NM"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Six minutes is one tenth of an hour, so 150 divided by 10 gives 15 NM."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "Two line features crossed approximately at right angles to track are especially useful for",
+      "o": [
+        "compass swinging",
+        "altitude selection",
+        "timing and groundspeed checks",
+        "magnetic variation measurement"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The known chart distance between transverse line features can be compared with elapsed time to check groundspeed."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "As visual navigation altitude increases, which change is generally expected?",
+      "o": [
+        "all charted masts become easier to see",
+        "near hills always hide more of the horizon",
+        "small details gain contrast",
+        "a wider pattern is visible but small vertical features lose prominence"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Greater altitude widens the view, while small masts and local vertical relief become less prominent."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "Which factor can substantially change the visual contrast of a checkpoint?",
+      "o": [
+        "The chart projection alone",
+        "Season, light and weather",
+        "The radio frequency selected",
+        "The compass deviation card"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Season, light and weather can change colour, shadow, water extent and surface appearance."
+    }
+  },
+  {
+    "chapter": "Topographical Maps and Map Reading",
+    "slug": "study-gennav-14-topo-maps",
+    "data": {
+      "q": "Before using a printed aeronautical chart, the pilot should first ensure that",
+      "o": [
+        "its edition and operational information are current",
+        "every symbol is memorised without the legend",
+        "all towns are overflown",
+        "only the magnetic variation is checked"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "The chart edition and operational information must be current through the applicable aeronautical information and NOTAM."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "The measurement of a day is based primarily on Earth's",
+      "o": [
+        "distance from the Moon",
+        "magnetic field",
+        "rotation about its axis",
+        "diameter at the equator"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "A day is defined from Earth's rotation measured against the Sun or a distant star."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "Perihelion normally occurs in",
+      "o": [
+        "early January",
+        "late March",
+        "early July",
+        "late September"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Earth is nearest the Sun at perihelion in early January."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "Viewed from the North Celestial Pole, Earth moves around the Sun",
+      "o": [
+        "clockwise in an ellipse",
+        "anticlockwise in an ellipse",
+        "clockwise in a circle",
+        "anticlockwise in a circle"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Viewed from above the North Celestial Pole, Earth follows its elliptical orbit anticlockwise."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "The principal cause of the seasons is",
+      "o": [
+        "the changing equation of time",
+        "the Moon's orbit",
+        "Earth's distance from the Sun",
+        "the inclination of Earth's axis"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "The seasons result mainly from the approximately 23.5 degree inclination of Earth's axis from the normal to its orbital plane."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "The angle between the ecliptic and the equinoctial is approximately",
+      "o": [
+        "23.5 degrees",
+        "45 degrees",
+        "66.5 degrees",
+        "90 degrees"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The obliquity of the ecliptic is approximately 23.5 degrees."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "At the Southern Hemisphere winter solstice, the Sun's declination is approximately",
+      "o": [
+        "23.5 degrees south",
+        "zero",
+        "23.5 degrees north",
+        "66.5 degrees north"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Southern Hemisphere winter occurs near the June solstice, when solar declination is about 23.5 degrees north."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "Compared with an apparent solar day, a sidereal day is",
+      "o": [
+        "longer by about 4 minutes",
+        "exactly equal",
+        "longer by one hour",
+        "shorter by about 4 minutes"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "A sidereal day is about 23 hours 56 minutes, roughly 4 minutes shorter than a mean or typical apparent solar day."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "A mean solar day is",
+      "o": [
+        "one orbit measured against a star",
+        "the annual average of apparent solar days",
+        "the shortest apparent solar day",
+        "the interval between two solstices"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "The mean solar day is the average length of apparent solar days over the year and is fixed at 24 hours."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "The maximum difference between mean time and apparent solar time is about",
+      "o": [
+        "4 minutes",
+        "8 minutes",
+        "30 minutes",
+        "16 minutes"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Oxford gives the largest equation of time difference as about 16 minutes in mid November."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "The tropical year is approximately",
+      "o": [
+        "360 days",
+        "365 days exactly",
+        "365 days 5 hours 48.75 minutes",
+        "365 days 6 hours"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "The tropical year, measured by the seasonal cycle, is about 365 days 5 hours 48.75 minutes."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "Greenwich Hour Angle is measured",
+      "o": [
+        "westwards from Greenwich from 0 to 360 degrees",
+        "eastwards from Greenwich from 0 to 180 degrees",
+        "northwards from the equinoctial",
+        "southwards from the ecliptic"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "GHA is the equinoctial arc measured westwards from the Greenwich meridian from 0 to 360 degrees."
+    }
+  },
+  {
+    "chapter": "Time 1: The Solar System and Time",
+    "slug": "study-gennav-15-time-1",
+    "data": {
+      "q": "A celestial body with GHA 270 degrees is transiting which equivalent geographic meridian?",
+      "o": [
+        "090 degrees west",
+        "090 degrees east",
+        "270 degrees east only",
+        "the Greenwich meridian"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "A GHA of 270 degrees west is the same meridian as longitude 090 degrees east."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "An arc of 153 degrees 30 minutes is equivalent to approximately",
+      "o": [
+        "10 hours 24 minutes",
+        "10 hours 22 minutes",
+        "10 hours 08 minutes",
+        "10 hours 14 minutes"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "At 15 degrees per hour, 153 degrees 30 minutes converts to 10 hours 14 minutes."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "To find LMT from UTC at an easterly longitude, the longitude expressed as time is",
+      "o": [
+        "subtracted twice",
+        "added",
+        "ignored",
+        "always rounded to a whole hour"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "East longitude is ahead of UTC, so its arc time is added to UTC to obtain LMT."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "If it is 0900 LMT at Greenwich, what is the LMT at 045 degrees east?",
+      "o": [
+        "1200",
+        "0600",
+        "0900",
+        "1500"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Forty five degrees equals 3 hours, and east is later, giving 1200 LMT."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "If Cairo at 030 degrees east has 0900 LMT, the corresponding UTC is",
+      "o": [
+        "1100",
+        "0900",
+        "0700",
+        "0500"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Thirty degrees equals 2 hours; east LMT is ahead, so 0900 minus 0200 gives 0700 UTC."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "The normal width of a theoretical full time zone is",
+      "o": [
+        "7.5 degrees",
+        "15 degrees",
+        "30 degrees",
+        "45 degrees"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Earth rotates 15 degrees per hour, so a theoretical full zone is 15 degrees wide."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "Using Oxford's zone number convention, longitude 137 degrees east lies in zone number",
+      "o": [
+        "+9",
+        "+8",
+        "-8",
+        "-9"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "137 divided by 15 is 9.13, rounded to 9, and east longitude receives a negative zone number, giving -9."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "The algebraic relationship between UTC, Zone Time and Zone Number is",
+      "o": [
+        "UTC equals Zone Time minus longitude",
+        "Zone Time equals UTC plus longitude",
+        "UTC = Zone Time + Zone Number",
+        "UTC equals Zone Time divided by Zone Number"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "The governing relationship is UTC = Zone Time + Zone Number."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "Indian Standard Time is",
+      "o": [
+        "UTC + 5 hours 30 minutes",
+        "UTC + 5 hours",
+        "UTC + 6 hours 30 minutes",
+        "UTC minus 5 hours 30 minutes"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Indian Standard Time is UTC + 5 hours 30 minutes, based on 82 degrees 30 minutes east."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "Why may a country's Standard Time differ from theoretical Zone Time?",
+      "o": [
+        "Earth rotates at different rates by country",
+        "Latitude changes the length of an hour",
+        "Legal and administrative boundaries determine Standard Time",
+        "UTC is not used in aviation"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "Standard Time is a legal and administrative choice, so its boundary need not follow a theoretical 15 degree zone."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "When crossing the International Date Line eastbound, the traveller normally",
+      "o": [
+        "subtracts one calendar day",
+        "adds one calendar day",
+        "adds 12 hours",
+        "keeps both time and date unchanged"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Eastbound crossing subtracts one calendar day; westbound crossing adds one day."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "A flight leaves 175 degrees east at 0100 LMT on 18 November, flies eastbound for 4 hours, and arrives at 150 degrees west. The arrival LMT is",
+      "o": [
+        "0720 on 18 November",
+        "2120 on 17 November",
+        "0520 on 18 November",
+        "0720 on 17 November"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Departure converts to 1320 UTC on 17 November; after 4 hours it is 1720 UTC, then minus 10 hours gives 0720 LMT on 17 November."
+    }
+  },
+  {
+    "chapter": "Time 2: UTC, Zone Time and the Date Line",
+    "slug": "study-gennav-16-time-2",
+    "data": {
+      "q": "At longitude 130 degrees east, Zone Time is 0600 on 1 January and the zone number is -9. The UTC is",
+      "o": [
+        "1500 on 1 January",
+        "2100 on 31 December",
+        "0300 on 1 January",
+        "2100 on 1 January"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "UTC = 0600 + (-9 hours), which gives 2100 UTC on 31 December."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "On 21 June, the lowest listed northerly latitude at which the Sun remains above the horizon all day is",
+      "o": [
+        "64 degrees north",
+        "66 degrees north",
+        "68 degrees north",
+        "70 degrees north"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The Air Almanac question gives 66 degrees north as the lowest listed latitude with continuous daylight on 21 June."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "On 21 December, the lowest listed northerly latitude at which the Sun does not rise is",
+      "o": [
+        "64 degrees north",
+        "66 degrees north",
+        "68 degrees north",
+        "70 degrees north"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The Air Almanac question gives 68 degrees north as the lowest listed latitude at which the Sun does not rise on 21 December."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "Civil twilight ends in the evening when the centre of the Sun reaches",
+      "o": [
+        "the sensible horizon",
+        "0 degrees 50 minutes below the horizon",
+        "12 degrees below the horizon",
+        "6 degrees below the sensible horizon"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Evening civil twilight ends when the Sun's centre is 6 degrees below the sensible horizon."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "Nautical twilight occurs while the Sun's centre is between",
+      "o": [
+        "6 and 12 degrees below the sensible horizon",
+        "0 and 6 degrees below",
+        "12 and 18 degrees below",
+        "18 and 24 degrees below"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Nautical twilight is the band from 6 to 12 degrees below the sensible horizon."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "Between 60 degrees north and 60 degrees south, the minimum civil-twilight duration is about",
+      "o": [
+        "16 minutes",
+        "30 minutes",
+        "21 minutes",
+        "45 minutes"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The minimum is about 21 minutes at the equator, where the Sun crosses the horizon most steeply."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "Compared with the sea-level table, an observer at high altitude normally sees",
+      "o": [
+        "later sunrise, earlier sunset and longer twilight",
+        "earlier sunrise, later sunset and shorter twilight",
+        "the same sunrise and sunset with shorter twilight",
+        "earlier sunrise, earlier sunset and unchanged twilight"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Greater height produces earlier sunrise, later sunset and generally shorter civil twilight."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "At visible sunrise, the point of the Sun used to define the event is the",
+      "o": [
+        "upper limb first appearing at the visible horizon",
+        "centre crossing the sensible horizon",
+        "lower limb touching the sensible horizon",
+        "centre reaching 6 degrees below the horizon"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Visible sunrise is defined by the upper limb first appearing at the visible horizon."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "Air Almanac sunrise and twilight values are normally tabulated as",
+      "o": [
+        "UTC for flight level 100",
+        "Standard Time for the capital city",
+        "zone time for mean sea level",
+        "LMT for an observer at sea level"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "The tables provide Local Mean Time for the stated latitude and date at sea level."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "For a Delhi sunrise problem, the Air Almanac table is entered initially with",
+      "o": [
+        "longitude and UTC",
+        "date and latitude",
+        "IST and longitude",
+        "altitude and Standard Time"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "Date and latitude select the Air Almanac value; longitude is used later to convert LMT to UTC."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "Sunset at New York is 1929 LMT and ECT is 2001 LMT. Evening civil twilight lasts",
+      "o": [
+        "32 minutes",
+        "21 minutes",
+        "28 minutes",
+        "42 minutes"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Evening civil twilight duration is ECT minus sunset, so 2001 minus 1929 is 32 minutes."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "At visible sunset the centre of the Sun is approximately",
+      "o": [
+        "6 degrees below the sensible horizon",
+        "16 minutes above the visual horizon",
+        "50 minutes of arc below the sensible horizon",
+        "12 degrees below the sensible horizon"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "Refraction of about 34 minutes plus the Sun's radius of about 16 minutes places its centre roughly 50 minutes below the sensible horizon."
+    }
+  },
+  {
+    "chapter": "Time 3: Sunrise, Sunset and Twilight",
+    "slug": "study-gennav-17-time-3",
+    "data": {
+      "q": "For two places on the same latitude and date, the Air Almanac sunrise value in LMT is",
+      "o": [
+        "later at the eastern place",
+        "earlier at the eastern place",
+        "controlled by longitude alone",
+        "the same at both places"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Sunrise occurs at the same Local Mean Time along the same parallel on the same date; longitude changes the corresponding UTC."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "The direction in which the longitudinal axis of an aircraft points is its",
+      "o": [
+        "track",
+        "drift",
+        "heading",
+        "groundspeed"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "Heading is the direction in which the aircraft's longitudinal axis points."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "The direction of the path actually followed over the Earth's surface is the",
+      "o": [
+        "track",
+        "heading",
+        "wind direction",
+        "true airspeed"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Track is the direction of the aircraft's actual path over the Earth's surface."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "An aircraft flies heading 000 degrees and makes good track 010 degrees. Its drift is",
+      "o": [
+        "10 degrees left",
+        "zero",
+        "20 degrees right",
+        "10 degrees right"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "Track lies 10 degrees to the right of heading, so the aircraft has 10 degrees right drift."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "To maintain a required track in a crosswind, the wind correction angle is normally",
+      "o": [
+        "equal to the drift and in the same direction",
+        "equal to the drift and in the opposite direction",
+        "twice the drift",
+        "independent of drift"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The wind correction angle is equal in magnitude and opposite in sense to the drift it prevents."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "A wind reported from 330 degrees is drawn in the triangle of velocities towards",
+      "o": [
+        "330 degrees",
+        "030 degrees",
+        "240 degrees",
+        "150 degrees"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "Wind is reported from 330 degrees but its vector points downwind towards 150 degrees."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "In the usual navigation vector convention, the wind vector is identified by",
+      "o": [
+        "one arrowhead",
+        "two arrowheads",
+        "three arrowheads",
+        "no arrowhead"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The wind vector carries three arrowheads; the air vector carries one and the ground vector carries two."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "For heading 000 degrees, TAS 100 kt and wind 240 degrees at 30 kt, the approximate scale-drawing result is",
+      "o": [
+        "track 012 degrees and groundspeed 118 kt",
+        "track 347 degrees and groundspeed 82 kt",
+        "track 012 degrees and groundspeed 82 kt",
+        "track 000 degrees and groundspeed 130 kt"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The scale drawing gives a track of about 012 degrees and a groundspeed of about 118 kt."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "With a wind exactly at right angles to the required track, the groundspeed after correcting heading is",
+      "o": [
+        "always greater than TAS",
+        "less than TAS",
+        "equal to TAS",
+        "equal to wind speed"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Crabbing uses part of the air vector across the track, so a pure crosswind gives a groundspeed less than TAS."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "Required track is 120 degrees, TAS 180 kt and wind is 340 degrees at 50 kt. The approximate heading and groundspeed are",
+      "o": [
+        "130 degrees and 144 kt",
+        "120 degrees and 180 kt",
+        "110 degrees and 216 kt",
+        "100 degrees and 230 kt"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "Opening the triangle gives approximately heading 110 degrees and groundspeed 216 kt."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "True heading is 310 degrees, TAS is 200 kt, groundspeed is 176 kt and drift is 7 degrees right. The approximate wind is",
+      "o": [
+        "090 degrees at 33 kt",
+        "270 degrees at 33 kt",
+        "270 degrees at 43 kt",
+        "090 degrees at 43 kt"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Opening the known air and ground vectors gives a wind of approximately 270 degrees at 33 kt."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "From a fix, an aircraft flies heading 090 degrees at 120 kt TAS for 30 minutes. Before wind displacement is applied, its air position is",
+      "o": [
+        "30 NM east of the fix",
+        "60 NM south of the fix",
+        "120 NM east of the fix",
+        "60 NM east of the fix"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "The air distance is 120 multiplied by 0.5 hour, so the air position is 60 NM east of the fix."
+    }
+  },
+  {
+    "chapter": "Dead Reckoning and the Triangle of Velocities",
+    "slug": "study-gennav-18-dead-reckoning",
+    "data": {
+      "q": "A complete dead-reckoning plot advances the last confirmed fix by applying",
+      "o": [
+        "direction, speed, time and forecast wind",
+        "a radio bearing only",
+        "a visual fix only",
+        "pressure altitude only"
+      ],
+      "a": 0,
+      "s": 8,
+      "e": "A complete DR plot advances the last confirmed fix using direction, speed, elapsed time and the forecast wind."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "Pressure altitude is the altitude indicated when the altimeter subscale is set to",
+      "o": [
+        "local QFE",
+        "regional QNH",
+        "standard temperature",
+        "1013.25 hPa"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Pressure altitude is read with the standard pressure setting of 1013.25 hPa on the subscale."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "Calibrated airspeed is obtained by correcting IAS for",
+      "o": [
+        "density error only",
+        "position or pressure error",
+        "compressibility only",
+        "temperature error only"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "CAS is IAS corrected for position or pressure error; the aircraft card may combine this with instrument correction."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "At FL 200 in ISA, relative density is about 0.533. A CAS of 100 kt gives a TAS closest to",
+      "o": [
+        "137 kt",
+        "100 kt",
+        "73 kt",
+        "153 kt"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "TAS is 100 divided by the square root of 0.533, which is approximately 137 kt."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "Which sequence correctly follows the airspeed corrections?",
+      "o": [
+        "IAS, EAS, CAS, TAS",
+        "CAS, IAS, TAS, EAS",
+        "IAS, CAS, EAS, TAS",
+        "IAS, TAS, CAS, EAS"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The correct sequence is IAS, CAS, EAS, TAS as position, compressibility and density corrections are applied."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "The difference between total air temperature and static air temperature is called",
+      "o": [
+        "ISA deviation",
+        "density error",
+        "ram rise",
+        "position error"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Ram rise is the heating difference between TAT and SAT caused by slowing and compressing the airflow at the probe."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "A recovery factor of one means that the temperature probe",
+      "o": [
+        "recovers the full theoretical ram rise",
+        "shows SAT directly at every speed",
+        "has no compressibility heating",
+        "must read zero Celsius"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "Recovery factor one represents full recovery of the theoretical ram-temperature rise."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "The local speed of sound in ISA conditions at mean sea level is approximately",
+      "o": [
+        "575 kt",
+        "593 kt",
+        "638 kt",
+        "661 kt"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "At 288.15 K the local speed of sound is approximately 661 kt."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "At SAT minus 42 degrees Celsius and Mach 0.86, the TAS is closest to",
+      "o": [
+        "593 kt",
+        "510 kt",
+        "460 kt",
+        "661 kt"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "The local speed of sound is about 593 kt, and 0.86 multiplied by 593 is about 510 kt TAS."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "If TAS remains constant while SAT decreases, Mach number will",
+      "o": [
+        "increase",
+        "decrease",
+        "remain constant",
+        "become equal to CAS"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Colder air lowers the local speed of sound, so the same TAS represents a higher Mach number."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "Density altitude is best defined as",
+      "o": [
+        "height above the aerodrome",
+        "true altitude corrected for wind",
+        "pressure altitude with QNH set",
+        "the ISA altitude having the existing air density"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Density altitude is the altitude in the ISA atmosphere at which the existing density would occur."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "At pressure altitude 5,000 ft and OAT 25 degrees Celsius, the density altitude using Bali's 118 factor is closest to",
+      "o": [
+        "5,000 ft",
+        "7,350 ft",
+        "2,650 ft",
+        "9,900 ft"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "ISA temperature is about 5.1 degrees Celsius, giving a positive deviation near 19.9 degrees and density altitude near 7,348 ft."
+    }
+  },
+  {
+    "chapter": "TAS, Mach Number and Density Altitude",
+    "slug": "study-gennav-19-tas-mach-density-altitude",
+    "data": {
+      "q": "The airspeed used as the magnitude of the air vector in the triangle of velocities is",
+      "o": [
+        "IAS",
+        "CAS",
+        "TAS",
+        "groundspeed"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "TAS is the aircraft's speed through the air mass and therefore forms the magnitude of the air vector."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "After 60 NM an aircraft is 7 NM left of planned track. Its track error is approximately",
+      "o": [
+        "4 degrees left",
+        "7 degrees left",
+        "7 degrees right",
+        "12 degrees left"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "At the 60 NM reference distance, 7 NM off represents approximately 7 degrees left."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "After travelling 120 NM from an on-track fix, an aircraft is 8 NM right of track. The track error is",
+      "o": [
+        "8 degrees right",
+        "2 degrees right",
+        "4 degrees left",
+        "4 degrees right"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Sixty multiplied by 8 divided by 120 gives a track error of 4 degrees right."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "An aircraft is 6 NM right of track after 90 NM. What is the approximate track error?",
+      "o": [
+        "6 degrees right",
+        "9 degrees right",
+        "4 degrees right",
+        "4 degrees left"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Sixty multiplied by 6 divided by 90 gives 4 degrees right."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "A fix is 4 NM left of track after 30 NM. The approximate track error is",
+      "o": [
+        "8 degrees left",
+        "4 degrees left",
+        "2 degrees left",
+        "8 degrees right"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "Four in 30 scales to eight in 60, so the error is 8 degrees left."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "Planned track is 045 degrees true. After 80 NM the fix is 4 NM left. Track made good is approximately",
+      "o": [
+        "042 degrees true",
+        "048 degrees true",
+        "041 degrees true",
+        "049 degrees true"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The error is 60 multiplied by 4 divided by 80, which is 3 degrees left; 045 minus 3 gives 042 degrees true."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "Planned track is 220 degrees true. A fix 3 NM right after 45 NM gives a track made good of",
+      "o": [
+        "216 degrees true",
+        "223 degrees true",
+        "224 degrees true",
+        "226 degrees true"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The error is 4 degrees right, so track made good is 220 plus 4, or 224 degrees true."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "Using pi as 3.142, the circumference of a circle of radius one unit is",
+      "o": [
+        "3.142 units",
+        "6.284 units",
+        "57.3 units",
+        "60 units"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Circumference is 2 pi r, so a radius of one gives 2 multiplied by 3.142, or 6.284 units."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "One radian is approximately",
+      "o": [
+        "60.0 degrees",
+        "45.0 degrees",
+        "6.284 degrees",
+        "57.3 degrees"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "One radian equals 360 divided by 2 pi, approximately 57.3 degrees."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "Why is 60 used instead of the exact 57.3 in the pilot rule?",
+      "o": [
+        "It removes tangent error completely",
+        "It makes the rule exact at every angle",
+        "It permits easy mental arithmetic with about 5 percent rounding error",
+        "It converts nautical miles to kilometres"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Rounding 57.3 to 60 makes proportional mental arithmetic easy and introduces about 5 percent error."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "At an angle of 10 degrees, the exact opposite side for an adjacent side of 60 units is closest to",
+      "o": [
+        "10.6 units",
+        "6.0 units",
+        "16.1 units",
+        "20.0 units"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Sixty multiplied by tangent 10 degrees is approximately 10.56 units, closest to 10.6."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "A 5 degree track error continues for 84 NM. The estimated distance off track is",
+      "o": [
+        "5 NM",
+        "14 NM",
+        "4 NM",
+        "7 NM"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Distance off is 5 multiplied by 84 divided by 60, which is 7 NM."
+    }
+  },
+  {
+    "chapter": "The 1 in 60 Rule",
+    "slug": "study-gennav-20-1in60-rule",
+    "data": {
+      "q": "For the track-error triangle, distance gone is measured",
+      "o": [
+        "along track made good to the fix",
+        "along planned track to the fix's abeam position",
+        "from the fix directly to destination",
+        "along the wind vector"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Distance gone is the adjacent side measured along planned track from the last on-track point to the present fix's abeam position."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "An aircraft is 4 NM left of track after 30 NM. Its approximate track error is",
+      "o": [
+        "8 degrees left",
+        "4 degrees left",
+        "8 degrees right",
+        "13 degrees left"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Track error is 60 multiplied by 4 divided by 30, which gives 8 degrees left."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "A 78 NM leg has 30 NM gone and a fix 4 NM left of track. What is the closing angle to destination?",
+      "o": [
+        "8 degrees",
+        "13 degrees",
+        "5 degrees",
+        "3 degrees"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Distance to go is 48 NM, so closing angle is 60 multiplied by 4 divided by 48, or 5 degrees."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "For the same 78 NM leg with a fix 4 NM left after 30 NM, the direct-to-destination heading alteration is",
+      "o": [
+        "5 degrees right",
+        "13 degrees right",
+        "8 degrees right",
+        "13 degrees left"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Track error is 8 degrees and closing angle is 5 degrees, so the aircraft turns 13 degrees right towards track."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "An aircraft is 4 NM left after 30 NM and will regain track after another 30 NM. The first heading alteration is",
+      "o": [
+        "8 degrees right",
+        "8 degrees left",
+        "16 degrees left",
+        "16 degrees right"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "With equal outbound and return distances, the double-track-error turn is 2 multiplied by 8 degrees, giving 16 degrees right."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "After the double-track-error correction in the previous question, what turn is made when track is regained?",
+      "o": [
+        "16 degrees left",
+        "16 degrees right",
+        "8 degrees right",
+        "8 degrees left"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "At the intercept, an 8 degree left turn removes only the closing angle and leaves the net wind correction."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "On a 95 NM leg, a fix after 35 NM is 7 NM right of track. The heading alteration to fly direct to destination is approximately",
+      "o": [
+        "12 degrees left",
+        "19 degrees left",
+        "7 degrees left",
+        "19 degrees right"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Track error is 12 degrees and closing angle over the remaining 60 NM is 7 degrees, giving a 19 degree turn left."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "A 96 NM leg has 36 NM gone and a fix 3 NM right of track. The direct correction is",
+      "o": [
+        "8 degrees left",
+        "5 degrees left",
+        "8 degrees right",
+        "3 degrees left"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Track error is 5 degrees and closing angle is 3 degrees, so the direct correction is 8 degrees left."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "If a cross-track error developed over 12 minutes and a double-track-error turn is made with unchanged groundspeed, track should be regained after approximately",
+      "o": [
+        "6 minutes",
+        "24 minutes",
+        "12 minutes",
+        "36 minutes"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The equal-triangle method takes the same time to regain track as the time taken to develop the error, which is 12 minutes."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "A closing angle is 5 degrees on a 78 NM leg with 30 NM gone. The combined correction is",
+      "o": [
+        "8 degrees",
+        "13 degrees",
+        "5 degrees",
+        "18 degrees"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Combined correction is closing angle multiplied by total distance divided by distance gone: 5 multiplied by 78 divided by 30 equals 13 degrees."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "A fix is one quarter of the way along a leg and the closing angle is 5 degrees. New Track Reference gives a heading alteration of",
+      "o": [
+        "5 degrees",
+        "10 degrees",
+        "15 degrees",
+        "20 degrees"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Invert one quarter to obtain 4, then multiply by the 5 degree closing angle to obtain 20 degrees."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "An aircraft is 4 NM off track and must regain track 24 NM ahead. The closing angle is",
+      "o": [
+        "6 degrees",
+        "8 degrees",
+        "10 degrees",
+        "12 degrees"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Closing angle is 60 multiplied by 4 divided by 24, which gives 10 degrees."
+    }
+  },
+  {
+    "chapter": "Navigation Using the 1 in 60 Rule",
+    "slug": "study-gennav-21-1in60-navigation",
+    "data": {
+      "q": "Which statement correctly distinguishes track error from drift?",
+      "o": [
+        "Track error is between planned track and TMG; drift is between heading and track",
+        "Track error is between heading and TMG; drift is between planned track and TMG",
+        "Both are always the same angle",
+        "Drift can be calculated without knowing heading"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "Track error compares planned track with track made good, while drift compares heading with a ground track."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "At 2 NM on a 3.5 degree glidepath, the approximate height above the touchdown reference is",
+      "o": [
+        "350 ft",
+        "600 ft",
+        "700 ft",
+        "1050 ft"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Height is 100 multiplied by 3.5 multiplied by 2, which gives 700 ft."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "At 4 NM on a 2.6 degree glidepath, the approximate height is",
+      "o": [
+        "1040 ft",
+        "780 ft",
+        "1200 ft",
+        "650 ft"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Height is 100 multiplied by 2.6 multiplied by 4, which gives 1040 ft."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "An aircraft is 2 NM from touchdown on a 3 degree path. Its approximate height is",
+      "o": [
+        "300 ft",
+        "900 ft",
+        "1200 ft",
+        "600 ft"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "A 3 degree path changes height by about 300 ft per NM, so at 2 NM the height is 600 ft."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "The required ROD at 120 kt groundspeed on a 3.5 degree path is approximately",
+      "o": [
+        "600 ft/min",
+        "700 ft/min",
+        "875 ft/min",
+        "420 ft/min"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Five times 120, multiplied by 3.5 divided by 3, gives 700 ft/min."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "At 180 kt groundspeed on a 2.6 degree path, the approximate ROD is",
+      "o": [
+        "900 ft/min",
+        "780 ft/min",
+        "650 ft/min",
+        "468 ft/min"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Five times 180, multiplied by 2.6 divided by 3, gives 780 ft/min."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "On a 3 degree path at 150 kt groundspeed, the approximate ROD is",
+      "o": [
+        "500 ft/min",
+        "600 ft/min",
+        "900 ft/min",
+        "750 ft/min"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "For a 3 degree path, ROD is about five times groundspeed, giving 750 ft/min."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "Groundspeed reduces from 150 kt to 120 kt on a 3 degree path. To maintain the path, ROD should",
+      "o": [
+        "decrease by 150 ft/min",
+        "increase by 150 ft/min",
+        "decrease by 30 ft/min",
+        "remain unchanged"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The 30 kt reduction requires a five-times change, so ROD decreases by 150 ft/min."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "On a 2.5 degree path, TAS is 220 kt and headwind is 10 kt. Approximate ROD is",
+      "o": [
+        "750 ft/min",
+        "917 ft/min",
+        "875 ft/min",
+        "1050 ft/min"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "Groundspeed is 210 kt, so five times 210 multiplied by 2.5 divided by 3 gives 875 ft/min."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "Required inbound QDM is 137 degrees, indicated QDM is 141 degrees and DME range is 90 NM. The aircraft is approximately",
+      "o": [
+        "4 NM right",
+        "5 NM right",
+        "6 NM right",
+        "6 NM left"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "The 4 degree difference at 90 NM gives 4 multiplied by 90 divided by 60, or 6 NM left of centreline."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "A point bearing changes 8 degrees while an aircraft at 120 kt flies for 6 minutes. Approximate range to the point is",
+      "o": [
+        "60 NM",
+        "90 NM",
+        "120 NM",
+        "45 NM"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The aircraft flies 12 NM; 12 multiplied by 60 divided by 8 gives a range of 90 NM."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "For a three-degree path, the rapid rate-of-descent factor is",
+      "o": [
+        "5 times groundspeed",
+        "3 times groundspeed",
+        "10 times groundspeed",
+        "groundspeed divided by 5"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "A 3 degree path is about 300 ft per NM, which gives an ROD of approximately five times groundspeed."
+    }
+  },
+  {
+    "chapter": "Other Applications of the 1 in 60 Rule",
+    "slug": "study-gennav-22-1in60-other-applications",
+    "data": {
+      "q": "A 2 degree angular deviation at a range of 30 NM represents an approximate displacement of",
+      "o": [
+        "0.5 NM",
+        "2 NM",
+        "1 NM",
+        "4 NM"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "Displacement is angle multiplied by range divided by 60: 2 multiplied by 30 divided by 60 equals 1 NM."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "Two checkpoints are 20 NM apart and elapsed time is 8 minutes. Measured groundspeed is",
+      "o": [
+        "120 kt",
+        "135 kt",
+        "160 kt",
+        "150 kt"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "Groundspeed is 20 multiplied by 60 divided by 8, which gives 150 kt."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "An aircraft passes A at 1010 and B, 30 NM farther, at 1027. If 20 NM remains, revised ETA is approximately",
+      "o": [
+        "1038",
+        "1035",
+        "1040",
+        "1045"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "The measured 30 NM took 17 minutes, so the remaining 20 NM takes about 11 minutes and ETA is about 1038."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "An aircraft passes X at 1420 and Y, 30 NM farther, at 1450. If Z is 20 NM beyond Y, ETA at Z is",
+      "o": [
+        "1500",
+        "1506",
+        "1510",
+        "1512"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The measured groundspeed is 60 kt, so 20 NM takes 20 minutes and ETA is 1510."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "A common planning radius for a circle of uncertainty after 70 NM without a fix is",
+      "o": [
+        "5 NM",
+        "7 NM",
+        "10 NM",
+        "14 NM"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Using 10 percent of distance flown gives an uncertainty radius of 7 NM."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "Visual checkpoints are normally selected at intervals of about",
+      "o": [
+        "1 to 2 minutes",
+        "15 to 20 minutes",
+        "5 to 10 minutes",
+        "30 minutes"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Oxford recommends visual checkpoints at roughly 5 to 10 minute intervals."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "Immediately after setting heading, the navigator should first establish",
+      "o": [
+        "a definite departure point and time",
+        "the final fuel reserve",
+        "the destination QNH",
+        "the next radio frequency only"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "A definite departure point and departure time provide the origin for the first track and ETA check."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "At a groundspeed of 150 kt, the distance represented by a six-minute chart marker is",
+      "o": [
+        "2.5 NM",
+        "6 NM",
+        "10 NM",
+        "15 NM"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "A six-minute marker equals groundspeed divided by 10, so 150 kt gives 15 NM."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "Which sequence best describes the normal in-flight navigation cycle?",
+      "o": [
+        "Correct, record, anticipate, identify",
+        "Anticipate, check, correct, record",
+        "Record, correct, check, anticipate",
+        "Check, record, anticipate, correct"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The normal cycle is anticipate, check, correct and record, with heading and ETA revised after a confirmed observation."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "If position is still uncertain when the planned turning-point time arrives, the normal navigation action is to",
+      "o": [
+        "continue straight until a feature appears",
+        "turn on the planned ETA",
+        "descend immediately",
+        "ignore the flight log"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "The lost procedure advises turning on the planned ETA rather than continuing indefinitely on the old heading."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "When the expected checkpoint is missing and position is uncertain, the more suitable visual-reading method is",
+      "o": [
+        "map-to-ground only",
+        "time-to-distance",
+        "track-error lines only",
+        "ground-to-map"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Ground-to-map starts with observed features and searches the chart for a matching pattern, which suits uncertain position."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "If a safe line feature outside the uncertainty circle is chosen, the aircraft should",
+      "o": [
+        "intercept it and follow it to a definite checkpoint",
+        "cross it and continue the same heading",
+        "descend below safety altitude",
+        "enter controlled airspace without clearance"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "A line feature can be intercepted and followed until a definite checkpoint allows normal navigation to resume."
+    }
+  },
+  {
+    "chapter": "In-flight Navigation Technique",
+    "slug": "study-gennav-23-in-flight-navigation",
+    "data": {
+      "q": "A fix is more than halfway along the leg and the pilot wishes to fly straight to destination. The preferred correction is",
+      "o": [
+        "turn only by track error",
+        "use no correction",
+        "add track error and closing angle",
+        "double track error regardless of distance"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "A direct-to-destination correction combines track error with the closing angle for the remaining distance."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "A position line is best described as",
+      "o": [
+        "a line of constant heading",
+        "a line somewhere along which the aircraft is known to be at a stated time",
+        "the line joining two planned waypoints",
+        "a line of constant groundspeed"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "A position line is a line somewhere along which the aircraft is known to be at the observation time."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "Fixes at 1700 and 1730 are 100 NM apart. The measured groundspeed is",
+      "o": [
+        "150 kt",
+        "180 kt",
+        "240 kt",
+        "200 kt"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "One hundred nautical miles in 30 minutes is 200 kt."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "A QDM of 330 degrees magnetic is converted to its QDR by taking the reciprocal. The QDR is",
+      "o": [
+        "150 degrees magnetic",
+        "160 degrees magnetic",
+        "330 degrees true",
+        "510 degrees magnetic"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The reciprocal of QDM 330 M is QDR 150 M."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "When plotting a VOR radial after magnetic-to-true conversion, the applicable variation is normally at",
+      "o": [
+        "the aircraft",
+        "the destination",
+        "the VOR station",
+        "the midpoint of the route"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "A VOR bearing is referenced and measured at the ground station, so station variation is used."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "An aircraft heads 315 M where aircraft variation is 9 degrees west. An NDB bears 207 relative. The true bearing to plot FROM the NDB is",
+      "o": [
+        "153 T",
+        "306 T",
+        "027 T",
+        "333 T"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "True heading is 306 T; adding relative 207 gives 153 T TO, whose reciprocal is 333 T FROM the NDB."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "Two DME range circles normally create",
+      "o": [
+        "one unambiguous point",
+        "two possible intersections",
+        "a straight position line",
+        "no usable position information"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Two circles normally intersect at two possible positions, so DR position, heading or range trend resolves the ambiguity."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "At 120 kt, a position line observed 10 minutes earlier is transferred along track by",
+      "o": [
+        "10 NM",
+        "15 NM",
+        "20 NM",
+        "24 NM"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "Transfer distance is 120 multiplied by 10 divided by 60, which equals 20 NM."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "To construct a running fix, the earlier position line is",
+      "o": [
+        "moved parallel to itself by estimated ground movement",
+        "rotated through the drift angle",
+        "left unchanged and relabelled",
+        "converted into a DME circle"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The complete earlier line is moved parallel to itself in track direction by the estimated distance travelled."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "The size of a cocked hat primarily indicates",
+      "o": [
+        "aircraft altitude",
+        "chart scale",
+        "agreement and probable accuracy of the position lines",
+        "magnetic variation"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "A smaller cocked hat shows closer agreement of the plotted lines, though common systematic error can still shift them."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "On an air and ground plot for the same interval, the vector from air position to ground position represents",
+      "o": [
+        "true airspeed",
+        "wind displacement",
+        "track made good only",
+        "magnetic variation"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "The difference between air position and simultaneous ground position is the displacement caused by wind."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "On a Lambert chart, an aircraft-measured ADF bearing is most accurately plotted from",
+      "o": [
+        "a line through the NDB parallel to the aircraft meridian",
+        "the equator",
+        "the nearest parallel of latitude",
+        "magnetic north at destination"
+      ],
+      "a": 0,
+      "s": 9,
+      "e": "A false meridian through the NDB, parallel to the aircraft meridian, automatically allows for chart convergence."
+    }
+  },
+  {
+    "chapter": "Plotting",
+    "slug": "study-gennav-24-plotting",
+    "data": {
+      "q": "To lose 23,000 ft over 65 NM at a groundspeed of 240 kt, the approximate rate of descent is",
+      "o": [
+        "1060 ft per minute",
+        "1200 ft per minute",
+        "1630 ft per minute",
+        "1415 ft per minute"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "The flight covers 65 NM in 16.25 minutes, and 23,000 divided by 16.25 is about 1415 ft per minute."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "Two aircraft 460 NM apart fly directly towards each other at groundspeeds of 250 kt and 210 kt. Their closing speed is",
+      "o": [
+        "40 kt",
+        "250 kt",
+        "460 kt",
+        "210 kt"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "For head-on motion the groundspeeds add, giving a closing speed of 460 kt."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "An aircraft at 220 kt is 80 NM behind traffic at 180 kt on the same track. Time to overtake is",
+      "o": [
+        "2 hours",
+        "1 hour",
+        "3 hours",
+        "4 hours"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Relative closing speed is 40 kt, so 80 NM divided by 40 kt gives 2 hours."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "A beacon changes from relative bearing 270 to 225 in 3 minutes while GS is 180 kt. For the stated isosceles geometry, closest approach is",
+      "o": [
+        "3 NM",
+        "6 NM",
+        "12 NM",
+        "9 NM"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "The aircraft travels 9 NM in 3 minutes, and the 45-degree isosceles geometry makes closest approach also 9 NM."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "In exact triangle-of-velocities geometry, zero head or tail component occurs when wind is at right angles to",
+      "o": [
+        "track only",
+        "the bisector between heading and track",
+        "heading only",
+        "true north"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Strictly, the wind must be perpendicular to the bisector between heading and track for zero along-track component."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "Safe endurance used in a PNR calculation is",
+      "o": [
+        "time available after protected reserves are excluded",
+        "all fuel on board including unusable fuel",
+        "route time to destination only",
+        "final-reserve time alone"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Safe endurance is the time available for the defined outbound and return operation after protected reserves and unusable fuel are removed."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "Safe endurance is 8 hours, outbound GS 450 kt and homebound GS 350 kt. Time to PNR is",
+      "o": [
+        "3.0 hours",
+        "3.25 hours",
+        "3.5 hours",
+        "4.5 hours"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "PNR time is 8 multiplied by 350 divided by 800, which equals 3.5 hours."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "Which expression gives PNR distance from base when E is safe endurance, O outbound GS and H homebound GS?",
+      "o": [
+        "E x O / H",
+        "E x O x H / (O + H)",
+        "E x (O + H)",
+        "E x H / O"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "PNR distance equals E multiplied by O multiplied by H, divided by O plus H."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "With E 10 hours, outbound GS 300 kt and homebound GS 500 kt, PNR distance is",
+      "o": [
+        "1500 NM",
+        "1750 NM",
+        "2500 NM",
+        "1875 NM"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "PNR time is 10 x 500 / 800 = 6.25 hours, and 6.25 x 300 gives 1875 NM."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "Available decision fuel is 3000 kg. Outbound flow is 500 kg/h at 400 kt and homebound flow 400 kg/h at 500 kt. Fuel-limited PNR distance is about",
+      "o": [
+        "1200 NM",
+        "1333 NM",
+        "1600 NM",
+        "1463 NM"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Distance is 3000 divided by (500/400 + 400/500), which is approximately 1463 NM."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "For a 2400 NM route with outbound GS 480 kt and homebound GS 320 kt, CP distance from base is",
+      "o": [
+        "960 NM",
+        "1200 NM",
+        "1440 NM",
+        "1600 NM"
+      ],
+      "a": 0,
+      "s": 8,
+      "e": "CP distance is 2400 multiplied by 320 divided by 800, giving 960 NM."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "An along-track wind moves the critical point towards",
+      "o": [
+        "the route midpoint in every case",
+        "the downwind endpoint",
+        "the upwind endpoint",
+        "the point of no return"
+      ],
+      "a": 2,
+      "s": 9,
+      "e": "The critical point shifts towards the upwind endpoint because travel is slower in that direction."
+    }
+  },
+  {
+    "chapter": "Navigation Problems: Relative Velocity, PNR and CP",
+    "slug": "study-gennav-25-navigation-problems",
+    "data": {
+      "q": "Which statement correctly distinguishes CP from PNR?",
+      "o": [
+        "Both require safe endurance",
+        "CP uses route distance and both groundspeeds, while PNR uses safe endurance",
+        "PNR is always the route midpoint",
+        "CP is determined only by fuel flow"
+      ],
+      "a": 1,
+      "s": 10,
+      "e": "CP is an equal-time point based on route distance and groundspeeds; PNR is an endurance or fuel-limited return point."
+    }
+  }
+]

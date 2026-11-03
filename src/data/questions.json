@@ -1,0 +1,3682 @@
+[
+  {
+    "id": "NAV-001",
+    "subject": "Air Navigation",
+    "topic": "Aircraft Magnetism and the Compasses",
+    "difficulty": "easy",
+    "question": "Compass deviation is the angle between",
+    "options": [
+      "true north and magnetic north",
+      "grid north and true north",
+      "aircraft heading and track",
+      "magnetic north and compass north"
+    ],
+    "answerIndex": 3,
+    "explanation": "Deviation is the angle between magnetic north and compass north, produced by magnetic influences within the aircraft.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses'"
+  },
+  {
+    "id": "NAV-002",
+    "subject": "Air Navigation",
+    "topic": "Aircraft Magnetism and the Compasses",
+    "difficulty": "medium",
+    "question": "A constant deviation on every heading is normally represented by which coefficient'",
+    "options": [
+      "Coefficient C",
+      "Coefficient A",
+      "Coefficient D",
+      "Coefficient B"
+    ],
+    "answerIndex": 1,
+    "explanation": "Coefficient A is the constant term and commonly represents a displaced lubber line or detector alignment error.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses'"
+  },
+  {
+    "id": "NAV-003",
+    "subject": "Air Navigation",
+    "topic": "Convergency and Conversion Angle",
+    "difficulty": "hard",
+    "question": "Earth convergency is best defined as",
+    "options": [
+      "the distance between two meridians along a parallel",
+      "the angle of inclination between selected meridians at a stated latitude",
+      "half the difference between two rhumb-line tracks",
+      "the angle between true and magnetic north"
+    ],
+    "answerIndex": 1,
+    "explanation": "Earth convergency is the angle of inclination between two selected meridians measured at a stated latitude.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Convergency and Conversion Angle'"
+  },
+  {
+    "id": "NAV-004",
+    "subject": "Air Navigation",
+    "topic": "Convergency and Conversion Angle",
+    "difficulty": "easy",
+    "question": "Two meridians are 40 degrees apart at latitude 30 degrees north. Their convergency is",
+    "options": [
+      "10 degrees",
+      "30 degrees",
+      "40 degrees",
+      "20 degrees"
+    ],
+    "answerIndex": 3,
+    "explanation": "Convergency = 40 × sin 30 degrees = 20 degrees.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Convergency and Conversion Angle'"
+  },
+  {
+    "id": "NAV-005",
+    "subject": "Air Navigation",
+    "topic": "Dead Reckoning and the Triangle of Velocities",
+    "difficulty": "medium",
+    "question": "The direction in which the longitudinal axis of an aircraft points is its",
+    "options": [
+      "track",
+      "drift",
+      "heading",
+      "groundspeed"
+    ],
+    "answerIndex": 2,
+    "explanation": "Heading is the direction in which the aircraft's longitudinal axis points.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Dead Reckoning and the Triangle of Velocities'"
+  },
+  {
+    "id": "NAV-006",
+    "subject": "Air Navigation",
+    "topic": "Dead Reckoning and the Triangle of Velocities",
+    "difficulty": "hard",
+    "question": "The direction of the path actually followed over the Earth's surface is the",
+    "options": [
+      "track",
+      "heading",
+      "wind direction",
+      "true airspeed"
+    ],
+    "answerIndex": 0,
+    "explanation": "Track is the direction of the aircraft's actual path over the Earth's surface.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Dead Reckoning and the Triangle of Velocities'"
+  },
+  {
+    "id": "NAV-007",
+    "subject": "Air Navigation",
+    "topic": "Departure",
+    "difficulty": "easy",
+    "question": "What is departure in navigation'",
+    "options": [
+      "The north-south distance between parallels",
+      "The angular difference between two meridians",
+      "The east-west distance between meridians along a stated parallel",
+      "The shortest great-circle distance between two positions"
+    ],
+    "answerIndex": 2,
+    "explanation": "Departure is the east-west distance between two meridians measured along a specified parallel of latitude.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Departure'"
+  },
+  {
+    "id": "NAV-008",
+    "subject": "Air Navigation",
+    "topic": "Departure",
+    "difficulty": "medium",
+    "question": "Two meridians differ by 20 degrees at latitude 52 degrees. What is the departure'",
+    "options": [
+      "About 739 NM",
+      "About 1,200 NM",
+      "About 616 NM",
+      "About 400 NM"
+    ],
+    "answerIndex": 0,
+    "explanation": "Departure = 1,200 minutes × cos 52 degrees = 738.8 NM, which is about 739 NM.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Departure'"
+  },
+  {
+    "id": "NAV-009",
+    "subject": "Air Navigation",
+    "topic": "Earth Magnetism",
+    "difficulty": "hard",
+    "question": "In the red and blue pole convention, the Earth behaves as if which polarity lies in the northern magnetic region'",
+    "options": [
+      "A blue pole",
+      "A red pole",
+      "Two red poles",
+      "No magnetic pole"
+    ],
+    "answerIndex": 0,
+    "explanation": "The northern magnetic region behaves as a blue polarity, which attracts the red north-seeking end of a compass magnet.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism'"
+  },
+  {
+    "id": "NAV-010",
+    "subject": "Air Navigation",
+    "topic": "Earth Magnetism",
+    "difficulty": "easy",
+    "question": "Magnetic variation is the angle between",
+    "options": [
+      "compass north and aircraft heading",
+      "magnetic north and compass north",
+      "true north and magnetic north",
+      "the horizontal and the total magnetic field"
+    ],
+    "answerIndex": 2,
+    "explanation": "Variation is the horizontal angle between true north and magnetic north at a stated place and time.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism'"
+  },
+  {
+    "id": "NAV-011",
+    "subject": "Air Navigation",
+    "topic": "General Chart Properties",
+    "difficulty": "medium",
+    "question": "In chart projection, the reduced Earth is",
+    "options": [
+      "the area omitted from a chart",
+      "a mathematically flattened hemisphere",
+      "a scale model of the Earth used as the projection basis",
+      "the part of the globe below the equator"
+    ],
+    "answerIndex": 2,
+    "explanation": "The reduced Earth is the scale model of the globe on which the projection is based.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'General Chart Properties'"
+  },
+  {
+    "id": "NAV-012",
+    "subject": "Air Navigation",
+    "topic": "General Chart Properties",
+    "difficulty": "hard",
+    "question": "The three general developable projection surfaces are",
+    "options": [
+      "plane, cylinder and cone",
+      "sphere, ellipse and plane",
+      "Mercator, Lambert and gnomonic",
+      "tangent, secant and orthomorphic"
+    ],
+    "answerIndex": 0,
+    "explanation": "The three general families use a plane, a cylinder or a cone as the developable surface.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'General Chart Properties'"
+  },
+  {
+    "id": "NAV-013",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "easy",
+    "question": "Which description defines a great circle'",
+    "options": [
+      "Any circle drawn on the Earth's surface",
+      "A surface circle whose plane passes through the Earth's centre",
+      "Any parallel of latitude",
+      "A route that keeps a constant direction"
+    ],
+    "answerIndex": 1,
+    "explanation": "A great circle has the same centre and radius as the Earth because its plane passes through the Earth's centre.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines'"
+  },
+  {
+    "id": "NAV-014",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "What is the defining property of a rhumb line'",
+    "options": [
+      "It always passes through both poles",
+      "It is always the shortest surface route",
+      "It has two vertices",
+      "It cuts every meridian at the same angle"
+    ],
+    "answerIndex": 3,
+    "explanation": "A rhumb line cuts every meridian at the same angle, which makes it a line of constant direction.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines'"
+  },
+  {
+    "id": "NAV-015",
+    "subject": "Air Navigation",
+    "topic": "In-flight Navigation Technique",
+    "difficulty": "hard",
+    "question": "Two checkpoints are 20 NM apart and elapsed time is 8 minutes. Measured groundspeed is",
+    "options": [
+      "120 kt",
+      "135 kt",
+      "160 kt",
+      "150 kt"
+    ],
+    "answerIndex": 3,
+    "explanation": "Groundspeed is 20 multiplied by 60 divided by 8, which gives 150 kt.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'In-flight Navigation Technique'"
+  },
+  {
+    "id": "NAV-016",
+    "subject": "Air Navigation",
+    "topic": "In-flight Navigation Technique",
+    "difficulty": "easy",
+    "question": "An aircraft passes A at 1010 and B, 30 NM farther, at 1027. If 20 NM remains, revised ETA is approximately",
+    "options": [
+      "1038",
+      "1035",
+      "1040",
+      "1045"
+    ],
+    "answerIndex": 0,
+    "explanation": "The measured 30 NM took 17 minutes, so the remaining 20 NM takes about 11 minutes and ETA is about 1038.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'In-flight Navigation Technique'"
+  },
+  {
+    "id": "NAV-017",
+    "subject": "Air Navigation",
+    "topic": "Lambert's Conformal Chart: Part 1",
+    "difficulty": "medium",
+    "question": "The principal navigation advantages sought in a Lambert conformal chart are",
+    "options": [
+      "straight rhumb lines and true area",
+      "constant scale at every point and straight meridians",
+      "a visible geographic pole and equal area",
+      "near constant scale and nearly straight great-circle routes"
+    ],
+    "answerIndex": 3,
+    "explanation": "Lambert was designed to give near constant scale and make a straight chart line a close approximation to a great circle.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Lambert's Conformal Chart: Part 1'"
+  },
+  {
+    "id": "NAV-018",
+    "subject": "Air Navigation",
+    "topic": "Lambert's Conformal Chart: Part 1",
+    "difficulty": "hard",
+    "question": "On a simple conic projection, scale is correct at",
+    "options": [
+      "the parallel of tangency",
+      "the equator only",
+      "every meridian",
+      "the pole of projection"
+    ],
+    "answerIndex": 0,
+    "explanation": "The simple cone touches the reduced Earth at its parallel of tangency, so scale is correct there.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Lambert's Conformal Chart: Part 1'"
+  },
+  {
+    "id": "NAV-019",
+    "subject": "Air Navigation",
+    "topic": "Lambert's Conformal Chart: Part 2",
+    "difficulty": "easy",
+    "question": "For practical aviation use, a chart may be treated as constant scale when its scale distortion does not exceed about",
+    "options": [
+      "4 percent",
+      "2 percent",
+      "1 percent",
+      "0.01 percent"
+    ],
+    "answerIndex": 2,
+    "explanation": "A Lambert sheet is treated as practically constant scale when its distortion remains within about 1 percent.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Lambert's Conformal Chart: Part 2'"
+  },
+  {
+    "id": "NAV-020",
+    "subject": "Air Navigation",
+    "topic": "Lambert's Conformal Chart: Part 2",
+    "difficulty": "medium",
+    "question": "A Lambert chart whose standard parallels are 16 degrees apart has an approximate maximum scale error of",
+    "options": [
+      "0.1 percent",
+      "1 percent",
+      "2 percent",
+      "4 percent"
+    ],
+    "answerIndex": 1,
+    "explanation": "Oxford's guide gives about 1 percent maximum scale error for 16 degrees of standard-parallel separation.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Lambert's Conformal Chart: Part 2'"
+  },
+  {
+    "id": "NAV-021",
+    "subject": "Air Navigation",
+    "topic": "Mercator Charts: Properties",
+    "difficulty": "hard",
+    "question": "A normal Mercator chart is correctly described as",
+    "options": [
+      "a perspective conical equal-area projection",
+      "a non-perspective conformal cylindrical projection",
+      "a perspective polar projection",
+      "a non-conformal plane projection"
+    ],
+    "answerIndex": 1,
+    "explanation": "The normal Mercator is cylindrical, mathematically modified and conformal, so it is non-perspective.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Mercator Charts: Properties'"
+  },
+  {
+    "id": "NAV-022",
+    "subject": "Air Navigation",
+    "topic": "Mercator Charts: Properties",
+    "difficulty": "easy",
+    "question": "The graticule of a direct Mercator chart is",
+    "options": [
+      "circular",
+      "convergent",
+      "radial",
+      "rectangular"
+    ],
+    "answerIndex": 3,
+    "explanation": "Parallel straight meridians and parallel straight latitudes form a rectangular Mercator graticule.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Mercator Charts: Properties'"
+  },
+  {
+    "id": "NAV-023",
+    "subject": "Air Navigation",
+    "topic": "Mercator Charts: Scale",
+    "difficulty": "medium",
+    "question": "The scale at latitude L on a normal Mercator is",
+    "options": [
+      "equatorial scale multiplied by sec L",
+      "equatorial scale multiplied by cos L",
+      "equatorial scale divided by tan L",
+      "constant at every latitude"
+    ],
+    "answerIndex": 0,
+    "explanation": "Mercator scale at latitude L is the equatorial scale multiplied by secant L.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Mercator Charts: Scale'"
+  },
+  {
+    "id": "NAV-024",
+    "subject": "Air Navigation",
+    "topic": "Mercator Charts: Scale",
+    "difficulty": "hard",
+    "question": "A Mercator has scale 1:1,000,000 at the equator. Its scale at 60 degrees north is",
+    "options": [
+      "1:2,000,000",
+      "1:1,000,000",
+      "1:500,000",
+      "1:250,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Secant 60 degrees is 2, so the scale doubles and the RF becomes 1:500,000.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Mercator Charts: Scale'"
+  },
+  {
+    "id": "NAV-025",
+    "subject": "Air Navigation",
+    "topic": "Navigation Problems: Relative Velocity, PNR and CP",
+    "difficulty": "easy",
+    "question": "Two aircraft 460 NM apart fly directly towards each other at groundspeeds of 250 kt and 210 kt. Their closing speed is",
+    "options": [
+      "40 kt",
+      "250 kt",
+      "460 kt",
+      "210 kt"
+    ],
+    "answerIndex": 2,
+    "explanation": "For head-on motion the groundspeeds add, giving a closing speed of 460 kt.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Navigation Problems: Relative Velocity, PNR and CP'"
+  },
+  {
+    "id": "NAV-026",
+    "subject": "Air Navigation",
+    "topic": "Navigation Problems: Relative Velocity, PNR and CP",
+    "difficulty": "medium",
+    "question": "An aircraft at 220 kt is 80 NM behind traffic at 180 kt on the same track. Time to overtake is",
+    "options": [
+      "2 hours",
+      "1 hour",
+      "3 hours",
+      "4 hours"
+    ],
+    "answerIndex": 0,
+    "explanation": "Relative closing speed is 40 kt, so 80 NM divided by 40 kt gives 2 hours.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Navigation Problems: Relative Velocity, PNR and CP'"
+  },
+  {
+    "id": "NAV-027",
+    "subject": "Air Navigation",
+    "topic": "Navigation Using the 1 in 60 Rule",
+    "difficulty": "hard",
+    "question": "An aircraft is 4 NM left of track after 30 NM. Its approximate track error is",
+    "options": [
+      "8 degrees left",
+      "4 degrees left",
+      "8 degrees right",
+      "13 degrees left"
+    ],
+    "answerIndex": 0,
+    "explanation": "Track error is 60 multiplied by 4 divided by 30, which gives 8 degrees left.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Navigation Using the 1 in 60 Rule'"
+  },
+  {
+    "id": "NAV-028",
+    "subject": "Air Navigation",
+    "topic": "Navigation Using the 1 in 60 Rule",
+    "difficulty": "easy",
+    "question": "A 78 NM leg has 30 NM gone and a fix 4 NM left of track. What is the closing angle to destination'",
+    "options": [
+      "8 degrees",
+      "13 degrees",
+      "5 degrees",
+      "3 degrees"
+    ],
+    "answerIndex": 2,
+    "explanation": "Distance to go is 48 NM, so closing angle is 60 multiplied by 4 divided by 48, or 5 degrees.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Navigation Using the 1 in 60 Rule'"
+  },
+  {
+    "id": "NAV-029",
+    "subject": "Air Navigation",
+    "topic": "Other Applications of the 1 in 60 Rule",
+    "difficulty": "medium",
+    "question": "At 2 NM on a 3.5 degree glidepath, the approximate height above the touchdown reference is",
+    "options": [
+      "350 ft",
+      "600 ft",
+      "700 ft",
+      "1050 ft"
+    ],
+    "answerIndex": 2,
+    "explanation": "Height is 100 multiplied by 3.5 multiplied by 2, which gives 700 ft.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Other Applications of the 1 in 60 Rule'"
+  },
+  {
+    "id": "NAV-030",
+    "subject": "Air Navigation",
+    "topic": "Other Applications of the 1 in 60 Rule",
+    "difficulty": "hard",
+    "question": "At 4 NM on a 2.6 degree glidepath, the approximate height is",
+    "options": [
+      "1040 ft",
+      "780 ft",
+      "1200 ft",
+      "650 ft"
+    ],
+    "answerIndex": 0,
+    "explanation": "Height is 100 multiplied by 2.6 multiplied by 4, which gives 1040 ft.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Other Applications of the 1 in 60 Rule'"
+  },
+  {
+    "id": "NAV-031",
+    "subject": "Air Navigation",
+    "topic": "Plotting",
+    "difficulty": "easy",
+    "question": "A position line is best described as",
+    "options": [
+      "a line of constant heading",
+      "a line somewhere along which the aircraft is known to be at a stated time",
+      "the line joining two planned waypoints",
+      "a line of constant groundspeed"
+    ],
+    "answerIndex": 1,
+    "explanation": "A position line is a line somewhere along which the aircraft is known to be at the observation time.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Plotting'"
+  },
+  {
+    "id": "NAV-032",
+    "subject": "Air Navigation",
+    "topic": "Plotting",
+    "difficulty": "medium",
+    "question": "Fixes at 1700 and 1730 are 100 NM apart. The measured groundspeed is",
+    "options": [
+      "150 kt",
+      "180 kt",
+      "240 kt",
+      "200 kt"
+    ],
+    "answerIndex": 3,
+    "explanation": "One hundred nautical miles in 30 minutes is 200 kt.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Plotting'"
+  },
+  {
+    "id": "NAV-033",
+    "subject": "Air Navigation",
+    "topic": "Polar Stereographic and Grid Navigation",
+    "difficulty": "hard",
+    "question": "For a North Polar stereographic chart, the plane touches the North Pole and the projection point is at",
+    "options": [
+      "the Earth's centre",
+      "the equator",
+      "the North Pole",
+      "the South Pole"
+    ],
+    "answerIndex": 3,
+    "explanation": "A North Polar stereographic is projected from the diametrically opposite South Pole onto a plane tangent at the North Pole.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Polar Stereographic and Grid Navigation'"
+  },
+  {
+    "id": "NAV-034",
+    "subject": "Air Navigation",
+    "topic": "Polar Stereographic and Grid Navigation",
+    "difficulty": "easy",
+    "question": "The co-latitude of 70 degrees north is",
+    "options": [
+      "70 degrees",
+      "10 degrees",
+      "20 degrees",
+      "160 degrees"
+    ],
+    "answerIndex": 2,
+    "explanation": "Co-latitude equals 90 minus latitude, so 90 minus 70 gives 20 degrees.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Polar Stereographic and Grid Navigation'"
+  },
+  {
+    "id": "NAV-035",
+    "subject": "Air Navigation",
+    "topic": "Scale",
+    "difficulty": "medium",
+    "question": "Chart scale is the relationship between",
+    "options": [
+      "longitude and departure",
+      "chart area and Earth area",
+      "latitude spacing and longitude spacing",
+      "a chart length and the corresponding Earth distance"
+    ],
+    "answerIndex": 3,
+    "explanation": "Scale relates a measured chart length to the corresponding distance between the same positions on Earth.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Scale'"
+  },
+  {
+    "id": "NAV-036",
+    "subject": "Air Navigation",
+    "topic": "Scale",
+    "difficulty": "hard",
+    "question": "Which set gives the three common methods of expressing scale'",
+    "options": [
+      "Statement in words, graduated scale line, representative fraction",
+      "Latitude, longitude, departure",
+      "Large, medium, small",
+      "Metric, imperial, angular"
+    ],
+    "answerIndex": 0,
+    "explanation": "Scale is commonly expressed by a word statement, a graduated scale line or a representative fraction.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Scale'"
+  },
+  {
+    "id": "NAV-037",
+    "subject": "Air Navigation",
+    "topic": "TAS, Mach Number and Density Altitude",
+    "difficulty": "easy",
+    "question": "Pressure altitude is the altitude indicated when the altimeter subscale is set to",
+    "options": [
+      "local QFE",
+      "regional QNH",
+      "standard temperature",
+      "1013.25 hPa"
+    ],
+    "answerIndex": 3,
+    "explanation": "Pressure altitude is read with the standard pressure setting of 1013.25 hPa on the subscale.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'TAS, Mach Number and Density Altitude'"
+  },
+  {
+    "id": "NAV-038",
+    "subject": "Air Navigation",
+    "topic": "TAS, Mach Number and Density Altitude",
+    "difficulty": "medium",
+    "question": "Calibrated airspeed is obtained by correcting IAS for",
+    "options": [
+      "density error only",
+      "position or pressure error",
+      "compressibility only",
+      "temperature error only"
+    ],
+    "answerIndex": 1,
+    "explanation": "CAS is IAS corrected for position or pressure error; the aircraft card may combine this with instrument correction.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'TAS, Mach Number and Density Altitude'"
+  },
+  {
+    "id": "NAV-039",
+    "subject": "Air Navigation",
+    "topic": "The 1 in 60 Rule",
+    "difficulty": "hard",
+    "question": "After 60 NM an aircraft is 7 NM left of planned track. Its track error is approximately",
+    "options": [
+      "4 degrees left",
+      "7 degrees left",
+      "7 degrees right",
+      "12 degrees left"
+    ],
+    "answerIndex": 1,
+    "explanation": "At the 60 NM reference distance, 7 NM off represents approximately 7 degrees left.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The 1 in 60 Rule'"
+  },
+  {
+    "id": "NAV-040",
+    "subject": "Air Navigation",
+    "topic": "The 1 in 60 Rule",
+    "difficulty": "easy",
+    "question": "After travelling 120 NM from an on-track fix, an aircraft is 8 NM right of track. The track error is",
+    "options": [
+      "8 degrees right",
+      "2 degrees right",
+      "4 degrees left",
+      "4 degrees right"
+    ],
+    "answerIndex": 3,
+    "explanation": "Sixty multiplied by 8 divided by 120 gives a track error of 4 degrees right.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The 1 in 60 Rule'"
+  },
+  {
+    "id": "NAV-041",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "For navigation calculations, what is the Earth's approximate compression'",
+    "options": [
+      "3 per cent",
+      "0.03 per cent",
+      "0.3 per cent, about 1 in 300",
+      "1 in 3000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The working compression is about 0.3 per cent, which is approximately 1 in 300; Bali gives the more exact ratio near 1 in 297.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position'"
+  },
+  {
+    "id": "NAV-042",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "hard",
+    "question": "What does the term graticule describe'",
+    "options": [
+      "Every line printed on a chart",
+      "The network of meridians and parallels on a globe, map or chart",
+      "Only the small circles near a pole",
+      "A magnetic compass correction card"
+    ],
+    "answerIndex": 1,
+    "explanation": "The graticule is the network formed by meridians and parallels, including the prime meridian and equator as its reference lines.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position'"
+  },
+  {
+    "id": "NAV-043",
+    "subject": "Air Navigation",
+    "topic": "Time 1: The Solar System and Time",
+    "difficulty": "easy",
+    "question": "The measurement of a day is based primarily on Earth's",
+    "options": [
+      "distance from the Moon",
+      "magnetic field",
+      "rotation about its axis",
+      "diameter at the equator"
+    ],
+    "answerIndex": 2,
+    "explanation": "A day is defined from Earth's rotation measured against the Sun or a distant star.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Time 1: The Solar System and Time'"
+  },
+  {
+    "id": "NAV-044",
+    "subject": "Air Navigation",
+    "topic": "Time 1: The Solar System and Time",
+    "difficulty": "medium",
+    "question": "Perihelion normally occurs in",
+    "options": [
+      "early January",
+      "late March",
+      "early July",
+      "late September"
+    ],
+    "answerIndex": 0,
+    "explanation": "Earth is nearest the Sun at perihelion in early January.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Time 1: The Solar System and Time'"
+  },
+  {
+    "id": "NAV-045",
+    "subject": "Air Navigation",
+    "topic": "Time 2: UTC, Zone Time and the Date Line",
+    "difficulty": "hard",
+    "question": "An arc of 153 degrees 30 minutes is equivalent to approximately",
+    "options": [
+      "10 hours 24 minutes",
+      "10 hours 22 minutes",
+      "10 hours 08 minutes",
+      "10 hours 14 minutes"
+    ],
+    "answerIndex": 3,
+    "explanation": "At 15 degrees per hour, 153 degrees 30 minutes converts to 10 hours 14 minutes.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Time 2: UTC, Zone Time and the Date Line'"
+  },
+  {
+    "id": "NAV-046",
+    "subject": "Air Navigation",
+    "topic": "Time 2: UTC, Zone Time and the Date Line",
+    "difficulty": "easy",
+    "question": "To find LMT from UTC at an easterly longitude, the longitude expressed as time is",
+    "options": [
+      "subtracted twice",
+      "added",
+      "ignored",
+      "always rounded to a whole hour"
+    ],
+    "answerIndex": 1,
+    "explanation": "East longitude is ahead of UTC, so its arc time is added to UTC to obtain LMT.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Time 2: UTC, Zone Time and the Date Line'"
+  },
+  {
+    "id": "NAV-047",
+    "subject": "Air Navigation",
+    "topic": "Time 3: Sunrise, Sunset and Twilight",
+    "difficulty": "medium",
+    "question": "On 21 June, the lowest listed northerly latitude at which the Sun remains above the horizon all day is",
+    "options": [
+      "64 degrees north",
+      "66 degrees north",
+      "68 degrees north",
+      "70 degrees north"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Air Almanac question gives 66 degrees north as the lowest listed latitude with continuous daylight on 21 June.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Time 3: Sunrise, Sunset and Twilight'"
+  },
+  {
+    "id": "NAV-048",
+    "subject": "Air Navigation",
+    "topic": "Time 3: Sunrise, Sunset and Twilight",
+    "difficulty": "hard",
+    "question": "On 21 December, the lowest listed northerly latitude at which the Sun does not rise is",
+    "options": [
+      "64 degrees north",
+      "66 degrees north",
+      "68 degrees north",
+      "70 degrees north"
+    ],
+    "answerIndex": 2,
+    "explanation": "The Air Almanac question gives 68 degrees north as the lowest listed latitude at which the Sun does not rise on 21 December.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Time 3: Sunrise, Sunset and Twilight'"
+  },
+  {
+    "id": "NAV-049",
+    "subject": "Air Navigation",
+    "topic": "Topographical Maps and Map Reading",
+    "difficulty": "easy",
+    "question": "Which of these chart scales normally gives the greater ground detail'",
+    "options": [
+      "1:2,000,000",
+      "1:500,000",
+      "1:1,000,000",
+      "1:5,000,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The 1:500,000 chart is the larger scale among these choices and normally shows more ground detail.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Topographical Maps and Map Reading'"
+  },
+  {
+    "id": "NAV-050",
+    "subject": "Air Navigation",
+    "topic": "Topographical Maps and Map Reading",
+    "difficulty": "medium",
+    "question": "On a contour chart, very closely spaced contours indicate",
+    "options": [
+      "a steep slope",
+      "a gentle slope",
+      "flat ground at sea level",
+      "an unknown contour interval"
+    ],
+    "answerIndex": 0,
+    "explanation": "A steep slope produces a large elevation change over a short horizontal distance, so its contours lie close together.",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Topographical Maps and Map Reading'"
+  },
+  {
+    "id": "REG-001",
+    "subject": "Air Regulations",
+    "topic": "ATS Surveillance",
+    "difficulty": "easy",
+    "question": "Which surveillance system can detect a reflecting aircraft without an airborne transponder'",
+    "options": [
+      "ADS-B",
+      "SSR",
+      "PSR",
+      "MLAT"
+    ],
+    "answerIndex": 2,
+    "explanation": "PSR detects reflected radio energy and therefore does not require an airborne transponder.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'ATS Surveillance'"
+  },
+  {
+    "id": "REG-002",
+    "subject": "Air Regulations",
+    "topic": "ATS Surveillance",
+    "difficulty": "medium",
+    "question": "What determines when ADS-C sends a normal surveillance report'",
+    "options": [
+      "The terms and triggers in the ground-held contract",
+      "A broadcast request from every nearby aircraft",
+      "Only the pilot pressing IDENT",
+      "The rotation rate of a radar antenna"
+    ],
+    "answerIndex": 0,
+    "explanation": "ADS-C reports according to the periodic, event or demand conditions defined in its ground-held contract.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'ATS Surveillance'"
+  },
+  {
+    "id": "REG-003",
+    "subject": "Air Regulations",
+    "topic": "Accident Investigation",
+    "difficulty": "hard",
+    "question": "What is the sole objective of an Annex 13 safety investigation'",
+    "options": [
+      "To decide compensation",
+      "To apportion commercial liability",
+      "To prosecute the flight crew",
+      "To prevent future accidents and incidents"
+    ],
+    "answerIndex": 3,
+    "explanation": "The sole objective is prevention of future accidents and incidents, not apportionment of blame or liability.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Accident Investigation'"
+  },
+  {
+    "id": "REG-004",
+    "subject": "Air Regulations",
+    "topic": "Accident Investigation",
+    "difficulty": "easy",
+    "question": "When does an injury count as fatal under Bali's national accident definition'",
+    "options": [
+      "Only when death is immediate",
+      "When it causes death within 30 days of the accident",
+      "Within one year",
+      "Within seven days"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bali treats an accident injury as fatal when death occurs within 30 days of the accident date.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Accident Investigation'"
+  },
+  {
+    "id": "REG-005",
+    "subject": "Air Regulations",
+    "topic": "Aerodrome Control",
+    "difficulty": "medium",
+    "question": "Which working position normally controls traffic on the manoeuvring area except runways'",
+    "options": [
+      "Clearance delivery",
+      "Ground controller",
+      "Approach control",
+      "Aerodrome controller"
+    ],
+    "answerIndex": 1,
+    "explanation": "The ground controller normally controls manoeuvring-area traffic except the runways.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aerodrome Control'"
+  },
+  {
+    "id": "REG-006",
+    "subject": "Air Regulations",
+    "topic": "Aerodrome Control",
+    "difficulty": "hard",
+    "question": "During low-visibility procedures, how should vehicle and person movements on the manoeuvring area be managed'",
+    "options": [
+      "They may move without clearance",
+      "Only aircraft movements are restricted",
+      "Everyone must leave the aerodrome",
+      "They are restricted to the essential minimum and ILS sensitive areas are protected"
+    ],
+    "answerIndex": 3,
+    "explanation": "Low-visibility procedures restrict persons and vehicles to the essential minimum and protect ILS critical and sensitive areas.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aerodrome Control'"
+  },
+  {
+    "id": "REG-007",
+    "subject": "Air Regulations",
+    "topic": "Aerodromes: Lighting and Services",
+    "difficulty": "easy",
+    "question": "What display identifies a land-aerodrome identification beacon'",
+    "options": [
+      "Green Morse-code characters",
+      "Flashing red hazard lights",
+      "Steady blue light",
+      "Alternating red and yellow"
+    ],
+    "answerIndex": 0,
+    "explanation": "A land-aerodrome identification beacon flashes green characters in International Morse Code.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aerodromes: Lighting and Services'"
+  },
+  {
+    "id": "REG-008",
+    "subject": "Air Regulations",
+    "topic": "Aerodromes: Lighting and Services",
+    "difficulty": "medium",
+    "question": "What distinguishes the inner 300 m of a precision category II or III approach-light system'",
+    "options": [
+      "Blue edge lights only",
+      "One green crossbar",
+      "No centre-line lights",
+      "White centre-line barrettes with red side-row barrettes"
+    ],
+    "answerIndex": 3,
+    "explanation": "The inner 300 m is strengthened by white centre-line barrettes and red side-row barrettes.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aerodromes: Lighting and Services'"
+  },
+  {
+    "id": "REG-009",
+    "subject": "Air Regulations",
+    "topic": "Aerodromes: Markings",
+    "difficulty": "hard",
+    "question": "Which area includes the manoeuvring area and aprons'",
+    "options": [
+      "Movement area",
+      "Runway strip",
+      "RESA",
+      "Clearway"
+    ],
+    "answerIndex": 0,
+    "explanation": "The movement area includes the manoeuvring area, aprons and relevant aircraft-maintenance movement areas.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aerodromes: Markings'"
+  },
+  {
+    "id": "REG-010",
+    "subject": "Air Regulations",
+    "topic": "Aerodromes: Markings",
+    "difficulty": "easy",
+    "question": "What determines aerodrome reference-code element 2'",
+    "options": [
+      "Reference field length only",
+      "Runway slope and elevation",
+      "Wingspan and outer main gear wheel span",
+      "Pavement strength"
+    ],
+    "answerIndex": 2,
+    "explanation": "Element 2 is the letter determined from wingspan and outer main gear wheel span.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aerodromes: Markings'"
+  },
+  {
+    "id": "REG-011",
+    "subject": "Air Regulations",
+    "topic": "Aeronautical Information",
+    "difficulty": "medium",
+    "question": "Which ICAO Annex contains the Standards and Recommended Practices for aeronautical information services'",
+    "options": [
+      "Annex 11",
+      "Annex 14",
+      "Annex 15",
+      "Annex 17"
+    ],
+    "answerIndex": 2,
+    "explanation": "Annex 15 contains the Standards and Recommended Practices for aeronautical information services.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aeronautical Information'"
+  },
+  {
+    "id": "REG-012",
+    "subject": "Air Regulations",
+    "topic": "Aeronautical Information",
+    "difficulty": "hard",
+    "question": "Which product is primarily used for a permanent change to AIP content'",
+    "options": [
+      "AIC",
+      "PIB",
+      "SNOWTAM",
+      "AIP amendment"
+    ],
+    "answerIndex": 3,
+    "explanation": "An AIP amendment is the controlled product for a permanent change to AIP content.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Aeronautical Information'"
+  },
+  {
+    "id": "REG-013",
+    "subject": "Air Regulations",
+    "topic": "Airspace and ATS",
+    "difficulty": "easy",
+    "question": "Which ATS objective is served by notifying rescue organisations about an aircraft needing aid'",
+    "options": [
+      "The speed-control objective",
+      "The aerodrome-lighting objective",
+      "The registration objective",
+      "The search and rescue support objective"
+    ],
+    "answerIndex": 3,
+    "explanation": "Notifying and assisting the organisations responsible for search and rescue is one of the five ATS objectives.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Airspace and ATS'"
+  },
+  {
+    "id": "REG-014",
+    "subject": "Air Regulations",
+    "topic": "Airspace and ATS",
+    "difficulty": "medium",
+    "question": "Which airspace structure begins at the surface and protects arriving and departing controlled flights'",
+    "options": [
+      "An airway",
+      "A UIR",
+      "A control zone",
+      "A control area"
+    ],
+    "answerIndex": 2,
+    "explanation": "A control zone begins at the surface and contains the relevant arriving and departing flight paths.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Airspace and ATS'"
+  },
+  {
+    "id": "REG-015",
+    "subject": "Air Regulations",
+    "topic": "Airworthiness",
+    "difficulty": "hard",
+    "question": "Which ICAO Annex contains the international airworthiness Standards'",
+    "options": [
+      "Annex 8",
+      "Annex 6",
+      "Annex 7",
+      "Annex 16"
+    ],
+    "answerIndex": 0,
+    "explanation": "Annex 8 contains the international Standards for the airworthiness of aircraft.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Airworthiness'"
+  },
+  {
+    "id": "REG-016",
+    "subject": "Air Regulations",
+    "topic": "Airworthiness",
+    "difficulty": "easy",
+    "question": "Which State determines whether an aircraft on its register continues to be airworthy'",
+    "options": [
+      "State of Manufacture",
+      "State of Registry",
+      "State of the next landing",
+      "State of the operator's insurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "The State of Registry determines whether an aircraft on its register continues to be airworthy.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Airworthiness'"
+  },
+  {
+    "id": "REG-017",
+    "subject": "Air Regulations",
+    "topic": "Altimeter Setting",
+    "difficulty": "medium",
+    "question": "Which setting makes an altimeter indicate altitude above mean sea level'",
+    "options": [
+      "QFE",
+      "QNE",
+      "QNH",
+      "Standard pressure only"
+    ],
+    "answerIndex": 2,
+    "explanation": "QNH makes the altimeter indicate altitude referenced to mean sea level.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Altimeter Setting'"
+  },
+  {
+    "id": "REG-018",
+    "subject": "Air Regulations",
+    "topic": "Altimeter Setting",
+    "difficulty": "hard",
+    "question": "What should a correctly set QFE altimeter indicate at its reference datum'",
+    "options": [
+      "Zero",
+      "Aerodrome elevation",
+      "Flight level zero",
+      "The transition altitude"
+    ],
+    "answerIndex": 0,
+    "explanation": "QFE is the pressure at the stated datum, so the altimeter indicates zero there.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Altimeter Setting'"
+  },
+  {
+    "id": "REG-019",
+    "subject": "Air Regulations",
+    "topic": "Definitions and Framework",
+    "difficulty": "easy",
+    "question": "Which instrument is the principal current Indian statute in the hierarchy described in this chapter'",
+    "options": [
+      "Aircraft Rules 1937",
+      "Chicago Convention",
+      "Bharatiya Vayuyan Adhiniyam 2024",
+      "Civil Aviation Requirements"
+    ],
+    "answerIndex": 2,
+    "explanation": "Bharatiya Vayuyan Adhiniyam 2024 is the principal current Indian statute, while the Rules and Civil Aviation Requirements provide more detailed requirements.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Definitions and Framework'"
+  },
+  {
+    "id": "REG-020",
+    "subject": "Air Regulations",
+    "topic": "Definitions and Framework",
+    "difficulty": "medium",
+    "question": "Which Indian authority has the core civil aviation security oversight role'",
+    "options": [
+      "BCAS",
+      "AAIB",
+      "AAI",
+      "WPC Wing"
+    ],
+    "answerIndex": 0,
+    "explanation": "BCAS is the authority responsible for civil aviation security policy, standards and oversight.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Definitions and Framework'"
+  },
+  {
+    "id": "REG-021",
+    "subject": "Air Regulations",
+    "topic": "Facilitation",
+    "difficulty": "hard",
+    "question": "What is the main purpose of Annex 9 facilitation'",
+    "options": [
+      "To remove all border controls",
+      "To expedite international air transport while maintaining necessary controls",
+      "To replace customs with airline staff",
+      "To govern aircraft design"
+    ],
+    "answerIndex": 1,
+    "explanation": "Annex 9 expedites aircraft, people and goods while preserving necessary customs, immigration, health, security and law-enforcement controls.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Facilitation'"
+  },
+  {
+    "id": "REG-022",
+    "subject": "Air Regulations",
+    "topic": "Facilitation",
+    "difficulty": "easy",
+    "question": "What happens when an aircraft-clearance document has been accepted electronically'",
+    "options": [
+      "The same document should not also be demanded on paper",
+      "It becomes a crew licence",
+      "It may be ignored by authorities",
+      "It must always be sent twice"
+    ],
+    "answerIndex": 0,
+    "explanation": "Once authorities accept the required electronic document, they should not demand the identical document again on paper.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Facilitation'"
+  },
+  {
+    "id": "REG-023",
+    "subject": "Air Regulations",
+    "topic": "ICAO and Conventions",
+    "difficulty": "medium",
+    "question": "Which Chicago Convention Article establishes complete and exclusive State sovereignty over the airspace above its territory'",
+    "options": [
+      "Article 5",
+      "Article 1",
+      "Article 12",
+      "Article 38"
+    ],
+    "answerIndex": 1,
+    "explanation": "Article 1 establishes complete and exclusive sovereignty over the airspace above a State's territory.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'ICAO and Conventions'"
+  },
+  {
+    "id": "REG-024",
+    "subject": "Air Regulations",
+    "topic": "ICAO and Conventions",
+    "difficulty": "hard",
+    "question": "What does Article 6 require before a scheduled international air service operates over or into another State'",
+    "options": [
+      "Only a filed flight plan",
+      "A technical stop",
+      "Cabotage approval",
+      "Special permission or authorisation from that State"
+    ],
+    "answerIndex": 3,
+    "explanation": "Special permission or authorisation from that State is required for a scheduled international air service under Article 6.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'ICAO and Conventions'"
+  },
+  {
+    "id": "REG-025",
+    "subject": "Air Regulations",
+    "topic": "Indian Regulatory System",
+    "difficulty": "easy",
+    "question": "Which law replaced the Aircraft Act, 1934 as India's principal civil aviation enabling statute'",
+    "options": [
+      "The Bharatiya Vayuyan Adhiniyam, 2024",
+      "The Indian Aircraft Rules, 1920",
+      "The Drone Rules, 2021",
+      "The Aircraft Security Rules, 2011"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Bharatiya Vayuyan Adhiniyam, 2024 replaced the Aircraft Act, 1934 as the principal enabling statute.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Indian Regulatory System'"
+  },
+  {
+    "id": "REG-026",
+    "subject": "Air Regulations",
+    "topic": "Indian Regulatory System",
+    "difficulty": "medium",
+    "question": "Which body has the central role of investigating aircraft accidents and incidents in India'",
+    "options": [
+      "Airports Authority of India",
+      "Bureau of Civil Aviation Security",
+      "Aircraft Accident Investigation Bureau",
+      "Directorate General of Health Services"
+    ],
+    "answerIndex": 2,
+    "explanation": "The Aircraft Accident Investigation Bureau is the body responsible for investigating aircraft accidents and incidents.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Indian Regulatory System'"
+  },
+  {
+    "id": "REG-027",
+    "subject": "Air Regulations",
+    "topic": "Instrument Approaches and Holding",
+    "difficulty": "hard",
+    "question": "Which threshold IAS places an aeroplane in Category C'",
+    "options": [
+      "121 to 140 kt",
+      "91 to 120 kt",
+      "141 to 165 kt",
+      "166 to 210 kt"
+    ],
+    "answerIndex": 0,
+    "explanation": "Category C covers a threshold IAS from 121 to 140 kt.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Instrument Approaches and Holding'"
+  },
+  {
+    "id": "REG-028",
+    "subject": "Air Regulations",
+    "topic": "Instrument Approaches and Holding",
+    "difficulty": "easy",
+    "question": "Which segment normally connects the en-route phase to the IAF'",
+    "options": [
+      "Final",
+      "Initial",
+      "Arrival",
+      "Intermediate"
+    ],
+    "answerIndex": 2,
+    "explanation": "The arrival segment connects the en-route structure or STAR to the IAF.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Instrument Approaches and Holding'"
+  },
+  {
+    "id": "REG-029",
+    "subject": "Air Regulations",
+    "topic": "Instrument Departures",
+    "difficulty": "medium",
+    "question": "Where is full MOC provided in a track-guided protected area'",
+    "options": [
+      "Only at the outer edge",
+      "Only over the controlling obstacle",
+      "Across the primary area",
+      "Across each secondary area"
+    ],
+    "answerIndex": 2,
+    "explanation": "Full MOC applies across the primary area; in each secondary area it tapers to zero at the outer edge.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Instrument Departures'"
+  },
+  {
+    "id": "REG-030",
+    "subject": "Air Regulations",
+    "topic": "Instrument Departures",
+    "difficulty": "hard",
+    "question": "What engine condition is assumed in the design of a published instrument departure'",
+    "options": [
+      "One engine inoperative",
+      "Critical engine at idle",
+      "Any condition selected by ATC",
+      "All engines operating"
+    ],
+    "answerIndex": 3,
+    "explanation": "PANS-OPS departure procedures assume all engines are operating, so the operator develops the engine-out contingency.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Instrument Departures'"
+  },
+  {
+    "id": "REG-031",
+    "subject": "Air Regulations",
+    "topic": "Nationality and Registration",
+    "difficulty": "easy",
+    "question": "Which ICAO Annex contains the Standards for aircraft nationality and registration marks'",
+    "options": [
+      "Annex 7",
+      "Annex 1",
+      "Annex 8",
+      "Annex 9"
+    ],
+    "answerIndex": 0,
+    "explanation": "Annex 7 contains the international Standards for Aircraft Nationality and Registration Marks.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Nationality and Registration'"
+  },
+  {
+    "id": "REG-032",
+    "subject": "Air Regulations",
+    "topic": "Nationality and Registration",
+    "difficulty": "medium",
+    "question": "Who assigns the individual registration mark to an aircraft'",
+    "options": [
+      "The aircraft manufacturer",
+      "The International Telecommunication Union alone",
+      "The State of Registry or common mark registering authority",
+      "The aerodrome operator"
+    ],
+    "answerIndex": 2,
+    "explanation": "The State of Registry or common mark registering authority assigns the aircraft's registration mark.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Nationality and Registration'"
+  },
+  {
+    "id": "REG-033",
+    "subject": "Air Regulations",
+    "topic": "Operational Hazards",
+    "difficulty": "hard",
+    "question": "What is the relationship between an operator's MEL and the approved MMEL'",
+    "options": [
+      "The MEL replaces all Flight Manual limits",
+      "The MMEL applies only to one flight",
+      "The MEL cannot be less restrictive than the MMEL",
+      "Neither document needs approval"
+    ],
+    "answerIndex": 2,
+    "explanation": "The operator's approved MEL is tailored from, and cannot be less restrictive than, the approved MMEL.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Operational Hazards'"
+  },
+  {
+    "id": "REG-034",
+    "subject": "Air Regulations",
+    "topic": "Operational Hazards",
+    "difficulty": "easy",
+    "question": "When does holdover time begin'",
+    "options": [
+      "At engine start",
+      "At the start of the final de-icing or anti-icing application",
+      "At the end of the first inspection",
+      "When taxi begins"
+    ],
+    "answerIndex": 1,
+    "explanation": "Holdover time begins at the start of the final de-icing or anti-icing application.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Operational Hazards'"
+  },
+  {
+    "id": "REG-035",
+    "subject": "Air Regulations",
+    "topic": "Operational Procedures",
+    "difficulty": "medium",
+    "question": "What does an AOC or permit authorise'",
+    "options": [
+      "Only aerodrome construction",
+      "Any flight without operational limits",
+      "Only aircraft maintenance",
+      "Specified commercial air transport operations"
+    ],
+    "answerIndex": 3,
+    "explanation": "An AOC or permit authorises the operator to conduct specified commercial air transport operations.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Operational Procedures'"
+  },
+  {
+    "id": "REG-036",
+    "subject": "Air Regulations",
+    "topic": "Operational Procedures",
+    "difficulty": "hard",
+    "question": "Which item belongs in the operational-manual group carried on board'",
+    "options": [
+      "The Minimum Equipment List",
+      "A passenger's passport copy",
+      "A land-ownership deed",
+      "An aerodrome construction permit"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Minimum Equipment List is one of the operational documents carried for the flight.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Operational Procedures'"
+  },
+  {
+    "id": "REG-037",
+    "subject": "Air Regulations",
+    "topic": "Personnel Licensing",
+    "difficulty": "easy",
+    "question": "What is the minimum age stated by Bali for an aeroplane CPL'",
+    "options": [
+      "18 years",
+      "16 years",
+      "17 years",
+      "21 years"
+    ],
+    "answerIndex": 0,
+    "explanation": "The minimum age for an aeroplane Commercial Pilot's Licence is 18 years.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Personnel Licensing'"
+  },
+  {
+    "id": "REG-038",
+    "subject": "Air Regulations",
+    "topic": "Personnel Licensing",
+    "difficulty": "medium",
+    "question": "Which language level is Operational and must be re-evaluated every three years'",
+    "options": [
+      "Level 6",
+      "Level 3",
+      "Level 4",
+      "Level 5"
+    ],
+    "answerIndex": 2,
+    "explanation": "Level 4 is Operational, is accepted, and requires re-evaluation every three years.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Personnel Licensing'"
+  },
+  {
+    "id": "REG-039",
+    "subject": "Air Regulations",
+    "topic": "Rules of the Air: General",
+    "difficulty": "hard",
+    "question": "When may the pilot-in-command depart from a Rule of the Air'",
+    "options": [
+      "Only when absolutely necessary in the interests of safety",
+      "Whenever a passenger requests it",
+      "Whenever operating in visual conditions",
+      "Only after landing"
+    ],
+    "answerIndex": 0,
+    "explanation": "A pilot-in-command may depart from a Rule only when circumstances make it absolutely necessary in the interests of safety.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Rules of the Air: General'"
+  },
+  {
+    "id": "REG-040",
+    "subject": "Air Regulations",
+    "topic": "Rules of the Air: General",
+    "difficulty": "easy",
+    "question": "What must pre-flight action include for an IFR flight'",
+    "options": [
+      "Only the intended departure time",
+      "Only aircraft registration details",
+      "Current weather, fuel requirements and an alternative course of action",
+      "A passenger preference survey"
+    ],
+    "answerIndex": 2,
+    "explanation": "IFR pre-flight action includes current weather information, fuel requirements and an alternative course of action if the plan cannot be completed.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Rules of the Air: General'"
+  },
+  {
+    "id": "REG-041",
+    "subject": "Air Regulations",
+    "topic": "Rules of the Air: VFR, IFR and Signals",
+    "difficulty": "medium",
+    "question": "What flight visibility is required at or above 10,000 ft AMSL under the standard VMC table'",
+    "options": [
+      "5 km",
+      "3 km",
+      "1.5 km",
+      "8 km"
+    ],
+    "answerIndex": 3,
+    "explanation": "The standard VMC minimum at or above 10,000 ft AMSL is 8 km flight visibility.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Rules of the Air: VFR, IFR and Signals'"
+  },
+  {
+    "id": "REG-042",
+    "subject": "Air Regulations",
+    "topic": "Rules of the Air: VFR, IFR and Signals",
+    "difficulty": "hard",
+    "question": "Which statement describes a Special VFR flight'",
+    "options": [
+      "It may ignore ATC in a control zone",
+      "It is an IFR flight in visual conditions",
+      "It is individually cleared within a control zone and remains clear of cloud with the surface in sight",
+      "It is available above FL 150 without approval"
+    ],
+    "answerIndex": 2,
+    "explanation": "Special VFR is an individually cleared control-zone operation that remains clear of cloud and in sight of the surface.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Rules of the Air: VFR, IFR and Signals'"
+  },
+  {
+    "id": "REG-043",
+    "subject": "Air Regulations",
+    "topic": "Search and Rescue",
+    "difficulty": "easy",
+    "question": "Which unit coordinates search and rescue operations throughout one SAR region'",
+    "options": [
+      "The Rescue Coordination Centre",
+      "The operator's dispatch office",
+      "The aerodrome customs office",
+      "The aircraft manufacturer"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Rescue Coordination Centre organises SAR service and coordinates operations throughout its SAR region.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Search and Rescue'"
+  },
+  {
+    "id": "REG-044",
+    "subject": "Air Regulations",
+    "topic": "Search and Rescue",
+    "difficulty": "medium",
+    "question": "Which organisation coordinates maritime SAR policy in Bali's Indian framework'",
+    "options": [
+      "NASARCC",
+      "Airports Authority of India",
+      "The National Maritime Search and Rescue Board",
+      "The meteorological office"
+    ],
+    "answerIndex": 2,
+    "explanation": "The National Maritime Search and Rescue Board coordinates maritime SAR policy under the Indian Coast Guard leadership described by Bali.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Search and Rescue'"
+  },
+  {
+    "id": "REG-045",
+    "subject": "Air Regulations",
+    "topic": "Security",
+    "difficulty": "hard",
+    "question": "What is the primary objective of Annex 17 security measures'",
+    "options": [
+      "Fast passenger processing",
+      "Commercial protection alone",
+      "Safety of passengers, crew, ground personnel and the public",
+      "Uniform ticket prices"
+    ],
+    "answerIndex": 2,
+    "explanation": "The safety of passengers, crew, ground personnel and the public is the primary Annex 17 objective.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Security'"
+  },
+  {
+    "id": "REG-046",
+    "subject": "Air Regulations",
+    "topic": "Security",
+    "difficulty": "easy",
+    "question": "Which body is India's specialist civil aviation security regulator and oversight authority'",
+    "options": [
+      "AAIB",
+      "ICAO Council",
+      "Airports Authority only",
+      "Bureau of Civil Aviation Security"
+    ],
+    "answerIndex": 3,
+    "explanation": "The Bureau of Civil Aviation Security, BCAS, sets standards and oversees civil aviation security in India.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Security'"
+  },
+  {
+    "id": "REG-047",
+    "subject": "Air Regulations",
+    "topic": "Separation",
+    "difficulty": "medium",
+    "question": "What is the normal vertical separation minimum below FL 290'",
+    "options": [
+      "2,000 ft",
+      "1,000 ft",
+      "500 ft",
+      "4,000 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Below FL 290, the normal vertical separation minimum is 1,000 ft.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Separation'"
+  },
+  {
+    "id": "REG-048",
+    "subject": "Air Regulations",
+    "topic": "Separation",
+    "difficulty": "hard",
+    "question": "When does the Bali VOR divergence method establish lateral separation'",
+    "options": [
+      "At 5 degrees with both aircraft overhead",
+      "At 30 degrees with no distance condition",
+      "At 15 degrees with at least one aircraft 15 NM from the facility",
+      "At 90 degrees only"
+    ],
+    "answerIndex": 2,
+    "explanation": "The VOR method uses at least 15 degrees divergence with one aircraft at least 15 NM from the facility.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Separation'"
+  },
+  {
+    "id": "REG-049",
+    "subject": "Air Regulations",
+    "topic": "Separation Near Aerodromes",
+    "difficulty": "easy",
+    "question": "When may a one-minute interval be used between two departures under Bali's stated divergence case'",
+    "options": [
+      "Only when vertical separation already exists",
+      "Whenever the preceding aircraft is faster",
+      "When both aircraft fly the same SID",
+      "When their tracks diverge by at least 45 degrees immediately after take-off"
+    ],
+    "answerIndex": 3,
+    "explanation": "One minute applies when the departure tracks diverge by at least 45 degrees immediately after take-off.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Separation Near Aerodromes'"
+  },
+  {
+    "id": "REG-050",
+    "subject": "Air Regulations",
+    "topic": "Separation Near Aerodromes",
+    "difficulty": "medium",
+    "question": "What speed relationship supports Bali's two-minute same-track departure interval'",
+    "options": [
+      "The following aircraft is at least 20 kt faster",
+      "The preceding aircraft is at least 40 kt faster",
+      "Both aircraft have identical filed speeds",
+      "The preceding aircraft is at least 10 kt faster"
+    ],
+    "answerIndex": 1,
+    "explanation": "The two-minute same-track case requires the preceding aircraft to be 40 kt or more faster than the following aircraft.",
+    "source": "R.K. Bali Air Regulations / ICAO Annexes, Chapter 'Separation Near Aerodromes'"
+  },
+  {
+    "id": "MET-001",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "easy",
+    "question": "The lowest layer of the atmosphere, in which almost all weather phenomena occur, is called the:",
+    "options": [
+      "Stratosphere",
+      "Troposphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "answerIndex": 1,
+    "explanation": "The troposphere extends from the surface to about 16-18 km at the equator and 8-10 km at the poles. It contains about 75% of the atmospheric mass and virtually all weather phenomena.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', Page 5"
+  },
+  {
+    "id": "MET-002",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "medium",
+    "question": "In the International Standard Atmosphere (ISA), what is the standard temperature and pressure at mean sea level'",
+    "options": [
+      "15°C (288.15 K) and 1013.25 hPa",
+      "20°C and 1000 hPa",
+      "0°C and 1013.25 hPa",
+      "15°C and 1000 hPa"
+    ],
+    "answerIndex": 0,
+    "explanation": "ICAO ISA specifies sea level temperature as +15°C (288.15 K), pressure as 1013.25 hPa (29.92 inHg), and density as 1225 g/m³ with a lapse rate of 6.5°C/km (approx 1.98°C/1000 ft) up to 11 km.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', Page 7"
+  },
+  {
+    "id": "MET-003",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "medium",
+    "question": "The height of the tropopause is:",
+    "options": [
+      "Constant over all latitudes at 11 km",
+      "Highest at the equator (16-18 km) and lowest at the poles (8-10 km)",
+      "Highest at the poles and lowest at the equator",
+      "Dependent only on the time of day"
+    ],
+    "answerIndex": 1,
+    "explanation": "Due to intense solar heating and strong vertical convective currents in the tropics, the tropopause reaches 16-18 km at the equator, while over the cold poles it lies between 8-10 km.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', Page 5"
+  },
+  {
+    "id": "MET-004",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "hard",
+    "question": "In ISA, from 11 km to 20 km altitude, the temperature is assumed to:",
+    "options": [
+      "Decrease at 2°C/1000 ft",
+      "Increase at 1°C/km",
+      "Remain constant at -56.5°C (isothermal)",
+      "Decrease to -90°C"
+    ],
+    "answerIndex": 2,
+    "explanation": "In the ICAO Standard Atmosphere, temperature decreases at 6.5°C/km from sea level to 11 km (-56.5°C), and then remains isothermal at -56.5°C from 11 km up to 20 km.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', Page 7"
+  },
+  {
+    "id": "MET-005",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "easy",
+    "question": "Roughly, a 1 hPa decrease in atmospheric pressure near mean sea level corresponds to an increase in height of approximately:",
+    "options": [
+      "10 ft",
+      "27 to 30 ft",
+      "60 ft",
+      "100 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Near mean sea level, 1 hPa change in pressure corresponds to approximately 27 to 30 ft (96 * T/P ft). At 20,000 ft it is about 50 ft/hPa, and at 40,000 ft about 100 ft/hPa.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', Page 12"
+  },
+  {
+    "id": "MET-006",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "medium",
+    "question": "When flying from an area of high pressure into an area of low pressure without resetting the altimeter subscale, the altimeter will:",
+    "options": [
+      "Under-read (aircraft is higher than indicated)",
+      "Over-read (aircraft is lower than indicated)",
+      "Read correctly because pitot-static tube compensates",
+      "Fluctuate rapidly between high and low readings"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rule: 'High to Low, Look Out Below'. When flying from high to low pressure, the altimeter senses lower pressure and interprets it as higher altitude, thus over-reading. The true altitude is lower than indicated.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', Page 19"
+  },
+  {
+    "id": "MET-007",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "medium",
+    "question": "Which pressure setting is defined as the aerodrome station level pressure reduced to mean sea level assuming ISA conditions'",
+    "options": [
+      "QFE",
+      "QFF",
+      "QNH",
+      "QNE"
+    ],
+    "answerIndex": 2,
+    "explanation": "QNH is station pressure reduced to MSL using ISA temperature lapse rate. When set on the altimeter subscale on the ground, the altimeter reads aerodrome elevation above MSL.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', Page 18"
+  },
+  {
+    "id": "MET-008",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "hard",
+    "question": "In the standard atmosphere, the 500 hPa and 300 hPa pressure levels correspond approximately to which altitudes'",
+    "options": [
+      "10,000 ft and 20,000 ft",
+      "18,000 ft (FL180) and 30,000 ft (FL300)",
+      "24,000 ft and 40,000 ft",
+      "14,000 ft and 25,000 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Standard isobaric levels in ISA: 850 hPa = 5,000 ft (FL50); 700 hPa = 10,000 ft (FL100); 500 hPa = 18,000 ft (FL180); 300 hPa = 30,000 ft (FL300); 200 hPa = 38,000 ft (FL380).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', Page 19 Table 2.1"
+  },
+  {
+    "id": "MET-009",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "easy",
+    "question": "On a clear day with calm winds, the minimum surface air temperature normally occurs:",
+    "options": [
+      "At midnight",
+      "At 03:00 local time",
+      "Half an hour to one hour after sunrise",
+      "Exactly at the moment of sunrise"
+    ],
+    "answerIndex": 2,
+    "explanation": "Due to nocturnal radiational cooling, ground temperatures continue falling after sunrise until incoming solar radiation balances outgoing terrestrial radiation, typically 30 to 60 minutes after dawn.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', Page 32"
+  },
+  {
+    "id": "MET-010",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "medium",
+    "question": "The fraction of incoming solar radiation reflected back into space by clouds, aerosols, and the Earth surface is termed:",
+    "options": [
+      "Insolation",
+      "Albedo",
+      "Advection",
+      "Thermal radiation"
+    ],
+    "answerIndex": 1,
+    "explanation": "Albedo is the ratio of reflected solar radiation to total incident solar radiation. Earth's average albedo is about 30%, whereas fresh snow reflects about 80%.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', Page 31"
+  },
+  {
+    "id": "MET-011",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density",
+    "difficulty": "easy",
+    "question": "Density altitude is defined as:",
+    "options": [
+      "The pressure altitude corrected for non-standard temperature",
+      "The altitude above ground level in standard temperature",
+      "The indicated altitude corrected for instrument error",
+      "The true altitude minus terrain elevation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Density altitude is pressure altitude corrected for non-standard temperature. In aviation, high density altitude reduces aircraft performance: longer takeoff run, slower rate of climb, and reduced engine power.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 4 'Air Density', Page 36"
+  },
+  {
+    "id": "MET-012",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density",
+    "difficulty": "medium",
+    "question": "For every 1°C increase in temperature above ISA, the density altitude increases by approximately:",
+    "options": [
+      "30 ft",
+      "60 ft",
+      "120 ft",
+      "200 ft"
+    ],
+    "answerIndex": 2,
+    "explanation": "A rule of thumb in aviation meteorology states that for each 1°C rise above standard ISA temperature, density altitude increases by approximately 120 ft above pressure altitude.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 4 'Air Density', Page 36"
+  },
+  {
+    "id": "MET-013",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "easy",
+    "question": "The temperature to which moist air must be cooled at constant pressure to reach saturation is called the:",
+    "options": [
+      "Wet bulb temperature",
+      "Dew point temperature",
+      "Virtual temperature",
+      "Frost point"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dew point (Td) is the temperature to which unsaturated air must be cooled at constant pressure and moisture content to become saturated (100% relative humidity).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 5 'Humidity', Page 41"
+  },
+  {
+    "id": "MET-014",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "medium",
+    "question": "When unsaturated air is lifted adiabatically, what happens to its Relative Humidity (RH) and Dew Point (DP)'",
+    "options": [
+      "RH decreases and DP increases",
+      "RH increases and DP decreases (by approx 2°C/km)",
+      "RH and DP both remain unchanged",
+      "RH increases while the humidity mixing ratio increases"
+    ],
+    "answerIndex": 1,
+    "explanation": "As air rises, it expands and cools at DALR (9.8°C/km). Dew point falls at approx 1.8°C to 2°C/km. The temperature and dew point converge, so Relative Humidity increases until saturation (LCL).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 5 'Humidity', Page 41-42"
+  },
+  {
+    "id": "MET-015",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "easy",
+    "question": "In the Northern Hemisphere, Buys Ballot's Law states that if an observer stands with their back to the wind:",
+    "options": [
+      "Low pressure is to their right and high pressure to their left",
+      "Low pressure is to their left and high pressure to their right",
+      "Low pressure is directly ahead",
+      "Low pressure is directly behind"
+    ],
+    "answerIndex": 1,
+    "explanation": "Buys Ballot's Law states that in the Northern Hemisphere, an observer facing downwind has lower pressure to the left and higher pressure to the right. In the Southern Hemisphere, this is reversed.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', Page 46"
+  },
+  {
+    "id": "MET-016",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "medium",
+    "question": "Coriolis force is directly proportional to wind speed and the sine of latitude. Where is Coriolis force zero'",
+    "options": [
+      "At the geographic poles",
+      "At 45° latitude",
+      "At the Equator",
+      "At the tropopause"
+    ],
+    "answerIndex": 2,
+    "explanation": "Coriolis force = 2 * omega * V * sin(phi). Since sin(0°) = 0, Coriolis force is zero at the Equator and reaches its maximum value at the poles where sin(90°) = 1.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', Page 47"
+  },
+  {
+    "id": "MET-017",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "medium",
+    "question": "A cold, dense wind blowing down a mountain slope at night due to surface cooling is termed a:",
+    "options": [
+      "Fohn wind",
+      "Anabatic wind",
+      "Katabatic wind",
+      "Chinook"
+    ],
+    "answerIndex": 2,
+    "explanation": "Katabatic winds are gravity-driven down-slope winds caused by nocturnal radiational cooling of the mountain slopes, making the air heavier than surrounding free air.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', Page 54"
+  },
+  {
+    "id": "MET-018",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "hard",
+    "question": "A sudden increase in wind speed of at least 16 kt (32 km/h), reaching 22 kt or more and lasting for at least one minute, is classified as a:",
+    "options": [
+      "Gust",
+      "Squall",
+      "Gale",
+      "Microburst"
+    ],
+    "answerIndex": 1,
+    "explanation": "WMO defines a squall as a sudden increase of wind speed by at least 16 kt (8 m/s), the speed rising to 22 kt (11 m/s) or more and lasting for at least one minute. Gusts are transient fluctuations of seconds.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', Page 46"
+  },
+  {
+    "id": "MET-019",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "easy",
+    "question": "In aviation weather reports, 'Fog' (FG) is reported when the horizontal visibility is reduced by water droplets or ice crystals to less than:",
+    "options": [
+      "500 m",
+      "1000 m",
+      "1500 m",
+      "5000 m"
+    ],
+    "answerIndex": 1,
+    "explanation": "By international aeronautical definition, fog is reported when visibility is less than 1000 m and relative humidity is near 100%. If visibility is between 1000 m and 5000 m with RH >= 95%, it is reported as Mist (BR).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', Page 66"
+  },
+  {
+    "id": "MET-020",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "medium",
+    "question": "Radiation fog is most likely to form under which combination of meteorological conditions'",
+    "options": [
+      "Strong winds (> 15 kt), overcast stratus sky, and dry air",
+      "Light winds (2-7 kt), clear skies at night, and high relative humidity",
+      "Calm wind, cloudy sky, and warm advection",
+      "Gale force winds and heavy precipitation"
+    ],
+    "answerIndex": 1,
+    "explanation": "Radiation fog requires high relative humidity, clear skies for maximum terrestrial radiation cooling, and light wind (2-7 kt) to produce gentle turbulent mixing confined to a shallow layer near the ground.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', Page 69"
+  },
+  {
+    "id": "MET-021",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "medium",
+    "question": "Advection fog forms when:",
+    "options": [
+      "Cold dry air blows over warm land",
+      "Warm, moist air moves horizontally over a cold land or sea surface",
+      "Air is cooled adiabatically by climbing a mountain",
+      "Rain falls into cold surface air"
+    ],
+    "answerIndex": 1,
+    "explanation": "Advection fog forms when warm moist air is transported over a colder underlying surface, cooling the air to its dew point. It can form over land or sea at any time of day or night and with moderate winds.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', Page 70"
+  },
+  {
+    "id": "MET-022",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "easy",
+    "question": "Which cloud type is characterized by great vertical development, an anvil-shaped fibrous top, and hazards including severe turbulence, hail, and microbursts'",
+    "options": [
+      "Altocumulus (AC)",
+      "Nimbostratus (NS)",
+      "Cumulonimbus (CB)",
+      "Stratocumulus (SC)"
+    ],
+    "answerIndex": 2,
+    "explanation": "Cumulonimbus (CB) is the thunderstorm cloud. It features massive vertical development, anvil cirrus top, and poses the most severe hazards in aviation (turbulence, severe icing, wind shear, hail, lightning).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 'Clouds', Page 78"
+  },
+  {
+    "id": "MET-023",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "medium",
+    "question": "Optical halos around the sun or moon are produced by light refraction through ice crystals in which cloud type'",
+    "options": [
+      "Altocumulus (AC)",
+      "Cirrostratus (CS)",
+      "Altostratus (AS)",
+      "Stratocumulus (SC)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cirrostratus (CS) clouds consist of hexagonal ice crystals that refract sunlight or moonlight at a 22° angle, producing a circular halo with the red component on the inside.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 'Clouds', Page 77; Chapter 10 'Optical Phenomena', Page 94"
+  },
+  {
+    "id": "MET-024",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "medium",
+    "question": "Precipitation consisting of very small, closely spaced water droplets (diameter < 0.5 mm) falling almost exclusively from Stratus cloud is termed:",
+    "options": [
+      "Rain (RA)",
+      "Drizzle (DZ)",
+      "Sleet",
+      "Virga"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drizzle (DZ) consists of small water droplets of diameter 0.1 to 0.5 mm that appear to float in air currents. It falls almost exclusively from Stratus (ST) clouds.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 11 'Precipitation', Page 100"
+  },
+  {
+    "id": "MET-025",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "hard",
+    "question": "Rain falling from a cloud that evaporates completely before reaching the ground is called:",
+    "options": [
+      "Graupel",
+      "Virga",
+      "Mirage",
+      "Mizzle"
+    ],
+    "answerIndex": 1,
+    "explanation": "Virga is precipitation falling from a cloud base that evaporates in dry air below before reaching the ground. It often indicates strong downdrafts beneath the cloud.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 11 'Precipitation', Page 101"
+  },
+  {
+    "id": "MET-026",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "medium",
+    "question": "The Dry Adiabatic Lapse Rate (DALR) and Saturated Adiabatic Lapse Rate (SALR) near sea level are approximately:",
+    "options": [
+      "6.5°C/km and 2°C/km",
+      "9.8°C/km (approx 3°C/1000 ft) and 5°C/km (approx 1.5°C/1000 ft)",
+      "2°C/1000 ft and 3°C/1000 ft",
+      "10°C/km and 9.8°C/km"
+    ],
+    "answerIndex": 1,
+    "explanation": "DALR is constant at 9.8°C/km (approx 3°C/1000 ft). SALR is lower because latent heat released during condensation warms the rising air, averaging about 5°C/km near sea level.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability and Instability', Page 86"
+  },
+  {
+    "id": "MET-027",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "hard",
+    "question": "If the Environmental Lapse Rate (ELR) is greater than the Dry Adiabatic Lapse Rate (DALR), the atmosphere is in a state of:",
+    "options": [
+      "Absolute stability",
+      "Conditional instability",
+      "Absolute instability",
+      "Neutral equilibrium"
+    ],
+    "answerIndex": 2,
+    "explanation": "When ELR > DALR (super-adiabatic), lifted parcels of both dry and saturated air are warmer and less dense than the environment, continuing to accelerate upward (Absolute Instability).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability and Instability', Page 87"
+  },
+  {
+    "id": "MET-028",
+    "subject": "Aviation Meteorology",
+    "topic": "Ice Accretion",
+    "difficulty": "medium",
+    "question": "Clear ice (glazed ice) on an airframe is most dangerous because it:",
+    "options": [
+      "Is light and easily shaken off by vibration",
+      "Is heavy, transparent, adheres tenaciously, alters airfoil shape, and is hard to remove",
+      "Forms only on parked aircraft overnight",
+      "Affects only communication antennas"
+    ],
+    "answerIndex": 1,
+    "explanation": "Clear ice forms from large supercooled water droplets at temperatures between 0°C and -10°C. The drops flow back before freezing, forming a dense, tenacious, transparent coating that severely degrades lift and adds weight.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 12 'Ice Accretion', Page 106"
+  },
+  {
+    "id": "MET-029",
+    "subject": "Aviation Meteorology",
+    "topic": "Ice Accretion",
+    "difficulty": "easy",
+    "question": "Carburetor icing in piston engines is most likely to occur in which temperature and humidity conditions'",
+    "options": [
+      "Only below -20°C in dry air",
+      "At ambient temperatures between -7°C and +30°C in moist air (RH > 60%)",
+      "Only when flying through heavy rain at 0°C",
+      "Only during full-throttle takeoff climb"
+    ],
+    "answerIndex": 1,
+    "explanation": "Fuel vaporization and adiabatic pressure reduction at the carburetor throttle butterfly can drop air temperature by up to 20°C. Carburetor ice can form even in warm ambient air up to +30°C with high relative humidity.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 12 'Ice Accretion', Page 107"
+  },
+  {
+    "id": "MET-030",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "medium",
+    "question": "The mature stage of a thunderstorm lifecycle is definitively marked by:",
+    "options": [
+      "The first appearance of an anvil top",
+      "The beginning of rain at the Earth's surface and the onset of downdrafts",
+      "The cessation of all lightning flashes",
+      "Weakening of the updrafts throughout the entire cell"
+    ],
+    "answerIndex": 1,
+    "explanation": "The mature stage begins when falling precipitation reaches the surface. Rain drags cold air downward, generating downdrafts and the first gust / squall front. Updrafts and downdrafts coexist in this stage.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', Page 113"
+  },
+  {
+    "id": "MET-031",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "hard",
+    "question": "A microburst is a localized intense downdraught with a horizontal diameter of less than 4 km. Its lifecycle typically lasts about:",
+    "options": [
+      "1 to 2 hours",
+      "15 to 20 minutes",
+      "1 to 2 days",
+      "30 to 45 seconds"
+    ],
+    "answerIndex": 1,
+    "explanation": "Microbursts typically last 15 to 20 minutes. Peak winds develop 5 minutes after surface contact. An aircraft flying through encounters increasing headwind, strong downdraft, and then a dangerous sudden tailwind.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', Page 117-118"
+  },
+  {
+    "id": "MET-032",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "medium",
+    "question": "What is the typical slope of a cold front compared to a warm front'",
+    "options": [
+      "Cold front is flatter (1:150 to 1:180), warm front is steeper",
+      "Cold front is steeper (approx 1:50 to 1:80), warm front is shallower (approx 1:150 to 1:180)",
+      "Both fronts have the identical slope of 1:100",
+      "Cold fronts have no slope as they are vertical walls"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cold fronts advance like a blunt wedge with a steep slope of about 1:50 to 1:80, causing rapid vertical lifting and convective clouds (CU, CB). Warm fronts have a shallow slope of 1:150 to 1:180 with stratiform clouds.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts and Western Disturbances', Page 128-129"
+  },
+  {
+    "id": "MET-033",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "medium",
+    "question": "Western Disturbances (WDs) affecting northern India during winter originate primarily over which region'",
+    "options": [
+      "Bay of Bengal",
+      "Arabian Sea",
+      "Mediterranean Sea and Caspian Sea region",
+      "Siberian landmass"
+    ],
+    "answerIndex": 2,
+    "explanation": "Western Disturbances originate as extra-tropical low-pressure systems over the Mediterranean and Caspian Seas, travelling eastward steered by the Subtropical Westerly Jet stream into Pakistan and northern India.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts and Western Disturbances', Page 132"
+  },
+  {
+    "id": "MET-034",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "easy",
+    "question": "By WMO definition, the arbitrary lower speed limit for the core of a jet stream is:",
+    "options": [
+      "30 kt",
+      "45 kt",
+      "60 kt (approx 30 m/s)",
+      "100 kt"
+    ],
+    "answerIndex": 2,
+    "explanation": "WMO defines a jet stream as a strong narrow current of winds concentrated along a quasi-horizontal axis in the upper troposphere or stratosphere, with a minimum core speed of 60 kt (30 m/s).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', Page 136"
+  },
+  {
+    "id": "MET-035",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "medium",
+    "question": "The Subtropical Jet Stream (STJ) affects northern India primarily during which months'",
+    "options": [
+      "June to September only",
+      "October to May (winter and transition seasons)",
+      "July and August only",
+      "April and May only"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Subtropical Westerly Jet Stream prevails over northern India from October to May, reaching peak core speeds of 100-150 kt in January/February near 27° N at 12 km (200 hPa).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', Page 137"
+  },
+  {
+    "id": "MET-036",
+    "subject": "Aviation Meteorology",
+    "topic": "Clear Air Turbulence",
+    "difficulty": "medium",
+    "question": "Clear Air Turbulence (CAT) is most severe and most frequently encountered in which region relative to a jet stream'",
+    "options": [
+      "Directly in the calm center of the jet core",
+      "On the low-pressure (colder / poleward) side near or below the jet axis where vertical and horizontal wind shear is greatest",
+      "Far away from all frontal zones and tropopause folds",
+      "Only at altitudes below 10,000 ft AMSL"
+    ],
+    "answerIndex": 1,
+    "explanation": "CAT occurs predominantly in regions of strong horizontal and vertical wind shear just below the tropopause, especially on the colder, poleward (left in Northern Hemisphere) side of the jet stream core.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 16 'Clear Air Turbulence', Page 143"
+  },
+  {
+    "id": "MET-037",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "easy",
+    "question": "In the mature stage of a Tropical Cyclone, the central calm region of light winds and descending air is termed the:",
+    "options": [
+      "Wall Cloud",
+      "Eye",
+      "Surge Line",
+      "Spiral Band"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Eye is the central region of lowest surface pressure, warmest temperatures, light winds, and often clear skies caused by subsiding air. It is surrounded by the destructive Eye Wall.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', Page 157"
+  },
+  {
+    "id": "MET-038",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "medium",
+    "question": "The normal date of onset of the Southwest Monsoon over the mainland of India (Kerala coast) is:",
+    "options": [
+      "15 May",
+      "01 June",
+      "15 June",
+      "01 July"
+    ],
+    "answerIndex": 1,
+    "explanation": "The normal date for the onset of the Southwest Monsoon over the South Andaman Sea is 20 May, and over the mainland coast of Kerala is 01 June.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 19 'Climatology of India', Page 171"
+  },
+  {
+    "id": "MET-039",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "medium",
+    "question": "During a 'Break in Monsoon', the axis of the monsoon trough shifts towards:",
+    "options": [
+      "The Indian Peninsula (Tamil Nadu)",
+      "The foot hills of the Himalayas",
+      "The central Arabian Sea",
+      "The equator"
+    ],
+    "answerIndex": 1,
+    "explanation": "During a break in monsoon, the monsoon trough shifts northwards close to the Himalayan foothills, causing heavy floods in Assam and sub-Himalayan Bengal while the plains of India experience dry spells.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 19 'Climatology of India', Page 172"
+  },
+  {
+    "id": "MET-040",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "easy",
+    "question": "In a METAR weather report, the term CAVOK indicates that simultaneously:",
+    "options": [
+      "Visibility >= 10 km, no clouds below 1500 m (5000 ft) or MSA, and no weather of significance",
+      "Visibility >= 5 km and sky completely clear",
+      "Visibility >= 8 km and no rain",
+      "No clouds at all altitudes and zero wind"
+    ],
+    "answerIndex": 0,
+    "explanation": "CAVOK (Ceiling And Visibility OK) requires: visibility 10 km or more; no cloud below 1500 m (5000 ft) or highest minimum sector altitude (whichever is greater), no CB/TCU; and no significant weather.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR SPECI', Page 219"
+  },
+  {
+    "id": "MET-041",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "A TREND landing forecast appended to a METAR or SPECI has a validity period of:",
+    "options": [
+      "30 minutes",
+      "2 hours",
+      "6 hours",
+      "9 hours"
+    ],
+    "answerIndex": 1,
+    "explanation": "A TREND forecast consists of a concise statement of expected significant changes appended to a METAR or SPECI and is valid for 2 hours from the time of the report.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR SPECI', Page 223"
+  },
+  {
+    "id": "MET-042",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "In a TAF report, the change indicator 'TEMPO 1215' means that the described weather changes are expected to:",
+    "options": [
+      "Start permanently at 12:00 UTC and continue through 15:00 UTC",
+      "Occur temporarily between 12:00 UTC and 15:00 UTC, lasting less than 1 hour in each instance",
+      "Be valid only for 12 to 15 minutes",
+      "Occur exactly at 12:15 UTC"
+    ],
+    "answerIndex": 1,
+    "explanation": "TEMPO denotes temporary fluctuations lasting less than one hour in each instance and in aggregate covering less than half of the indicated period (from 12:00 to 15:00 UTC).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 26 'Aviation Weather Forecasts TAF', Page 224, 231"
+  },
+  {
+    "id": "MET-043",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "hard",
+    "question": "In a METAR, 'R27/1200D' in the runway visual range group indicates:",
+    "options": [
+      "Runway 27 RVR is 1200 ft with downward slope",
+      "Runway 27 RVR is 1200 metres with a downward (decreasing) tendency",
+      "Runway 27 RVR is 1200 metres during daytime",
+      "Runway 27 RVR is between 1200 and 1500 m"
+    ],
+    "answerIndex": 1,
+    "explanation": "In the RVR group RD_R/V_RV_RV_RV_R i: R27 indicates Runway 27, 1200 indicates 1200 metres, and the tendency letter 'D' indicates decreasing over the past 10 minutes ('U' = increasing, 'N' = no change).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR SPECI', Page 221"
+  },
+  {
+    "id": "MET-044",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "A SIGMET is issued by a Meteorological Watch Office (MWO) to warn pilots of:",
+    "options": [
+      "Routine terminal weather conditions",
+      "En-route weather phenomena that may affect the safety of all aircraft operations",
+      "Only local airport surface wind gusts",
+      "Flight delays caused by air traffic congestion"
+    ],
+    "answerIndex": 1,
+    "explanation": "SIGMET messages give concise information concerning the occurrence or expected occurrence of specified en-route weather phenomena which may affect the safety of aircraft operations (e.g., severe turbulence, severe icing, volcanic ash, tropical cyclones).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 21 'Met Services', Page 192"
+  },
+  {
+    "id": "MET-045",
+    "subject": "Aviation Meteorology",
+    "topic": "General Circulation",
+    "difficulty": "medium",
+    "question": "The descending branch of the Hadley Cell near latitude 30° N and 30° S is characterized by calm winds, high pressure, and world deserts. This region is known as:",
+    "options": [
+      "The Doldrums (ITCZ)",
+      "The Horse Latitudes",
+      "The Roaring Forties",
+      "The Polar Front"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Horse Latitudes are subtropical high-pressure belts located around 30° N and 30° S, formed by subsiding air from the Hadley cell. The sinking air causes adiabatic warming, cloud dissipation, calm winds, and major arid zones.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 20 'General Circulation', Page 184"
+  },
+  {
+    "id": "TG-001",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "easy",
+    "question": "According to Bernoulli's principle, as airflow accelerates over the cambered upper surface of an airfoil, what happens to dynamic pressure and static pressure'",
+    "options": [
+      "Dynamic pressure decreases and static pressure increases",
+      "Dynamic pressure increases and static pressure decreases",
+      "Both dynamic and static pressure increase",
+      "Both dynamic and static pressure decrease"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bernoulli's theorem states that for steady incompressible flow, total pressure (static + dynamic) remains constant. As air accelerates over the camber, dynamic pressure increases and static pressure decreases, producing lift.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 2 'Subsonic Airflow'"
+  },
+  {
+    "id": "TG-002",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "medium",
+    "question": "An aircraft will stall whenever which condition occurs'",
+    "options": [
+      "The airspeed falls below a fixed calibrated airspeed",
+      "The critical (stalling) angle of attack is exceeded, regardless of airspeed, weight, or attitude",
+      "The engine power is reduced to idle",
+      "The aircraft enters a banked turn exceeding 45 degrees"
+    ],
+    "answerIndex": 1,
+    "explanation": "An airfoil always stalls at the same critical angle of attack (typically 15°-18° for general aviation airfoils), regardless of airspeed, weight, load factor, or flight attitude.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 3 'The Stall'"
+  },
+  {
+    "id": "TG-003",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "medium",
+    "question": "Induced drag is a byproduct of lift creation caused by wingtip vortices. As airspeed increases in straight and level flight, induced drag:",
+    "options": [
+      "Increases proportional to the square of airspeed",
+      "Decreases inversely proportional to the square of airspeed",
+      "Remains constant",
+      "Increases linearly with airspeed"
+    ],
+    "answerIndex": 1,
+    "explanation": "Induced drag is inversely proportional to the square of airspeed (Di proportional to 1/V^2). At high speeds, angle of attack is small, wingtip vortices are weak, and induced drag is low. At low speeds, induced drag is high.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 4 'Drag'"
+  },
+  {
+    "id": "TG-004",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "hard",
+    "question": "In a level, coordinated 60-degree banked turn, the load factor (g) and stall speed increase by approximately what factors'",
+    "options": [
+      "Load factor 1.41 g, stall speed increases by 19%",
+      "Load factor 2.0 g, stall speed increases by approximately 41%",
+      "Load factor 3.0 g, stall speed doubles (100%)",
+      "Load factor 1.5 g, stall speed increases by 25%"
+    ],
+    "answerIndex": 1,
+    "explanation": "Load factor n = 1 / cos(bank angle). At 60°, n = 1/cos(60°) = 2.0 g. Stall speed in a turn Vs_turn = Vs_level * sqrt(n) = Vs * sqrt(2.0) = 1.414 * Vs (a 41% increase in stalling speed).",
+    "source": "Oxford ATPL Principles of Flight, Chapter 8 'Manoeuvres'"
+  },
+  {
+    "id": "TG-005",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "medium",
+    "question": "When flying into ground effect (within approximately one wingspan of the surface), which changes occur'",
+    "options": [
+      "Induced drag increases and elevator authority is lost",
+      "Induced drag decreases, effective lift increases, and the aircraft tends to float",
+      "Parasite drag increases dramatically requiring more thrust",
+      "Stall speed increases significantly"
+    ],
+    "answerIndex": 1,
+    "explanation": "The proximity of the ground restricts the vertical component of airflow, reducing downwash and wingtip vortex size. Induced drag drops significantly, increasing the lift-to-drag ratio and causing the aircraft to float.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 4 'Ground Effect'"
+  },
+  {
+    "id": "TG-006",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "medium",
+    "question": "What is the primary aerodynamic purpose of wing dihedral (wings angled upward from root to tip)'",
+    "options": [
+      "To increase maximum takeoff weight",
+      "To provide lateral (roll) stability",
+      "To provide longitudinal (pitch) stability",
+      "To reduce parasite drag in cruise"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dihedral provides lateral stability. When the aircraft sideslips (rolls), the lower wing has a higher effective angle of attack than the higher wing, producing a restoring rolling moment that levels the wings.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 9 'Stability'"
+  },
+  {
+    "id": "TG-007",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "easy",
+    "question": "In a four-stroke internal combustion aero-engine, what is the correct order of the operating strokes'",
+    "options": [
+      "Compression, Intake, Exhaust, Power",
+      "Intake, Compression, Power, Exhaust",
+      "Intake, Power, Compression, Exhaust",
+      "Power, Compression, Exhaust, Intake"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Otto four-stroke cycle consists of: 1) Intake (fuel-air drawn in), 2) Compression (mixture compressed), 3) Power/Expansion (spark fires, burning expands), 4) Exhaust (burnt gases expelled).",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 1 'Piston Engines'"
+  },
+  {
+    "id": "TG-008",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "medium",
+    "question": "Aviation piston engines use dual independent ignition systems primarily consisting of:",
+    "options": [
+      "A car battery and two alternators",
+      "Two engine-driven magnetos, each firing one of two spark plugs per cylinder, independent of the electrical system",
+      "A single distributor firing four spark plugs in sequence",
+      "Direct injection piezo-electric igniters powered by the busbar"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aero piston engines use two independent magnetos (left and right), each powering one spark plug per cylinder. Magnetos are engine-driven permanent-magnet generators that operate completely independent of the aircraft battery.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 3 'Ignition Systems'"
+  },
+  {
+    "id": "TG-009",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "medium",
+    "question": "Detonation in an aircraft piston engine is best defined as:",
+    "options": [
+      "Ignition of the fuel-air charge prior to the normal spark event",
+      "An uncontrolled, explosive burning of the remaining fuel-air charge ahead of the normal flame front",
+      "Backfiring through the carburetor induction pipe due to lean mixture",
+      "Normal rapid combustion at full takeoff power"
+    ],
+    "answerIndex": 1,
+    "explanation": "Detonation is the sudden explosive combustion of the end-gas ahead of the advancing flame front. It causes extreme cylinder head temperature and pressure spikes, potentially leading to catastrophic engine damage.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 2 'Combustion'"
+  },
+  {
+    "id": "TG-010",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "hard",
+    "question": "Pre-ignition differs from detonation in that pre-ignition is caused by:",
+    "options": [
+      "Using fuel of too high an octane rating",
+      "An incandescent hotspot (such as glowing carbon or overheated spark plug electrode) igniting the mixture before timed spark occurs",
+      "Over-cooling the cylinder head during a descent",
+      "Excessively rich fuel-to-air mixture"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pre-ignition is the ignition of the fuel-air charge before the spark plug fires, caused by a local hot spot in the cylinder (overheated spark plug tip, carbon deposit, or cracked exhaust valve).",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 2 'Combustion'"
+  },
+  {
+    "id": "TG-011",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "medium",
+    "question": "During a pre-flight magneto check at 1800 RPM, switching from BOTH to LEFT produces no drop in RPM. The most likely reason is:",
+    "options": [
+      "The engine is running perfectly with zero magneto wear",
+      "The right magneto P-lead (ground wire) is broken/disconnected, leaving the right magneto permanently LIVE",
+      "The left magneto has failed completely",
+      "The carburetor heat is stuck in the ON position"
+    ],
+    "answerIndex": 1,
+    "explanation": "If switching to one magneto produces no RPM drop, the P-lead on the other magneto is broken or disconnected. The other magneto remains ungrounded (hot/live) and keeps firing. This is an extreme safety hazard on the ground.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 3 'Ignition Systems'"
+  },
+  {
+    "id": "TG-012",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "easy",
+    "question": "Applying carburetor heat to an aircraft with an iced carburetor will initially cause:",
+    "options": [
+      "An immediate increase in engine RPM and smoother running",
+      "A further drop in RPM and possible engine roughness as ice melts, followed by an RPM rise once clear",
+      "The engine to cut out permanently",
+      "The cylinder head temperature to drop to zero"
+    ],
+    "answerIndex": 1,
+    "explanation": "When carburetor heat is applied, hot air is less dense, so the mixture richens and RPM drops slightly. As ice melts, water passes through the cylinders causing temporary roughness, before smooth operation returns at clear RPM.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 4 'Fuel and Carburetion'"
+  },
+  {
+    "id": "TG-013",
+    "subject": "Technical General",
+    "topic": "Propellers",
+    "difficulty": "easy",
+    "question": "A constant-speed propeller automatically adjusts its blade pitch to maintain a constant:",
+    "options": [
+      "Aircraft true airspeed (TAS)",
+      "Engine RPM selected by the pilot via the propeller control",
+      "Manifold pressure at all altitudes",
+      "Exhaust gas temperature (EGT)"
+    ],
+    "answerIndex": 1,
+    "explanation": "A constant-speed propeller uses a hydraulic governor to automatically vary the blade pitch angle, maintaining the engine RPM selected by the pilot on the blue propeller pitch lever regardless of airspeed or throttle setting.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 7 'Propellers'"
+  },
+  {
+    "id": "TG-014",
+    "subject": "Technical General",
+    "topic": "Propellers",
+    "difficulty": "medium",
+    "question": "P-factor (asymmetric propeller blade effect) causes an aircraft to yaw to the left during high angle of attack flight (such as climb) because:",
+    "options": [
+      "The ascending blade takes a bigger bite of air than the descending blade",
+      "The descending blade operates at a higher effective angle of attack and produces more thrust than the ascending blade",
+      "Propeller torque rolls the left wheel down on the runway",
+      "Slipstream hits the left side of the rudder"
+    ],
+    "answerIndex": 1,
+    "explanation": "At high angles of attack, the propeller disc is tilted relative to relative airflow. The downward-moving blade on the right has a higher forward velocity and higher angle of attack, producing more thrust than the upward blade on the left, yawing the plane left.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 7 'Propeller Effects'"
+  },
+  {
+    "id": "TG-015",
+    "subject": "Technical General",
+    "topic": "Propellers",
+    "difficulty": "hard",
+    "question": "On a multi-engine aircraft with both propellers rotating clockwise (viewed from the cockpit), the 'critical engine' is the:",
+    "options": [
+      "Right engine, because its failure causes no asymmetric yaw",
+      "Left engine, because its thrust line is closer to the fuselage than the right engine's descending blade thrust line",
+      "Engine closest to the fuel tanks",
+      "Neither engine, because clockwise engines are symmetric"
+    ],
+    "answerIndex": 1,
+    "explanation": "The descending blade on the right engine produces thrust furthest from the aircraft centerline (longer moment arm). Failure of the left engine leaves the right engine operating with maximum asymmetric yaw moment, making the left engine critical.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 10 'Multi-Engine Flight'"
+  },
+  {
+    "id": "TG-016",
+    "subject": "Technical General",
+    "topic": "Aircraft Systems",
+    "difficulty": "medium",
+    "question": "In a hydraulic system, why is mineral-based fluid (such as MIL-PRF-5606) dyed red'",
+    "options": [
+      "To indicate it is corrosive to aluminum",
+      "For leak detection and to prevent accidental servicing with incompatible fluid types",
+      "To lubricate actuator seals automatically",
+      "To indicate it has boiled under high pressure"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aviation hydraulic fluids are color-coded to prevent catastrophic cross-contamination: MIL-H-5606 (mineral) is dyed red; Skydrol (phosphate-ester synthetic) is dyed purple/green. Mixing them destroys system packings and seals.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Systems, Chapter 1 'Hydraulics'"
+  },
+  {
+    "id": "TG-017",
+    "subject": "Technical General",
+    "topic": "Aircraft Systems",
+    "difficulty": "easy",
+    "question": "What is the purpose of an aircraft electrical circuit breaker'",
+    "options": [
+      "To boost voltage when the battery is weak",
+      "To protect aircraft wiring and equipment from overheating and fire caused by excessive current (overload/short-circuit)",
+      "To convert alternating current (AC) to direct current (DC)",
+      "To ground the magnetos when shutting down the engine"
+    ],
+    "answerIndex": 1,
+    "explanation": "Circuit breakers protect wiring and electrical components from carrying excessive electrical current that could cause insulation melting, electrical fires, and equipment failure. They pop open automatically when rated current is exceeded.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Systems, Chapter 4 'Electrics'"
+  },
+  {
+    "id": "TG-018",
+    "subject": "Technical General",
+    "topic": "Aircraft Systems",
+    "difficulty": "medium",
+    "question": "An aircraft alternator failure in flight is normally first indicated by:",
+    "options": [
+      "Immediate engine stoppage",
+      "A zero or negative reading on the ammeter (discharge) and an annunciator warning light",
+      "The airspeed indicator reading zero",
+      "Loss of all hydraulic pressure"
+    ],
+    "answerIndex": 1,
+    "explanation": "Since the ignition system runs on magnetos, the engine continues running. The ammeter shows battery discharge (or zero output), and the low-voltage/alternator-fail warning illuminates as the battery takes over electrical loads.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Systems, Chapter 4 'Electrics'"
+  },
+  {
+    "id": "TG-019",
+    "subject": "Technical General",
+    "topic": "Pitot-Static Instruments",
+    "difficulty": "easy",
+    "question": "Which flight instrument relies on BOTH pitot (ram) pressure and static pressure to operate'",
+    "options": [
+      "Altimeter",
+      "Vertical Speed Indicator (VSI)",
+      "Airspeed Indicator (ASI)",
+      "Turn Coordinator"
+    ],
+    "answerIndex": 2,
+    "explanation": "The Airspeed Indicator (ASI) measures dynamic pressure (ram pressure minus static pressure). The Altimeter and Vertical Speed Indicator connect to the static source only.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 1 'Pitot-Static Systems'"
+  },
+  {
+    "id": "TG-020",
+    "subject": "Technical General",
+    "topic": "Pitot-Static Instruments",
+    "difficulty": "medium",
+    "question": "If the pitot tube ram pressure inlet is completely blocked by ice while the drain hole remains open, what will the Airspeed Indicator indicate'",
+    "options": [
+      "It will freeze at the speed when blockage occurred",
+      "The pressure bleeds out through the drain hole, causing the ASI to drop to zero",
+      "It will over-read progressively as the aircraft climbs",
+      "It will indicate maximum airspeed (Vne)"
+    ],
+    "answerIndex": 1,
+    "explanation": "If the ram air inlet is blocked while the drain hole is open, trapped pressure leaks out through the drain hole. The pressure inside the capsule drops to ambient static pressure, and the ASI indicates zero.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 1 'Pitot-Static Systems'"
+  },
+  {
+    "id": "TG-021",
+    "subject": "Technical General",
+    "topic": "Pitot-Static Instruments",
+    "difficulty": "hard",
+    "question": "If BOTH the pitot tube ram inlet and drain hole are completely frozen shut, how will the Airspeed Indicator behave during a climb'",
+    "options": [
+      "It will indicate zero",
+      "It will act like an altimeter, over-reading as the aircraft climbs into lower ambient static pressure",
+      "It will under-read as the aircraft climbs",
+      "It will read constant regardless of attitude"
+    ],
+    "answerIndex": 1,
+    "explanation": "Trapped ram pressure remains constant in the capsule. As the aircraft climbs, ambient static pressure in the casing decreases, allowing the capsule to expand. The ASI acts like an altimeter and falsely over-reads.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 1 'Pitot-Static Systems'"
+  },
+  {
+    "id": "TG-022",
+    "subject": "Technical General",
+    "topic": "Pitot-Static Instruments",
+    "difficulty": "hard",
+    "question": "If the static port becomes completely blocked while climbing to a higher altitude, what will the Altimeter and VSI indicate'",
+    "options": [
+      "Altimeter will read zero; VSI will show maximum climb",
+      "Altimeter freezes at the altitude where blockage occurred; VSI drops to zero after pressure equalizes",
+      "Altimeter continues to read correctly; VSI over-reads",
+      "Both instruments oscillate erratically"
+    ],
+    "answerIndex": 1,
+    "explanation": "Trapped static pressure holds the altimeter aneroid capsule fixed, freezing the altimeter at the altitude of blockage. In the VSI, calibrated leak capillary equalizes pressure between capsule and case, causing the VSI to read zero.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 1 'Pitot-Static Systems'"
+  },
+  {
+    "id": "TG-023",
+    "subject": "Technical General",
+    "topic": "Gyroscopic Instruments",
+    "difficulty": "easy",
+    "question": "The two fundamental physical properties of a spinning gyroscope that enable aircraft flight instruments are:",
+    "options": [
+      "Centrifugal force and gravitational attraction",
+      "Rigidity in space (gyroscopic inertia) and precession",
+      "Aerodynamic lift and drag",
+      "Magnetic dip and variation"
+    ],
+    "answerIndex": 1,
+    "explanation": "The two fundamental properties of a gyroscope are: 1) Rigidity in space (the rotor maintains its spin axis orientation in inertial space), and 2) Precession (an applied force results in angular motion 90° ahead in the direction of rotation).",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 2 'Gyroscopic Instruments'"
+  },
+  {
+    "id": "TG-024",
+    "subject": "Technical General",
+    "topic": "Gyroscopic Instruments",
+    "difficulty": "medium",
+    "question": "The Attitude Indicator (Artificial Horizon) utilizes a gyro spinning in which plane to display pitch and roll'",
+    "options": [
+      "Horizontal spin axis with vertical gimbals",
+      "Vertical spin axis (spinning in the horizontal plane) with freedom in two gimbals",
+      "Tilted 45 degrees to sense both yaw and roll",
+      "Fixed single gimbal aligned with the longitudinal axis"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Attitude Indicator rotor spins about a vertical axis (in the horizontal plane) supported by two gimbals, giving 3 degrees of freedom. This provides an earth-vertical reference against which aircraft pitch and roll attitudes are measured.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 2 'Gyroscopic Instruments'"
+  },
+  {
+    "id": "TG-025",
+    "subject": "Technical General",
+    "topic": "Gyroscopic Instruments",
+    "difficulty": "medium",
+    "question": "Apparent drift (apparent wander) in a Directional Gyroscope is caused by:",
+    "options": [
+      "Friction in the gimbal bearings only",
+      "The rotation of the Earth beneath the gyro spinning in space, equal to 15° per hour multiplied by sin(latitude)",
+      "Magnetic fields from electrical wires in the cockpit",
+      "Vibrations from the engine exhaust system"
+    ],
+    "answerIndex": 1,
+    "explanation": "A Directional Gyro maintains its axis in space while the Earth rotates 15° per hour beneath it. At the poles, apparent drift is 15°/hr * sin(90°) = 15°/hr. At the equator (sin 0° = 0), apparent drift is zero.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 2 'Gyroscopic Instruments'"
+  },
+  {
+    "id": "TG-026",
+    "subject": "Technical General",
+    "topic": "Gyroscopic Instruments",
+    "difficulty": "medium",
+    "question": "The Turn Coordinator differs from the older Turn and Slip Indicator because its gimbal is tilted approximately 30 degrees, allowing it to sense:",
+    "options": [
+      "Pitch rate only",
+      "Both rate of roll and rate of yaw",
+      "Only rate of yaw (turn)",
+      "Angle of bank directly in degrees"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Turn Coordinator has its gyro gimbal tilted 30° up from horizontal, enabling it to sense both roll rate and yaw rate. The older Turn and Slip Indicator had a horizontal gimbal sensing yaw rate only.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 2 'Gyroscopic Instruments'"
+  },
+  {
+    "id": "TG-027",
+    "subject": "Technical General",
+    "topic": "Weight & Balance",
+    "difficulty": "easy",
+    "question": "What is the primary aerodynamic hazard of operating an aircraft with the Center of Gravity (CG) located aft of the approved aft limit'",
+    "options": [
+      "Severely increased elevator control forces during landing flare",
+      "Decreased longitudinal static stability, violent stall characteristics, and possible inability to recover from a stall or spin",
+      "Excessive fuel consumption due to heavy nose-down trim",
+      "Decreased cruise speed due to excessive tailplane download"
+    ],
+    "answerIndex": 1,
+    "explanation": "An aft CG reduces the tailplane arm and download requirement, drastically reducing longitudinal static stability. In extreme aft CG, the aircraft becomes dynamically unstable and may enter an unrecoverable flat spin.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 9 'Weight and Balance / Stability'"
+  },
+  {
+    "id": "TG-028",
+    "subject": "Technical General",
+    "topic": "Weight & Balance",
+    "difficulty": "medium",
+    "question": "Operating an aircraft with the Center of Gravity (CG) at its extreme forward limit results in:",
+    "options": [
+      "Higher cruise speed and lighter control forces",
+      "Higher stall speed, heavier elevator control forces, and difficulty in achieving full flare on landing",
+      "Danger of unrecoverable spin",
+      "Zero induced drag in straight and level flight"
+    ],
+    "answerIndex": 1,
+    "explanation": "A forward CG requires a larger down-load on the tailplane to balance the nose-heavy moment. The wings must produce more total lift, which increases stall speed, increases induced drag (reducing cruise speed), and demands high stick forces.",
+    "source": "Oxford ATPL Principles of Flight, Chapter 9 'Weight and Balance / Stability'"
+  },
+  {
+    "id": "TG-029",
+    "subject": "Technical General",
+    "topic": "Airspeed Definitions",
+    "difficulty": "easy",
+    "question": "Calibrated Airspeed (CAS) is defined as Indicated Airspeed (IAS) corrected for:",
+    "options": [
+      "Air density and altitude variations",
+      "Compressibility error at high Mach numbers",
+      "Instrument and position (installation) errors",
+      "Wind speed and direction"
+    ],
+    "answerIndex": 2,
+    "explanation": "CAS is IAS corrected for position error (static port location turbulence and angle of attack) and instrument mechanical errors. Flight manuals provide CAS vs IAS correction tables.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Instrumentation, Chapter 1"
+  },
+  {
+    "id": "TG-030",
+    "subject": "Technical General",
+    "topic": "Airspeed Definitions",
+    "difficulty": "medium",
+    "question": "True Airspeed (TAS) equals Calibrated Airspeed (CAS) under which atmospheric conditions'",
+    "options": [
+      "At any altitude as long as IAS is below 100 kt",
+      "In standard ISA conditions at mean sea level (15°C, 1013.25 hPa, 1225 g/m³)",
+      "At the absolute ceiling of the aircraft",
+      "At FL180 in standard temperature"
+    ],
+    "answerIndex": 1,
+    "explanation": "TAS is the actual speed of the aircraft through the air mass: TAS = EAS / sqrt(relative density). At sea level in ISA, relative density = 1.0, so TAS equals EAS/CAS. At altitude, air is thinner so TAS is higher than CAS.",
+    "source": "Oxford ATPL Principles of Flight / Navigation, Chapter 'Airspeeds'"
+  },
+  {
+    "id": "TG-031",
+    "subject": "Technical General",
+    "topic": "Airspeed Definitions",
+    "difficulty": "easy",
+    "question": "A pilot flying at a constant Calibrated Airspeed of 120 kt climbs from sea level to 10,000 ft in ISA. The True Airspeed (TAS) will:",
+    "options": [
+      "Decrease by about 10%",
+      "Remain exactly 120 kt",
+      "Increase by approximately 2% per 1000 ft of altitude (reaching approx 144 kt)",
+      "Increase to 200 kt"
+    ],
+    "answerIndex": 2,
+    "explanation": "Rule of thumb: TAS increases by approximately 1.5% to 2% per 1000 ft of altitude for a constant CAS. At 10,000 ft: 120 kt + (10 * 2%) = 120 * 1.20 = approx 144 kt.",
+    "source": "Oxford ATPL General Navigation, Chapter 'Airspeed Conversions'"
+  },
+  {
+    "id": "TG-032",
+    "subject": "Technical General",
+    "topic": "Piston Engines",
+    "difficulty": "medium",
+    "question": "Exhaust Gas Temperature (EGT) is used by pilots of piston aircraft primarily to:",
+    "options": [
+      "Monitor oil cooler efficiency",
+      "Set and adjust the fuel-to-air mixture for best economy or best power",
+      "Verify whether the cabin heater valve is open",
+      "Determine the exact outside air temperature"
+    ],
+    "answerIndex": 1,
+    "explanation": "EGT measures the temperature of combustion gases exiting the cylinder. Peaking the mixture (chemically correct stoichiometric ratio) and leaning or richening relative to peak EGT allows precise fuel mixture management.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Powerplant, Chapter 4 'Mixture Control'"
+  },
+  {
+    "id": "TG-033",
+    "subject": "Technical General",
+    "topic": "Aircraft Systems",
+    "difficulty": "hard",
+    "question": "Vapor lock in an aircraft fuel system is caused by:",
+    "options": [
+      "Water accumulating in the fuel tank sumps freezing at low temperatures",
+      "Fuel vaporizing prematurely in fuel lines due to high fuel temperature, low ambient pressure, or excessive suction, blocking liquid fuel flow",
+      "Microbiological fungal growth in Jet-A1 tanks",
+      "Excessive lead additives accumulating in fuel injectors"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vapor lock occurs when high temperatures and/or low atmospheric pressures cause volatile fuel components to boil inside fuel lines. The resulting vapor bubble prevents the fuel pump from delivering liquid fuel to the engine.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Systems, Chapter 3 'Fuel Systems'"
+  },
+  {
+    "id": "TG-034",
+    "subject": "Technical General",
+    "topic": "Aircraft Systems",
+    "difficulty": "medium",
+    "question": "What is the primary function of the aircraft landing gear oleo-pneumatic strut'",
+    "options": [
+      "To steer the aircraft on the ground only",
+      "To absorb and dissipate landing impact shocks using compressed gas (nitrogen) and hydraulic fluid forced through an orifice",
+      "To retract the landing gear after takeoff",
+      "To cool the wheel brakes after landing"
+    ],
+    "answerIndex": 1,
+    "explanation": "An oleo strut absorbs landing loads: compressed nitrogen acts as a spring, while hydraulic oil forced through a metering orifice provides viscous damping, dissipating kinetic energy as heat without rebounding.",
+    "source": "Oxford ATPL Aircraft General Knowledge - Systems, Chapter 2 'Landing Gear'"
+  },
+  {
+    "id": "TG-035",
+    "subject": "Technical General",
+    "topic": "Principles of Flight",
+    "difficulty": "easy",
+    "question": "Which flight control surface provides longitudinal control (pitch about the lateral axis)'",
+    "options": [
+      "Ailerons",
+      "Elevator (or Stabilator)",
+      "Rudder",
+      "Flaps"
+    ],
+    "answerIndex": 1,
+    "explanation": "The elevator controls pitch about the lateral axis (longitudinal control). Ailerons control roll about the longitudinal axis (lateral control). The rudder controls yaw about the normal/vertical axis (directional control).",
+    "source": "Oxford ATPL Principles of Flight, Chapter 6 'Flight Controls'"
+  },
+  {
+    "id": "TS-001",
+    "subject": "Technical Specific",
+    "topic": "V-speeds and their meanings",
+    "difficulty": "easy",
+    "question": "Vso is defined as the stalling speed or minimum steady flight speed in which configuration'",
+    "options": [
+      "Clean configuration at maximum weight",
+      "Landing configuration (flaps and gear extended)",
+      "Cruise configuration at sea level",
+      "Take-off configuration with flaps at first notch"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vso is the stalling speed or minimum steady flight speed in the landing configuration (flaps fully extended, gear down). It corresponds to the lower end of the white arc on the airspeed indicator.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-002",
+    "subject": "Technical Specific",
+    "topic": "V-speeds and their meanings",
+    "difficulty": "easy",
+    "question": "Vno is best described as which of the following'",
+    "options": [
+      "Never-exceed speed",
+      "Maximum structural cruising speed",
+      "Best rate-of-climb speed",
+      "Manoeuvring speed"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vno is the maximum structural cruising speed. Flight above Vno should only be conducted in smooth air and with caution. It marks the upper limit of the green arc and the lower limit of the yellow arc on the ASI.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-003",
+    "subject": "Technical Specific",
+    "topic": "V-speeds and their meanings",
+    "difficulty": "medium",
+    "question": "Va (manoeuvring speed) is significant because below this speed the aircraft:",
+    "options": [
+      "Will not exceed its never-exceed speed in a dive",
+      "Will stall before exceeding its limit load factor with a single full control input",
+      "Can extend flaps without structural damage",
+      "Achieves best glide ratio"
+    ],
+    "answerIndex": 1,
+    "explanation": "At or below Va, the wings will stall before the airframe can be overstressed by a single full (abrupt) control deflection. Va decreases as aircraft weight decreases because a lighter aircraft needs less lift and will stall at a lower speed.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-004",
+    "subject": "Technical Specific",
+    "topic": "V-speeds and their meanings",
+    "difficulty": "medium",
+    "question": "Vx and Vy differ in that Vx gives best angle of climb while Vy gives best rate of climb. Which statement about their relationship at altitude is correct'",
+    "options": [
+      "Vx and Vy converge as altitude increases, meeting at the aircraft absolute ceiling",
+      "Vx remains constant while Vy decreases with altitude",
+      "Vy remains constant while Vx increases with altitude",
+      "Both Vx and Vy increase equally with altitude"
+    ],
+    "answerIndex": 0,
+    "explanation": "As altitude increases, excess power decreases more rapidly than excess thrust. Vy decreases and Vx increases slightly until they converge at the absolute ceiling where the aircraft can maintain level flight at only one airspeed.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-005",
+    "subject": "Technical Specific",
+    "topic": "V-speeds and their meanings",
+    "difficulty": "hard",
+    "question": "Vfe refers to the maximum speed at which flaps may be extended. If a pilot inadvertently exceeds Vfe with flaps deployed, the primary structural risk is to which component'",
+    "options": [
+      "Engine mounts due to increased drag loading",
+      "Flap hinges, actuating mechanism, and wing flap attachment structure",
+      "Landing gear doors due to airflow disruption",
+      "Elevator trim tab"
+    ],
+    "answerIndex": 1,
+    "explanation": "Exceeding Vfe with flaps extended risks structural damage or failure of the flap hinges, actuating rods/screws, and the wing structure at the flap attachment points due to excessive aerodynamic loads on the flap surfaces.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-006",
+    "subject": "Technical Specific",
+    "topic": "Airspeed indicator markings",
+    "difficulty": "easy",
+    "question": "On a standard airspeed indicator, the white arc represents which speed range'",
+    "options": [
+      "Normal operating range from Vno to Vne",
+      "Flap operating range from Vso to Vfe",
+      "Caution range from Vno to Vne",
+      "Best glide speed to never-exceed speed"
+    ],
+    "answerIndex": 1,
+    "explanation": "The white arc on the airspeed indicator represents the flap operating range. Its lower limit is Vso (stalling speed in landing configuration) and its upper limit is Vfe (maximum flap extended speed).",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-007",
+    "subject": "Technical Specific",
+    "topic": "Airspeed indicator markings",
+    "difficulty": "easy",
+    "question": "The red radial line on the airspeed indicator represents:",
+    "options": [
+      "Vno — maximum structural cruising speed",
+      "Vne — never-exceed speed",
+      "Vso — stall speed in landing configuration",
+      "Va — manoeuvring speed"
+    ],
+    "answerIndex": 1,
+    "explanation": "The red radial line marks Vne, the never-exceed speed. Exceeding this speed risks structural failure due to flutter or overstress. It is placed at the top of the yellow arc.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-008",
+    "subject": "Technical Specific",
+    "topic": "Airspeed indicator markings",
+    "difficulty": "medium",
+    "question": "The yellow arc (caution range) on the airspeed indicator lies between which two speeds'",
+    "options": [
+      "Vs1 and Vso",
+      "Vfe and Vne",
+      "Vno and Vne",
+      "Va and Vno"
+    ],
+    "answerIndex": 2,
+    "explanation": "The yellow arc (caution range) lies between Vno (maximum structural cruising speed) and Vne (never-exceed speed). Flight in this range is permitted only in smooth air and requires caution.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-009",
+    "subject": "Technical Specific",
+    "topic": "Airspeed indicator markings",
+    "difficulty": "medium",
+    "question": "The green arc on the ASI represents the normal operating range. What are its lower and upper limits'",
+    "options": [
+      "Vso to Vno",
+      "Vs1 to Vno",
+      "Vso to Vne",
+      "Va to Vno"
+    ],
+    "answerIndex": 1,
+    "explanation": "The green arc spans from Vs1 (stalling speed in clean/cruise configuration, power off) at its lower end to Vno (maximum structural cruising speed) at its upper end. This is the normal operating range in smooth air.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-010",
+    "subject": "Technical Specific",
+    "topic": "Airspeed indicator markings",
+    "difficulty": "hard",
+    "question": "On a multi-engine aircraft ASI, a blue radial line indicates:",
+    "options": [
+      "Vmc — minimum control speed with critical engine inoperative",
+      "Vyse — best rate-of-climb speed with one engine inoperative",
+      "Vxse — best angle-of-climb speed with one engine inoperative",
+      "Vsse — safe intentional one-engine inoperative speed"
+    ],
+    "answerIndex": 1,
+    "explanation": "The blue radial line on a multi-engine ASI marks Vyse, the best rate-of-climb speed with one engine inoperative (also called blue-line speed). It represents the optimum single-engine climb performance speed.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-011",
+    "subject": "Technical Specific",
+    "topic": "Fuel grades and colors",
+    "difficulty": "easy",
+    "question": "AVGAS 100LL used in piston aircraft is which color'",
+    "options": [
+      "Red",
+      "Green",
+      "Blue",
+      "Colorless"
+    ],
+    "answerIndex": 2,
+    "explanation": "AVGAS 100LL (100 octane, Low Lead) is dyed blue. The color coding helps pilots and fuellers identify the correct fuel type and avoid misfuelling.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-012",
+    "subject": "Technical Specific",
+    "topic": "Fuel grades and colors",
+    "difficulty": "easy",
+    "question": "Jet-A1 turbine fuel, when visually inspected, normally appears as which color'",
+    "options": [
+      "Blue",
+      "Green",
+      "Straw/colorless (pale yellow)",
+      "Red"
+    ],
+    "answerIndex": 2,
+    "explanation": "Jet-A1 is a kerosene-based turbine fuel that appears straw-colored or nearly colorless. Unlike AVGAS, it is not dyed with a distinctive color. Its density and smell differ markedly from AVGAS.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-013",
+    "subject": "Technical Specific",
+    "topic": "Fuel grades and colors",
+    "difficulty": "medium",
+    "question": "AVGAS 80 (grade 80/87) is identified by which color'",
+    "options": [
+      "Blue",
+      "Red",
+      "Green",
+      "Orange"
+    ],
+    "answerIndex": 1,
+    "explanation": "AVGAS Grade 80/87 is dyed red. It is a lower octane fuel suitable for engines with lower compression ratios. AVGAS 100 (non-low-lead) is dyed green, while 100LL is blue.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-014",
+    "subject": "Technical Specific",
+    "topic": "Fuel grades and colors",
+    "difficulty": "hard",
+    "question": "A pilot discovers that AVGAS 100LL has been accidentally loaded into an aircraft certified for AVGAS 80 only. The primary concern is:",
+    "options": [
+      "Fuel will burn too lean causing engine roughness",
+      "Higher lead content of 100LL may cause valve seat deposits and fouling over time, and the engine was not designed for it",
+      "Fuel will vaporize at low altitudes causing vapor lock",
+      "The blue dye will contaminate the fuel system filters"
+    ],
+    "answerIndex": 1,
+    "explanation": "While 100LL has adequate octane rating for lower-grade engines, its higher lead content (compared to AVGAS 80) can lead to lead fouling of spark plugs and valve seats over time. The engine manufacturer approval must be confirmed. Using an unapproved fuel grade is also a regulatory violation.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-015",
+    "subject": "Technical Specific",
+    "topic": "Altimeter setting procedures",
+    "difficulty": "easy",
+    "question": "QNH is defined as the altimeter sub-scale setting that causes the altimeter to read:",
+    "options": [
+      "Zero on the ground at any elevation",
+      "Pressure altitude at the airfield",
+      "Airfield elevation above mean sea level when on the ground",
+      "Height above the standard datum of 1013.25 hPa"
+    ],
+    "answerIndex": 2,
+    "explanation": "QNH is the local altimeter setting adjusted so that the altimeter reads the aerodrome elevation (AMSL) when the aircraft is on the ground at that aerodrome. It allows aircraft to fly at altitudes referenced to mean sea level.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-016",
+    "subject": "Technical Specific",
+    "topic": "Altimeter setting procedures",
+    "difficulty": "medium",
+    "question": "When climbing through the transition altitude, the pilot should change the altimeter setting from QNH to:",
+    "options": [
+      "QFE of the destination aerodrome",
+      "Standard pressure setting of 1013.25 hPa (29.92 inHg)",
+      "QNH of the destination aerodrome",
+      "Regional QNH"
+    ],
+    "answerIndex": 1,
+    "explanation": "At the transition altitude, climbing aircraft change from QNH to standard pressure (1013.25 hPa / 29.92 inHg). Above the transition layer, aircraft fly at Flight Levels referenced to standard pressure, ensuring uniform vertical separation.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-017",
+    "subject": "Technical Specific",
+    "topic": "Altimeter setting procedures",
+    "difficulty": "medium",
+    "question": "QFE is the altimeter setting that causes the altimeter to indicate:",
+    "options": [
+      "Elevation AMSL at the aerodrome",
+      "Height above the aerodrome reference point (zero on the ground at the aerodrome)",
+      "Density altitude at field elevation",
+      "Flight level equivalent of field elevation"
+    ],
+    "answerIndex": 1,
+    "explanation": "QFE is set so that the altimeter reads zero (or aerodrome elevation if at a threshold) when the aircraft is on the ground at the reference point. It gives height above the aerodrome rather than altitude above sea level.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-018",
+    "subject": "Technical Specific",
+    "topic": "Altimeter setting procedures",
+    "difficulty": "hard",
+    "question": "An aircraft on approach with QNH set will read altitude AMSL. If the actual atmospheric pressure is lower than the set QNH, the aircraft will be:",
+    "options": [
+      "Higher than indicated — safe situation",
+      "Lower than indicated — potentially dangerous",
+      "At the correct altitude since QNH compensates automatically",
+      "Unaffected, as pressure changes only affect TAS"
+    ],
+    "answerIndex": 1,
+    "explanation": "If the actual pressure is lower than set (cold or low-pressure air), the altimeter over-reads — the aircraft is actually lower than indicated. This is the basis of the memory aid: High to Low, Look Out Below. This is a safety-critical scenario during approaches.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-019",
+    "subject": "Technical Specific",
+    "topic": "POH sections",
+    "difficulty": "easy",
+    "question": "According to the standard POH/AFM structure (FAR Part 23 / EASA CS-23 format), which section contains emergency procedures'",
+    "options": [
+      "Section 1",
+      "Section 2",
+      "Section 3",
+      "Section 4"
+    ],
+    "answerIndex": 2,
+    "explanation": "The standard POH is divided into 9 sections. Section 3 is Emergency Procedures, which contains memory items, checklists for abnormal/emergency situations, and amplified procedures. Section 1 is General, Section 2 is Limitations, and Section 4 is Normal Procedures.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-020",
+    "subject": "Technical Specific",
+    "topic": "POH sections",
+    "difficulty": "medium",
+    "question": "A pilot needs to find the aircraft maximum certified takeoff weight and CG limits. This information is located in which POH section'",
+    "options": [
+      "Section 4 — Normal Procedures",
+      "Section 6 — Weight and Balance",
+      "Section 2 — Limitations",
+      "Section 7 — Airplane and Systems Description"
+    ],
+    "answerIndex": 2,
+    "explanation": "Section 2 (Limitations) contains all FAA/DGCA-approved operating limitations, including maximum takeoff weight, maximum landing weight, CG limits, airspeed limitations, engine limitations, and approved fuel types.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-021",
+    "subject": "Technical Specific",
+    "topic": "POH sections",
+    "difficulty": "medium",
+    "question": "Which section of the POH would a pilot consult to determine the aircraft useful load and to perform a weight and balance calculation'",
+    "options": [
+      "Section 2 — Limitations",
+      "Section 5 — Performance",
+      "Section 6 — Weight and Balance",
+      "Section 9 — Supplements"
+    ],
+    "answerIndex": 2,
+    "explanation": "Section 6 (Weight and Balance) contains equipment lists, loading graphs, moment/weight tables, and sample CG calculations. Pilots use this section to compute the loaded weight and confirm the CG is within limits before each flight.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-022",
+    "subject": "Technical Specific",
+    "topic": "Weight limits",
+    "difficulty": "easy",
+    "question": "Maximum ramp weight (maximum taxi weight) differs from maximum takeoff weight because it accounts for:",
+    "options": [
+      "Fuel burn during flight to destination",
+      "Fuel burned and oil consumed during engine start, taxi, and runup",
+      "Passenger and baggage weight loaded at the terminal",
+      "Structural limits applicable only on the ground"
+    ],
+    "answerIndex": 1,
+    "explanation": "Maximum ramp weight (also called maximum taxi weight) is slightly higher than maximum takeoff weight by the amount of fuel expected to be burned during engine start, taxi, and run-up. The aircraft must be at or below MTOW by the time it begins its takeoff roll.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-023",
+    "subject": "Technical Specific",
+    "topic": "Weight limits",
+    "difficulty": "medium",
+    "question": "An aircraft has a maximum zero fuel weight (MZFW) limitation. The purpose of this limit is to:",
+    "options": [
+      "Prevent the aircraft from exceeding structural limits in turbulence when fuel is absent from the wing tanks",
+      "Ensure the aircraft cannot take off with an empty fuel tank",
+      "Limit the payload that can be carried on short sectors",
+      "Prevent exceeding the maximum landing weight on arrival"
+    ],
+    "answerIndex": 0,
+    "explanation": "MZFW is the maximum weight of the aircraft without usable fuel. Fuel in the wing tanks relieves upward bending loads on the wing root. Without fuel (or with minimal fuel), bending loads on the wing root structure are highest, so MZFW limits the payload/structure combination to prevent overstress.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-024",
+    "subject": "Technical Specific",
+    "topic": "Performance charts",
+    "difficulty": "medium",
+    "question": "When using a takeoff distance performance chart, increasing pressure altitude while keeping all other variables constant will result in:",
+    "options": [
+      "Shorter ground roll due to higher engine efficiency",
+      "Longer ground roll because of reduced air density and engine power output",
+      "No change because ASI reads the same IAS",
+      "Shorter total distance because thinner air reduces drag"
+    ],
+    "answerIndex": 1,
+    "explanation": "At higher pressure altitudes, air density is lower. This reduces both engine power output and propeller/wing efficiency (aerodynamic performance). As a result, acceleration is lower and the aircraft needs more runway to reach the required airspeed for liftoff.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "TS-025",
+    "subject": "Technical Specific",
+    "topic": "Performance charts",
+    "difficulty": "hard",
+    "question": "A performance chart gives a take-off distance of 800 m under standard conditions. The temperature is ISA+20. Using the approximation of 10% increase per 1000 ft density altitude increase above field elevation, and the density altitude is approximately 2000 ft above field elevation, the corrected distance is approximately:",
+    "options": [
+      "960 m",
+      "880 m",
+      "800 m",
+      "840 m"
+    ],
+    "answerIndex": 0,
+    "explanation": "A 2000 ft density altitude increase above the charted conditions gives approximately 2 x 10% = 20% increase in distance. 800 m x 1.20 = 960 m. This is a standard approximation method used when exact chart corrections are not available.",
+    "source": "Generic POH / DGCA Flight Test Standards"
+  },
+  {
+    "id": "RTR-001",
+    "subject": "RTR",
+    "topic": "Phonetic alphabet",
+    "difficulty": "easy",
+    "question": "In the ICAO phonetic alphabet, the letter W is represented by which word'",
+    "options": [
+      "Washington",
+      "Whiskey",
+      "White",
+      "Warsaw"
+    ],
+    "answerIndex": 1,
+    "explanation": "The ICAO phonetic alphabet word for W is Whiskey. The full alphabet is standardised in ICAO Doc 9432 and Annex 10 to ensure clarity in voice communications regardless of the speaker language background.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-002",
+    "subject": "RTR",
+    "topic": "Phonetic alphabet",
+    "difficulty": "easy",
+    "question": "How is the number 9 pronounced in standard ICAO radiotelephony'",
+    "options": [
+      "Nine",
+      "Niner",
+      "Nov-em-ber",
+      "Nyne"
+    ],
+    "answerIndex": 1,
+    "explanation": "In ICAO radiotelephony, the digit 9 is pronounced NINER to avoid confusion with the German word nein (no) and similar words in other languages. Correct numeral pronunciation is specified in ICAO Doc 9432.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-003",
+    "subject": "RTR",
+    "topic": "Phonetic alphabet",
+    "difficulty": "medium",
+    "question": "A pilot is asked to spell out the registration VT-KAB using the ICAO phonetic alphabet. The correct transmission is:",
+    "options": [
+      "Victor Tango Kilo Alpha Bravo",
+      "Victor Tango Kilo November Bravo",
+      "Victor Tango Kilo Alfa Bravo",
+      "Violet Tiger Kilo Alpha Bravo"
+    ],
+    "answerIndex": 2,
+    "explanation": "The ICAO phonetic word for A is Alfa (not Alpha — the spelling Alpha is not the official ICAO form). The correct transmission is Victor Tango Kilo Alfa Bravo. ICAO Doc 9432 specifies Alfa and Juliett as the standard spellings.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-004",
+    "subject": "RTR",
+    "topic": "Readability scale",
+    "difficulty": "easy",
+    "question": "In ICAO standard radiotelephony, a readability of 5 means:",
+    "options": [
+      "Unreadable",
+      "Readable now and then",
+      "Readable but with difficulty",
+      "Perfectly readable"
+    ],
+    "answerIndex": 3,
+    "explanation": "The ICAO readability scale runs from 1 to 5: 1 = Unreadable, 2 = Readable now and then, 3 = Readable but with difficulty, 4 = Readable, 5 = Perfectly readable. A readability of 5 is the best possible signal quality report.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-005",
+    "subject": "RTR",
+    "topic": "Readability scale",
+    "difficulty": "medium",
+    "question": "A controller responds to a pilot radio check with READABILITY 3. This means the pilot transmission is:",
+    "options": [
+      "Perfectly readable",
+      "Readable but with difficulty",
+      "Readable now and then",
+      "Unreadable"
+    ],
+    "answerIndex": 1,
+    "explanation": "Readability 3 on the ICAO scale means readable but with difficulty. The pilot should take corrective action (check microphone, adjust squelch, check frequency, or change position) to improve signal quality.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-006",
+    "subject": "RTR",
+    "topic": "Standard phraseology",
+    "difficulty": "easy",
+    "question": "Which word is used in ICAO RTF to indicate that a message has been received and understood'",
+    "options": [
+      "Copy",
+      "Roger",
+      "Wilco",
+      "Affirmative"
+    ],
+    "answerIndex": 1,
+    "explanation": "ROGER means I have received all of your last transmission. It does not mean I will comply (that is WILCO — will comply). COPY and AFFIRMATIVE are not the standard ICAO terms for simple acknowledgement of receipt.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-007",
+    "subject": "RTR",
+    "topic": "Standard phraseology",
+    "difficulty": "easy",
+    "question": "The word WILCO in ICAO RTF phraseology means:",
+    "options": [
+      "I have received and understood your message",
+      "I have received your message, will comply",
+      "Wait, I must check with operations",
+      "Your message is not understood"
+    ],
+    "answerIndex": 1,
+    "explanation": "WILCO (derived from will comply) means I have received your message, understand it, and will comply with it. It already implies receipt, so ROGER WILCO is redundant but sometimes used colloquially; WILCO alone is technically sufficient.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-008",
+    "subject": "RTR",
+    "topic": "Standard phraseology",
+    "difficulty": "medium",
+    "question": "The phrase BREAK BREAK in RTF is used to indicate:",
+    "options": [
+      "A separation between the address and the message of the same station",
+      "An emergency transmission follows",
+      "Separation between messages to different aircraft in a busy frequency",
+      "The pilot is leaving the frequency temporarily"
+    ],
+    "answerIndex": 2,
+    "explanation": "BREAK BREAK is used to indicate a separation between messages addressed to different aircraft on the same frequency, especially when several messages are transmitted in sequence. BREAK (once) separates the address from the message text for the same station.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-009",
+    "subject": "RTR",
+    "topic": "ATC clearances and readback",
+    "difficulty": "medium",
+    "question": "Which of the following items in an ATC clearance is MANDATORY to read back by the pilot'",
+    "options": [
+      "Weather information and ATIS code",
+      "Route clearance, assigned heading, altitude, and speed instructions",
+      "Taxiway names during pushback",
+      "Traffic information passed by ATC"
+    ],
+    "answerIndex": 1,
+    "explanation": "ICAO Annex 11 and Doc 4444 require mandatory readback of: ATC route clearances, runway-in-use, clearances to enter/land/take off/hold short of any active runway, heading instructions, altitude instructions, speed instructions, SSR transponder codes, and altimeter settings. Weather info and ATIS codes do not require readback.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-010",
+    "subject": "RTR",
+    "topic": "ATC clearances and readback",
+    "difficulty": "medium",
+    "question": "A pilot reads back an ATC clearance incorrectly. The controller should respond with:",
+    "options": [
+      "ROGER — the readback is accepted even if incorrect",
+      "NEGATIVE, followed by the correct version of the instruction",
+      "STANDBY and reissue after other traffic is handled",
+      "CONFIRM — asking the pilot to re-read the original message"
+    ],
+    "answerIndex": 1,
+    "explanation": "If a readback is incorrect or incomplete, ATC must use the word NEGATIVE and immediately transmit the correct version. This is a safety-critical procedure to prevent misunderstandings from becoming operational errors.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-011",
+    "subject": "RTR",
+    "topic": "Distress and urgency calls",
+    "difficulty": "easy",
+    "question": "The MAYDAY distress call is transmitted how many times at the beginning of a distress message'",
+    "options": [
+      "Once",
+      "Twice",
+      "Three times",
+      "Five times"
+    ],
+    "answerIndex": 2,
+    "explanation": "The distress call begins with MAYDAY MAYDAY MAYDAY spoken three times, as specified in ICAO Annex 10 and Doc 9432. The repetition ensures the call is recognised as a distress call even if the beginning is partially missed.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-012",
+    "subject": "RTR",
+    "topic": "Distress and urgency calls",
+    "difficulty": "easy",
+    "question": "PAN-PAN (urgency) differs from MAYDAY (distress) primarily because:",
+    "options": [
+      "PAN-PAN is used by ATC; MAYDAY is used only by pilots",
+      "PAN-PAN indicates a serious situation requiring priority, but the aircraft is not in immediate danger of destruction",
+      "PAN-PAN is used only on 121.5 MHz; MAYDAY on working frequency",
+      "PAN-PAN requires a full position report; MAYDAY does not"
+    ],
+    "answerIndex": 1,
+    "explanation": "MAYDAY indicates a state of distress — grave and imminent danger requiring immediate assistance (e.g., engine failure with forced landing imminent). PAN-PAN indicates urgency — a serious and urgent situation that requires priority handling but is not immediately life-threatening (e.g., medical emergency, lost aircraft).",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-013",
+    "subject": "RTR",
+    "topic": "Distress and urgency calls",
+    "difficulty": "medium",
+    "question": "The international aeronautical distress frequency on which all aircraft should monitor during flight (and on which ELTs transmit) is:",
+    "options": [
+      "123.45 MHz",
+      "121.5 MHz",
+      "156.8 MHz",
+      "243.0 MHz"
+    ],
+    "answerIndex": 1,
+    "explanation": "121.5 MHz is the international VHF aeronautical emergency/distress frequency. ELTs (Emergency Locator Transmitters) transmit on both 121.5 MHz and 406 MHz. Aircraft are encouraged to monitor 121.5 MHz when on airways. 243.0 MHz is the military UHF guard frequency.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-014",
+    "subject": "RTR",
+    "topic": "Distress and urgency calls",
+    "difficulty": "hard",
+    "question": "After transmitting a MAYDAY call, a pilot does not receive a response. What is the next correct action per ICAO procedures'",
+    "options": [
+      "Cease transmitting to avoid blocking the channel",
+      "Repeat the MAYDAY call on 121.5 MHz or any other available frequency",
+      "Switch to squawk 7700 and only transmit on 243.0 MHz",
+      "Transmit a PAN-PAN downgrade and await acknowledgement"
+    ],
+    "answerIndex": 1,
+    "explanation": "If a MAYDAY call goes unanswered on the current frequency, the pilot should repeat it on 121.5 MHz (international distress frequency) or attempt any other available frequency. Squawk 7700 should also be selected, but continued voice transmission attempts are essential.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-015",
+    "subject": "RTR",
+    "topic": "Transponder codes",
+    "difficulty": "easy",
+    "question": "The SSR transponder code 7700 indicates:",
+    "options": [
+      "Radio communication failure",
+      "Unlawful interference (hijack)",
+      "General emergency",
+      "VFR flight in uncontrolled airspace"
+    ],
+    "answerIndex": 2,
+    "explanation": "Squawk 7700 is the standard ICAO SSR code for general emergency. Squawk 7600 indicates radio communication failure (NORDO), and squawk 7500 indicates unlawful interference (hijacking). These codes are recognized worldwide and trigger immediate ATC alerts.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-016",
+    "subject": "RTR",
+    "topic": "Transponder codes",
+    "difficulty": "easy",
+    "question": "Which transponder code should a pilot squawk when experiencing radio communication failure (NORDO)'",
+    "options": [
+      "7700",
+      "7500",
+      "7600",
+      "2000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Code 7600 is the ICAO designated SSR code for radio communication failure (NORDO — No Radio). It alerts ATC that the aircraft cannot communicate by voice. ATC will then apply NORDO procedures. Code 7700 is general emergency and 7500 is hijack.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-017",
+    "subject": "RTR",
+    "topic": "Transponder codes",
+    "difficulty": "medium",
+    "question": "An ATC instruction reads SQUAWK IDENT. The correct pilot action is:",
+    "options": [
+      "Switch the transponder to STANDBY mode",
+      "Press the IDENT button on the transponder to produce a special SPI pulse on radar",
+      "Change the transponder code to the assigned squawk and press IDENT",
+      "Set the transponder to Mode A only and confirm on radio"
+    ],
+    "answerIndex": 1,
+    "explanation": "When instructed to SQUAWK IDENT, the pilot presses the IDENT (Identification) button on the transponder. This triggers a Special Position Identification (SPI) pulse, causing the aircraft radar return to blossom on the controller screen for quick identification.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-018",
+    "subject": "RTR",
+    "topic": "Transponder codes",
+    "difficulty": "medium",
+    "question": "Transponder Mode C provides ATC with which additional information compared to Mode A'",
+    "options": [
+      "Aircraft registration and flight number",
+      "Pressure altitude of the aircraft",
+      "GPS position of the aircraft",
+      "Ground speed and heading"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mode A transmits only the 4-digit squawk code for identification. Mode C additionally transmits the aircraft pressure altitude (derived from the transponder encoding altimeter or air data computer), enabling ATC to see the aircraft altitude on radar.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-019",
+    "subject": "RTR",
+    "topic": "Frequency management",
+    "difficulty": "easy",
+    "question": "Before changing from one ATC frequency to another (when not instructed by ATC), the pilot should:",
+    "options": [
+      "Change immediately to avoid delay",
+      "Inform the current controller and obtain approval or acknowledgement before changing",
+      "Switch without informing since radio is the pilot prerogative",
+      "Squawk 7600 and then change frequency"
+    ],
+    "answerIndex": 1,
+    "explanation": "A pilot should always inform the current ATC unit before changing to another frequency, unless ATC has already instructed the change or it is an emergency. Unannounced frequency changes can result in loss of radio contact and are contrary to ICAO RTF procedures.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-020",
+    "subject": "RTR",
+    "topic": "Frequency management",
+    "difficulty": "medium",
+    "question": "A pilot is instructed MONITOR 128.3. The correct action is:",
+    "options": [
+      "Tune 128.3, call the station, and await a response",
+      "Tune 128.3 and listen without making an initial call",
+      "Continue on the current frequency and note 128.3 as backup",
+      "Acknowledge on current frequency, tune 128.3, and call when ready"
+    ],
+    "answerIndex": 1,
+    "explanation": "MONITOR (frequency) means tune to the stated frequency and listen, but do not make an initial call. CONTACT (frequency) means tune and make an initial call. These are distinct standard ICAO instructions with different required actions.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-021",
+    "subject": "RTR",
+    "topic": "ATIS",
+    "difficulty": "easy",
+    "question": "ATIS stands for:",
+    "options": [
+      "Automatic Terminal Information Service",
+      "Air Traffic Identification System",
+      "Aerodrome Traffic and Information Squawk",
+      "Automatic Transponder Identification System"
+    ],
+    "answerIndex": 0,
+    "explanation": "ATIS stands for Automatic Terminal Information Service. It is a continuous broadcast of routine aerodrome meteorological and operational information on a dedicated frequency, updated regularly (typically every 30 minutes or when significant changes occur), and identified by a successive letter of the alphabet.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-022",
+    "subject": "RTR",
+    "topic": "ATIS",
+    "difficulty": "medium",
+    "question": "When making first contact with approach control after listening to ATIS information CHARLIE, the pilot should:",
+    "options": [
+      "State the full ATIS message received to confirm awareness",
+      "Mention INFORMATION CHARLIE in the initial call to indicate the ATIS has been received",
+      "Ask for the latest ATIS as it may have changed",
+      "Omit any reference to ATIS and wait for the controller to ask"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pilots should include the ATIS identifier (e.g., INFORMATION CHARLIE) in their initial call to the ATC unit. This informs the controller that the pilot has the current ATIS information and does not need it repeated. If the ATIS has been updated, ATC will advise the pilot to obtain the new information.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-023",
+    "subject": "RTR",
+    "topic": "VHF propagation basics",
+    "difficulty": "medium",
+    "question": "VHF radio waves used in aviation communications travel primarily as:",
+    "options": [
+      "Ground waves that follow the curvature of the Earth",
+      "Sky waves reflected by the ionosphere",
+      "Line-of-sight waves limited by the horizon",
+      "Surface waves diffracted around terrain"
+    ],
+    "answerIndex": 2,
+    "explanation": "VHF (Very High Frequency, 30-300 MHz) signals propagate primarily by line-of-sight. They cannot follow the Earth curvature and are not significantly reflected by the ionosphere (unlike HF/MF). This limits VHF range to approximately line-of-sight between the aircraft and the ground station antenna.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-024",
+    "subject": "RTR",
+    "topic": "VHF propagation basics",
+    "difficulty": "medium",
+    "question": "A pilot flying at 1600 ft AGL notices VHF communication with a ground station 60 NM away is unreliable. The most likely reason is:",
+    "options": [
+      "VHF frequency selected is outside the aviation band",
+      "The aircraft is below the radio horizon for that range at its current altitude",
+      "The transmitter is operating on a sky wave at this frequency",
+      "Ionospheric absorption is highest during daytime at VHF"
+    ],
+    "answerIndex": 1,
+    "explanation": "VHF range is governed by line-of-sight. The radio horizon in nautical miles is approximately 1.23 times the square root of altitude in feet. At 1600 ft: 1.23 x sqrt(1600) = 1.23 x 40 = approximately 49 NM. The 60 NM station may therefore be beyond the radio horizon, causing unreliable reception.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  },
+  {
+    "id": "RTR-025",
+    "subject": "RTR",
+    "topic": "Standard phraseology",
+    "difficulty": "hard",
+    "question": "When a pilot is uncertain of a received ATC clearance, the correct ICAO phraseology to request repetition of the last message is:",
+    "options": [
+      "REPEAT LAST MESSAGE",
+      "SAY AGAIN",
+      "CONFIRM LAST TRANSMISSION",
+      "RESTATE INSTRUCTIONS"
+    ],
+    "answerIndex": 1,
+    "explanation": "SAY AGAIN is the standard ICAO phraseology requesting repetition of all or part of a previous transmission. The word REPEAT is reserved for use by artillery and should not be used in aviation RTF to avoid confusion. Pilots should use SAY AGAIN ALL AFTER (phrase) or SAY AGAIN ALL BEFORE (phrase) for partial repetition.",
+    "source": "ICAO Doc 9432 / DGCA RTR(A) Syllabus / Annex 10"
+  }
+]

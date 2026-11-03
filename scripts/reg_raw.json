@@ -1,0 +1,4802 @@
+[
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which instrument is the principal current Indian statute in the hierarchy described in this chapter?",
+      "o": [
+        "Aircraft Rules 1937",
+        "Chicago Convention",
+        "Bharatiya Vayuyan Adhiniyam 2024",
+        "Civil Aviation Requirements"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "Bharatiya Vayuyan Adhiniyam 2024 is the principal current Indian statute, while the Rules and Civil Aviation Requirements provide more detailed requirements."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which Indian authority has the core civil aviation security oversight role?",
+      "o": [
+        "BCAS",
+        "AAIB",
+        "AAI",
+        "WPC Wing"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "BCAS is the authority responsible for civil aviation security policy, standards and oversight."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which definition describes a non-power driven heavier than air aircraft deriving lift chiefly from fixed surfaces?",
+      "o": [
+        "Airship",
+        "Helicopter",
+        "Amphibian",
+        "Glider"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "Glider is the correct term for a non-power driven heavier than air aircraft that derives lift chiefly from fixed surfaces."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which operation is neither commercial air transport nor aerial work?",
+      "o": [
+        "Public transport",
+        "General aviation",
+        "Scheduled air transport",
+        "Aerial work"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "General aviation is defined as an aircraft operation other than commercial air transport or aerial work."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "When a pressure altimeter is set to QNH, which vertical quantity does it indicate?",
+      "o": [
+        "Altitude",
+        "Height above the QFE datum",
+        "Flight level",
+        "Aerodrome elevation only"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Altitude is indicated with QNH because altitude is referenced to mean sea level."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which minimum provides at least 1,000 ft obstacle clearance within a 25 NM sector centred on a radio navigation aid?",
+      "o": [
+        "MOCA",
+        "MEA",
+        "MDA",
+        "MSA"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "MSA is the minimum sector altitude, providing at least 1,000 ft clearance within a 25 NM sector."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which airspace begins at the surface and extends upward to a specified upper limit?",
+      "o": [
+        "Control area",
+        "Control zone",
+        "Airway",
+        "Flight information region"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "A control zone is controlled airspace extending upwards from the surface to a specified upper limit."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which navigation specification includes on-board performance monitoring and alerting?",
+      "o": [
+        "RNAV specification",
+        "ATS route",
+        "Advisory route",
+        "RNP specification"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "An RNP specification includes the requirement for on-board performance monitoring and alerting."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which aerodrome area consists of the manoeuvring area plus the apron or aprons?",
+      "o": [
+        "Movement area",
+        "Landing area",
+        "Runway strip",
+        "Clearway"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "The movement area consists of the manoeuvring area and the apron or aprons."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which declared distance equals TORA plus stopway, if a stopway is provided?",
+      "o": [
+        "TODA",
+        "LDA",
+        "ASDA",
+        "TORA"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "ASDA is the accelerate-stop distance available and equals TORA plus the stopway, if provided."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which flight plan includes changes resulting from subsequent clearances?",
+      "o": [
+        "Filed flight plan",
+        "Current flight plan",
+        "Operational flight plan",
+        "Repetitive flight plan"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The current flight plan is the flight plan including changes brought about by later clearances."
+    }
+  },
+  {
+    "chapter": "Definitions and Framework",
+    "slug": "study-airreg-01-definitions-and-framework",
+    "data": {
+      "q": "Which emergency phase means reasonable certainty that grave and imminent danger exists and immediate assistance is required?",
+      "o": [
+        "ALERFA",
+        "INCERFA",
+        "DETRESFA",
+        "Alerting service"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "DETRESFA is the distress phase, used when grave and imminent danger is reasonably certain and immediate assistance is required."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which Chicago Convention Article establishes complete and exclusive State sovereignty over the airspace above its territory?",
+      "o": [
+        "Article 5",
+        "Article 1",
+        "Article 12",
+        "Article 38"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "Article 1 establishes complete and exclusive sovereignty over the airspace above a State's territory."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "What does Article 6 require before a scheduled international air service operates over or into another State?",
+      "o": [
+        "Only a filed flight plan",
+        "A technical stop",
+        "Cabotage approval",
+        "Special permission or authorisation from that State"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Special permission or authorisation from that State is required for a scheduled international air service under Article 6."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which item is one of the seven documents listed under Article 29?",
+      "o": [
+        "Certificate of registration",
+        "Airport entry permit",
+        "Passenger health card for every flight",
+        "Aerodrome licence"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "A certificate of registration is one of the documents Article 29 requires an aircraft in international navigation to carry."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Within what period does Article 38 require notice after an amended international Standard when a State does not amend its own practice?",
+      "o": [
+        "30 days",
+        "45 days",
+        "60 days",
+        "One year"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The required period stated by Article 38 is 60 days after adoption of the amendment."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which ICAO body has all Contracting States represented with one vote each?",
+      "o": [
+        "Council",
+        "Air Navigation Commission",
+        "Assembly",
+        "Secretariat"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The Assembly includes all Contracting States, with one vote for each State."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which body adopts international Standards and Recommended Practices?",
+      "o": [
+        "The Council",
+        "The Secretariat",
+        "A regional office",
+        "The Air Transport Committee alone"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The Council adopts international Standards and Recommended Practices, while technical bodies prepare and recommend material."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which Annex addresses safe transport of dangerous goods by air?",
+      "o": [
+        "Annex 16",
+        "Annex 17",
+        "Annex 19",
+        "Annex 18"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "Annex 18 addresses the safe transport of dangerous goods by air."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "What status do Regional Supplementary Procedures have?",
+      "o": [
+        "They are national laws in every State",
+        "They are Council-approved procedures for the relevant region",
+        "They replace the Chicago Convention",
+        "They apply only to military aircraft"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Regional Supplementary Procedures are approved by the Council and apply only in the relevant region."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which freedom permits landing in another State for refuelling without taking on or putting down traffic?",
+      "o": [
+        "Second freedom",
+        "First freedom",
+        "Fourth freedom",
+        "Fifth freedom"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "The second freedom permits a non-traffic technical landing such as refuelling or repair."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which convention chiefly addresses unlawful seizure of aircraft?",
+      "o": [
+        "Tokyo 1963",
+        "Rome 1952",
+        "The Hague 1970",
+        "Geneva 1948"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "The Hague Convention 1970 chiefly addresses suppression of unlawful seizure of aircraft."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which convention concerns damage caused by foreign aircraft to persons or property on the surface?",
+      "o": [
+        "Warsaw 1929",
+        "Rome 1952",
+        "Tokyo 1963",
+        "Cape Town 2001"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "The Rome Convention 1952 concerns liability for damage caused by foreign aircraft to third parties on the surface."
+    }
+  },
+  {
+    "chapter": "ICAO and Conventions",
+    "slug": "study-airreg-02-icao-and-conventions",
+    "data": {
+      "q": "Which Indian body is responsible for civil aviation safety regulation, licensing and airworthiness oversight?",
+      "o": [
+        "AAI",
+        "ICAO",
+        "Ministry of External Affairs",
+        "DGCA"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "DGCA is the Indian safety regulator responsible for licensing, airworthiness and related oversight."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "Which law replaced the Aircraft Act, 1934 as India's principal civil aviation enabling statute?",
+      "o": [
+        "The Bharatiya Vayuyan Adhiniyam, 2024",
+        "The Indian Aircraft Rules, 1920",
+        "The Drone Rules, 2021",
+        "The Aircraft Security Rules, 2011"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The Bharatiya Vayuyan Adhiniyam, 2024 replaced the Aircraft Act, 1934 as the principal enabling statute."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "Which body has the central role of investigating aircraft accidents and incidents in India?",
+      "o": [
+        "Airports Authority of India",
+        "Bureau of Civil Aviation Security",
+        "Aircraft Accident Investigation Bureau",
+        "Directorate General of Health Services"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "The Aircraft Accident Investigation Bureau is the body responsible for investigating aircraft accidents and incidents."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "What must an Indian registered aircraft normally obtain before leaving India for an overseas flight?",
+      "o": [
+        "A customs seal only",
+        "Required DGCA permission",
+        "An AIC",
+        "A new certificate of registration"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Required DGCA permission is needed before an Indian registered aircraft leaves India for an overseas flight."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "If a pilot strays into a prohibited area under the rule summarised by Bali, what is the correct immediate course?",
+      "o": [
+        "Descend immediately inside the area",
+        "Continue to destination without reporting",
+        "Circle until a clearance is received",
+        "Signal distress, leave the area and land at the nearest aerodrome"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "The stated response is to signal distress, leave the prohibited area and land at the nearest aerodrome."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "How long before flight does Bali state that flight crew must avoid alcohol, sedatives and narcotics?",
+      "o": [
+        "6 hours",
+        "12 hours",
+        "18 hours",
+        "24 hours"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Bali states a 12-hour prohibition before flight, together with the continuing rule against operating while intoxicated."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "At what jet-exhaust distance does the fuelling rule in the lesson require fuelling to stop?",
+      "o": [
+        "15 m",
+        "30 m",
+        "43 m",
+        "50 m"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Fuelling stops when hazardous jet exhaust comes within 43 m of the fuelling equipment or aircraft."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "For how long must a flight crew log book be preserved under the stated rule?",
+      "o": [
+        "At least five years after the last entry",
+        "Two years after the first entry",
+        "Until the next licence renewal",
+        "For the holder's lifetime"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The personal flight crew log book is retained for at least five years after its last entry."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "For how long is a draft CAR placed on the DGCA website for objections and suggestions before final issue?",
+      "o": [
+        "7 days",
+        "14 days",
+        "21 days",
+        "30 days"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "The stated consultation period for a draft CAR is 30 days before final issue."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "Which publication is used for urgent, time-sensitive information about a facility, service, procedure or hazard?",
+      "o": [
+        "AIC",
+        "NOTAM",
+        "Operations Manual",
+        "Certificate of airworthiness"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "A NOTAM provides time-sensitive operational information whose timely knowledge is essential."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "Which airspace type permits flight only in accordance with specified conditions?",
+      "o": [
+        "Restricted area",
+        "Prohibited area",
+        "Danger area in every circumstance",
+        "Aerodrome traffic zone only"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "A restricted area permits flight only in accordance with its specified conditions."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "What identifier is assigned to a registered drone under the Drone Rules system?",
+      "o": [
+        "Certificate of airworthiness number",
+        "SSR code",
+        "Unique Identification Number",
+        "Aerodrome reference code"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "A registered drone receives a Unique Identification Number, commonly shortened to UIN."
+    }
+  },
+  {
+    "chapter": "Indian Regulatory System",
+    "slug": "study-airreg-03-indian-regulatory-system",
+    "data": {
+      "q": "What general maximum fine is stated in Bali's summary of the 2024 Act?",
+      "o": [
+        "Rs. 1 lakh",
+        "Rs. 10 lakh",
+        "Rs. 50 lakh",
+        "Rs. 1 crore"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "Bali's summary states a general maximum fine of Rs. 1 crore, alongside imprisonment up to two years or both."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Which ICAO Annex contains the Standards for aircraft nationality and registration marks?",
+      "o": [
+        "Annex 7",
+        "Annex 1",
+        "Annex 8",
+        "Annex 9"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Annex 7 contains the international Standards for Aircraft Nationality and Registration Marks."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Who assigns the individual registration mark to an aircraft?",
+      "o": [
+        "The aircraft manufacturer",
+        "The International Telecommunication Union alone",
+        "The State of Registry or common mark registering authority",
+        "The aerodrome operator"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "The State of Registry or common mark registering authority assigns the aircraft's registration mark."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Which combination must be excluded because it can be confused with an urgency signal?",
+      "o": [
+        "RCC",
+        "PAN",
+        "DDD",
+        "LLL"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "PAN is an internationally recognised urgency signal and must not be used as a registration-mark combination."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Which mark does Bali identify for Indian civil aircraft?",
+      "o": [
+        "AT",
+        "VU",
+        "U followed by six characters",
+        "VT"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "VT is the nationality mark that Bali identifies as continuing in use for Indian civil aircraft."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "What is the minimum height of marks on the wings of a heavier-than-air aircraft?",
+      "o": [
+        "30 cm",
+        "40 cm",
+        "50 cm",
+        "60 cm"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The wing marks of a heavier-than-air aircraft must be at least 50 cm high."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Where are the wing marks placed on a heavier-than-air aircraft?",
+      "o": [
+        "On the lower wing surface",
+        "Only on the upper wing surface",
+        "Only on the wing tips",
+        "Inside the wheel wells"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The required wing marks are placed on the lower wing surface for ready external identification."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "What minimum height applies to marks on the fuselage or vertical tail of a heavier-than-air aircraft?",
+      "o": [
+        "20 cm",
+        "30 cm",
+        "40 cm",
+        "50 cm"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Fuselage and vertical-tail marks on a heavier-than-air aircraft must be at least 30 cm high."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Which document is evidence that an aircraft has been entered on the national register?",
+      "o": [
+        "Certificate of Airworthiness",
+        "Noise certificate",
+        "Journey log book",
+        "Certificate of Registration"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "The Certificate of Registration is the official evidence that the aircraft has been entered on the national register."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Which item is specifically added to the Indian Certificate of Registration for a leased aircraft?",
+      "o": [
+        "Lease validity and particulars of lessor and lessee",
+        "The pilot's medical expiry",
+        "Every airport in the intended route network",
+        "A passenger manifest"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "A leased aircraft's certificate includes the lease validity and the names, nationalities and addresses of lessor and lessee."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Which event is a stated ground for DGCA cancellation of Indian registration?",
+      "o": [
+        "A routine change of parking stand",
+        "The Certificate of Airworthiness has been expired for five years or more",
+        "A single delayed departure",
+        "Replacement of a cabin seat cover"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "A Certificate of Airworthiness that has remained expired for five years or more is a stated cancellation ground."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "Who exercises operational control over a leased aircraft in Bali's summary?",
+      "o": [
+        "The common mark authority",
+        "The aircraft manufacturer",
+        "The lessee operator",
+        "The aerodrome licensee"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The lessee operator exercises operational control and must hold the necessary economic and operating authority."
+    }
+  },
+  {
+    "chapter": "Nationality and Registration",
+    "slug": "study-airreg-04-nationality-and-registration",
+    "data": {
+      "q": "What does a common mark replace for a qualifying international operating agency?",
+      "o": [
+        "The registration certificate",
+        "The identification plate",
+        "The registration mark",
+        "The nationality mark"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "A common mark replaces the nationality mark for a qualifying international operating agency."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Which ICAO Annex contains the international airworthiness Standards?",
+      "o": [
+        "Annex 8",
+        "Annex 6",
+        "Annex 7",
+        "Annex 16"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Annex 8 contains the international Standards for the airworthiness of aircraft."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Which State determines whether an aircraft on its register continues to be airworthy?",
+      "o": [
+        "State of Manufacture",
+        "State of Registry",
+        "State of the next landing",
+        "State of the operator's insurer"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "The State of Registry determines whether an aircraft on its register continues to be airworthy."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "What is the main purpose of a Type Certificate?",
+      "o": [
+        "To license the flight crew",
+        "To approve one maintenance release",
+        "To approve the type design",
+        "To register one aircraft"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "A Type Certificate records approval of the type design after compliance with the applicable design requirements is shown."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Which document summarises approved models, certification basis, powerplant combinations and design limitations?",
+      "o": [
+        "Journey log",
+        "Noise Certificate",
+        "Certificate of Registration",
+        "Type Certificate Data Sheet"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "The Type Certificate Data Sheet summarises the approved design data and limitations associated with the Type Certificate."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "What must be true before DGCA issues a normal Certificate of Airworthiness?",
+      "o": [
+        "The aircraft must have flown internationally",
+        "The owner must also be the manufacturer",
+        "The aircraft must conform to its approved design and be safe to operate",
+        "The Noise Certificate must replace the flight manual"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "DGCA issues the normal Certificate of Airworthiness only when the aircraft conforms to its approved basis and is in a condition for safe operation."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "What does an Airworthiness Review Certificate record?",
+      "o": [
+        "Approval of a new aircraft type",
+        "A satisfactory periodic continuing-airworthiness review",
+        "Ownership of the aircraft",
+        "Permission to use a radio frequency"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "An Airworthiness Review Certificate records that the required periodic continuing-airworthiness review was completed satisfactorily."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Which action belongs to continuing airworthiness?",
+      "o": [
+        "Controlling defects and complying with mandatory airworthiness instructions",
+        "Changing the nationality mark without approval",
+        "Ignoring an applicable directive until the next sale",
+        "Replacing technical records with the journey log"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "Controlling defects and complying with mandatory airworthiness instructions are core continuing-airworthiness duties."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Who ensures a structural integrity programme, including corrosion-control information, exists for the applicable type?",
+      "o": [
+        "The aerodrome operator",
+        "The pilot alone",
+        "The travel agent",
+        "The State of Design"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "The State of Design ensures that the applicable structural integrity programme includes corrosion-control information."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Which event causes the certificate to be deemed suspended under Bali's national provisions?",
+      "o": [
+        "Major damage to the aircraft",
+        "A change of parking stand",
+        "A delayed departure",
+        "A passenger missing a connection"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Major damage is one of the events that causes the Certificate of Airworthiness to be deemed suspended."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "What may the Director General require when there is reasonable doubt about aircraft safety?",
+      "o": [
+        "A change of aircraft nationality only",
+        "Automatic commercial approval",
+        "Deletion of the technical log",
+        "Inspection, repair, replacement, overhaul or flight testing under approved supervision"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "The Director General may require inspection, repair, replacement, overhaul or flight testing under approved supervision."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "What does a special flight permit authorise?",
+      "o": [
+        "Unlimited normal operation",
+        "Any flight selected by the pilot",
+        "A specific exceptional flight subject to stated limitations",
+        "Permanent restoration of the normal certificate"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "A special flight permit authorises a specific exceptional flight subject to its stated purpose and limitations."
+    }
+  },
+  {
+    "chapter": "Airworthiness",
+    "slug": "study-airreg-05-airworthiness",
+    "data": {
+      "q": "Which document answers whether the aircraft meets an applicable certified noise standard?",
+      "o": [
+        "Certificate of Registration",
+        "Noise Certificate",
+        "Flight crew licence",
+        "Journey log"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The Noise Certificate records compliance of the approved aircraft configuration with the applicable certified noise standard."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What is the minimum age stated by Bali for an aeroplane CPL?",
+      "o": [
+        "18 years",
+        "16 years",
+        "17 years",
+        "21 years"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The minimum age for an aeroplane Commercial Pilot's Licence is 18 years."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "Which language level is Operational and must be re-evaluated every three years?",
+      "o": [
+        "Level 6",
+        "Level 3",
+        "Level 4",
+        "Level 5"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Level 4 is Operational, is accepted, and requires re-evaluation every three years."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What is the normal Class 2 medical validity up to age 50?",
+      "o": [
+        "Six months",
+        "Two years",
+        "One year",
+        "Four years"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The normal Class 2 medical validity is two years up to age 50."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "Which restriction applies to an SPL holder?",
+      "o": [
+        "The holder may carry one passenger",
+        "The holder may fly for hire under supervision",
+        "The holder may fly IFR after ten solo hours",
+        "The holder flies under VFR and may not carry passengers"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "An SPL holder flies under VFR and may not carry passengers, animals or goods."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What total flight experience does Bali state for the aeroplane PPL?",
+      "o": [
+        "20 hours",
+        "100 hours",
+        "40 hours",
+        "200 hours"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The aeroplane PPL requires at least 40 hours of total flight time."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What recent night experience is required before a PPL holder carries passengers at night?",
+      "o": [
+        "Five take-offs and five landings by night as pilot-in-command in six months",
+        "Ten night landings in twelve months",
+        "One night cross-country every month",
+        "Five instrument approaches in six months"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The PPL holder needs five take-offs and five landings by night as pilot-in-command within the preceding six months."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "Which set correctly states the CPL core experience?",
+      "o": [
+        "100 total, 50 command, 10 cross-country",
+        "250 total, 150 command, 50 instrument",
+        "1,500 total, 250 command, 500 cross-country",
+        "200 total, 100 command, 20 cross-country command"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "The CPL core is 200 total hours, 100 hours as pilot-in-command and 20 hours cross-country as pilot-in-command."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "How long is the type proficiency check described for transport aeroplanes above 5,700 kg valid?",
+      "o": [
+        "Twelve months",
+        "Six months",
+        "Twenty-four months",
+        "Three months"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The applicable type proficiency check is valid for six months."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What total time does Bali state for the aeroplane ATPL?",
+      "o": [
+        "1,500 hours",
+        "1,000 hours",
+        "500 hours",
+        "250 hours"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "The aeroplane ATPL requires at least 1,500 hours of total flight time."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What is the ATPL minimum total night-flight experience?",
+      "o": [
+        "25 hours",
+        "50 hours",
+        "100 hours",
+        "75 hours"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "The ATPL experience table requires at least 75 hours of night flight."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "What is the normal validity of an aeroplane Instrument Rating from its flight test?",
+      "o": [
+        "Six months",
+        "Twenty-four months",
+        "Twelve months",
+        "Ten years"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "The aeroplane Instrument Rating is valid for twelve months from the instrument flight test."
+    }
+  },
+  {
+    "chapter": "Personnel Licensing",
+    "slug": "study-airreg-06-personnel-licensing",
+    "data": {
+      "q": "Which time must the student log as SPIC with the instructor named in remarks?",
+      "o": [
+        "Ordinary passenger time",
+        "Student pilot-in-command time",
+        "All simulator time",
+        "Unsupervised co-pilot time"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Student pilot-in-command time is logged by the student as SPIC with the instructor named in the remarks."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "When may the pilot-in-command depart from a Rule of the Air?",
+      "o": [
+        "Only when absolutely necessary in the interests of safety",
+        "Whenever a passenger requests it",
+        "Whenever operating in visual conditions",
+        "Only after landing"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "A pilot-in-command may depart from a Rule only when circumstances make it absolutely necessary in the interests of safety."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "What must pre-flight action include for an IFR flight?",
+      "o": [
+        "Only the intended departure time",
+        "Only aircraft registration details",
+        "Current weather, fuel requirements and an alternative course of action",
+        "A passenger preference survey"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "IFR pre-flight action includes current weather information, fuel requirements and an alternative course of action if the plan cannot be completed."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "What is the VFR minimum over a congested area when no exception applies?",
+      "o": [
+        "500 ft above the nearest person",
+        "1,000 ft above the highest obstacle within 600 m",
+        "2,000 ft above every obstacle within 8 km",
+        "600 ft above the aerodrome"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "The VFR congested-area minimum is 1,000 ft above the highest obstacle within 600 m."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "What does Bali state about civil formation flight in India?",
+      "o": [
+        "It is freely permitted below 3,000 ft",
+        "It needs only passenger consent",
+        "It is mandatory for training aircraft",
+        "It is not permitted"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "Bali states that civil formation flight is not permitted in India."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "In a converging encounter at the same level, which aircraft gives way?",
+      "o": [
+        "The aircraft with the other on its left",
+        "The faster aircraft",
+        "The aircraft with the other on its right",
+        "The larger aircraft in every case"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "The aircraft that has the other aircraft on its right gives way."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "What action is required in an approximately head-on encounter?",
+      "o": [
+        "Both aircraft alter heading to the right",
+        "Both aircraft turn left",
+        "Only the lower aircraft turns",
+        "Both aircraft maintain heading"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "In a head-on or approximately head-on encounter, both aircraft alter heading to the right."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "Who has right-of-way during overtaking?",
+      "o": [
+        "The overtaking aircraft",
+        "The aircraft on the right only",
+        "The faster aircraft",
+        "The aircraft being overtaken"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "The aircraft being overtaken has right-of-way, and the overtaking aircraft keeps clear by altering to the right."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "When may an aircraft cross a lighted stop bar?",
+      "o": [
+        "Whenever no traffic is visible",
+        "Only after the lights are switched off and the required clearance exists",
+        "Whenever the pilot has received a taxi route",
+        "After flashing landing lights"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "An aircraft proceeds beyond a stop bar only after the lights are switched off and the required clearance exists."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "Which navigation light is displayed on the aircraft's port side?",
+      "o": [
+        "Red",
+        "Green",
+        "White",
+        "Amber"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The port navigation light is red."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "For an Indian semicircular track of 225 degrees, which IFR family normally applies below the RVSM transition?",
+      "o": [
+        "Odd thousands",
+        "Odd thousands plus 500 ft",
+        "Any level selected by the pilot",
+        "Even thousands"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "A track from 180 through 359 degrees uses the even-thousand IFR family."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "What does a VI R designator identify?",
+      "o": [
+        "A prohibited area",
+        "A restricted area",
+        "A danger area",
+        "A compulsory reporting point"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "VI R identifies an Indian restricted area, which may be entered only under the published conditions."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: General",
+    "slug": "study-airreg-07-rules-of-the-air-general",
+    "data": {
+      "q": "Which maximum vertical displacement from the leader is stated for an authorised formation?",
+      "o": [
+        "300 m",
+        "500 ft",
+        "30 m or 100 ft",
+        "1 km"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The Annex 2 formation condition limits vertical displacement from the leader to 30 m or 100 ft."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "What flight visibility is required at or above 10,000 ft AMSL under the standard VMC table?",
+      "o": [
+        "5 km",
+        "3 km",
+        "1.5 km",
+        "8 km"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "The standard VMC minimum at or above 10,000 ft AMSL is 8 km flight visibility."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "Which statement describes a Special VFR flight?",
+      "o": [
+        "It may ignore ATC in a control zone",
+        "It is an IFR flight in visual conditions",
+        "It is individually cleared within a control zone and remains clear of cloud with the surface in sight",
+        "It is available above FL 150 without approval"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Special VFR is an individually cleared control-zone operation that remains clear of cloud and in sight of the surface."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "Which flight always requires a flight plan under the listed rules?",
+      "o": [
+        "A local taxi movement",
+        "A flight crossing an international border",
+        "Every glider winch launch",
+        "Every engine ground run"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "A flight crossing an international border is one of the flights for which a flight plan is required."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "What is the general IFR obstacle margin over high or mountainous terrain?",
+      "o": [
+        "2,000 ft above the highest obstacle within 8 km",
+        "500 ft within 600 m",
+        "1,000 ft within 8 km",
+        "1,500 ft within 5 km"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "Over high or mountainous terrain, the general IFR minimum is 2,000 ft above the highest obstacle within 8 km."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "Which radiotelephony word indicates an urgency condition?",
+      "o": [
+        "MAYDAY",
+        "PAN PAN",
+        "SOS",
+        "WILCO"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "PAN PAN is the radiotelephony urgency signal."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "What is the first visual response to the interceptor's follow-me signal?",
+      "o": [
+        "Rock the wings, flash navigation lights and follow",
+        "Lower the landing gear immediately",
+        "Make an abrupt 90 degree turn away",
+        "Switch all lights regularly"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The intercepted aircraft acknowledges the follow-me signal by rocking its wings, flashing navigation lights and following."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "What do red flashes from the tower mean to an aircraft in flight?",
+      "o": [
+        "Cleared to land",
+        "Return for landing",
+        "Give way and circle",
+        "Aerodrome unsafe, do not land"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Red flashes to an aircraft in flight mean the aerodrome is unsafe and the aircraft must not land."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "Which marshalling signal calls for an emergency stop?",
+      "o": [
+        "Slowly lowering both arms",
+        "Moving the wands outward",
+        "Abruptly crossing the raised wands above the head",
+        "Holding both arms at 45 degrees downward"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "An emergency stop is signalled by abruptly raising and crossing the wands above the head."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "What does a white dumbbell in the signal area mean?",
+      "o": [
+        "Landing, take-off and taxiing are confined to runways and taxiways",
+        "Gliders are operating",
+        "Landing is prohibited",
+        "Right-hand traffic is in use"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "A white dumbbell means landing, take-off and taxiing are confined to runways and taxiways."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "After an IFR flight encounters visual conditions, when is IFR cancelled?",
+      "o": [
+        "Automatically on entering VMC",
+        "When cloud disappears from view",
+        "When ATC first sees the aircraft",
+        "Only after the pilot explicitly cancels IFR and reports the plan change"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "Visual conditions do not cancel IFR automatically; the pilot must explicitly cancel IFR and communicate the flight-plan change."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "What sustained true-airspeed deviation is reported under Bali's flight-plan change rule?",
+      "o": [
+        "Mach 0.20 only",
+        "Mach 0.02 or 10 kt",
+        "Any 1 kt change",
+        "Exactly 20 kt only"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "A sustained deviation of Mach 0.02 or 10 kt from the filed true airspeed is reported."
+    }
+  },
+  {
+    "chapter": "Rules of the Air: VFR, IFR and Signals",
+    "slug": "study-airreg-08-rules-of-the-air-vfr-ifr-signals",
+    "data": {
+      "q": "Which navigation-light combination shows another aircraft approaching approximately head-on?",
+      "o": [
+        "White only",
+        "Red and white",
+        "Red and green",
+        "Green and white"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "Seeing both red and green navigation lights indicates an approaching, approximately head-on aspect."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "Which ATS objective is served by notifying rescue organisations about an aircraft needing aid?",
+      "o": [
+        "The speed-control objective",
+        "The aerodrome-lighting objective",
+        "The registration objective",
+        "The search and rescue support objective"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "Notifying and assisting the organisations responsible for search and rescue is one of the five ATS objectives."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "Which airspace structure begins at the surface and protects arriving and departing controlled flights?",
+      "o": [
+        "An airway",
+        "A UIR",
+        "A control zone",
+        "A control area"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "A control zone begins at the surface and contains the relevant arriving and departing flight paths."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "In which class are IFR and VFR admitted and all aircraft separated from each other?",
+      "o": [
+        "Class A",
+        "Class B",
+        "Class D",
+        "Class G"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Class B admits IFR and VFR and provides separation between every aircraft."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "Which second letter belongs to the Chennai FIR family in an Indian location indicator?",
+      "o": [
+        "O",
+        "A",
+        "E",
+        "I"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The Chennai FIR family uses O as the second letter, as in VOMM."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "What does prefix U indicate in an ATS route designator?",
+      "o": [
+        "An advisory-only route",
+        "A helicopter route",
+        "A route or portion in upper airspace",
+        "A route confined to VFR"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "Prefix U identifies an ATS route or portion established in upper airspace."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "Which item must be read back when transmitted by voice?",
+      "o": [
+        "An ATC route clearance",
+        "A general airport advertisement",
+        "A catering request",
+        "A passenger announcement"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "An ATC route clearance is safety-related information that must always be read back when transmitted by voice."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "Where may Voice ATIS never be transmitted?",
+      "o": [
+        "On a discrete VHF frequency",
+        "On the voice channel of an ILS",
+        "On a suitable VOR voice channel",
+        "By a continuous repetitive broadcast"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Voice ATIS must not be transmitted on the ILS voice channel."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "Which condition can directly trigger ALERFA?",
+      "o": [
+        "A routine five-minute en-route delay",
+        "Failure to land within five minutes after landing clearance with communication not restored",
+        "A normal change of cruise level",
+        "Arrival exactly on the estimated time"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "Failure to land within five minutes after landing clearance, combined with loss of communication, is an ALERFA trigger."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "What is the minimum stated lower limit of a control area?",
+      "o": [
+        "200 m or 700 ft above ground or water",
+        "The surface in every case",
+        "FL 290",
+        "5 NM above the aerodrome"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Bali states that the lower limit of a control area must be at least 200 m or 700 ft above ground or water."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "What service is given to participating IFR flights in Class F airspace?",
+      "o": [
+        "Aerodrome control only",
+        "No service",
+        "Full separation from every aircraft",
+        "Air traffic advisory service plus flight information"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "Participating IFR flights in Class F receive air traffic advisory service and flight information."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "What is the RVSM vertical band stated in the lesson?",
+      "o": [
+        "FL 100 to FL 190",
+        "FL 410 to FL 600",
+        "Surface to FL 150",
+        "FL 290 to FL 410 inclusive"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "RVSM airspace extends from FL 290 through FL 410 inclusive."
+    }
+  },
+  {
+    "chapter": "Airspace and ATS",
+    "slug": "study-airreg-09-airspace-and-ats",
+    "data": {
+      "q": "What is essential traffic?",
+      "o": [
+        "Any VFR aircraft parked on an apron",
+        "Only an emergency aircraft",
+        "Controlled traffic to which separation applies but the required minimum is not or will not be maintained",
+        "Any aircraft outside an FIR"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "Essential traffic is controlled traffic to which separation should apply but which is not, or will not be, separated by the required minimum."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What is the normal vertical separation minimum below FL 290?",
+      "o": [
+        "2,000 ft",
+        "1,000 ft",
+        "500 ft",
+        "4,000 ft"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "Below FL 290, the normal vertical separation minimum is 1,000 ft."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "When does the Bali VOR divergence method establish lateral separation?",
+      "o": [
+        "At 5 degrees with both aircraft overhead",
+        "At 30 degrees with no distance condition",
+        "At 15 degrees with at least one aircraft 15 NM from the facility",
+        "At 90 degrees only"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The VOR method uses at least 15 degrees divergence with one aircraft at least 15 NM from the facility."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "Which angular difference is classified as reciprocal track?",
+      "o": [
+        "180 degrees",
+        "020 degrees",
+        "090 degrees",
+        "320 degrees"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "A reciprocal-track relationship is more than 135 degrees but less than 225 degrees, so 180 degrees qualifies."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What time minimum may be used when the leader is at least 40 kt faster and the stated same-track conditions are met?",
+      "o": [
+        "15 minutes",
+        "10 minutes",
+        "5 minutes",
+        "3 minutes"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "The same-track same-level minimum may reduce to 3 minutes when the leader is at least 40 kt faster and all stated geometry conditions are met."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What is the basic DME or GNSS distance minimum for aircraft at the same level on the same track?",
+      "o": [
+        "5 NM",
+        "10 NM",
+        "80 NM",
+        "20 NM"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "The basic common-reference DME or GNSS minimum for same-level same-track aircraft is 20 NM."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "Which technique requires turbojet aircraft to maintain an ATC-assigned speed expressed as Mach number?",
+      "o": [
+        "Mach number technique",
+        "Visual separation",
+        "Geographical separation",
+        "Stop-bar control"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Mach number technique uses assigned Mach numbers to stabilise relative speed and preserve longitudinal spacing."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What surveillance wake minimum applies to a Light aircraft following a Heavy aircraft?",
+      "o": [
+        "3 NM",
+        "4 NM",
+        "6 NM",
+        "5 NM"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "A Light aircraft following a Heavy aircraft requires 6 NM surveillance wake spacing in the table."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What must ATC do before the current separation method becomes insufficient?",
+      "o": [
+        "Wait for the aircraft to report a loss",
+        "Establish another valid form of separation",
+        "Cancel both flight plans",
+        "Transfer all responsibility to the pilots"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "ATC establishes another valid method before the existing separation becomes insufficient."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What does Bali state about cruise climb in Indian FIRs?",
+      "o": [
+        "It is not permitted",
+        "It is permitted above FL 290",
+        "It needs only pilot agreement",
+        "It is compulsory in RVSM airspace"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Bali states that cruise climb is not permitted in Indian FIRs."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "For aircraft climbing or descending on reciprocal tracks without lateral separation, how long is vertical separation protected around estimated passing?",
+      "o": [
+        "Five minutes before only",
+        "Five minutes after only",
+        "At least 10 minutes before and 10 minutes after",
+        "Until the first position report"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Vertical separation is provided for at least 10 minutes before and after the estimated passing time."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "What is the normal horizontal surveillance minimum stated by Bali?",
+      "o": [
+        "3 NM everywhere",
+        "5 NM",
+        "10 NM",
+        "20 NM"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Bali states 5 NM as the normal horizontal surveillance minimum, with 3 NM only where specifically authorised."
+    }
+  },
+  {
+    "chapter": "Separation",
+    "slug": "study-airreg-10-separation",
+    "data": {
+      "q": "Which category includes aircraft above 7,000 kg but below 136,000 kg maximum take-off mass?",
+      "o": [
+        "SUPER",
+        "HEAVY",
+        "LIGHT",
+        "MEDIUM"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "The MEDIUM category covers aircraft above 7,000 kg but below 136,000 kg."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "When may a one-minute interval be used between two departures under Bali's stated divergence case?",
+      "o": [
+        "Only when vertical separation already exists",
+        "Whenever the preceding aircraft is faster",
+        "When both aircraft fly the same SID",
+        "When their tracks diverge by at least 45 degrees immediately after take-off"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "One minute applies when the departure tracks diverge by at least 45 degrees immediately after take-off."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "What speed relationship supports Bali's two-minute same-track departure interval?",
+      "o": [
+        "The following aircraft is at least 20 kt faster",
+        "The preceding aircraft is at least 40 kt faster",
+        "Both aircraft have identical filed speeds",
+        "The preceding aircraft is at least 10 kt faster"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "The two-minute same-track case requires the preceding aircraft to be 40 kt or more faster than the following aircraft."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "For a straight-in arrival, until when may a departure take off in any direction?",
+      "o": [
+        "Until 3 minutes before the arrival reaches the runway",
+        "Until the arrival crosses the final approach fix",
+        "Until 5 minutes before the arrival is estimated over the instrument runway",
+        "Until 10 minutes before touchdown"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "A departure in any direction is permitted only until 5 minutes before the straight-in arrival is estimated over the instrument runway."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "Which situation can support reduced separation near an aerodrome?",
+      "o": [
+        "The following crew has the preceding aircraft in sight and can maintain separation",
+        "Both aircraft are using the same runway",
+        "The controller has issued traffic information only",
+        "The crews can hear each other on frequency"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "One permitted case is the following crew reporting the preceding aircraft in sight and confirming that separation can be maintained."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "What Bali visibility figure applies to a Category C aeroplane requesting a visual approach, before comparison with the operating minimum?",
+      "o": [
+        "2,800 m",
+        "3,200 m",
+        "5 km",
+        "3,600 m"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Bali states 3,200 m for a Category C aeroplane, with the higher applicable operating minimum still governing."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "Up to what level may the specified own-separation-in-VMC climb or descent be cleared?",
+      "o": [
+        "The transition level without limit",
+        "FL 200",
+        "5,000 ft",
+        "3,050 m (10,000 ft)"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "The clearance is for a specified portion at or below 3,050 m, which is 10,000 ft."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "At what expected delay does Bali require an EAT to be determined?",
+      "o": [
+        "10 minutes or more",
+        "15 minutes or more",
+        "30 minutes or more",
+        "5 minutes or more"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "An EAT is determined when the arriving aircraft is expected to be delayed by 10 minutes or more."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "When is a revised EAT transmitted without delay under Bali's normal threshold?",
+      "o": [
+        "Whenever it changes by 2 minutes",
+        "Only after a 30-minute hold",
+        "When it differs by 5 minutes or more",
+        "Only at the pilot's request"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "The normal revision threshold is a difference of 5 minutes or more, unless a smaller agreed period applies."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "What departure information is passed without delay when its status changes?",
+      "o": [
+        "A visual or non-visual aid essential for take-off and climb",
+        "The next day's forecast",
+        "The operator's stand allocation",
+        "The destination customs status"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "A change in the operational status of an aid essential for take-off and climb is passed without delay."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "Which mean wind-component change is significant at the commencement of final approach according to Bali?",
+      "o": [
+        "Head-wind 2 kt",
+        "Cross-wind 10 kt",
+        "Tail-wind 5 kt",
+        "Tail-wind 2 kt"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "Bali lists 2 kt as the significant change in the mean tail-wind component."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "What does an expected onward clearance time tell a held aircraft?",
+      "o": [
+        "Its expected touchdown time",
+        "When it can expect to leave the fix where it is being held",
+        "When the runway will reopen",
+        "When its flight plan expires"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "Expected onward clearance time is the time at which the aircraft can expect to leave the fix where it is held."
+    }
+  },
+  {
+    "chapter": "Separation Near Aerodromes",
+    "slug": "study-airreg-11-separation-near-aerodromes",
+    "data": {
+      "q": "Which item is essential local traffic when it may create a collision hazard?",
+      "o": [
+        "Only an airborne IFR aircraft",
+        "Only vehicles actually on the runway",
+        "An aircraft, vehicle or person on or near the runway",
+        "Only an aircraft inside controlled airspace"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "Essential local traffic includes an aircraft, vehicle or person on or near the runway when it may constitute a collision hazard."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "Which working position normally controls traffic on the manoeuvring area except runways?",
+      "o": [
+        "Clearance delivery",
+        "Ground controller",
+        "Approach control",
+        "Aerodrome controller"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "The ground controller normally controls manoeuvring-area traffic except the runways."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "During low-visibility procedures, how should vehicle and person movements on the manoeuvring area be managed?",
+      "o": [
+        "They may move without clearance",
+        "Only aircraft movements are restricted",
+        "Everyone must leave the aerodrome",
+        "They are restricted to the essential minimum and ILS sensitive areas are protected"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "Low-visibility procedures restrict persons and vehicles to the essential minimum and protect ILS critical and sensitive areas."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "What must a pilot report with a start-up request under Bali's procedure?",
+      "o": [
+        "Persons on board including crew, plus security-check completion",
+        "Only estimated taxi time",
+        "Only the requested cruising level",
+        "Passenger count excluding crew"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "The start-up request includes total persons on board, including crew, and confirmation that the security check is complete."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "If a taxi limit lies beyond a runway, what must the clearance contain?",
+      "o": [
+        "A request to report the runway in sight",
+        "Permission to choose any crossing",
+        "An explicit crossing clearance or instruction to hold short",
+        "Only the taxiway designator"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "A taxi clearance beyond a runway must explicitly clear the crossing or instruct the aircraft to hold short."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "What distance from the runway edge does Bali state for a runway 900 m or longer, unless the marked holding position governs?",
+      "o": [
+        "15 m",
+        "30 m",
+        "75 m",
+        "50 m"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "For a runway 900 m or longer, Bali states the holding position or at least 50 m from the runway edge."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "What instruction follows when an obstruction threatens an aircraft already cleared to land?",
+      "o": [
+        "Continue approach",
+        "Go around",
+        "Hold position",
+        "Change runway after touchdown"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "The controller instructs the landing aircraft to go around when a runway obstruction threatens safety."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "How is ATIS receipt normally acknowledged on first contact?",
+      "o": [
+        "By reporting the current phonetic designator",
+        "By repeating the complete broadcast",
+        "By stating the observation time only",
+        "By reading back the runway condition"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "The pilot reports the current ATIS phonetic designator, after which ATC passes later changes or missing items."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "What is the tower's first action when VFR operations are suspended?",
+      "o": [
+        "Close the aerodrome to IFR traffic",
+        "Cancel every flight plan",
+        "Hold all VFR departures",
+        "Switch off the runway lights"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "The suspension procedure begins by holding all VFR departures."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "Which aircraft normally has priority between an aircraft on final and one ready to depart from the same runway?",
+      "o": [
+        "The departure because it is ready",
+        "The aircraft landing or in the final stages of approach",
+        "Whichever called first",
+        "The heavier aircraft"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "An aircraft landing or in the final stages of approach normally has priority over a departure from the same or intersecting runway."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "When does Bali require aeronautical ground lights by day in India?",
+      "o": [
+        "When visibility is 5,000 m or less",
+        "Whenever cloud is below 1,500 ft",
+        "Only during rain",
+        "Only at the pilot's home aerodrome"
+      ],
+      "a": 0,
+      "s": 9,
+      "e": "From sunrise to sunset, Bali requires the lights when visibility in India is 5,000 m or less."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "A measured runway friction coefficient of 0.27 corresponds to which assessment?",
+      "o": [
+        "Good, code 5",
+        "Medium, code 3",
+        "Poor, code 1",
+        "Medium to poor, code 2"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "A coefficient from 0.29 to 0.26 is medium to poor and carries code 2."
+    }
+  },
+  {
+    "chapter": "Aerodrome Control",
+    "slug": "study-airreg-12-aerodrome-control",
+    "data": {
+      "q": "To what approximate height does Bali extend the low-level wind-shear description?",
+      "o": [
+        "500 ft",
+        "1,000 ft",
+        "1,500 ft",
+        "3,000 ft"
+      ],
+      "a": 2,
+      "s": 9,
+      "e": "Bali describes low-level wind shear from the surface to approximately 1,500 ft."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "Which surveillance system can detect a reflecting aircraft without an airborne transponder?",
+      "o": [
+        "ADS-B",
+        "SSR",
+        "PSR",
+        "MLAT"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "PSR detects reflected radio energy and therefore does not require an airborne transponder."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What determines when ADS-C sends a normal surveillance report?",
+      "o": [
+        "The terms and triggers in the ground-held contract",
+        "A broadcast request from every nearby aircraft",
+        "Only the pilot pressing IDENT",
+        "The rotation rate of a radar antenna"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "ADS-C reports according to the periodic, event or demand conditions defined in its ground-held contract."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "How does multilateration calculate aircraft position?",
+      "o": [
+        "From a single reflected radar pulse",
+        "From the code selected by the pilot alone",
+        "From a magnetic bearing reported by radio",
+        "From differences in arrival time at several receivers"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "MLAT calculates position from the time differences with which several receivers obtain the same transmission."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What communication condition normally supports an ATS surveillance service?",
+      "o": [
+        "A listening watch on a company frequency only",
+        "Direct two-way communication with the unit providing the service",
+        "No radio contact after identification",
+        "Communication only through another aircraft"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Direct two-way communication with the unit providing the surveillance service is normally required."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "Under the PSR departing-aircraft method, where should identification normally be established?",
+      "o": [
+        "Within 1 NM of the end of the runway used",
+        "Within 10 NM of the aerodrome boundary",
+        "Only after reaching cruising level",
+        "At the first FIR boundary"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The departing-aircraft method requires correlation within 1 NM of the runway end, with care to prevent confusion."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "Unless another minimum is prescribed, what ICAO surveillance separation minimum does Bali state?",
+      "o": [
+        "2.0 NM",
+        "3.0 NM",
+        "5.0 NM",
+        "10.0 NM"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "Bali states 5.0 NM, or 9.3 km, as the general ICAO surveillance minimum unless otherwise prescribed."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What code is selected before entry into an Indian FIR if no SSR code has been assigned?",
+      "o": [
+        "Mode A 7000",
+        "Mode A3 2000",
+        "Mode A 7600",
+        "Mode C 2000"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Bali requires Mode A3 code 2000 before Indian FIR entry when no code has been assigned."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "Which special code indicates radio communication failure?",
+      "o": [
+        "7000",
+        "7500",
+        "7700",
+        "7600"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "Mode A code 7600 indicates radio communication failure."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What altitude-data tolerance does Bali state for RVSM airspace?",
+      "o": [
+        "Plus or minus 500 ft",
+        "Plus or minus 300 ft",
+        "Plus or minus 200 ft",
+        "Zero error"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "Bali uses a tolerance of plus or minus 200 ft for pressure-altitude data in RVSM airspace."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What normally happens after an in-flight transponder failure where carriage is mandatory?",
+      "o": [
+        "The flight may continue to the next intended landing, subject to coordination",
+        "The aircraft must land immediately on the nearest runway",
+        "The flight automatically becomes VFR",
+        "The pilot selects 0000 and continues without advising ATS"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "A flight with an in-flight transponder failure is normally allowed to continue to its next intended landing, subject to coordination and safety restrictions."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What should a pilot do if an ACAS RA conflicts with an ATC vertical instruction?",
+      "o": [
+        "Ignore the RA because ATC always has priority",
+        "Average the two vertical rates",
+        "Maintain level until ATC repeats the instruction",
+        "Follow the RA and inform ATC as soon as workload permits"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "The pilot follows the RA even when it conflicts with an ATC instruction, then informs ATC as soon as workload permits."
+    }
+  },
+  {
+    "chapter": "ATS Surveillance",
+    "slug": "study-airreg-13-ats-surveillance",
+    "data": {
+      "q": "What risk is addressed by a minimum safe altitude warning?",
+      "o": [
+        "A duplicate transponder code",
+        "Unsafe proximity to terrain or obstacles",
+        "A predicted radio failure",
+        "Wake turbulence only"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "MSAW warns a controller that a tracked aircraft is at, or predicted to be at, an unsafe altitude relative to terrain or obstacles."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "Where is full MOC provided in a track-guided protected area?",
+      "o": [
+        "Only at the outer edge",
+        "Only over the controlling obstacle",
+        "Across the primary area",
+        "Across each secondary area"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "Full MOC applies across the primary area; in each secondary area it tapers to zero at the outer edge."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "What engine condition is assumed in the design of a published instrument departure?",
+      "o": [
+        "One engine inoperative",
+        "Critical engine at idle",
+        "Any condition selected by ATC",
+        "All engines operating"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "PANS-OPS departure procedures assume all engines are operating, so the operator develops the engine-out contingency."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "What standard PDG is assumed unless another gradient is published?",
+      "o": [
+        "2.5 percent",
+        "3.3 percent",
+        "0.8 percent",
+        "5.0 percent"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The standard procedure design gradient is 3.3 percent."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "At what rate does MOC increase from zero at the DER?",
+      "o": [
+        "0.8 percent of horizontal distance",
+        "3.3 percent",
+        "2.5 percent",
+        "15 percent"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "MOC increases at 0.8 percent of horizontal distance from the DER."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "Which initial alignment defines a straight departure?",
+      "o": [
+        "Exactly on the centre line",
+        "Within 5 degrees",
+        "Within 30 degrees",
+        "Within 15 degrees of runway centre line"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "A straight departure has an initial track within 15 degrees of runway centre-line alignment."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "What height above DER elevation is normally reached before an aeroplane begins a turning departure?",
+      "o": [
+        "60 m, 200 ft",
+        "90 m, 295 ft",
+        "120 m, 394 ft",
+        "300 m, 1,000 ft"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "An aeroplane normally flies straight until at least 120 m, 394 ft, above DER elevation."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "How far from the runway beginning is an omnidirectional turn normally not initiated sooner?",
+      "o": [
+        "600 m",
+        "150 m",
+        "3.5 km",
+        "10 km"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The basic omnidirectional design does not initiate a turn sooner than 600 m from the runway beginning."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "Where does a SID normally terminate?",
+      "o": [
+        "At the first turn",
+        "At the first en-route fix, facility or waypoint",
+        "At 3,000 ft",
+        "At the control-zone boundary"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "A SID terminates at the first fix, facility or waypoint of the en-route phase."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "How does RNAV normally fly a fly-by waypoint?",
+      "o": [
+        "It crosses before turning",
+        "It waits for a radio call",
+        "It ignores the waypoint in wind",
+        "It anticipates the turn to intercept the next leg"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "At a fly-by waypoint, RNAV anticipates the turn and intercepts the next leg smoothly."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "Who develops the contingency procedure for an engine failure after V1?",
+      "o": [
+        "The operator",
+        "The procedure designer",
+        "The tower",
+        "The database supplier"
+      ],
+      "a": 0,
+      "s": 9,
+      "e": "The operator is responsible for the engine-failure contingency procedure after V1."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "Which procedure delays acceleration to reduce noise close to the aerodrome?",
+      "o": [
+        "Normal en-route climb",
+        "NADP 1",
+        "Omnidirectional departure",
+        "NADP 2"
+      ],
+      "a": 1,
+      "s": 10,
+      "e": "NADP 1 delays acceleration and clean-up to reduce close-in noise."
+    }
+  },
+  {
+    "chapter": "Instrument Departures",
+    "slug": "study-airreg-14-instrument-departures",
+    "data": {
+      "q": "Below which height should the first noise-driven action not begin?",
+      "o": [
+        "400 ft above aerodrome elevation",
+        "3,000 ft above aerodrome elevation",
+        "800 ft above aerodrome elevation",
+        "120 m above DER"
+      ],
+      "a": 2,
+      "s": 10,
+      "e": "The first noise-driven thrust or acceleration action should not begin below 800 ft above aerodrome elevation."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "Which threshold IAS places an aeroplane in Category C?",
+      "o": [
+        "121 to 140 kt",
+        "91 to 120 kt",
+        "141 to 165 kt",
+        "166 to 210 kt"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "Category C covers a threshold IAS from 121 to 140 kt."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "Which segment normally connects the en-route phase to the IAF?",
+      "o": [
+        "Final",
+        "Initial",
+        "Arrival",
+        "Intermediate"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The arrival segment connects the en-route structure or STAR to the IAF."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "What obstacle clearance does an MSA or TAA provide within its 25 NM area?",
+      "o": [
+        "At least 600 m in every case",
+        "At least 150 m, 492 ft",
+        "Exactly 50 m, 164 ft",
+        "At least 300 m, 1,000 ft"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "An MSA or TAA provides at least 300 m, 1,000 ft, obstacle clearance within 25 NM."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "What is the maximum normal initial-segment intercept angle for a precision approach?",
+      "o": [
+        "30 degrees",
+        "90 degrees",
+        "45 degrees",
+        "120 degrees"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "The precision initial-segment intercept angle is limited to 90 degrees."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "Which point begins the final segment of a precision approach?",
+      "o": [
+        "MAPt",
+        "IAF",
+        "FAP",
+        "FAF"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The FAP is where the intermediate altitude meets the precision glide path and the final segment begins."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "What is the optimum final-approach descent angle with a FAF?",
+      "o": [
+        "3.0 degrees",
+        "2.5 degrees",
+        "3.7 degrees",
+        "5.7 degrees"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "The optimum is 3.0 degrees, equivalent to about 5.2 percent or 318 ft per NM."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "Which operational minimum is used for a non-precision approach?",
+      "o": [
+        "DA/H only",
+        "MDA/H",
+        "Transition level",
+        "OCA/H as the operational minimum in every case"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "An NPA uses MDA/H; OCA/H is the design value from which the operational minimum is derived."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "What is the normal minimum missed-approach climb gradient?",
+      "o": [
+        "0.8 percent",
+        "3.3 percent",
+        "5.2 percent",
+        "2.5 percent"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "The standard missed-approach construction uses a minimum climb gradient of 2.5 percent."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "What should the pilot do first if visual reference is lost while circling?",
+      "o": [
+        "Descend to regain the runway",
+        "Begin a climbing turn towards the landing runway and aerodrome",
+        "Continue at MDA/H indefinitely",
+        "Turn directly away from the aerodrome"
+      ],
+      "a": 1,
+      "s": 9,
+      "e": "The circling missed approach begins with a climbing turn towards the landing runway and aerodrome before joining the published missed track."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "How long is the outbound holding leg at or below 14,000 ft in still air?",
+      "o": [
+        "One minute",
+        "One and one-half minutes",
+        "Two minutes",
+        "Thirty seconds"
+      ],
+      "a": 0,
+      "s": 10,
+      "e": "At or below 14,000 ft, the standard outbound holding time is one minute."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "Which entry flies 30 degrees from the reciprocal inbound track on the holding side?",
+      "o": [
+        "Direct",
+        "Parallel",
+        "Offset",
+        "DME arc"
+      ],
+      "a": 2,
+      "s": 11,
+      "e": "The offset entry flies a track 30 degrees from the reciprocal on the holding side."
+    }
+  },
+  {
+    "chapter": "Instrument Approaches and Holding",
+    "slug": "study-airreg-15-instrument-approaches-holding",
+    "data": {
+      "q": "Which statement describes Mode 2 parallel approaches?",
+      "o": [
+        "Approaches are independent with no adjacent radar minimum",
+        "One runway is reserved for departures",
+        "Only simultaneous departures are permitted",
+        "Radar separation minima are prescribed between adjacent approaches"
+      ],
+      "a": 3,
+      "s": 12,
+      "e": "Mode 2 is the dependent parallel-approach mode, so radar separation minima are prescribed between adjacent approaches."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "Which setting makes an altimeter indicate altitude above mean sea level?",
+      "o": [
+        "QFE",
+        "QNE",
+        "QNH",
+        "Standard pressure only"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "QNH makes the altimeter indicate altitude referenced to mean sea level."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "What should a correctly set QFE altimeter indicate at its reference datum?",
+      "o": [
+        "Zero",
+        "Aerodrome elevation",
+        "Flight level zero",
+        "The transition altitude"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "QFE is the pressure at the stated datum, so the altimeter indicates zero there."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "What is QNE?",
+      "o": [
+        "The current sea-level pressure",
+        "The fixed value 1013.2 hPa",
+        "The pressure at runway level",
+        "The expected touchdown indication with standard pressure set"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "QNE is the calculated altimeter indication at touchdown when standard pressure is set."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "When climbing, where is the altimeter changed from QNH to standard pressure?",
+      "o": [
+        "At the transition level",
+        "When passing the transition altitude",
+        "At the lowest usable flight level only",
+        "At the destination QNH boundary"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "On climb, standard pressure is set when passing the transition altitude."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "What is the lowest transition altitude stated by Bali for India?",
+      "o": [
+        "4,000 ft",
+        "3,000 ft",
+        "5,000 ft",
+        "FL 040"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "Bali states that the lowest transition altitude in India is 4,000 ft."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "How is the lowest usable flight level related to minimum flight altitude?",
+      "o": [
+        "It is always one level below it",
+        "It is unrelated to it",
+        "It corresponds to or lies immediately above it",
+        "It is always FL 100"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "The lowest usable flight level corresponds to, or lies immediately above, the established minimum flight altitude."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "What setting is normally used en route above transition altitude?",
+      "o": [
+        "QFE",
+        "1013.2 hPa",
+        "Destination QNH",
+        "QNE"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Above transition altitude after changeover, 1013.2 hPa is used and vertical position is reported as a flight level."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "What is Bali's pre-flight tolerance for an altimeter with a 0 to 30,000 ft test range?",
+      "o": [
+        "Plus or minus 20 ft",
+        "Plus or minus 100 ft",
+        "Plus or minus 80 ft",
+        "Plus or minus 60 ft"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "For a test range of 0 to 30,000 ft, Bali gives a tolerance of plus or minus 60 ft."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "What happens to true altitude when temperature is colder than standard at a constant indicated altitude?",
+      "o": [
+        "It becomes higher than indicated",
+        "It remains exactly equal",
+        "It becomes lower than indicated",
+        "It changes only above FL 410"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "In colder-than-standard air, pressure surfaces contract and true altitude is lower than indicated."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "Which IFR family normally applies to magnetic tracks from 180 through 359 degrees?",
+      "o": [
+        "Odd thousands",
+        "Even thousands",
+        "Odd thousands plus 500 ft",
+        "Any level selected without ATC"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "Tracks from 180 through 359 degrees use the even-thousand IFR family."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "Which statement about transition level is correct?",
+      "o": [
+        "It is fixed for the State",
+        "It is always equal to transition altitude",
+        "It is selected by the pilot after take-off",
+        "It changes with QNH"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "Transition level changes with QNH so the transition layer remains protected."
+    }
+  },
+  {
+    "chapter": "Altimeter Setting",
+    "slug": "study-airreg-16-altimeter-setting",
+    "data": {
+      "q": "If a pressure setting higher than the correct value is set, what is the main hazard?",
+      "o": [
+        "The aircraft is lower than indicated",
+        "The aircraft is always higher than indicated",
+        "The altimeter reads zero",
+        "The flight level becomes an altitude automatically"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "A setting that is too high makes the altimeter over-read, so the aircraft is lower than indicated."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "Which ICAO Annex contains the Standards and Recommended Practices for aeronautical information services?",
+      "o": [
+        "Annex 11",
+        "Annex 14",
+        "Annex 15",
+        "Annex 17"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "Annex 15 contains the Standards and Recommended Practices for aeronautical information services."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "Which product is primarily used for a permanent change to AIP content?",
+      "o": [
+        "AIC",
+        "PIB",
+        "SNOWTAM",
+        "AIP amendment"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "An AIP amendment is the controlled product for a permanent change to AIP content."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "Which three principal parts form an AIP?",
+      "o": [
+        "GEN, MET and SAR",
+        "GEN, ENR and AD",
+        "RAC, COM and AD",
+        "AGA, FAL and MAP"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The AIP is divided into GEN, ENR and AD."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "A temporary change will last four months. Which product normally carries it?",
+      "o": [
+        "An AIP supplement",
+        "Only a monthly checklist",
+        "Only an AIC",
+        "A permanent AIP amendment"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "An AIP supplement carries a temporary change of three months or longer."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "Which Indian NOTAM series does Bali associate with general and lasting information affecting aircraft operations?",
+      "o": [
+        "Series A",
+        "Series B",
+        "Series D",
+        "Series G"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Bali describes Series G as carrying general and lasting information affecting aircraft operations."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "What does Item E of a NOTAM contain?",
+      "o": [
+        "The operational text in standard plain language and abbreviations",
+        "Only the upper flight level",
+        "Only the ICAO location indicator",
+        "The filing signature"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "Item E contains the operational text, expressed with standard language and abbreviations."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "What is the interval between common AIRAC effective dates?",
+      "o": [
+        "42 days",
+        "14 days",
+        "28 days",
+        "56 days"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "AIRAC common effective dates occur at intervals of 28 days."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "Which special-series message reports operationally significant volcanic activity or volcanic ash?",
+      "o": [
+        "PIB",
+        "ASHTAM",
+        "SNOWTAM",
+        "AIC"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "ASHTAM reports an operationally significant change in volcanic activity, eruption or ash cloud."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "What is a PIB?",
+      "o": [
+        "A plain-language pre-flight summary of current NOTAM and urgent information",
+        "A permanent amendment to the AIP",
+        "A volcanic alert message",
+        "A chart amendment record"
+      ],
+      "a": 0,
+      "s": 9,
+      "e": "A PIB is a plain-language pre-flight summary of current NOTAM and other urgent information."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "What is the main purpose of WGS 84 in aeronautical information?",
+      "o": [
+        "To define NOTAM series letters",
+        "To replace all altimeter settings",
+        "To provide one common geodetic datum for published coordinates",
+        "To set AIRAC dates"
+      ],
+      "a": 2,
+      "s": 9,
+      "e": "WGS 84 provides a common geodetic datum for coordinates used by charts, databases and navigation systems."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "When should a trigger NOTAM become effective?",
+      "o": [
+        "One month after the supplement",
+        "When the next checklist is printed",
+        "Seven days before every amendment",
+        "On the same effective date as the AIRAC amendment or supplement"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "A trigger NOTAM comes into force on the same effective date as the AIRAC amendment or supplement it announces."
+    }
+  },
+  {
+    "chapter": "Aeronautical Information",
+    "slug": "study-airreg-17-aeronautical-information",
+    "data": {
+      "q": "What should a crew report through the post-flight information process?",
+      "o": [
+        "Only passenger complaints",
+        "Observed defects in navigation facilities and operational hazards",
+        "Only forecast weather errors",
+        "Only a late arrival"
+      ],
+      "a": 1,
+      "s": 9,
+      "e": "Post-flight information includes observed defects in navigation facilities and hazards such as birds or wildlife near an aerodrome."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "Which area includes the manoeuvring area and aprons?",
+      "o": [
+        "Movement area",
+        "Runway strip",
+        "RESA",
+        "Clearway"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The movement area includes the manoeuvring area, aprons and relevant aircraft-maintenance movement areas."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "What determines aerodrome reference-code element 2?",
+      "o": [
+        "Reference field length only",
+        "Runway slope and elevation",
+        "Wingspan and outer main gear wheel span",
+        "Pavement strength"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "Element 2 is the letter determined from wingspan and outer main gear wheel span."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "What is the minimum RESA length stated in the lesson?",
+      "o": [
+        "60 m",
+        "90 m",
+        "120 m",
+        "240 m"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "The RESA extends at least 90 m from the end of the runway strip."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "Which relationship normally defines ASDA?",
+      "o": [
+        "LDA plus clearway",
+        "TODA plus RESA",
+        "TORA minus stopway",
+        "TORA plus stopway"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "ASDA normally equals TORA plus any available stopway."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "At a runway and taxiway intersection, which markings continue?",
+      "o": [
+        "Taxiway markings only",
+        "Runway markings",
+        "Neither set",
+        "Both sets without interruption"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "Runway markings continue through a runway and taxiway intersection, while taxiway markings are interrupted."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "How is a permanently displaced threshold shown?",
+      "o": [
+        "By white arrows leading to a transverse white threshold stripe",
+        "Only by yellow taxiway lines",
+        "By a red stop bar painted on the runway",
+        "By removing every centre-line marking"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "White arrows lead to the transverse white stripe that marks a displaced threshold."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "How far from the threshold does an aiming-point marking begin when LDA is 2,400 m or more?",
+      "o": [
+        "300 m",
+        "150 m",
+        "250 m",
+        "400 m"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "For an LDA of 2,400 m or more, the aiming-point marking starts 400 m from the threshold."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "Which description identifies Pattern A?",
+      "o": [
+        "A single broken yellow line",
+        "A continuous red line",
+        "Two solid and two broken yellow lines",
+        "A yellow circle with an arrow"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "Pattern A consists of two solid and two broken yellow lines across the taxiway."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "What is the diameter of a VOR aerodrome-checkpoint circle?",
+      "o": [
+        "3 m",
+        "15 m",
+        "9 m",
+        "6 m"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "The VOR aerodrome-checkpoint circle is 6 m in diameter."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "Which colour combination identifies a mandatory instruction sign?",
+      "o": [
+        "Yellow inscription on black",
+        "White inscription on red",
+        "Black inscription on yellow",
+        "White inscription on blue"
+      ],
+      "a": 1,
+      "s": 10,
+      "e": "A mandatory instruction sign uses a white inscription on a red background."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "What does a yellow inscription on a black sign identify?",
+      "o": [
+        "The current location",
+        "A runway-exit direction",
+        "A prohibited area",
+        "A mandatory runway limit"
+      ],
+      "a": 0,
+      "s": 10,
+      "e": "A yellow inscription on black is a location sign showing the current taxiway, runway or pavement."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Markings",
+    "slug": "study-airreg-18-aerodromes-markings",
+    "data": {
+      "q": "What does a runway-vacated sign depict?",
+      "o": [
+        "A touchdown-zone pair",
+        "A wind-direction cone",
+        "The Pattern A holding-position symbol",
+        "A runway-designation number only"
+      ],
+      "a": 2,
+      "s": 10,
+      "e": "A runway-vacated sign depicts the Pattern A holding-position symbol."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What display identifies a land-aerodrome identification beacon?",
+      "o": [
+        "Green Morse-code characters",
+        "Flashing red hazard lights",
+        "Steady blue light",
+        "Alternating red and yellow"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "A land-aerodrome identification beacon flashes green characters in International Morse Code."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What distinguishes the inner 300 m of a precision category II or III approach-light system?",
+      "o": [
+        "Blue edge lights only",
+        "One green crossbar",
+        "No centre-line lights",
+        "White centre-line barrettes with red side-row barrettes"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "The inner 300 m is strengthened by white centre-line barrettes and red side-row barrettes."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "Which PAPI display means the aircraft is on the nominal approach slope?",
+      "o": [
+        "Four white",
+        "Two white and two red",
+        "One white and three red",
+        "Four red"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "Two white and two red is the standard PAPI on-slope indication."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What colour are runway centre-line lights for the final 300 m?",
+      "o": [
+        "White",
+        "Alternate red and white",
+        "Red",
+        "Green"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Runway centre-line lights are red throughout the final 300 m."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What does an illuminated stop bar require?",
+      "o": [
+        "Cross after a voice clearance",
+        "Follow the green centre line without stopping",
+        "Turn onto the runway immediately",
+        "Stop and do not cross while it remains illuminated"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "An illuminated red stop bar is a stop instruction and must not be crossed."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "Which obstacle surface protects the initial take-off climb?",
+      "o": [
+        "Inner horizontal surface",
+        "Take-off climb surface",
+        "Conical surface",
+        "Transitional surface only"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "The take-off climb surface is the inclined, widening plane beyond the runway or clearway end."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "How are high-intensity obstacle lights displayed?",
+      "o": [
+        "Flashing white",
+        "Fixed red",
+        "Flashing blue",
+        "Fixed yellow"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "High-intensity obstacle lights are flashing white and may be used by day as well as night."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "Which overall-length band defines RFF category 8?",
+      "o": [
+        "39 m to below 49 m",
+        "61 m to below 76 m",
+        "49 m to below 61 m",
+        "76 m to below 90 m"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "Category 8 covers overall lengths from 49 m up to, but not including, 61 m."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What can happen when highest-category movements are fewer than 700 in the busiest consecutive three months?",
+      "o": [
+        "Protection may be one category lower",
+        "The fire station may close",
+        "Dry chemical agent is no longer required",
+        "The runway becomes non-instrument"
+      ],
+      "a": 0,
+      "s": 8,
+      "e": "Subject to the stated condition, the protection provided may be one category below the determined category."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "Which item belongs in a disabled-aircraft removal plan?",
+      "o": [
+        "A new runway-designation method",
+        "Only passenger compensation arrangements",
+        "A replacement flight plan",
+        "A coordinator and available lifting or towing resources"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "The removal plan identifies a coordinator, equipment, routes, communications and recovery information."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What is a principal purpose of apron management?",
+      "o": [
+        "Issue airworthiness certificates",
+        "Prevent collisions and coordinate apron movement",
+        "Publish instrument minima",
+        "Allocate aircraft nationality marks"
+      ],
+      "a": 1,
+      "s": 10,
+      "e": "Apron management regulates movement to prevent collisions and coordinates apron entry, exit and vehicle activity."
+    }
+  },
+  {
+    "chapter": "Aerodromes: Lighting and Services",
+    "slug": "study-airreg-19-aerodromes-lighting-services",
+    "data": {
+      "q": "What is a primary control for wildlife hazard?",
+      "o": [
+        "Switch off every runway light",
+        "Permit food waste near the runway",
+        "Manage habitat and attractants, then monitor and disperse wildlife",
+        "Replace all taxiway markings"
+      ],
+      "a": 2,
+      "s": 10,
+      "e": "Wildlife risk is reduced through habitat and attractant control, surveillance, dispersal and reporting."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "What does an AOC or permit authorise?",
+      "o": [
+        "Only aerodrome construction",
+        "Any flight without operational limits",
+        "Only aircraft maintenance",
+        "Specified commercial air transport operations"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "An AOC or permit authorises the operator to conduct specified commercial air transport operations."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "Which item belongs in the operational-manual group carried on board?",
+      "o": [
+        "The Minimum Equipment List",
+        "A passenger's passport copy",
+        "A land-ownership deed",
+        "An aerodrome construction permit"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "The Minimum Equipment List is one of the operational documents carried for the flight."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "Who makes the final decision about admitting a permitted person to the flight deck?",
+      "o": [
+        "The passenger",
+        "The handling agent",
+        "The commander",
+        "The meteorological office"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The commander retains the final responsibility for admission to the flight deck."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "What additive produces Restricted AOM from Normal AOM in Bali?",
+      "o": [
+        "50 ft and 200 m",
+        "100 ft and 400 m",
+        "No fixed additive",
+        "200 ft and 800 m"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "Restricted AOM adds 100 ft to DA/H or MDA/H and 400 m to visibility or RVR."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "What vertical separation is applied in RVSM airspace from FL 290 to FL 410 inclusive?",
+      "o": [
+        "1,000 ft",
+        "2,000 ft",
+        "500 ft",
+        "3,000 ft"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "RVSM applies 1,000 ft vertical separation between FL 290 and FL 410 inclusive."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "Which statement correctly compares MEL and MMEL?",
+      "o": [
+        "Neither requires approval",
+        "The MMEL is written for one individual flight",
+        "The MEL cancels aircraft limitations",
+        "The operator MEL cannot be less restrictive than the MMEL"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "An operator's approved MEL is derived from and cannot be less restrictive than the aircraft-type MMEL."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "Below which compartment pressure must oxygen cover crew and passengers for any period?",
+      "o": [
+        "700 hPa",
+        "620 hPa",
+        "850 hPa",
+        "1,013 hPa"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "For any period below 620 hPa, oxygen must be available for crew and passengers."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "What is turbine-aeroplane final reserve fuel?",
+      "o": [
+        "15 minutes at cruise speed",
+        "45 minutes at holding speed at sea level",
+        "30 minutes at holding speed 1,500 ft above the aerodrome",
+        "Five per cent of taxi fuel"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "For a turbine aeroplane, final reserve is 30 minutes at holding speed 1,500 ft above aerodrome elevation in standard conditions."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "Which aeronautical emergency frequency must the communication equipment support?",
+      "o": [
+        "406.0 kHz",
+        "108.0 MHz",
+        "243.0 kHz",
+        "121.5 MHz"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "The aircraft radio equipment must support aeronautical emergency frequency 121.5 MHz."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "How long must FDTL duty and rest records be retained?",
+      "o": [
+        "Eighteen months",
+        "Twelve months",
+        "Twenty-four months",
+        "Six months"
+      ],
+      "a": 0,
+      "s": 11,
+      "e": "Bali states that records of duties and rest periods are kept for 18 months."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "What is the maximum two-pilot FDP for four landings in Bali's table?",
+      "o": [
+        "11 hours",
+        "12 hours 30 minutes",
+        "12 hours",
+        "13 hours"
+      ],
+      "a": 2,
+      "s": 11,
+      "e": "For four landings, the table permits 8 hours flight time and a maximum FDP of 12 hours."
+    }
+  },
+  {
+    "chapter": "Operational Procedures",
+    "slug": "study-airreg-20-operational-procedures",
+    "data": {
+      "q": "Which term means block time from first movement for take-off until final rest after flight?",
+      "o": [
+        "Standby",
+        "Flight time",
+        "Duty period",
+        "Rest period"
+      ],
+      "a": 1,
+      "s": 10,
+      "e": "Flight time is block-to-block time from first movement for take-off until final rest after landing."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "What is the relationship between an operator's MEL and the approved MMEL?",
+      "o": [
+        "The MEL replaces all Flight Manual limits",
+        "The MMEL applies only to one flight",
+        "The MEL cannot be less restrictive than the MMEL",
+        "Neither document needs approval"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "The operator's approved MEL is tailored from, and cannot be less restrictive than, the approved MMEL."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "When does holdover time begin?",
+      "o": [
+        "At engine start",
+        "At the start of the final de-icing or anti-icing application",
+        "At the end of the first inspection",
+        "When taxi begins"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Holdover time begins at the start of the final de-icing or anti-icing application."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "What should a pilot do first when exposed to a strong laser beam on approach?",
+      "o": [
+        "Descend below the beam without informing ATC",
+        "Stare at the source to identify it",
+        "Switch off all cockpit lighting",
+        "Look away and maintain control using instruments"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "The pilot should look away from the beam, maintain control on instruments and transfer control if needed."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "Which agent principle is correct for an energised class C electrical fire?",
+      "o": [
+        "Use an approved nonconducting agent",
+        "Use only metal-fire powder",
+        "Use a conducting water jet",
+        "Add fuel to cool the wiring"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "A class C electrical fire requires an approved nonconducting agent such as halon or carbon dioxide."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "What is the immediate crew priority after explosive decompression at high altitude?",
+      "o": [
+        "Complete the passenger manifest",
+        "Ask ATC for a route shortcut",
+        "Put on oxygen masks and control the aircraft",
+        "Inspect the cargo hold"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The crew first put on oxygen masks and control the aircraft before communication and assessment."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "Which sequence describes a microburst encounter on approach?",
+      "o": [
+        "Tailwind, updraft, headwind",
+        "Tailwind gain followed by calm air",
+        "Continuous headwind only",
+        "Headwind gain, downdraft, tailwind loss"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "A microburst typically gives a headwind gain, then a downdraft, followed by a dangerous tailwind loss."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "When are wingtip vortices strongest?",
+      "o": [
+        "When the generating aircraft is heavy, clean and slow",
+        "When it is light, dirty and fast",
+        "Only during taxi",
+        "Only above the tropopause"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "Wake vortices are strongest when the generating aircraft is heavy, clean and slow."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "What surveillance wake minimum applies to an A380 followed by a Light aircraft in Bali's table?",
+      "o": [
+        "5 NM",
+        "8 NM",
+        "6 NM",
+        "10 NM"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "Bali's surveillance table gives 8 NM for an A380 followed by a Light aircraft."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "What vertical position is required for traffic behind a fuel-jettisoning aircraft within the protected trail area?",
+      "o": [
+        "Only 500 ft below",
+        "Exactly the same level",
+        "At least 1,000 ft above or 3,000 ft below",
+        "At least 3,000 ft above or 1,000 ft below"
+      ],
+      "a": 2,
+      "s": 9,
+      "e": "Traffic behind within the protected distance remains at least 1,000 ft above or 3,000 ft below."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "What mainly characterises dynamic hydroplaning?",
+      "o": [
+        "The tyre gains extra friction from water",
+        "Water pressure lifts the tyre from the pavement",
+        "The runway slope disappears",
+        "The wheel brakes become more effective"
+      ],
+      "a": 1,
+      "s": 10,
+      "e": "In dynamic hydroplaning, water pressure lifts the tyre from the pavement and greatly reduces braking and directional control."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "Which dangerous-goods class contains corrosives?",
+      "o": [
+        "Class 3",
+        "Class 9",
+        "Class 6",
+        "Class 8"
+      ],
+      "a": 3,
+      "s": 11,
+      "e": "Class 8 is the dangerous-goods class for corrosive substances."
+    }
+  },
+  {
+    "chapter": "Operational Hazards",
+    "slug": "study-airreg-21-operational-hazards",
+    "data": {
+      "q": "Which organisation issues volcanic ash advisory information for its assigned area?",
+      "o": [
+        "A Volcanic Ash Advisory Centre",
+        "The aerodrome fire service",
+        "The aircraft manufacturer",
+        "The baggage-handling agent"
+      ],
+      "a": 0,
+      "s": 12,
+      "e": "A Volcanic Ash Advisory Centre analyses the hazard and issues volcanic ash advisory information."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "Which unit coordinates search and rescue operations throughout one SAR region?",
+      "o": [
+        "The Rescue Coordination Centre",
+        "The operator's dispatch office",
+        "The aerodrome customs office",
+        "The aircraft manufacturer"
+      ],
+      "a": 0,
+      "s": 1,
+      "e": "The Rescue Coordination Centre organises SAR service and coordinates operations throughout its SAR region."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "Which organisation coordinates maritime SAR policy in Bali's Indian framework?",
+      "o": [
+        "NASARCC",
+        "Airports Authority of India",
+        "The National Maritime Search and Rescue Board",
+        "The meteorological office"
+      ],
+      "a": 2,
+      "s": 2,
+      "e": "The National Maritime Search and Rescue Board coordinates maritime SAR policy under the Indian Coast Guard leadership described by Bali."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "What does INCERFA mean?",
+      "o": [
+        "The aircraft has requested medical assistance",
+        "The aircraft is certainly destroyed",
+        "Rescue work has been completed",
+        "Uncertainty exists about the safety of an aircraft and its occupants"
+      ],
+      "a": 3,
+      "s": 3,
+      "e": "INCERFA is the uncertainty phase, in which uncertainty exists about aircraft and occupant safety."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "Which statement best describes DETRESFA action by an RCC?",
+      "o": [
+        "Wait for a scheduled report before acting",
+        "Initiate the coordinated search and rescue plan without delay",
+        "Close the flight plan automatically",
+        "Transfer all responsibility to the operator"
+      ],
+      "a": 1,
+      "s": 4,
+      "e": "During DETRESFA the RCC initiates the coordinated search and rescue plan without delay."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "Who normally takes initial on-scene charge when the first arriving aircraft is not a dedicated SAR aircraft?",
+      "o": [
+        "The nearest airline dispatcher",
+        "The last aircraft to arrive",
+        "The pilot of the first aircraft",
+        "The aerodrome fire chief"
+      ],
+      "a": 2,
+      "s": 5,
+      "e": "The pilot of the first aircraft takes temporary on-scene charge until agreed transfer or arrival of a dedicated SAR aircraft."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "Which search pattern is best suited to a precisely known datum and compact area?",
+      "o": [
+        "Expanding square",
+        "Random visual search",
+        "Track crawl",
+        "Parallel sweep only"
+      ],
+      "a": 0,
+      "s": 6,
+      "e": "An expanding-square search begins near an accurate datum and expands systematically through a compact area."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "How does an aircraft direct a surface craft toward survivors when radio communication is unavailable?",
+      "o": [
+        "Land beside the vessel",
+        "Circle it, cross close ahead while attracting attention, then fly the required direction",
+        "Cross its wake close astern and depart",
+        "Flash the landing lights once and climb"
+      ],
+      "a": 1,
+      "s": 7,
+      "e": "The directing sequence is to circle, cross close ahead while attracting attention, and then head toward the distress site."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "What does the survivor ground symbol X mean?",
+      "o": [
+        "Proceed in this direction",
+        "No or negative",
+        "Operation completed",
+        "Require medical assistance"
+      ],
+      "a": 3,
+      "s": 8,
+      "e": "The survivor symbol X means require medical assistance."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "What is the primary role of the 406 MHz component of an ELT?",
+      "o": [
+        "Satellite distress alerting with coded identity",
+        "Routine air-to-air communication",
+        "ILS localiser guidance",
+        "Weather-radar calibration"
+      ],
+      "a": 0,
+      "s": 9,
+      "e": "The 406 MHz ELT transmission provides coded satellite distress alerting through COSPAS-SARSAT."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "What is the defining assessment in ALERFA?",
+      "o": [
+        "No concern exists",
+        "The operation is complete",
+        "Apprehension exists about aircraft and occupant safety",
+        "A forced landing is certain"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "ALERFA is the alert phase, when apprehension exists about the safety of the aircraft and occupants."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "How does an aircraft acknowledge a ground signal at night?",
+      "o": [
+        "By rocking the wings only",
+        "By circling exactly three times",
+        "By transmitting IDENT",
+        "By flashing landing lights twice, or navigation lights twice if needed"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "At night the aircraft flashes its landing lights twice or, if unavailable, switches navigation lights on and off twice."
+    }
+  },
+  {
+    "chapter": "Search and Rescue",
+    "slug": "study-airreg-22-search-and-rescue",
+    "data": {
+      "q": "Which streamer colour identifies food and water in droppable SAR supplies?",
+      "o": [
+        "Red",
+        "Blue",
+        "Yellow",
+        "Black"
+      ],
+      "a": 1,
+      "s": 9,
+      "e": "Blue streamers identify packages containing food and water."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "What is the sole objective of an Annex 13 safety investigation?",
+      "o": [
+        "To decide compensation",
+        "To apportion commercial liability",
+        "To prosecute the flight crew",
+        "To prevent future accidents and incidents"
+      ],
+      "a": 3,
+      "s": 1,
+      "e": "The sole objective is prevention of future accidents and incidents, not apportionment of blame or liability."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "When does an injury count as fatal under Bali's national accident definition?",
+      "o": [
+        "Only when death is immediate",
+        "When it causes death within 30 days of the accident",
+        "Within one year",
+        "Within seven days"
+      ],
+      "a": 1,
+      "s": 2,
+      "e": "Bali treats an accident injury as fatal when death occurs within 30 days of the accident date."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "Which event is a typical serious incident?",
+      "o": [
+        "A near collision requiring an avoidance manoeuvre",
+        "A routine gate delay",
+        "A passenger missing a connection",
+        "Normal use of reverse thrust"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "A near collision requiring avoidance is a typical serious incident because an accident nearly occurred."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "What is the correct timing principle for notifying AAIB?",
+      "o": [
+        "Wait until every fact is confirmed",
+        "Notify only after the final report",
+        "Notify promptly by the quickest means and within Bali's 24-hour limit",
+        "Notify at the next licence renewal"
+      ],
+      "a": 2,
+      "s": 4,
+      "e": "Known facts are notified promptly by the quickest means, with Bali's outer limit of 24 hours after awareness."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "Which State normally institutes an investigation for an occurrence in its territory?",
+      "o": [
+        "State of Design",
+        "State of Occurrence",
+        "State of Manufacture",
+        "State of Operator"
+      ],
+      "a": 1,
+      "s": 5,
+      "e": "The State of Occurrence normally institutes and conducts the territorial investigation."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "Who normally investigates an accident in India under the 2017 Rules?",
+      "o": [
+        "The aerodrome operator alone",
+        "The insurance company",
+        "The aircraft manufacturer",
+        "AAIB"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "AAIB investigates accidents under the Aircraft (Investigation of Accidents and Incidents) Rules, 2017."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "What takes priority over preserving an untouched wreckage site?",
+      "o": [
+        "Public access for photographs",
+        "Release of baggage without recording",
+        "Rescue of people and removal of immediate danger",
+        "Commercial recovery of parts"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "Lifesaving rescue and removal of immediate danger take priority, with necessary disturbance documented."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "What is ADREP?",
+      "o": [
+        "ICAO's Accident and Incident Data Reporting system",
+        "An aerodrome lighting system",
+        "A flight crew licence",
+        "A runway-friction code"
+      ],
+      "a": 0,
+      "s": 8,
+      "e": "ADREP is ICAO's standardised Accident and Incident Data Reporting system."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "Which statement describes just culture?",
+      "o": [
+        "Every error is punished identically",
+        "Proportionate honest actions are protected while wilful misconduct remains accountable",
+        "No one can ever be disciplined",
+        "Only anonymous reports are accepted"
+      ],
+      "a": 1,
+      "s": 9,
+      "e": "Just culture protects proportionate honest actions while retaining accountability for wilful misconduct and similarly unacceptable behaviour."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "Who may also notify AAIB besides the pilot or operator?",
+      "o": [
+        "The aerodrome operator, ATS unit and DGCA where applicable",
+        "Only passengers",
+        "Only the manufacturer",
+        "Only foreign embassies"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "The aerodrome operator, ATS unit concerned and DGCA where applicable also submit notification to AAIB."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "Which Indian body normally investigates other incidents not assigned to AAIB by the serious-incident criteria?",
+      "o": [
+        "The District Magistrate",
+        "The airport retailer",
+        "The State of Manufacture",
+        "DGCA"
+      ],
+      "a": 3,
+      "s": 6,
+      "e": "DGCA normally investigates incidents and serious incidents not assigned to AAIB, unless AAIB takes over."
+    }
+  },
+  {
+    "chapter": "Accident Investigation",
+    "slug": "study-airreg-23-accident-investigation",
+    "data": {
+      "q": "What is the purpose of a safety recommendation?",
+      "o": [
+        "To establish criminal guilt",
+        "To set insurance premiums",
+        "To address a safety deficiency and prevent recurrence",
+        "To cancel every certificate involved"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "A safety recommendation proposes preventive action to address an identified safety deficiency."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "What is the main purpose of Annex 9 facilitation?",
+      "o": [
+        "To remove all border controls",
+        "To expedite international air transport while maintaining necessary controls",
+        "To replace customs with airline staff",
+        "To govern aircraft design"
+      ],
+      "a": 1,
+      "s": 1,
+      "e": "Annex 9 expedites aircraft, people and goods while preserving necessary customs, immigration, health, security and law-enforcement controls."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "What happens when an aircraft-clearance document has been accepted electronically?",
+      "o": [
+        "The same document should not also be demanded on paper",
+        "It becomes a crew licence",
+        "It may be ignored by authorities",
+        "It must always be sent twice"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "Once authorities accept the required electronic document, they should not demand the identical document again on paper."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "Who may sign the General Declaration?",
+      "o": [
+        "Any passenger",
+        "Only the customs officer",
+        "The pilot-in-command or an authorised agent",
+        "Only the aircraft manufacturer"
+      ],
+      "a": 2,
+      "s": 3,
+      "e": "The General Declaration may be signed by the pilot-in-command or an authorised agent."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "What is the purpose of a direct transit area?",
+      "o": [
+        "To store unclaimed cargo",
+        "To conduct aircraft maintenance",
+        "To replace the runway holding point",
+        "To let transit passengers remain under supervision without applying for entry"
+      ],
+      "a": 3,
+      "s": 4,
+      "e": "A direct transit area lets passengers remain under authority supervision during transfer without applying to enter the State."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "How is unaccompanied baggage normally cleared?",
+      "o": [
+        "Under cargo procedures with a simplified process",
+        "Only as mail",
+        "Without any customs control",
+        "It is never accepted"
+      ],
+      "a": 0,
+      "s": 5,
+      "e": "Unaccompanied baggage follows cargo clearance procedures but may use a simplified process."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "Which principle applies to assistance for a passenger with a disability?",
+      "o": [
+        "Assistance begins only after boarding",
+        "The journey chain should be coordinated with dignity and accessible communication",
+        "Mobility aids are always left behind",
+        "Disability alone automatically bars carriage"
+      ],
+      "a": 1,
+      "s": 6,
+      "e": "Facilitation coordinates accessible assistance through the journey while respecting dignity, autonomy and safety."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "Which statement correctly distinguishes an inadmissible person from a deportee?",
+      "o": [
+        "An inadmissible person must be airline crew",
+        "They are identical terms",
+        "A deportee is always a transit passenger",
+        "An inadmissible person is refused entry, while a deportee is formally ordered to leave after admission or presence"
+      ],
+      "a": 3,
+      "s": 7,
+      "e": "Inadmissibility is refusal of entry; deportation is formal removal of a person already admitted or present."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "What is disinsection intended to control?",
+      "o": [
+        "Runway rubber deposits",
+        "Aircraft corrosion",
+        "Insects capable of carrying disease or pests",
+        "Passenger baggage weight"
+      ],
+      "a": 2,
+      "s": 8,
+      "e": "Disinsection uses an approved treatment to control insects that can carry disease or agricultural pests."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "Which channel is used in India by an arriving passenger with no dutiable goods?",
+      "o": [
+        "Red Channel",
+        "Green Channel",
+        "Cargo channel",
+        "Diplomatic mail channel"
+      ],
+      "a": 1,
+      "s": 9,
+      "e": "An arriving passenger with no dutiable goods uses the Green Channel and remains responsible for an accurate declaration."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "Which three standard aircraft documents are central to the chapter?",
+      "o": [
+        "General Declaration, Passenger Manifest and Cargo Manifest",
+        "Licence, medical and radio permit",
+        "Load sheet, fuel sheet and journey log",
+        "Weather chart, flight plan and tech log"
+      ],
+      "a": 0,
+      "s": 3,
+      "e": "The standard facilitation documents are the General Declaration, Passenger Manifest and Cargo Manifest."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "Who normally arranges removal after a border authority refuses a passenger admission?",
+      "o": [
+        "The aircraft manufacturer",
+        "The meteorological office",
+        "The operator under the State's removal order",
+        "The passenger's hotel"
+      ],
+      "a": 2,
+      "s": 7,
+      "e": "After the State refuses admission and issues the removal direction, the operator normally arranges carriage to the specified admissible point."
+    }
+  },
+  {
+    "chapter": "Facilitation",
+    "slug": "study-airreg-24-facilitation",
+    "data": {
+      "q": "What must happen before an international flight leaves India according to Bali's national provision?",
+      "o": [
+        "The cargo manifest must be destroyed",
+        "All passengers must use the Red Channel",
+        "The aircraft must be re-registered",
+        "Immigration and customs clearance must be obtained on the General Declaration"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "Bali states that immigration and customs authorities must clear the flight on the General Declaration before departure from India."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "What is the primary objective of Annex 17 security measures?",
+      "o": [
+        "Fast passenger processing",
+        "Commercial protection alone",
+        "Safety of passengers, crew, ground personnel and the public",
+        "Uniform ticket prices"
+      ],
+      "a": 2,
+      "s": 1,
+      "e": "The safety of passengers, crew, ground personnel and the public is the primary Annex 17 objective."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "Which body is India’s specialist civil aviation security regulator and oversight authority?",
+      "o": [
+        "AAIB",
+        "ICAO Council",
+        "Airports Authority only",
+        "Bureau of Civil Aviation Security"
+      ],
+      "a": 3,
+      "s": 2,
+      "e": "The Bureau of Civil Aviation Security, BCAS, sets standards and oversees civil aviation security in India."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "What does a security quality-control test establish?",
+      "o": [
+        "Whether an aircraft can meet take-off performance",
+        "Whether a control detects or prevents a simulated threat",
+        "Whether a passenger has a visa",
+        "Whether a route is economical"
+      ],
+      "a": 1,
+      "s": 3,
+      "e": "A security test challenges a control under managed conditions to see whether it detects or prevents a simulated threat."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "What distinguishes a security restricted area from a general landside area?",
+      "o": [
+        "It is a priority risk area with additional access and security controls",
+        "It contains only shops",
+        "It is always outside the airport fence",
+        "It is open to every ticket holder"
+      ],
+      "a": 0,
+      "s": 4,
+      "e": "A security restricted area is a priority risk area where additional access and security controls apply."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "What is required if screened passengers mix with unscreened persons after the screening point?",
+      "o": [
+        "Only a new boarding card",
+        "A head count only",
+        "No action if the flight is ready",
+        "The affected passengers and cabin baggage must be screened again"
+      ],
+      "a": 3,
+      "s": 5,
+      "e": "Mixing breaks the sterile flow, so affected passengers and their cabin baggage must be screened again before boarding."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "When can screened cargo continue to be treated as secure?",
+      "o": [
+        "Only when it travels with a passenger",
+        "Even after an unexplained access breach",
+        "Only while it remains protected from unauthorised interference",
+        "Whenever its package is large"
+      ],
+      "a": 2,
+      "s": 6,
+      "e": "Screened cargo retains secure status only while it remains protected from unauthorised interference."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "Which statement correctly compares an aircraft security check and search?",
+      "o": [
+        "A search is the more thorough interior and exterior inspection",
+        "They are identical terms",
+        "A check is always more extensive",
+        "Neither concerns suspicious objects"
+      ],
+      "a": 0,
+      "s": 7,
+      "e": "An aircraft security search is the more thorough inspection of interior, exterior and defined concealed areas."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "Who must receive operationally necessary information about an authorised armed person aboard?",
+      "o": [
+        "Every passenger",
+        "The pilot-in-command",
+        "Only the baggage handler",
+        "No one after authorisation"
+      ],
+      "a": 1,
+      "s": 8,
+      "e": "The pilot-in-command must receive the information needed to manage authorised armed carriage safely."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "What is the normal action when an unlawfully seized aircraft lands in a State?",
+      "o": [
+        "Move all passengers to another flight without coordination",
+        "Require immediate departure in every case",
+        "Release it whenever the operator asks",
+        "Retain it on the ground unless protection of human life requires departure"
+      ],
+      "a": 3,
+      "s": 9,
+      "e": "The State normally retains the aircraft on the ground, with an exception when the overriding duty to protect human life requires departure."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "What is the AVSEC Panel’s central role?",
+      "o": [
+        "Licensing Indian flight crew",
+        "Operating airport screening lanes",
+        "Advising ICAO on security standards, threats and Annex 17 amendments",
+        "Investigating every baggage delay"
+      ],
+      "a": 2,
+      "s": 10,
+      "e": "The AVSEC Panel advises ICAO on emerging threats, vulnerabilities, security standards and proposed Annex 17 amendments."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "Which national document coordinates security responsibilities and required controls across India?",
+      "o": [
+        "The National Civil Aviation Security Programme",
+        "The aircraft journey log",
+        "The passenger manifest",
+        "The meteorological watch plan"
+      ],
+      "a": 0,
+      "s": 2,
+      "e": "The National Civil Aviation Security Programme coordinates national aviation security responsibilities, standards and controls."
+    }
+  },
+  {
+    "chapter": "Security",
+    "slug": "study-airreg-25-security",
+    "data": {
+      "q": "Which recipients are explicitly part of the landing notification chain after an act of unlawful interference?",
+      "o": [
+        "Only the departure airport shops",
+        "The States of Registry and Operator, affected-national States and ICAO",
+        "Only the aircraft manufacturer",
+        "Only the next air traffic control unit"
+      ],
+      "a": 1,
+      "s": 9,
+      "e": "The notification chain includes the States of Registry and Operator, relevant States connected to affected citizens and ICAO."
+    }
+  }
+]

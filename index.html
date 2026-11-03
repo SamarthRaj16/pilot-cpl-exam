@@ -1,17 +1,3776 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="description" content="DGCA CPL Exam Practice — Authentic questions from official textbooks and DGCA syllabus." />
-    <meta name="theme-color" content="#0284c7" />
-    <title>DGCA CPL Exam Practice | Pilot Ground School</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>DGCA CPL Exam Practice</title>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #f4f6f8;
+      --surface: #fff;
+      --surface2: #e9ecf0;
+      --text: #1a1a2e;
+      --text2: #555;
+      --border: #d0d5dd;
+
+      --primary: #1565c0;
+      --primary-light: #e3f2fd;
+      --primary-dark: #0d47a1;
+      --correct: #2e7d32;
+      --correct-bg: #e8f5e9;
+      --wrong: #c62828;
+      --wrong-bg: #ffebee;
+      --flag: #ef6c00;
+      --flag-bg: #fff3e0;
+      --radius: 10px;
+      --shadow: 0 2px 8px rgba(0, 0, 0, .08);
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    .dark {
+      --bg: #0f1117;
+      --surface: #1a1d2e;
+      --surface2: #252836;
+      --text: #e0e0e0;
+      --text2: #9e9e9e;
+      --border: #333;
+      --primary: #42a5f5;
+      --primary-light: #1a2744;
+      --primary-dark: #90caf9;
+      --correct: #66bb6a;
+      --correct-bg: #1b3a1b;
+      --wrong: #ef5350;
+      --wrong-bg: #3a1b1b;
+      --flag: #ffa726;
+      --flag-bg: #3a2e1b;
+      --shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    }
+
+    html {
+      font-size: 16px
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      transition: background .3s, color .3s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--radius);
+      font-size: .95rem;
+      transition: all .15s ease;
+    }
+
+    button:active {
+      transform: scale(.97)
+    }
+
+    /* ── Layout ───────────────────────────────────────────── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 16px
+    }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary)
+    }
+
+    .header h1 span {
+      font-weight: 400;
+      color: var(--text2);
+      font-size: .85rem;
+      display: block
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--surface2);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .icon-btn:hover {
+      background: var(--primary-light);
+      color: var(--primary)
+    }
+
+    /* ── Screens ──────────────────────────────────────────── */
+    .screen {
+      display: none
+    }
+
+    .screen.active {
+      display: block
+    }
+
+    /* ── Home Screen ──────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      color: var(--primary)
+    }
+
+    .card h3 {
+      font-size: .95rem;
+      margin-bottom: 8px;
+      color: var(--text)
+    }
+
+    .subject-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chip {
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: .88rem;
+      background: var(--surface2);
+      color: var(--text);
+      border: 2px solid transparent;
+      font-weight: 500;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .chip.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600
+    }
+
+    .mode-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .mode-btn {
+      flex: 1;
+      min-width: 140px;
+      min-height: 52px;
+      padding: 14px;
+      background: var(--surface2);
+      color: var(--text);
+      border: 2px solid transparent;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .mode-btn.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary)
+    }
+
+    .timer-input {
+      margin-top: 12px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .timer-input.show {
+      display: flex
+    }
+
+    .timer-input label {
+      font-size: .9rem;
+      color: var(--text2)
+    }
+
+    .timer-input input {
+      width: 80px;
+      padding: 10px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .start-btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: var(--primary);
+      color: #fff;
+      margin-top: 8px;
+      min-height: 52px;
+    }
+
+    .start-btn:hover {
+      background: var(--primary-dark)
+    }
+
+    .start-btn:disabled {
+      opacity: .5;
+      cursor: not-allowed
+    }
+
+    /* Weakness panel */
+    .weakness-bar-wrap {
+      margin-bottom: 10px
+    }
+
+    .weakness-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .85rem;
+      margin-bottom: 4px
+    }
+
+    .weakness-track {
+      height: 8px;
+      border-radius: 4px;
+      background: var(--surface2);
+      overflow: hidden;
+    }
+
+    .weakness-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width .4s ease
+    }
+
+    .reset-btn {
+      padding: 10px 16px;
+      background: var(--wrong);
+      color: #fff;
+      font-size: .85rem;
+      min-height: 44px;
+    }
+
+    /* ── Quiz Screen ──────────────────────────────────────── */
+    .quiz-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .quiz-subject {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    .quiz-timer {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .quiz-progress {
+      font-size: .85rem;
+      color: var(--text2)
+    }
+
+    .question-text {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      padding: 14px 16px;
+      background: var(--surface2);
+      color: var(--text);
+      border: 2px solid transparent;
+      font-size: .95rem;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.4;
+    }
+
+    .option-btn .opt-letter {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .85rem;
+      border: 1px solid var(--border);
+    }
+
+    .option-btn:hover {
+      border-color: var(--primary)
+    }
+
+    .option-btn.selected {
+      border-color: var(--primary);
+      background: var(--primary-light)
+    }
+
+    .option-btn.correct {
+      border-color: var(--correct);
+      background: var(--correct-bg)
+    }
+
+    .option-btn.correct .opt-letter {
+      background: var(--correct);
+      color: #fff;
+      border-color: var(--correct)
+    }
+
+    .option-btn.wrong {
+      border-color: var(--wrong);
+      background: var(--wrong-bg)
+    }
+
+    .option-btn.wrong .opt-letter {
+      background: var(--wrong);
+      color: #fff;
+      border-color: var(--wrong)
+    }
+
+    .option-btn.disabled {
+      pointer-events: none
+    }
+
+    .feedback-box {
+      padding: 14px;
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+      font-size: .9rem;
+      line-height: 1.5;
+      display: none;
+    }
+
+    .feedback-box.show {
+      display: block
+    }
+
+    .feedback-box.correct-fb {
+      background: var(--correct-bg);
+      border: 1px solid var(--correct)
+    }
+
+    .feedback-box.wrong-fb {
+      background: var(--wrong-bg);
+      border: 1px solid var(--wrong)
+    }
+
+    .feedback-box strong {
+      display: block;
+      margin-bottom: 4px
+    }
+
+    .feedback-source {
+      font-size: .82rem;
+      color: var(--text2);
+      margin-top: 6px;
+      font-style: italic
+    }
+
+    .quiz-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px
+    }
+
+    .quiz-actions button {
+      flex: 1;
+      min-width: 100px;
+      min-height: 48px;
+      padding: 12px;
+      font-weight: 600;
+    }
+
+    .nav-btn {
+      background: var(--surface2);
+      color: var(--text)
+    }
+
+    .nav-btn:hover {
+      background: var(--primary-light);
+      color: var(--primary)
+    }
+
+    .flag-btn {
+      background: var(--surface2);
+      color: var(--flag)
+    }
+
+    .flag-btn.flagged {
+      background: var(--flag-bg);
+      color: var(--flag);
+      font-weight: 700
+    }
+
+    .finish-btn {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .finish-btn:hover {
+      background: var(--primary-dark)
+    }
+
+    .quit-btn {
+      background: var(--wrong);
+      color: #fff;
+      font-size: .85rem
+    }
+
+    /* Question Grid */
+    .grid-toggle {
+      text-align: center;
+      color: var(--primary);
+      font-size: .9rem;
+      padding: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .q-grid {
+      display: none;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px 0;
+      justify-content: center;
+    }
+
+    .q-grid.show {
+      display: flex
+    }
+
+    .q-cell {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: .82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface2);
+      color: var(--text);
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .q-cell.current {
+      border-color: var(--primary)
+    }
+
+    .q-cell.answered {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .q-cell.flagged {
+      background: var(--flag-bg);
+      color: var(--flag);
+      border-color: var(--flag)
+    }
+
+    .q-cell.answered.flagged {
+      background: var(--flag);
+      color: #fff;
+    }
+
+    /* ── Results Screen ───────────────────────────────────── */
+    .result-hero {
+      text-align: center;
+      padding: 20px 0
+    }
+
+    .result-score {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary)
+    }
+
+    .result-pct {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text2);
+      margin-bottom: 4px
+    }
+
+    .result-time {
+      font-size: .9rem;
+      color: var(--text2)
+    }
+
+    .breakdown-bar-wrap {
+      margin-bottom: 12px
+    }
+
+    .breakdown-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .88rem;
+      margin-bottom: 4px;
+      font-weight: 500
+    }
+
+    .breakdown-track {
+      height: 14px;
+      border-radius: 7px;
+      background: var(--surface2);
+      overflow: hidden;
+    }
+
+    .breakdown-fill {
+      height: 100%;
+      border-radius: 7px;
+      transition: width .5s ease;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .result-actions button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      min-height: 48px;
+    }
+
+    .retry-btn {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .retry-wrong-btn {
+      background: var(--flag);
+      color: #fff
+    }
+
+    .review-btn {
+      background: var(--surface2);
+      color: var(--text)
+    }
+
+    .home-btn {
+      background: var(--surface2);
+      color: var(--text)
+    }
+
+    /* ── Review Screen ────────────────────────────────────── */
+    .review-item {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--wrong);
+    }
+
+    .review-q {
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.5
+    }
+
+    .review-ans {
+      font-size: .9rem;
+      margin-bottom: 4px;
+      line-height: 1.4
+    }
+
+    .review-ans.your {
+      color: var(--wrong)
+    }
+
+    .review-ans.right {
+      color: var(--correct);
+      font-weight: 600
+    }
+
+    .review-expl {
+      font-size: .88rem;
+      color: var(--text2);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      line-height: 1.5;
+    }
+
+    .review-src {
+      font-size: .82rem;
+      color: var(--text2);
+      font-style: italic;
+      margin-top: 4px
+    }
+
+    .back-btn {
+      padding: 12px 20px;
+      background: var(--surface2);
+      color: var(--text);
+      font-weight: 600;
+      min-height: 48px;
+    }
+
+    /* ── Confirm modal ────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .45);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.show {
+      display: flex
+    }
+
+    .modal-box {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px;
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
+      text-align: center;
+    }
+
+    .modal-box p {
+      margin-bottom: 18px;
+      font-size: 1rem;
+      line-height: 1.5
+    }
+
+    .modal-btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center
+    }
+
+    .modal-btns button {
+      padding: 12px 24px;
+      font-weight: 600;
+      min-height: 44px
+    }
+
+    .modal-cancel {
+      background: var(--surface2);
+      color: var(--text)
+    }
+
+    .modal-confirm {
+      background: var(--wrong);
+      color: #fff
+    }
+
+    /* ── Responsive ───────────────────────────────────────── */
+    @media(max-width:480px) {
+      .container {
+        padding: 12px
+      }
+
+      .card {
+        padding: 16px
+      }
+
+      .quiz-actions {
+        gap: 8px
+      }
+
+      .quiz-actions button {
+        min-width: 0;
+        font-size: .88rem;
+        padding: 10px
+      }
+
+      .q-cell {
+        width: 36px;
+        height: 36px;
+        font-size: .78rem
+      }
+    }
+
+    /* ── Scrollbar (dark) ─────────────────────────────────── */
+    .dark ::-webkit-scrollbar {
+      width: 6px
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: var(--bg)
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 3px
+    }
+
+    /* Print hide */
+    @media print {
+
+      .header,
+      .quiz-actions,
+      .result-actions,
+      .home-btn,
+      .back-btn {
+        display: none !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+     HEADER
+     ════════════════════════════════════════════════════════ -->
+  <div class="header">
+    <h1>✈ CPL Quiz<span>DGCA Exam Practice</span></h1>
+    <div class="header-actions">
+      <button class="icon-btn" id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+     HOME SCREEN
+     ════════════════════════════════════════════════════════ -->
+  <div class="container">
+    <div id="homeScreen" class="screen active">
+
+      <div class="card">
+        <h2>📚 Choose Subject</h2>
+        <div class="subject-chips" id="subjectChips"></div>
+      </div>
+
+      <div class="card">
+        <h2>⚙️ Quiz Mode</h2>
+        <div class="mode-btns">
+          <button class="mode-btn selected" data-mode="practice">📝 Practice</button>
+          <button class="mode-btn" data-mode="timed">⏱ Timed</button>
+        </div>
+        <div class="timer-input" id="timerInput">
+          <label for="timerMin">Minutes:</label>
+          <input type="number" id="timerMin" value="30" min="1" max="180">
+        </div>
+      </div>
+
+      <div class="card" id="weaknessCard" style="display:none">
+        <h2>📊 Your Weak Areas</h2>
+        <div id="weaknessPanel"></div>
+      </div>
+
+      <button class="start-btn" id="startBtn">🚀 Start Quiz</button>
+
+      <div class="card" style="margin-top:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <span style="font-size:.88rem;color:var(--text2)" id="statsLine">No attempts yet.</span>
+          <button class="reset-btn" id="resetBtn">🗑 Reset Progress</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+     QUIZ SCREEN
+     ════════════════════════════════════════════════════════ -->
+    <div id="quizScreen" class="screen">
+
+      <div class="quiz-top">
+        <span class="quiz-subject" id="qSubject"></span>
+        <span class="quiz-timer" id="qTimer"></span>
+        <span class="quiz-progress" id="qProgress"></span>
+      </div>
+
+      <div class="question-text" id="qText"></div>
+
+      <div class="options-list" id="qOptions"></div>
+
+      <div class="feedback-box" id="qFeedback"></div>
+
+      <div class="quiz-actions">
+        <button class="nav-btn" id="prevBtn">◀ Prev</button>
+        <button class="flag-btn" id="flagBtn">🚩 Flag</button>
+        <button class="nav-btn" id="nextBtn">Next ▶</button>
+      </div>
+      <div class="quiz-actions" style="margin-top:0">
+        <button class="finish-btn" id="finishBtn">✅ Finish</button>
+        <button class="quit-btn" id="quitBtn">✖ Quit</button>
+      </div>
+
+      <div class="grid-toggle" id="gridToggle">▼ Question Grid</div>
+      <div class="q-grid" id="qGrid"></div>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+     RESULTS SCREEN
+     ════════════════════════════════════════════════════════ -->
+    <div id="resultScreen" class="screen">
+
+      <div class="card result-hero">
+        <div class="result-score" id="rScore"></div>
+        <div class="result-pct" id="rPct"></div>
+        <div class="result-time" id="rTime"></div>
+      </div>
+
+      <div class="card">
+        <h2>📊 Subject Breakdown</h2>
+        <div id="rBreakdown"></div>
+      </div>
+
+      <div class="result-actions">
+        <button class="review-btn" id="reviewBtn">🔍 Review Mistakes</button>
+        <button class="retry-wrong-btn" id="retryWrongBtn">🔄 Retry Wrong Only</button>
+        <button class="retry-btn" id="retryBtn">🔁 Retry All</button>
+        <button class="home-btn" id="homeFromResult">🏠 Home</button>
+      </div>
+
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+     REVIEW SCREEN
+     ════════════════════════════════════════════════════════ -->
+    <div id="reviewScreen" class="screen">
+      <h2 style="margin-bottom:14px;color:var(--primary)">🔍 Review Mistakes</h2>
+      <div id="reviewList"></div>
+      <button class="back-btn" id="backFromReview">◀ Back to Results</button>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- ════════════════════════════════════════════════════════
+     CONFIRM MODAL
+     ════════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+      <p id="modalMsg"></p>
+      <div class="modal-btns">
+        <button class="modal-cancel" id="modalCancel">Cancel</button>
+        <button class="modal-confirm" id="modalConfirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ══════════════════════════════════════════════════════════
+       QUESTIONS — Replace these with real DGCA CPL questions.
+       Format: { subject, question, options[], answer (0-based index), explanation, source }
+       ══════════════════════════════════════════════════════════ */
+    const QUESTIONS = [
+  {
+    "id": "NAV-001",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'F'o'r' 'n'a'v'i'g'a't'i'o'n' 'c'a'l'c'u'l'a't'i'o'n's',' 'w'h'a't' 'i's' 't'h'e' 'E'a'r't'h'’'s' 'a'p'p'r'o'x'i'm'a't'e' 'c'o'm'p'r'e's's'i'o'n'?'",
+    "options": [
+      "'3' 'p'e'r' 'c'e'n't'",
+      "'0'.'0'3' 'p'e'r' 'c'e'n't'",
+      "'0'.'3' 'p'e'r' 'c'e'n't',' 'a'b'o'u't' '1' 'i'n' '3'0'0'",
+      "'1' 'i'n' '3'0'0'0'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'w'o'r'k'i'n'g' 'c'o'm'p'r'e's's'i'o'n' 'i's' 'a'b'o'u't' '0'.'3' 'p'e'r' 'c'e'n't',' 'w'h'i'c'h' 'i's' 'a'p'p'r'o'x'i'm'a't'e'l'y' '1' 'i'n' '3'0'0';' 'B'a'l'i' 'g'i'v'e's' 't'h'e' 'm'o'r'e' 'e'x'a'c't' 'r'a't'i'o' 'n'e'a'r' '1' 'i'n' '2'9'7'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 1"
+  },
+  {
+    "id": "NAV-002",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 't'h'e' 't'e'r'm' 'g'r'a't'i'c'u'l'e' 'd'e's'c'r'i'b'e'?'",
+    "options": [
+      "'E'v'e'r'y' 'l'i'n'e' 'p'r'i'n't'e'd' 'o'n' 'a' 'c'h'a'r't'",
+      "'T'h'e' 'n'e't'w'o'r'k' 'o'f' 'm'e'r'i'd'i'a'n's' 'a'n'd' 'p'a'r'a'l'l'e'l's' 'o'n' 'a' 'g'l'o'b'e',' 'm'a'p' 'o'r' 'c'h'a'r't'",
+      "'O'n'l'y' 't'h'e' 's'm'a'l'l' 'c'i'r'c'l'e's' 'n'e'a'r' 'a' 'p'o'l'e'",
+      "'A' 'm'a'g'n'e't'i'c' 'c'o'm'p'a's's' 'c'o'r'r'e'c't'i'o'n' 'c'a'r'd'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'T'h'e' 'g'r'a't'i'c'u'l'e' 'i's' 't'h'e' 'n'e't'w'o'r'k' 'f'o'r'm'e'd' 'b'y' 'm'e'r'i'd'i'a'n's' 'a'n'd' 'p'a'r'a'l'l'e'l's',' 'i'n'c'l'u'd'i'n'g' 't'h'e' 'p'r'i'm'e' 'm'e'r'i'd'i'a'n' 'a'n'd' 'e'q'u'a't'o'r' 'a's' 'i't's' 'r'e'f'e'r'e'n'c'e' 'l'i'n'e's'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 4"
+  },
+  {
+    "id": "NAV-003",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'A' 'g'r'e'a't' 'c'i'r'c'l'e' 'h'a's' 'i't's' 'n'o'r't'h'e'r'n' 'v'e'r't'e'x' 'a't' '7'0' 'd'e'g'r'e'e's' 'N',' '1'3'0' 'd'e'g'r'e'e's' 'E'.' 'W'h'e'r'e' 'i's' 't'h'e' 's'o'u't'h'e'r'n' 'v'e'r't'e'x'?'",
+    "options": [
+      "'7'0' 'd'e'g'r'e'e's' 'S',' '1'3'0' 'd'e'g'r'e'e's' 'W'",
+      "'2'0' 'd'e'g'r'e'e's' 'S',' '0'5'0' 'd'e'g'r'e'e's' 'W'",
+      "'7'0' 'd'e'g'r'e'e's' 'N',' '0'5'0' 'd'e'g'r'e'e's' 'W'",
+      "'7'0' 'd'e'g'r'e'e's' 'S',' '0'5'0' 'd'e'g'r'e'e's' 'W'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'O'p'p'o's'i't'e' 'v'e'r't'i'c'e's' 'a'r'e' 'a'n't'i'p'o'd'a'l',' 's'o' 't'h'e' 'l'a't'i't'u'd'e' 'c'h'a'n'g'e's' 't'o' '7'0' 'd'e'g'r'e'e's' 'S' 'a'n'd' 'l'o'n'g'i't'u'd'e' 'c'h'a'n'g'e's' 'b'y' '1'8'0' 'd'e'g'r'e'e's' 't'o' '0'5'0' 'd'e'g'r'e'e's' 'W'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 7"
+  },
+  {
+    "id": "NAV-004",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'U's'i'n'g' 'a' 's'e'm'i'-'m'a'j'o'r' 'a'x'i's' 'o'f' '6'3'7'8'.'4' 'k'm' 'a'n'd' 'c'o'm'p'r'e's's'i'o'n' 'o'f' '1'/'2'9'7',' 'w'h'a't' 'i's' 't'h'e' 'a'p'p'r'o'x'i'm'a't'e' 's'e'm'i'-'m'i'n'o'r' 'a'x'i's'?'",
+    "options": [
+      "'6'3'5'6'.'9' 'k'm'",
+      "'6'3'9'9'.'9' 'k'm'",
+      "'6'3'7'8'.'4' 'k'm'",
+      "'6'3'6'7'.'0' 'k'm'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'r'e'd'u'c't'i'o'n' 'i's' '6'3'7'8'.'4' 'd'i'v'i'd'e'd' 'b'y' '2'9'7',' 'a'b'o'u't' '2'1'.'5' 'k'm',' 's'o' 't'h'e' 's'e'm'i'-'m'i'n'o'r' 'a'x'i's' 'i's' 'a'p'p'r'o'x'i'm'a't'e'l'y' '6'3'5'6'.'9' 'k'm'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 1"
+  },
+  {
+    "id": "NAV-005",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'd'a't'u'm' 'i's' 'u's'e'd' 'f'o'r' 'm'e'a's'u'r'i'n'g' 'l'a't'i't'u'd'e'?'",
+    "options": [
+      "'T'h'e' 'p'r'i'm'e' 'm'e'r'i'd'i'a'n'",
+      "'T'h'e' 'e'q'u'a't'o'r'",
+      "'T'h'e' 'N'o'r't'h' 'P'o'l'e' 'o'n'l'y'",
+      "'T'h'e' 'G'r'e'e'n'w'i'c'h' 'a'n't'i'-'m'e'r'i'd'i'a'n'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'L'a't'i't'u'd'e' 'i's' 't'h'e' 'a'n'g'u'l'a'r' 'd'i's't'a'n'c'e' 'n'o'r't'h' 'o'r' 's'o'u't'h' 'o'f' 't'h'e' 'e'q'u'a't'o'r'i'a'l' 'p'l'a'n'e',' 's'o' 't'h'e' 'e'q'u'a't'o'r' 'i's' 'i't's' 'd'a't'u'm'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 5"
+  },
+  {
+    "id": "NAV-006",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'e'r'e' 'i's' 't'h'e' 'd'i'f'f'e'r'e'n'c'e' 'b'e't'w'e'e'n' 'g'e'o'c'e'n't'r'i'c' 'a'n'd' 'g'e'o'd'e't'i'c' 'l'a't'i't'u'd'e' 'g'r'e'a't'e's't'?'",
+    "options": [
+      "'A't' 't'h'e' 'e'q'u'a't'o'r'",
+      "'A't' 'b'o't'h' 'g'e'o'g'r'a'p'h'i'c' 'p'o'l'e's'",
+      "'A't' '2'3'.'5' 'd'e'g'r'e'e's' 'N' 'a'n'd' 'S'",
+      "'N'e'a'r' '4'5' 'd'e'g'r'e'e's' 'N' 'a'n'd' 'S'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'T'h'e' 'd'i'f'f'e'r'e'n'c'e' 'i's' 'g'r'e'a't'e's't' 'n'e'a'r' '4'5' 'd'e'g'r'e'e's' 'n'o'r't'h' 'a'n'd' 's'o'u't'h',' 'w'h'e'r'e' 'i't' 'r'e'a'c'h'e's' 'a'b'o'u't' '1'1'.'6' 'm'i'n'u't'e's' 'o'f' 'a'r'c'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 5"
+  },
+  {
+    "id": "NAV-007",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'A'n' 'a'i'r'c'r'a'f't' 'm'o'v'e's' 'f'r'o'm' '1'6'5' 'd'e'g'r'e'e's' 'W' 't'o' '1'0'3' 'd'e'g'r'e'e's' 'W'.' 'W'h'a't' 'i's' 't'h'e' 's'h'o'r't'e'r' 'c'h'a'n'g'e' 'o'f' 'l'o'n'g'i't'u'd'e'?'",
+    "options": [
+      "'6'2' 'd'e'g'r'e'e's' 'E'",
+      "'6'2' 'd'e'g'r'e'e's' 'W'",
+      "'2'6'8' 'd'e'g'r'e'e's' 'E'",
+      "'2'6'8' 'd'e'g'r'e'e's' 'W'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'l'o'n'g'i't'u'd'e's' 'h'a'v'e' 't'h'e' 's'a'm'e' 'n'a'm'e',' 's'o' 's'u'b't'r'a'c't' 't'o' 'o'b't'a'i'n' '6'2' 'd'e'g'r'e'e's';' '1'0'3' 'd'e'g'r'e'e's' 'W' 'l'i'e's' 'e'a's't' 'o'f' '1'6'5' 'd'e'g'r'e'e's' 'W',' 'g'i'v'i'n'g' '6'2' 'd'e'g'r'e'e's' 'E'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 6"
+  },
+  {
+    "id": "NAV-008",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'A'n' 'a'i'r'c'r'a'f't' 'h'o'l'd's' 'c'o'm'p'a's's' 'h'e'a'd'i'n'g' '3'5'5' 'd'e'g'r'e'e's' 'w'i't'h' 'd'e'v'i'a't'i'o'n' '2' 'd'e'g'r'e'e's' 'w'e's't' 'a'n'd' 'v'a'r'i'a't'i'o'n' '6' 'd'e'g'r'e'e's' 'e'a's't'.' 'W'h'a't' 'i's' 't'h'e' 't'r'u'e' 'h'e'a'd'i'n'g'?'",
+    "options": [
+      "'3'4'7' 'd'e'g'r'e'e's' 'T'",
+      "'0'0'5' 'd'e'g'r'e'e's' 'T'",
+      "'3'5'9' 'd'e'g'r'e'e's' 'T'",
+      "'3'5'3' 'd'e'g'r'e'e's' 'T'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'C'o'm'p'a's's' 'p'l'u's' 'd'e'v'i'a't'i'o'n' 'g'i'v'e's' 'm'a'g'n'e't'i'c':' '3'5'5' 'm'i'n'u's' '2' 'i's' '3'5'3' 'd'e'g'r'e'e's' 'M'.' 'M'a'g'n'e't'i'c' 'p'l'u's' 'e'a's't'e'r'l'y' 'v'a'r'i'a't'i'o'n' 'g'i'v'e's' 't'r'u'e':' '3'5'3' 'p'l'u's' '6' 'i's' '3'5'9' 'd'e'g'r'e'e's' 'T'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 3"
+  },
+  {
+    "id": "NAV-009",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'T'r'u'e' 'h'e'a'd'i'n'g' 'i's' '0'1'5' 'd'e'g'r'e'e's',' 'v'a'r'i'a't'i'o'n' 'i's' '9' 'd'e'g'r'e'e's' 'w'e's't' 'a'n'd' 'd'e'v'i'a't'i'o'n' 'i's' '3' 'd'e'g'r'e'e's' 'e'a's't'.' 'W'h'a't' 'c'o'm'p'a's's' 'h'e'a'd'i'n'g' 's'h'o'u'l'd' 't'h'e' 'p'i'l'o't' 's't'e'e'r'?'",
+    "options": [
+      "'0'0'9' 'd'e'g'r'e'e's' 'C'",
+      "'0'2'1' 'd'e'g'r'e'e's' 'C'",
+      "'0'2'7' 'd'e'g'r'e'e's' 'C'",
+      "'0'0'3' 'd'e'g'r'e'e's' 'C'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'R'e'v'e'r's'e' 't'h'e' 'c'h'a'i'n' 'b'y' 's'u'b't'r'a'c't'i'n'g' 't'h'e' 's'i'g'n'e'd' 'c'o'r'r'e'c't'i'o'n's'.' 'T'r'u'e' 'm'i'n'u's' 'w'e's't'e'r'l'y' 'v'a'r'i'a't'i'o'n':' '0'1'5' 'm'i'n'u's' 'm'i'n'u's' '9' 'i's' '0'2'4' 'd'e'g'r'e'e's' 'M'.' 'T'h'e'n' '0'2'4' 'm'i'n'u's' '3' 'd'e'g'r'e'e's' 'e'a's't'e'r'l'y' 'd'e'v'i'a't'i'o'n' 'i's' '0'2'1' 'd'e'g'r'e'e's' 'C'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 3"
+  },
+  {
+    "id": "NAV-010",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'r'e'c'i'p'r'o'c'a'l' 'o'f' 'a' 't'r'u'e' 'd'i'r'e'c't'i'o'n' 'o'f' '3'5'3' 'd'e'g'r'e'e's'?'",
+    "options": [
+      "'1'7'3' 'd'e'g'r'e'e's' 'T'",
+      "'1'5'3' 'd'e'g'r'e'e's' 'T'",
+      "'1'6'3' 'd'e'g'r'e'e's' 'T'",
+      "'1'8'3' 'd'e'g'r'e'e's' 'T'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A' 'r'e'c'i'p'r'o'c'a'l' 'i's' '1'8'0' 'd'e'g'r'e'e's' 'a'w'a'y'.' 'S'u'b't'r'a'c't'i'n'g' '1'8'0' 'f'r'o'm' '3'5'3' 'g'i'v'e's' '1'7'3' 'd'e'g'r'e'e's' 'T'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 2"
+  },
+  {
+    "id": "NAV-011",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'l'a't'i't'u'd'e' 'r'e's'o'l'u't'i'o'n' 'i's' 'i'm'p'l'i'e'd' 'b'y' 'q'u'o't'i'n'g' 'a' 'p'o's'i't'i'o'n' 't'o' 'o'n'e' 'd'e'c'i'm'a'l' 'm'i'n'u't'e'?'",
+    "options": [
+      "'A'b'o'u't' '1' 'N'M'",
+      "'A'b'o'u't' '3'0' 'm'",
+      "'A'b'o'u't' '3' 'm'",
+      "'A'b'o'u't' '0'.'1' 'N'M',' 'o'r' '1'8'5' 'm'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'O'n'e' 'd'e'c'i'm'a'l' 'm'i'n'u't'e' 'i's' '0'.'1' 'm'i'n'u't'e' 'o'f' 'g'r'e'a't'-'c'i'r'c'l'e' 'a'r'c',' 'a'b'o'u't' '0'.'1' 'N'M' 'o'r' '1'8'5' 'm' 'a'l'o'n'g' 'a' 'm'e'r'i'd'i'a'n'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 7"
+  },
+  {
+    "id": "NAV-012",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'I'f' 'a' 'g'r'e'a't' 'c'i'r'c'l'e' 'h'a's' 'i't's' 's'o'u't'h'e'r'n' 'v'e'r't'e'x' 'a't' '6'3' 'd'e'g'r'e'e's' 'S',' '1'7'0' 'd'e'g'r'e'e's' 'W',' 'w'h'e'r'e' 'i's' 'i't's' 'n'o'r't'h'e'r'n' 'v'e'r't'e'x'?'",
+    "options": [
+      "'6'3' 'd'e'g'r'e'e's' 'N',' '1'7'0' 'd'e'g'r'e'e's' 'E'",
+      "'2'7' 'd'e'g'r'e'e's' 'N',' '0'1'0' 'd'e'g'r'e'e's' 'E'",
+      "'6'3' 'd'e'g'r'e'e's' 'N',' '0'1'0' 'd'e'g'r'e'e's' 'E'",
+      "'6'3' 'd'e'g'r'e'e's' 'S',' '0'1'0' 'd'e'g'r'e'e's' 'E'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'a'n't'i'p'o'd'a'l' 'v'e'r't'e'x' 'h'a's' 't'h'e' 'o'p'p'o's'i't'e' 'l'a't'i't'u'd'e' 'n'a'm'e' 'a'n'd' 'a' 'l'o'n'g'i't'u'd'e' '1'8'0' 'd'e'g'r'e'e's' 'a'w'a'y',' 'g'i'v'i'n'g' '6'3' 'd'e'g'r'e'e's' 'N',' '0'1'0' 'd'e'g'r'e'e's' 'E'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 7"
+  },
+  {
+    "id": "NAV-013",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'd'e's'c'r'i'p't'i'o'n' 'd'e'f'i'n'e's' 'a' 'g'r'e'a't' 'c'i'r'c'l'e'?'",
+    "options": [
+      "'A'n'y' 'c'i'r'c'l'e' 'd'r'a'w'n' 'o'n' 't'h'e' 'E'a'r't'h'''s' 's'u'r'f'a'c'e'",
+      "'A' 's'u'r'f'a'c'e' 'c'i'r'c'l'e' 'w'h'o's'e' 'p'l'a'n'e' 'p'a's's'e's' 't'h'r'o'u'g'h' 't'h'e' 'E'a'r't'h'''s' 'c'e'n't'r'e'",
+      "'A'n'y' 'p'a'r'a'l'l'e'l' 'o'f' 'l'a't'i't'u'd'e'",
+      "'A' 'r'o'u't'e' 't'h'a't' 'k'e'e'p's' 'a' 'c'o'n's't'a'n't' 'd'i'r'e'c't'i'o'n'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A' 'g'r'e'a't' 'c'i'r'c'l'e' 'h'a's' 't'h'e' 's'a'm'e' 'c'e'n't'r'e' 'a'n'd' 'r'a'd'i'u's' 'a's' 't'h'e' 'E'a'r't'h' 'b'e'c'a'u's'e' 'i't's' 'p'l'a'n'e' 'p'a's's'e's' 't'h'r'o'u'g'h' 't'h'e' 'E'a'r't'h'''s' 'c'e'n't'r'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 1"
+  },
+  {
+    "id": "NAV-014",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'd'e'f'i'n'i'n'g' 'p'r'o'p'e'r't'y' 'o'f' 'a' 'r'h'u'm'b' 'l'i'n'e'?'",
+    "options": [
+      "'I't' 'a'l'w'a'y's' 'p'a's's'e's' 't'h'r'o'u'g'h' 'b'o't'h' 'p'o'l'e's'",
+      "'I't' 'i's' 'a'l'w'a'y's' 't'h'e' 's'h'o'r't'e's't' 's'u'r'f'a'c'e' 'r'o'u't'e'",
+      "'I't' 'h'a's' 't'w'o' 'v'e'r't'i'c'e's'",
+      "'I't' 'c'u't's' 'e'v'e'r'y' 'm'e'r'i'd'i'a'n' 'a't' 't'h'e' 's'a'm'e' 'a'n'g'l'e'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'A' 'r'h'u'm'b' 'l'i'n'e' 'c'u't's' 'e'v'e'r'y' 'm'e'r'i'd'i'a'n' 'a't' 't'h'e' 's'a'm'e' 'a'n'g'l'e',' 'w'h'i'c'h' 'm'a'k'e's' 'i't' 'a' 'l'i'n'e' 'o'f' 'c'o'n's't'a'n't' 'd'i'r'e'c't'i'o'n'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 2"
+  },
+  {
+    "id": "NAV-015",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'A' 'm'e'r'i'd'i'a'n',' 'c'o'n's'i'd'e'r'e'd' 'f'r'o'm' 'o'n'e' 'p'o'l'e' 't'o' 't'h'e' 'o't'h'e'r',' 'i's'",
+    "options": [
+      "'a' 's'e'm'i'-'g'r'e'a't' 'c'i'r'c'l'e' 'a'n'd' 'a' 'r'h'u'm'b' 'l'i'n'e'",
+      "'a' 's'm'a'l'l' 'c'i'r'c'l'e' 'o'n'l'y'",
+      "'a' 'c'o'm'p'l'e't'e' 'g'r'e'a't' 'c'i'r'c'l'e' 'b'y' 'i't's'e'l'f'",
+      "'n'e'i't'h'e'r' 'a' 'g'r'e'a't' 'c'i'r'c'l'e' 'n'o'r' 'a' 'r'h'u'm'b' 'l'i'n'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A' 'm'e'r'i'd'i'a'n' 'i's' 'o'n'e' 'h'a'l'f' 'o'f' 'a' 'g'r'e'a't' 'c'i'r'c'l'e' 'a'n'd' 'g'i'v'e's' 'a' 'c'o'n's't'a'n't' 'n'o'r't'h' 'o'r' 's'o'u't'h' 'd'i'r'e'c't'i'o'n',' 's'o' 'i't' 'i's' 'a'l's'o' 'a' 'r'h'u'm'b' 'l'i'n'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 1"
+  },
+  {
+    "id": "NAV-016",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'O'n'e' 'm'i'n'u't'e' 'o'f' 'l'o'n'g'i't'u'd'e' 'r'e'p'r'e's'e'n't's' 'o'n'e' 'n'a'u't'i'c'a'l' 'm'i'l'e'",
+    "options": [
+      "'a't' 'e'v'e'r'y' 'l'a't'i't'u'd'e'",
+      "'o'n'l'y' 'a't' '4'5' 'd'e'g'r'e'e's' 'l'a't'i't'u'd'e'",
+      "'o'n'l'y' 'a't' 't'h'e' 'E'q'u'a't'o'r'",
+      "'o'n'l'y' 'a't' 'e'i't'h'e'r' 'p'o'l'e'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'O'n'e' 'm'i'n'u't'e' 'o'f' 'l'o'n'g'i't'u'd'e' 'e'q'u'a'l's' 'o'n'e' 'n'a'u't'i'c'a'l' 'm'i'l'e' 'o'n'l'y' 'a't' 't'h'e' 'E'q'u'a't'o'r',' 'w'h'e'r'e' 't'h'e' 'p'a'r'a'l'l'e'l' 'i's' 'i't's'e'l'f' 'a' 'g'r'e'a't' 'c'i'r'c'l'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 5"
+  },
+  {
+    "id": "NAV-017",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'e'x'a'c't' 'I'C'A'O' 'v'a'l'u'e' 'o'f' 'o'n'e' 'n'a'u't'i'c'a'l' 'm'i'l'e'?'",
+    "options": [
+      "'1'8'5'2' 'm'",
+      "'1'6'0'9' 'm'",
+      "'2'0'0'0' 'm'",
+      "'6'0'8'0' 'm'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'I'C'A'O' 'n'a'u't'i'c'a'l' 'm'i'l'e' 'i's' 'e'x'a'c't'l'y' '1'8'5'2' 'm'e't'r'e's'.' 'T'h'e' 't'r'a'd'i't'i'o'n'a'l' '6'0'8'0' 'f'i'g'u'r'e' 'i's' 'i'n' 'f'e'e't'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 4"
+  },
+  {
+    "id": "NAV-018",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'H'o'w' 'm'a'n'y' 'f'e'e't' 'a'r'e' 'i'n' 'o'n'e' 's't'a't'u't'e' 'm'i'l'e'?'",
+    "options": [
+      "'5'0'0'0' 'f't'",
+      "'6'0'7'6' 'f't'",
+      "'5'2'8'0' 'f't'",
+      "'6'0'8'0' 'f't'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'O'n'e' 's't'a't'u't'e' 'm'i'l'e' 'i's' '5'2'8'0' 'f't'.' 'I't' 'm'u's't' 'n'o't' 'b'e' 'c'o'n'f'u's'e'd' 'w'i't'h' 't'h'e' 't'r'a'd'i't'i'o'n'a'l' '6'0'8'0' 'f't' 'n'a'u't'i'c'a'l' 'm'i'l'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 4"
+  },
+  {
+    "id": "NAV-019",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'A'n' 'a'i'r'c'r'a'f't' 'f'l'i'e's' 'f'r'o'm' '7'2' 'd'e'g'r'e'e's' 'n'o'r't'h',' '0'0'2' 'd'e'g'r'e'e's' '3'0' 'm'i'n'u't'e's' 'e'a's't' 't'o' '7'2' 'd'e'g'r'e'e's' 'n'o'r't'h',' '1'7'7' 'd'e'g'r'e'e's' '3'0' 'm'i'n'u't'e's' 'w'e's't' 'b'y' 't'h'e' 's'h'o'r't'e's't' 'r'o'u't'e'.' 'W'h'a't' 'i's' 'i't's' 'i'n'i't'i'a'l' 't'r'u'e' 't'r'a'c'k'?'",
+    "options": [
+      "'0'9'0' 'd'e'g'r'e'e's'",
+      "'1'8'0' 'd'e'g'r'e'e's'",
+      "'2'7'0' 'd'e'g'r'e'e's'",
+      "'3'6'0' 'd'e'g'r'e'e's'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'T'h'e' 'p'o'i'n't's' 'l'i'e' 'o'n' 'a' 'm'e'r'i'd'i'a'n' 'a'n'd' 'a'n't'i'-'m'e'r'i'd'i'a'n'.' 'T'h'e' 's'h'o'r't'e'r' 'g'r'e'a't'-'c'i'r'c'l'e' 'r'o'u't'e' 'i'n'i't'i'a'l'l'y' 'g'o'e's' 'n'o'r't'h' 'o'v'e'r' 't'h'e' 'N'o'r't'h' 'P'o'l'e',' 's'o' 't'h'e' 'i'n'i't'i'a'l' 't'r'a'c'k' 'i's' '3'6'0' 'd'e'g'r'e'e's' 't'r'u'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 6"
+  },
+  {
+    "id": "NAV-020",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'R'e'l'a't'i'v'e' 't'o' 't'h'e' 'c'o'r'r'e's'p'o'n'd'i'n'g' 'g'r'e'a't' 'c'i'r'c'l'e',' 'a' 'r'h'u'm'b' 'l'i'n'e' 'b'e't'w'e'e'n' 't'w'o' 'o'r'd'i'n'a'r'y' 'p'o'i'n't's' 'l'i'e's'",
+    "options": [
+      "'o'n' 't'h'e' 'p'o'l'a'r' 's'i'd'e'",
+      "'o'n' 't'h'e' 'e'q'u'a't'o'r'i'a'l' 's'i'd'e'",
+      "'o'n' 't'h'e' 's'a'm'e' 'p'a't'h' 'i'n' 'e'v'e'r'y' 'c'a's'e'",
+      "'t'h'r'o'u'g'h' 't'h'e' 'n'e'a'r'e's't' 'p'o'l'e'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'T'h'e' 'r'h'u'm'b' 'l'i'n'e' 'l'i'e's' 'o'n' 't'h'e' 'e'q'u'a't'o'r'i'a'l' 's'i'd'e' 'o'f' 't'h'e' 'g'r'e'a't' 'c'i'r'c'l'e',' 'w'h'i'c'h' 'b'o'w's' 't'o'w'a'r'd's' 't'h'e' 'n'e'a'r'e'r' 'p'o'l'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 2"
+  },
+  {
+    "id": "NAV-021",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'T'w'o' 'p'o'i'n't's' 'o'n' 't'h'e' 's'a'm'e' 'm'e'r'i'd'i'a'n' 'a'r'e' 'a't' '4'1' 'd'e'g'r'e'e's' '2'5' 'm'i'n'u't'e's' 'n'o'r't'h' 'a'n'd' '7'9' 'd'e'g'r'e'e's' '3'0' 'm'i'n'u't'e's' 'n'o'r't'h'.' 'T'h'e'i'r' 's'e'p'a'r'a't'i'o'n' 'i's'",
+    "options": [
+      "'1'9'0'5' 'N'M'",
+      "'2'1'3'5' 'N'M'",
+      "'2'2'8'5' 'N'M'",
+      "'4'2'3'2' 'N'M'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'c'h'a'n'g'e' 'o'f' 'l'a't'i't'u'd'e' 'i's' '3'8' 'd'e'g'r'e'e's' '0'5' 'm'i'n'u't'e's',' 'e'q'u'a'l' 't'o' '2'2'8'5' 'm'i'n'u't'e's' 'o'f' 'a'r'c' 'a'n'd' 't'h'e'r'e'f'o'r'e' '2'2'8'5' 'N'M'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 5"
+  },
+  {
+    "id": "NAV-022",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'g'r'e'a't'-'c'i'r'c'l'e' 'd'i's't'a'n'c'e' 'b'e't'w'e'e'n' 'a'n't'i'p'o'd'a'l' 'p'o'i'n't's' 'o'n' 't'h'e' 's'p'h'e'r'i'c'a'l' 'n'a'v'i'g'a't'i'o'n' 'm'o'd'e'l'?'",
+    "options": [
+      "'1'0' '8'0'0' 'N'M'",
+      "'5'4'0'0' 'N'M'",
+      "'2'1' '6'0'0' 'N'M'",
+      "'1'8' '0'0'0' 'N'M'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A'n't'i'p'o'd'e's' 'a'r'e' 's'e'p'a'r'a't'e'd' 'b'y' '1'8'0' 'd'e'g'r'e'e's'.' 'M'u'l't'i'p'l'y'i'n'g' 'b'y' '6'0' 'g'i'v'e's' '1'0' '8'0'0' 'N'M',' 'h'a'l'f' 't'h'e' 'E'a'r't'h'''s' '2'1' '6'0'0' 'N'M' 'c'i'r'c'u'm'f'e'r'e'n'c'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 6"
+  },
+  {
+    "id": "NAV-023",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'I'f' 't'h'e' 'c'o'n'v'e'r'g'e'n'c'y' 'b'e't'w'e'e'n' 't'h'e' 'e'n'd' 'm'e'r'i'd'i'a'n's' 'i's' '1'4' 'd'e'g'r'e'e's',' 't'h'e' 'c'o'n'v'e'r's'i'o'n' 'a'n'g'l'e' 'i's'",
+    "options": [
+      "'1'4' 'd'e'g'r'e'e's'",
+      "'7' 'd'e'g'r'e'e's'",
+      "'2'8' 'd'e'g'r'e'e's'",
+      "'3'.'5' 'd'e'g'r'e'e's'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'C'o'n'v'e'r's'i'o'n' 'a'n'g'l'e' 'i's' 'h'a'l'f' 't'h'e' 'm'e'r'i'd'i'a'n' 'c'o'n'v'e'r'g'e'n'c'y',' 's'o' 'h'a'l'f' 'o'f' '1'4' 'd'e'g'r'e'e's' 'i's' '7' 'd'e'g'r'e'e's'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 3"
+  },
+  {
+    "id": "NAV-024",
+    "subject": "Air Navigation",
+    "topic": "Great Circles and Rhumb Lines",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 's't'a't'e'm'e'n't' 'a'b'o'u't' 'p'a'r'a'l'l'e'l's' 'o'f' 'l'a't'i't'u'd'e' 'i's' 'c'o'r'r'e'c't'?'",
+    "options": [
+      "'E'v'e'r'y' 'p'a'r'a'l'l'e'l' 'i's' 'a' 'g'r'e'a't' 'c'i'r'c'l'e'",
+      "'N'o' 'p'a'r'a'l'l'e'l' 'i's' 'a' 'r'h'u'm'b' 'l'i'n'e'",
+      "'O'n'l'y' 't'h'e' 'p'o'l'e's' 'a'r'e' 's'm'a'l'l' 'c'i'r'c'l'e's'",
+      "'E'v'e'r'y' 'p'a'r'a'l'l'e'l' 'e'x'c'e'p't' 't'h'e' 'E'q'u'a't'o'r' 'i's' 'a' 's'm'a'l'l' 'c'i'r'c'l'e' 'a'n'd' 'a' 'r'h'u'm'b' 'l'i'n'e'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'E'v'e'r'y' 'n'o'n'-'e'q'u'a't'o'r'i'a'l' 'p'a'r'a'l'l'e'l' 'i's' 'a' 's'm'a'l'l' 'c'i'r'c'l'e',' 'a'n'd' 'i't' 'i's' 'a'l's'o' 'a' 'r'h'u'm'b' 'l'i'n'e' 'b'e'c'a'u's'e' 'i't' 'c'u't's' 'e'a'c'h' 'm'e'r'i'd'i'a'n' 'a't' '9'0' 'd'e'g'r'e'e's'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Great Circles and Rhumb Lines', Sec 7"
+  },
+  {
+    "id": "NAV-025",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'I'n' 't'h'e' 'r'e'd' 'a'n'd' 'b'l'u'e' 'p'o'l'e' 'c'o'n'v'e'n't'i'o'n',' 't'h'e' 'E'a'r't'h' 'b'e'h'a'v'e's' 'a's' 'i'f' 'w'h'i'c'h' 'p'o'l'a'r'i't'y' 'l'i'e's' 'i'n' 't'h'e' 'n'o'r't'h'e'r'n' 'm'a'g'n'e't'i'c' 'r'e'g'i'o'n'?'",
+    "options": [
+      "'A' 'b'l'u'e' 'p'o'l'e'",
+      "'A' 'r'e'd' 'p'o'l'e'",
+      "'T'w'o' 'r'e'd' 'p'o'l'e's'",
+      "'N'o' 'm'a'g'n'e't'i'c' 'p'o'l'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'n'o'r't'h'e'r'n' 'm'a'g'n'e't'i'c' 'r'e'g'i'o'n' 'b'e'h'a'v'e's' 'a's' 'a' 'b'l'u'e' 'p'o'l'a'r'i't'y',' 'w'h'i'c'h' 'a't't'r'a'c't's' 't'h'e' 'r'e'd' 'n'o'r't'h'-'s'e'e'k'i'n'g' 'e'n'd' 'o'f' 'a' 'c'o'm'p'a's's' 'm'a'g'n'e't'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 1"
+  },
+  {
+    "id": "NAV-026",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'M'a'g'n'e't'i'c' 'v'a'r'i'a't'i'o'n' 'i's' 't'h'e' 'a'n'g'l'e' 'b'e't'w'e'e'n'",
+    "options": [
+      "'c'o'm'p'a's's' 'n'o'r't'h' 'a'n'd' 'a'i'r'c'r'a'f't' 'h'e'a'd'i'n'g'",
+      "'m'a'g'n'e't'i'c' 'n'o'r't'h' 'a'n'd' 'c'o'm'p'a's's' 'n'o'r't'h'",
+      "'t'r'u'e' 'n'o'r't'h' 'a'n'd' 'm'a'g'n'e't'i'c' 'n'o'r't'h'",
+      "'t'h'e' 'h'o'r'i'z'o'n't'a'l' 'a'n'd' 't'h'e' 't'o't'a'l' 'm'a'g'n'e't'i'c' 'f'i'e'l'd'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'V'a'r'i'a't'i'o'n' 'i's' 't'h'e' 'h'o'r'i'z'o'n't'a'l' 'a'n'g'l'e' 'b'e't'w'e'e'n' 't'r'u'e' 'n'o'r't'h' 'a'n'd' 'm'a'g'n'e't'i'c' 'n'o'r't'h' 'a't' 'a' 's't'a't'e'd' 'p'l'a'c'e' 'a'n'd' 't'i'm'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 4"
+  },
+  {
+    "id": "NAV-027",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'a'n'g'l'e' 'o'f' 'd'i'p' 'a't' 't'h'e' 'm'a'g'n'e't'i'c' 'e'q'u'a't'o'r'?'",
+    "options": [
+      "'9'0' 'd'e'g'r'e'e's'",
+      "'0' 'd'e'g'r'e'e's'",
+      "'4'5' 'd'e'g'r'e'e's'",
+      "'1'8'0' 'd'e'g'r'e'e's'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'D'i'p' 'i's' '0' 'd'e'g'r'e'e's' 'a't' 't'h'e' 'm'a'g'n'e't'i'c' 'e'q'u'a't'o'r' 'b'e'c'a'u's'e' 't'h'e' 't'o't'a'l' 'f'i'e'l'd' 'i's' 'h'o'r'i'z'o'n't'a'l' 't'h'e'r'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 2"
+  },
+  {
+    "id": "NAV-028",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'e'q'u'a't'i'o'n' 'c'o'r'r'e'c't'l'y' 'r'e'l'a't'e's' 't'o't'a'l' 'f'o'r'c'e' 'T',' 'h'o'r'i'z'o'n't'a'l' 'f'o'r'c'e' 'H' 'a'n'd' 'v'e'r't'i'c'a'l' 'f'o'r'c'e' 'Z'?'",
+    "options": [
+      "'T' '=' 'H' '+' 'Z'",
+      "'H'²' '=' 'T'²' '+' 'Z'²'",
+      "'Z' '=' 'T' '+' 'H'",
+      "'T'²' '=' 'H'²' '+' 'Z'²'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'T'h'e' 't'h'r'e'e' 'f'o'r'c'e's' 'f'o'r'm' 'a' 'r'i'g'h't' 't'r'i'a'n'g'l'e',' 's'o' 't'h'e' 'c'o'r'r'e'c't' 'r'e'l'a't'i'o'n's'h'i'p' 'i's' 'T'²' '=' 'H'²' '+' 'Z'²'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 3"
+  },
+  {
+    "id": "NAV-029",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'c'o'm'p'o'n'e'n't' 'o'f' 't'h'e' 'E'a'r't'h'''s' 'm'a'g'n'e't'i'c' 'f'i'e'l'd' 's'u'p'p'l'i'e's' 'a' 'h'e'a'd'i'n'g' 'c'o'm'p'a's's' 'w'i't'h' 'd'i'r'e'c't'i'v'e' 'f'o'r'c'e'?'",
+    "options": [
+      "'T'h'e' 'v'e'r't'i'c'a'l' 'c'o'm'p'o'n'e'n't' 'Z'",
+      "'T'h'e' 'h'o'r'i'z'o'n't'a'l' 'c'o'm'p'o'n'e'n't' 'H'",
+      "'T'h'e' 't'o't'a'l' 'f'o'r'c'e' 'o'n'l'y'",
+      "'T'h'e' 's'e'c'u'l'a'r' 'c'o'm'p'o'n'e'n't'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'T'h'e' 'h'o'r'i'z'o'n't'a'l' 'c'o'm'p'o'n'e'n't' 'H' 'i's' 't'h'e' 'd'i'r'e'c't'i'v'e' 'f'o'r'c'e' 't'h'a't' 'a'l'i'g'n's' 't'h'e' 'c'o'm'p'a's's' 'w'i't'h' 't'h'e' 'm'a'g'n'e't'i'c' 'm'e'r'i'd'i'a'n'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 3"
+  },
+  {
+    "id": "NAV-030",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 'a'n' 'a'g'o'n'i'c' 'l'i'n'e' 'j'o'i'n'?'",
+    "options": [
+      "'P'l'a'c'e's' 'o'f' 'z'e'r'o' 'v'a'r'i'a't'i'o'n'",
+      "'P'l'a'c'e's' 'o'f' 'e'q'u'a'l' 'd'i'p'",
+      "'T'h'e' 'g'e'o'g'r'a'p'h'i'c' 'p'o'l'e's'",
+      "'P'l'a'c'e's' 'o'f' 'm'a'x'i'm'u'm' 'h'o'r'i'z'o'n't'a'l' 'f'o'r'c'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A'n' 'a'g'o'n'i'c' 'l'i'n'e' 'i's' 't'h'e' 'z'e'r'o'-'v'a'l'u'e' 'i's'o'g'o'n'a'l',' 's'o' 'i't' 'j'o'i'n's' 'p'l'a'c'e's' 'w'h'e'r'e' 'm'a'g'n'e't'i'c' 'v'a'r'i'a't'i'o'n' 'i's' 'z'e'r'o'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 5"
+  },
+  {
+    "id": "NAV-031",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'A' 'l'i'n'e' 'j'o'i'n'i'n'g' 'p'l'a'c'e's' 'o'f' 'e'q'u'a'l' 'm'a'g'n'e't'i'c' 'd'i'p' 'i's' 'c'a'l'l'e'd'",
+    "options": [
+      "'a'n' 'i's'o'g'o'n'a'l'",
+      "'a'n' 'a'g'o'n'i'c' 'l'i'n'e'",
+      "'a' 'm'a'g'n'e't'i'c' 'm'e'r'i'd'i'a'n'",
+      "'a'n' 'i's'o'c'l'i'n'a'l'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'A'n' 'i's'o'c'l'i'n'a'l' 'j'o'i'n's' 'p'l'a'c'e's' 'o'f' 'e'q'u'a'l' 'm'a'g'n'e't'i'c' 'd'i'p'.' 'I't's' 'z'e'r'o'-'d'i'p' 's'p'e'c'i'a'l' 'c'a's'e' 'i's' 't'h'e' 'a'c'l'i'n'i'c' 'l'i'n'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 2"
+  },
+  {
+    "id": "NAV-032",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'm'a'x'i'm'u'm' 'p'o's's'i'b'l'e' 'm'a'g'n'i't'u'd'e' 'o'f' 'm'a'g'n'e't'i'c' 'd'i'p'?'",
+    "options": [
+      "'4'5' 'd'e'g'r'e'e's'",
+      "'6'0' 'd'e'g'r'e'e's'",
+      "'9'0' 'd'e'g'r'e'e's'",
+      "'1'8'0' 'd'e'g'r'e'e's'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'D'i'p' 'r'e'a'c'h'e's' '9'0' 'd'e'g'r'e'e's' 'a't' 'a' 'm'a'g'n'e't'i'c' 'p'o'l'e',' 'w'h'e'r'e' 't'h'e' 'f'i'e'l'd' 'i's' 'v'e'r't'i'c'a'l'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 2"
+  },
+  {
+    "id": "NAV-033",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'I'f' 'H' 'i's' '3'0' 'm'i'c'r'o't'e's'l'a's' 'a'n'd' 'Z' 'i's' '4'0' 'm'i'c'r'o't'e's'l'a's',' 'w'h'a't' 'i's' 'T'?'",
+    "options": [
+      "'5'0' 'm'i'c'r'o't'e's'l'a's'",
+      "'7'0' 'm'i'c'r'o't'e's'l'a's'",
+      "'3'5' 'm'i'c'r'o't'e's'l'a's'",
+      "'1'0' 'm'i'c'r'o't'e's'l'a's'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'U's'i'n'g' 'T'²' '=' 'H'²' '+' 'Z'²' 'g'i'v'e's' 'T' '=' '√'('9'0'0' '+' '1'6'0'0')' '=' '5'0' 'm'i'c'r'o't'e's'l'a's'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 3"
+  },
+  {
+    "id": "NAV-034",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'd'e's'c'r'i'p't'i'o'n' 'b'e's't' 'm'a't'c'h'e's' 's'e'c'u'l'a'r' 'c'h'a'n'g'e'?'",
+    "options": [
+      "'T'h'e' 'c'o'm'p'a's's' 'e'r'r'o'r' 'c'a'u's'e'd' 'b'y' 'a'i'r'c'r'a'f't' 'e'l'e'c't'r'i'c'a'l' 'e'q'u'i'p'm'e'n't'",
+      "'T'h'e' 'd'a'i'l'y' 'c'y'c'l'e' 'l'a's't'i'n'g' 'a'b'o'u't' '2'4' 'h'o'u'r's'",
+      "'A' 's'u'd'd'e'n' 'r'e'c'e'i'v'e'r' 'f'a'i'l'u'r'e' 'd'u'r'i'n'g' 'a' 'm'a'g'n'e't'i'c' 's't'o'r'm'",
+      "'T'h'e' 's'l'o'w' 'l'o'n'g'-'t'e'r'm' 'd'r'i'f't' 'o'f' 't'h'e' 'E'a'r't'h'''s' 'm'a'i'n' 'm'a'g'n'e't'i'c' 'f'i'e'l'd'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'S'e'c'u'l'a'r' 'c'h'a'n'g'e' 'i's' 't'h'e' 's'l'o'w' 'l'o'n'g'-'t'e'r'm' 'c'h'a'n'g'e' 'o'f' 't'h'e' 'm'a'i'n' 'f'i'e'l'd',' 'w'h'i'c'h' 'm'o'v'e's' 'p'o'l'e's' 'a'n'd' 'i's'o'g'o'n'a'l's' 'o'v'e'r' 'y'e'a'r's' 'a'n'd' 'd'e'c'a'd'e's'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 6"
+  },
+  {
+    "id": "NAV-035",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 'a'n' 'i's'o'g'o'n'a'l' 'j'o'i'n'?'",
+    "options": [
+      "'P'l'a'c'e's' 'o'f' 'e'q'u'a'l' 'm'a'g'n'e't'i'c' 'd'i'p'",
+      "'P'l'a'c'e's' 'o'f' 'z'e'r'o' 'd'i'p' 'o'n'l'y'",
+      "'P'l'a'c'e's' 'o'f' 'e'q'u'a'l' 'm'a'g'n'e't'i'c' 'v'a'r'i'a't'i'o'n'",
+      "'P'l'a'c'e's' 'w'i't'h' 'e'q'u'a'l' 'g'e'o'g'r'a'p'h'i'c' 'l'a't'i't'u'd'e'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'A'n' 'i's'o'g'o'n'a'l' 'j'o'i'n's' 'p'l'a'c'e's' 'o'f' 'e'q'u'a'l' 'm'a'g'n'e't'i'c' 'v'a'r'i'a't'i'o'n' 'f'o'r' 't'h'e' 's't'a't'e'd' 'c'h'a'r't' 'e'p'o'c'h'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 5"
+  },
+  {
+    "id": "NAV-036",
+    "subject": "Air Navigation",
+    "topic": "The Earth, Direction and Position",
+    "difficulty": "medium",
+    "question": "'W'h'y' 'd'o'e's' 'a' 'd'i'r'e'c't'-'r'e'a'd'i'n'g' 'm'a'g'n'e't'i'c' 'c'o'm'p'a's's' 'b'e'c'o'm'e' 'u'n'r'e'l'i'a'b'l'e' 'n'e'a'r' 'a' 'm'a'g'n'e't'i'c' 'p'o'l'e'?'",
+    "options": [
+      "'T'o't'a'l' 'f'i'e'l'd' 'T' 'b'e'c'o'm'e's' 'z'e'r'o'",
+      "'H'o'r'i'z'o'n't'a'l' 'c'o'm'p'o'n'e'n't' 'H' 'a'p'p'r'o'a'c'h'e's' 'z'e'r'o'",
+      "'V'e'r't'i'c'a'l' 'c'o'm'p'o'n'e'n't' 'Z' 'a'p'p'r'o'a'c'h'e's' 'z'e'r'o'",
+      "'V'a'r'i'a't'i'o'n' 'm'u's't' 'a'l'w'a'y's' 'b'e' 'z'e'r'o'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'N'e'a'r' 'a' 'm'a'g'n'e't'i'c' 'p'o'l'e' 't'h'e' 'f'i'e'l'd' 'i's' 'n'e'a'r'l'y' 'v'e'r't'i'c'a'l',' 's'o' 't'h'e' 'h'o'r'i'z'o'n't'a'l' 'd'i'r'e'c't'i'v'e' 'c'o'm'p'o'n'e'n't' 'H' 'a'p'p'r'o'a'c'h'e's' 'z'e'r'o' 'a'n'd' 'c'a'n'n'o't' 'e's't'a'b'l'i's'h' 'a' 'd'e'p'e'n'd'a'b'l'e' 'h'e'a'd'i'n'g'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Earth Magnetism', Sec 7"
+  },
+  {
+    "id": "NAV-037",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'C'o'm'p'a's's' 'd'e'v'i'a't'i'o'n' 'i's' 't'h'e' 'a'n'g'l'e' 'b'e't'w'e'e'n'",
+    "options": [
+      "'t'r'u'e' 'n'o'r't'h' 'a'n'd' 'm'a'g'n'e't'i'c' 'n'o'r't'h'",
+      "'g'r'i'd' 'n'o'r't'h' 'a'n'd' 't'r'u'e' 'n'o'r't'h'",
+      "'a'i'r'c'r'a'f't' 'h'e'a'd'i'n'g' 'a'n'd' 't'r'a'c'k'",
+      "'m'a'g'n'e't'i'c' 'n'o'r't'h' 'a'n'd' 'c'o'm'p'a's's' 'n'o'r't'h'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'D'e'v'i'a't'i'o'n' 'i's' 't'h'e' 'a'n'g'l'e' 'b'e't'w'e'e'n' 'm'a'g'n'e't'i'c' 'n'o'r't'h' 'a'n'd' 'c'o'm'p'a's's' 'n'o'r't'h',' 'p'r'o'd'u'c'e'd' 'b'y' 'm'a'g'n'e't'i'c' 'i'n'f'l'u'e'n'c'e's' 'w'i't'h'i'n' 't'h'e' 'a'i'r'c'r'a'f't'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 1"
+  },
+  {
+    "id": "NAV-038",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'A' 'c'o'n's't'a'n't' 'd'e'v'i'a't'i'o'n' 'o'n' 'e'v'e'r'y' 'h'e'a'd'i'n'g' 'i's' 'n'o'r'm'a'l'l'y' 'r'e'p'r'e's'e'n't'e'd' 'b'y' 'w'h'i'c'h' 'c'o'e'f'f'i'c'i'e'n't'?'",
+    "options": [
+      "'C'o'e'f'f'i'c'i'e'n't' 'C'",
+      "'C'o'e'f'f'i'c'i'e'n't' 'A'",
+      "'C'o'e'f'f'i'c'i'e'n't' 'D'",
+      "'C'o'e'f'f'i'c'i'e'n't' 'B'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'C'o'e'f'f'i'c'i'e'n't' 'A' 'i's' 't'h'e' 'c'o'n's't'a'n't' 't'e'r'm' 'a'n'd' 'c'o'm'm'o'n'l'y' 'r'e'p'r'e's'e'n't's' 'a' 'd'i's'p'l'a'c'e'd' 'l'u'b'b'e'r' 'l'i'n'e' 'o'r' 'd'e't'e'c't'o'r' 'a'l'i'g'n'm'e'n't' 'e'r'r'o'r'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 2"
+  },
+  {
+    "id": "NAV-039",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'O'n' 'w'h'i'c'h' 'p'a'i'r' 'o'f' 'h'e'a'd'i'n'g's' 'i's' 'c'o'e'f'f'i'c'i'e'n't' 'B' 'n'o'r'm'a'l'l'y' 'c'o'r'r'e'c't'e'd'?'",
+    "options": [
+      "'E'a's't' 'a'n'd' 'w'e's't'",
+      "'N'o'r't'h' 'a'n'd' 's'o'u't'h'",
+      "'N'o'r't'h'-'e'a's't' 'a'n'd' 's'o'u't'h'-'w'e's't'",
+      "'A'n'y' 't'w'o' 'h'e'a'd'i'n'g's' '3'0' 'd'e'g'r'e'e's' 'a'p'a'r't'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'C'o'e'f'f'i'c'i'e'n't' 'B' 'h'a's' 'i't's' 'm'a'x'i'm'u'm' 's'e'm'i'c'i'r'c'u'l'a'r' 'e'f'f'e'c't' 'o'n' 'e'a's't' 'a'n'd' 'w'e's't' 'h'e'a'd'i'n'g's',' 's'o' 't'h'o's'e' 'h'e'a'd'i'n'g's' 'a'r'e' 'u's'e'd' 'f'o'r' 'i't's' 'c'o'r'r'e'c't'i'o'n'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 3"
+  },
+  {
+    "id": "NAV-040",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'O'b's'e'r'v'e'd' 'd'e'v'i'a't'i'o'n's' 'a'r'e' 'n'o'r't'h' '+'6' 'd'e'g'r'e'e's' 'a'n'd' 's'o'u't'h' 'm'i'n'u's' '2' 'd'e'g'r'e'e's'.' 'W'h'a't' 'i's' 'c'o'e'f'f'i'c'i'e'n't' 'C'?'",
+    "options": [
+      "'m'i'n'u's' '4' 'd'e'g'r'e'e's'",
+      "'+'2' 'd'e'g'r'e'e's'",
+      "'+'4' 'd'e'g'r'e'e's'",
+      "'+'8' 'd'e'g'r'e'e's'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'C' '=' '('d'e'v'i'a't'i'o'n' 'n'o'r't'h' 'm'i'n'u's' 'd'e'v'i'a't'i'o'n' 's'o'u't'h')' 'd'i'v'i'd'e'd' 'b'y' '2',' 's'o' 'C' '=' '['6' 'm'i'n'u's' '('m'i'n'u's' '2')']' 'd'i'v'i'd'e'd' 'b'y' '2' '=' '+'4' 'd'e'g'r'e'e's'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 2"
+  },
+  {
+    "id": "NAV-041",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'i't'e'm' 'i's' 'o'n'e' 'o'f' 't'h'e' 'a'i'm's' 'o'f' 'a' 'c'o'm'p'a's's' 's'w'i'n'g'?'",
+    "options": [
+      "'T'o' 'r'e'm'o'v'e' 'm'a'g'n'e't'i'c' 'v'a'r'i'a't'i'o'n'",
+      "'T'o' 'r'e'c'o'r'd' 't'h'e' 'r'e's'i'd'u'a'l' 'd'e'v'i'a't'i'o'n'",
+      "'T'o' 'a'l'i'g'n' 't'r'u'e' 'n'o'r't'h' 'w'i't'h' 'g'r'i'd' 'n'o'r't'h'",
+      "'T'o' 'c'a'l'c'u'l'a't'e' 'w'i'n'd' 'v'e'l'o'c'i't'y'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A' 'c'o'm'p'a's's' 's'w'i'n'g' 'd'e't'e'r'm'i'n'e's' 'd'e'v'i'a't'i'o'n',' 'r'e'd'u'c'e's' 'c'o'r'r'e'c't'a'b'l'e' 'e'r'r'o'r' 'a'n'd' 'r'e'c'o'r'd's' 't'h'e' 'r'e's'i'd'u'a'l' 'd'e'v'i'a't'i'o'n' 'o'n' 't'h'e' 'a'i'r'c'r'a'f't' 'c'o'm'p'a's's' 'c'a'r'd'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 3"
+  },
+  {
+    "id": "NAV-042",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'I'n' 't'h'e' 'n'o'r't'h'e'r'n' 'h'e'm'i's'p'h'e'r'e',' 'a'c'c'e'l'e'r'a't'i'o'n' 'o'n' 'a'n' 'e'a's't'e'r'l'y' 'h'e'a'd'i'n'g' 'm'a'k'e's' 'a' 'd'i'r'e'c't' 'c'o'm'p'a's's' 's'h'o'w' 'a'n' 'a'p'p'a'r'e'n't' 't'u'r'n' 't'o'w'a'r'd's'",
+    "options": [
+      "'e'a's't'",
+      "'w'e's't'",
+      "'s'o'u't'h'",
+      "'n'o'r't'h'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'I'n' 't'h'e' 'n'o'r't'h'e'r'n' 'h'e'm'i's'p'h'e'r'e',' 'a'c'c'e'l'e'r'a't'i'o'n' 'o'n' 'a'n' 'e'a's't' 'o'r' 'w'e's't' 'h'e'a'd'i'n'g' 'c'a'u's'e's' 'a'n' 'a'p'p'a'r'e'n't' 't'u'r'n' 't'o'w'a'r'd's' 'n'o'r't'h'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 5"
+  },
+  {
+    "id": "NAV-043",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 'U'N'O'S' 'm'e'a'n' 'f'o'r' 'a' 'd'i'r'e'c't' 'c'o'm'p'a's's' 'i'n' 't'h'e' 'n'o'r't'h'e'r'n' 'h'e'm'i's'p'h'e'r'e'?'",
+    "options": [
+      "'U'n'd'e'r'r'e'a'd' 's'o'u't'h',' 'o'v'e'r'r'e'a'd' 'n'o'r't'h'",
+      "'U's'e' 'n'o'r't'h' 'o'n'l'y' 'f'o'r' 's'e't't'i'n'g'",
+      "'U'n'd'e'r's'h'o'o't' 'n'o'r't'h',' 'o'v'e'r's'h'o'o't' 's'o'u't'h'",
+      "'U'n'i'f'o'r'm' 'n'o'r't'h' 'a'n'd' 'o'p'p'o's'i't'e' 's'o'u't'h'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'U'N'O'S' 'm'e'a'n's' 'u'n'd'e'r's'h'o'o't' 'n'o'r't'h' 'a'n'd' 'o'v'e'r's'h'o'o't' 's'o'u't'h' 'w'h'e'n' 'r'o'l'l'i'n'g' 'o'u't' 'u's'i'n'g' 'a' 'd'i'r'e'c't' 'm'a'g'n'e't'i'c' 'c'o'm'p'a's's' 'i'n' 't'h'e' 'n'o'r't'h'e'r'n' 'h'e'm'i's'p'h'e'r'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 5"
+  },
+  {
+    "id": "NAV-044",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'A't' 't'h'e' 'm'a'g'n'e't'i'c' 'e'q'u'a't'o'r',' 'a'n' 'a'i'r'c'r'a'f't' 'a'c'c'e'l'e'r'a't'e's' 'o'n' 'a' 'w'e's't'e'r'l'y' 'h'e'a'd'i'n'g'.' 'W'h'a't' 'd'i'p'-'i'n'd'u'c'e'd' 'i'n'd'i'c'a't'i'o'n' 's'h'o'u'l'd' 'b'e' 'e'x'p'e'c't'e'd'?'",
+    "options": [
+      "'N'o' 'a'p'p'a'r'e'n't' 't'u'r'n'",
+      "'A'n' 'a'p'p'a'r'e'n't' 't'u'r'n' 'n'o'r't'h'",
+      "'A'n' 'a'p'p'a'r'e'n't' 't'u'r'n' 's'o'u't'h'",
+      "'A' '9'0' 'd'e'g'r'e'e' 'c'o'm'p'a's's' 's'w'i'n'g'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e'r'e' 'i's' 'n'o' 'd'i'p'-'i'n'd'u'c'e'd' 'a'c'c'e'l'e'r'a't'i'o'n' 'e'r'r'o'r' 'a't' 't'h'e' 'm'a'g'n'e't'i'c' 'e'q'u'a't'o'r' 'b'e'c'a'u's'e' 't'h'e' 'v'e'r't'i'c'a'l' 'f'i'e'l'd' 'c'o'm'p'o'n'e'n't' 'a'n'd' 'd'i'p' 'a'r'e' 'z'e'r'o'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 5"
+  },
+  {
+    "id": "NAV-045",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'A' 'd'i'r'e'c't' 'c'o'm'p'a's's' 'd'e's'c'r'i'b'e'd' 'a's' 'a'p'e'r'i'o'd'i'c' 'i's' 'o'n'e' 't'h'a't'",
+    "options": [
+      "'c'a'n' 'i'n'd'i'c'a't'e' 't'r'u'e' 'h'e'a'd'i'n'g' 'd'i'r'e'c't'l'y'",
+      "'h'a's' 'n'o' 'l'i'q'u'i'd' 'i'n' 'i't's' 'b'o'w'l'",
+      "'r'e'q'u'i'r'e's' 'n'o' 'd'e'v'i'a't'i'o'n' 'c'a'r'd'",
+      "'s'e't't'l'e's' 'q'u'i'c'k'l'y' 'w'i't'h'o'u't' 'p'r'o'l'o'n'g'e'd' 'o's'c'i'l'l'a't'i'o'n'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'A'p'e'r'i'o'd'i'c',' 'o'r' 'd'e'a'd' 'b'e'a't',' 'm'e'a'n's' 't'h'e' 'd'i's't'u'r'b'e'd' 'm'a'g'n'e't' 's'y's't'e'm' 's'e't't'l'e's' 'q'u'i'c'k'l'y' 'w'i't'h'o'u't' 'c'o'n't'i'n'u'i'n'g' 't'o' 'o's'c'i'l'l'a't'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 4"
+  },
+  {
+    "id": "NAV-046",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'A' 'b'u'b'b'l'e' 'i'n' 't'h'e' 'l'i'q'u'i'd' 'o'f' 'a' 'd'i'r'e'c't' 'c'o'm'p'a's's' 'm'o's't' 's't'r'o'n'g'l'y' 's'u'g'g'e's't's'",
+    "options": [
+      "'a' 'l'e'a'k'i'n'g' 's'e'a'l'",
+      "'e'x'c'e's's' 'h'o'r'i'z'o'n't'a'l' 'f'i'e'l'd' 'H'",
+      "'a' 'c'o'r'r'e'c't' 'd'a'm'p'i'n'g' 't'i'm'e'",
+      "'a' 'd'i's'p'l'a'c'e'd' 'a'g'o'n'i'c' 'l'i'n'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A' 'b'u'b'b'l'e' 'c'o'm'm'o'n'l'y' 'i'n'd'i'c'a't'e's' 'a' 'l'e'a'k'i'n'g' 's'e'a'l' 'a'n'd' 'c'a'n' 'm'o'v'e' 't'h'r'o'u'g'h' 't'h'e' 'l'i'q'u'i'd',' 'c'r'e'a't'i'n'g' 'e'd'd'i'e's' 't'h'a't' 'd'i's't'u'r'b' 't'h'e' 'm'a'g'n'e't' 'a's's'e'm'b'l'y'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 6"
+  },
+  {
+    "id": "NAV-047",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'W'h'y' 'i's' 'a' 'r'e'm'o't'e' 'm'a'g'n'e't'i'c' 'd'e't'e'c't'o'r' 'c'o'm'm'o'n'l'y' 'i'n's't'a'l'l'e'd' 'n'e'a'r' 'a' 'w'i'n'g't'i'p' 'o'r' 'f'i'n'?'",
+    "options": [
+      "'T'o' 'i'n'c'r'e'a's'e' 'm'a'g'n'e't'i'c' 'd'i'p'",
+      "'T'o' 'r'e'd'u'c'e' 'e'x'p'o's'u'r'e' 't'o' 'a'i'r'c'r'a'f't' 'm'a'g'n'e't'i'c' 'i'n't'e'r'f'e'r'e'n'c'e'",
+      "'T'o' 'm'a'k'e' 't'h'e' 'a'i'r'c'r'a'f't' 't'u'r'n' 'f'a's't'e'r'",
+      "'T'o' 'r'e'm'o'v'e' 't'h'e' 'n'e'e'd' 'f'o'r' 'e'l'e'c't'r'i'c'a'l' 'p'o'w'e'r'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A' 'r'e'm'o't'e' 'l'o'c'a't'i'o'n' 'i's' 'c'h'o's'e'n' 'b'e'c'a'u's'e' 'a'i'r'c'r'a'f't' 'm'a'g'n'e't'i'c' 'a'n'd' 'e'l'e'c't'r'i'c'a'l' 'i'n't'e'r'f'e'r'e'n'c'e' 'i's' 'n'o'r'm'a'l'l'y' 's'm'a'l'l'e'r' 't'h'e'r'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 7"
+  },
+  {
+    "id": "NAV-048",
+    "subject": "Air Navigation",
+    "topic": "Earth and Aircraft Magnetism",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 'a' 's'l'a'v'e'd' 'g'y'r'o' 'm'a'g'n'e't'i'c' 'c'o'm'p'a's's' 'c'o'm'b'i'n'e'?'",
+    "options": [
+      "'T'r'u'e' 'n'o'r't'h' 'w'i't'h' 'p'r'e's's'u'r'e' 'a'l't'i't'u'd'e'",
+      "'A' 'd'i'r'e'c't' 'c'o'm'p'a's's' 'w'i't'h' 'a' 'w'i'n'd' 'v'a'n'e'",
+      "'M'a'g'n'e't'i'c' 'n'o'r't'h'-'s'e'e'k'i'n'g' 'w'i't'h' 'g'y'r'o' 's't'a'b'i'l'i't'y'",
+      "'G'r'i'd' 'c'o'n'v'e'r'g'e'n'c'e' 'w'i't'h' 'l'i'q'u'i'd' 'd'a'm'p'i'n'g'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'f'l'u'x'-'v'a'l'v'e' 'r'e'f'e'r'e'n'c'e' 's'u'p'p'l'i'e's' 'm'a'g'n'e't'i'c' 'n'o'r't'h'-'s'e'e'k'i'n'g',' 'w'h'i'l'e' 't'h'e' 'd'i'r'e'c't'i'o'n'a'l' 'g'y'r'o' 's'u'p'p'l'i'e's' 'a' 's't'a'b'l'e' 's'h'o'r't'-'t'e'r'm' 'h'e'a'd'i'n'g' 'd'i's'p'l'a'y'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Aircraft Magnetism and the Compasses', Sec 7"
+  },
+  {
+    "id": "NAV-049",
+    "subject": "Air Navigation",
+    "topic": "Departure and Convergency",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 'd'e'p'a'r't'u'r'e' 'i'n' 'n'a'v'i'g'a't'i'o'n'?'",
+    "options": [
+      "'T'h'e' 'n'o'r't'h'-'s'o'u't'h' 'd'i's't'a'n'c'e' 'b'e't'w'e'e'n' 'p'a'r'a'l'l'e'l's'",
+      "'T'h'e' 'a'n'g'u'l'a'r' 'd'i'f'f'e'r'e'n'c'e' 'b'e't'w'e'e'n' 't'w'o' 'm'e'r'i'd'i'a'n's'",
+      "'T'h'e' 'e'a's't'-'w'e's't' 'd'i's't'a'n'c'e' 'b'e't'w'e'e'n' 'm'e'r'i'd'i'a'n's' 'a'l'o'n'g' 'a' 's't'a't'e'd' 'p'a'r'a'l'l'e'l'",
+      "'T'h'e' 's'h'o'r't'e's't' 'g'r'e'a't'-'c'i'r'c'l'e' 'd'i's't'a'n'c'e' 'b'e't'w'e'e'n' 't'w'o' 'p'o's'i't'i'o'n's'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'D'e'p'a'r't'u'r'e' 'i's' 't'h'e' 'e'a's't'-'w'e's't' 'd'i's't'a'n'c'e' 'b'e't'w'e'e'n' 't'w'o' 'm'e'r'i'd'i'a'n's' 'm'e'a's'u'r'e'd' 'a'l'o'n'g' 'a' 's'p'e'c'i'f'i'e'd' 'p'a'r'a'l'l'e'l' 'o'f' 'l'a't'i't'u'd'e'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Departure', Sec 1"
+  },
+  {
+    "id": "NAV-050",
+    "subject": "Air Navigation",
+    "topic": "Departure and Convergency",
+    "difficulty": "medium",
+    "question": "'T'w'o' 'm'e'r'i'd'i'a'n's' 'd'i'f'f'e'r' 'b'y' '2'0' 'd'e'g'r'e'e's' 'a't' 'l'a't'i't'u'd'e' '5'2' 'd'e'g'r'e'e's'.' 'W'h'a't' 'i's' 't'h'e' 'd'e'p'a'r't'u'r'e'?'",
+    "options": [
+      "'A'b'o'u't' '7'3'9' 'N'M'",
+      "'A'b'o'u't' '1','2'0'0' 'N'M'",
+      "'A'b'o'u't' '6'1'6' 'N'M'",
+      "'A'b'o'u't' '4'0'0' 'N'M'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'D'e'p'a'r't'u'r'e' '=' '1','2'0'0' 'm'i'n'u't'e's' '×' 'c'o's' '5'2' 'd'e'g'r'e'e's' '=' '7'3'8'.'8' 'N'M',' 'w'h'i'c'h' 'i's' 'a'b'o'u't' '7'3'9' 'N'M'.'",
+    "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'Departure', Sec 2"
+  },
+  {
+    "id": "REG-001",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'i'n's't'r'u'm'e'n't' 'i's' 't'h'e' 'p'r'i'n'c'i'p'a'l' 'c'u'r'r'e'n't' 'I'n'd'i'a'n' 's't'a't'u't'e' 'i'n' 't'h'e' 'h'i'e'r'a'r'c'h'y' 'd'e's'c'r'i'b'e'd' 'i'n' 't'h'i's' 'c'h'a'p't'e'r'?'",
+    "options": [
+      "'A'i'r'c'r'a'f't' 'R'u'l'e's' '1'9'3'7'",
+      "'C'h'i'c'a'g'o' 'C'o'n'v'e'n't'i'o'n'",
+      "'B'h'a'r'a't'i'y'a' 'V'a'y'u'y'a'n' 'A'd'h'i'n'i'y'a'm' '2'0'2'4'",
+      "'C'i'v'i'l' 'A'v'i'a't'i'o'n' 'R'e'q'u'i'r'e'm'e'n't's'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'B'h'a'r'a't'i'y'a' 'V'a'y'u'y'a'n' 'A'd'h'i'n'i'y'a'm' '2'0'2'4' 'i's' 't'h'e' 'p'r'i'n'c'i'p'a'l' 'c'u'r'r'e'n't' 'I'n'd'i'a'n' 's't'a't'u't'e',' 'w'h'i'l'e' 't'h'e' 'R'u'l'e's' 'a'n'd' 'C'i'v'i'l' 'A'v'i'a't'i'o'n' 'R'e'q'u'i'r'e'm'e'n't's' 'p'r'o'v'i'd'e' 'm'o'r'e' 'd'e't'a'i'l'e'd' 'r'e'q'u'i'r'e'm'e'n't's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 1"
+  },
+  {
+    "id": "REG-002",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'I'n'd'i'a'n' 'a'u't'h'o'r'i't'y' 'h'a's' 't'h'e' 'c'o'r'e' 'c'i'v'i'l' 'a'v'i'a't'i'o'n' 's'e'c'u'r'i't'y' 'o'v'e'r's'i'g'h't' 'r'o'l'e'?'",
+    "options": [
+      "'B'C'A'S'",
+      "'A'A'I'B'",
+      "'A'A'I'",
+      "'W'P'C' 'W'i'n'g'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'B'C'A'S' 'i's' 't'h'e' 'a'u't'h'o'r'i't'y' 'r'e's'p'o'n's'i'b'l'e' 'f'o'r' 'c'i'v'i'l' 'a'v'i'a't'i'o'n' 's'e'c'u'r'i't'y' 'p'o'l'i'c'y',' 's't'a'n'd'a'r'd's' 'a'n'd' 'o'v'e'r's'i'g'h't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 1"
+  },
+  {
+    "id": "REG-003",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'd'e'f'i'n'i't'i'o'n' 'd'e's'c'r'i'b'e's' 'a' 'n'o'n'-'p'o'w'e'r' 'd'r'i'v'e'n' 'h'e'a'v'i'e'r' 't'h'a'n' 'a'i'r' 'a'i'r'c'r'a'f't' 'd'e'r'i'v'i'n'g' 'l'i'f't' 'c'h'i'e'f'l'y' 'f'r'o'm' 'f'i'x'e'd' 's'u'r'f'a'c'e's'?'",
+    "options": [
+      "'A'i'r's'h'i'p'",
+      "'H'e'l'i'c'o'p't'e'r'",
+      "'A'm'p'h'i'b'i'a'n'",
+      "'G'l'i'd'e'r'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'G'l'i'd'e'r' 'i's' 't'h'e' 'c'o'r'r'e'c't' 't'e'r'm' 'f'o'r' 'a' 'n'o'n'-'p'o'w'e'r' 'd'r'i'v'e'n' 'h'e'a'v'i'e'r' 't'h'a'n' 'a'i'r' 'a'i'r'c'r'a'f't' 't'h'a't' 'd'e'r'i'v'e's' 'l'i'f't' 'c'h'i'e'f'l'y' 'f'r'o'm' 'f'i'x'e'd' 's'u'r'f'a'c'e's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 2"
+  },
+  {
+    "id": "REG-004",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'o'p'e'r'a't'i'o'n' 'i's' 'n'e'i't'h'e'r' 'c'o'm'm'e'r'c'i'a'l' 'a'i'r' 't'r'a'n's'p'o'r't' 'n'o'r' 'a'e'r'i'a'l' 'w'o'r'k'?'",
+    "options": [
+      "'P'u'b'l'i'c' 't'r'a'n's'p'o'r't'",
+      "'G'e'n'e'r'a'l' 'a'v'i'a't'i'o'n'",
+      "'S'c'h'e'd'u'l'e'd' 'a'i'r' 't'r'a'n's'p'o'r't'",
+      "'A'e'r'i'a'l' 'w'o'r'k'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'G'e'n'e'r'a'l' 'a'v'i'a't'i'o'n' 'i's' 'd'e'f'i'n'e'd' 'a's' 'a'n' 'a'i'r'c'r'a'f't' 'o'p'e'r'a't'i'o'n' 'o't'h'e'r' 't'h'a'n' 'c'o'm'm'e'r'c'i'a'l' 'a'i'r' 't'r'a'n's'p'o'r't' 'o'r' 'a'e'r'i'a'l' 'w'o'r'k'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 2"
+  },
+  {
+    "id": "REG-005",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'e'n' 'a' 'p'r'e's's'u'r'e' 'a'l't'i'm'e't'e'r' 'i's' 's'e't' 't'o' 'Q'N'H',' 'w'h'i'c'h' 'v'e'r't'i'c'a'l' 'q'u'a'n't'i't'y' 'd'o'e's' 'i't' 'i'n'd'i'c'a't'e'?'",
+    "options": [
+      "'A'l't'i't'u'd'e'",
+      "'H'e'i'g'h't' 'a'b'o'v'e' 't'h'e' 'Q'F'E' 'd'a't'u'm'",
+      "'F'l'i'g'h't' 'l'e'v'e'l'",
+      "'A'e'r'o'd'r'o'm'e' 'e'l'e'v'a't'i'o'n' 'o'n'l'y'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A'l't'i't'u'd'e' 'i's' 'i'n'd'i'c'a't'e'd' 'w'i't'h' 'Q'N'H' 'b'e'c'a'u's'e' 'a'l't'i't'u'd'e' 'i's' 'r'e'f'e'r'e'n'c'e'd' 't'o' 'm'e'a'n' 's'e'a' 'l'e'v'e'l'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 3"
+  },
+  {
+    "id": "REG-006",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'm'i'n'i'm'u'm' 'p'r'o'v'i'd'e's' 'a't' 'l'e'a's't' '1','0'0'0' 'f't' 'o'b's't'a'c'l'e' 'c'l'e'a'r'a'n'c'e' 'w'i't'h'i'n' 'a' '2'5' 'N'M' 's'e'c't'o'r' 'c'e'n't'r'e'd' 'o'n' 'a' 'r'a'd'i'o' 'n'a'v'i'g'a't'i'o'n' 'a'i'd'?'",
+    "options": [
+      "'M'O'C'A'",
+      "'M'E'A'",
+      "'M'D'A'",
+      "'M'S'A'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'M'S'A' 'i's' 't'h'e' 'm'i'n'i'm'u'm' 's'e'c't'o'r' 'a'l't'i't'u'd'e',' 'p'r'o'v'i'd'i'n'g' 'a't' 'l'e'a's't' '1','0'0'0' 'f't' 'c'l'e'a'r'a'n'c'e' 'w'i't'h'i'n' 'a' '2'5' 'N'M' 's'e'c't'o'r'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 3"
+  },
+  {
+    "id": "REG-007",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'a'i'r's'p'a'c'e' 'b'e'g'i'n's' 'a't' 't'h'e' 's'u'r'f'a'c'e' 'a'n'd' 'e'x't'e'n'd's' 'u'p'w'a'r'd' 't'o' 'a' 's'p'e'c'i'f'i'e'd' 'u'p'p'e'r' 'l'i'm'i't'?'",
+    "options": [
+      "'C'o'n't'r'o'l' 'a'r'e'a'",
+      "'C'o'n't'r'o'l' 'z'o'n'e'",
+      "'A'i'r'w'a'y'",
+      "'F'l'i'g'h't' 'i'n'f'o'r'm'a't'i'o'n' 'r'e'g'i'o'n'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A' 'c'o'n't'r'o'l' 'z'o'n'e' 'i's' 'c'o'n't'r'o'l'l'e'd' 'a'i'r's'p'a'c'e' 'e'x't'e'n'd'i'n'g' 'u'p'w'a'r'd's' 'f'r'o'm' 't'h'e' 's'u'r'f'a'c'e' 't'o' 'a' 's'p'e'c'i'f'i'e'd' 'u'p'p'e'r' 'l'i'm'i't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 4"
+  },
+  {
+    "id": "REG-008",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'n'a'v'i'g'a't'i'o'n' 's'p'e'c'i'f'i'c'a't'i'o'n' 'i'n'c'l'u'd'e's' 'o'n'-'b'o'a'r'd' 'p'e'r'f'o'r'm'a'n'c'e' 'm'o'n'i't'o'r'i'n'g' 'a'n'd' 'a'l'e'r't'i'n'g'?'",
+    "options": [
+      "'R'N'A'V' 's'p'e'c'i'f'i'c'a't'i'o'n'",
+      "'A'T'S' 'r'o'u't'e'",
+      "'A'd'v'i's'o'r'y' 'r'o'u't'e'",
+      "'R'N'P' 's'p'e'c'i'f'i'c'a't'i'o'n'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'A'n' 'R'N'P' 's'p'e'c'i'f'i'c'a't'i'o'n' 'i'n'c'l'u'd'e's' 't'h'e' 'r'e'q'u'i'r'e'm'e'n't' 'f'o'r' 'o'n'-'b'o'a'r'd' 'p'e'r'f'o'r'm'a'n'c'e' 'm'o'n'i't'o'r'i'n'g' 'a'n'd' 'a'l'e'r't'i'n'g'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 4"
+  },
+  {
+    "id": "REG-009",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'a'e'r'o'd'r'o'm'e' 'a'r'e'a' 'c'o'n's'i's't's' 'o'f' 't'h'e' 'm'a'n'o'e'u'v'r'i'n'g' 'a'r'e'a' 'p'l'u's' 't'h'e' 'a'p'r'o'n' 'o'r' 'a'p'r'o'n's'?'",
+    "options": [
+      "'M'o'v'e'm'e'n't' 'a'r'e'a'",
+      "'L'a'n'd'i'n'g' 'a'r'e'a'",
+      "'R'u'n'w'a'y' 's't'r'i'p'",
+      "'C'l'e'a'r'w'a'y'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'm'o'v'e'm'e'n't' 'a'r'e'a' 'c'o'n's'i's't's' 'o'f' 't'h'e' 'm'a'n'o'e'u'v'r'i'n'g' 'a'r'e'a' 'a'n'd' 't'h'e' 'a'p'r'o'n' 'o'r' 'a'p'r'o'n's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 5"
+  },
+  {
+    "id": "REG-010",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'd'e'c'l'a'r'e'd' 'd'i's't'a'n'c'e' 'e'q'u'a'l's' 'T'O'R'A' 'p'l'u's' 's't'o'p'w'a'y',' 'i'f' 'a' 's't'o'p'w'a'y' 'i's' 'p'r'o'v'i'd'e'd'?'",
+    "options": [
+      "'T'O'D'A'",
+      "'L'D'A'",
+      "'A'S'D'A'",
+      "'T'O'R'A'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'A'S'D'A' 'i's' 't'h'e' 'a'c'c'e'l'e'r'a't'e'-'s't'o'p' 'd'i's't'a'n'c'e' 'a'v'a'i'l'a'b'l'e' 'a'n'd' 'e'q'u'a'l's' 'T'O'R'A' 'p'l'u's' 't'h'e' 's't'o'p'w'a'y',' 'i'f' 'p'r'o'v'i'd'e'd'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 5"
+  },
+  {
+    "id": "REG-011",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'f'l'i'g'h't' 'p'l'a'n' 'i'n'c'l'u'd'e's' 'c'h'a'n'g'e's' 'r'e's'u'l't'i'n'g' 'f'r'o'm' 's'u'b's'e'q'u'e'n't' 'c'l'e'a'r'a'n'c'e's'?'",
+    "options": [
+      "'F'i'l'e'd' 'f'l'i'g'h't' 'p'l'a'n'",
+      "'C'u'r'r'e'n't' 'f'l'i'g'h't' 'p'l'a'n'",
+      "'O'p'e'r'a't'i'o'n'a'l' 'f'l'i'g'h't' 'p'l'a'n'",
+      "'R'e'p'e't'i't'i'v'e' 'f'l'i'g'h't' 'p'l'a'n'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'T'h'e' 'c'u'r'r'e'n't' 'f'l'i'g'h't' 'p'l'a'n' 'i's' 't'h'e' 'f'l'i'g'h't' 'p'l'a'n' 'i'n'c'l'u'd'i'n'g' 'c'h'a'n'g'e's' 'b'r'o'u'g'h't' 'a'b'o'u't' 'b'y' 'l'a't'e'r' 'c'l'e'a'r'a'n'c'e's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 6"
+  },
+  {
+    "id": "REG-012",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'e'm'e'r'g'e'n'c'y' 'p'h'a's'e' 'm'e'a'n's' 'r'e'a's'o'n'a'b'l'e' 'c'e'r't'a'i'n't'y' 't'h'a't' 'g'r'a'v'e' 'a'n'd' 'i'm'm'i'n'e'n't' 'd'a'n'g'e'r' 'e'x'i's't's' 'a'n'd' 'i'm'm'e'd'i'a't'e' 'a's's'i's't'a'n'c'e' 'i's' 'r'e'q'u'i'r'e'd'?'",
+    "options": [
+      "'A'L'E'R'F'A'",
+      "'I'N'C'E'R'F'A'",
+      "'D'E'T'R'E'S'F'A'",
+      "'A'l'e'r't'i'n'g' 's'e'r'v'i'c'e'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'D'E'T'R'E'S'F'A' 'i's' 't'h'e' 'd'i's't'r'e's's' 'p'h'a's'e',' 'u's'e'd' 'w'h'e'n' 'g'r'a'v'e' 'a'n'd' 'i'm'm'i'n'e'n't' 'd'a'n'g'e'r' 'i's' 'r'e'a's'o'n'a'b'l'y' 'c'e'r't'a'i'n' 'a'n'd' 'i'm'm'e'd'i'a't'e' 'a's's'i's't'a'n'c'e' 'i's' 'r'e'q'u'i'r'e'd'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Definitions and Framework', Sec 6"
+  },
+  {
+    "id": "REG-013",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'C'h'i'c'a'g'o' 'C'o'n'v'e'n't'i'o'n' 'A'r't'i'c'l'e' 'e's't'a'b'l'i's'h'e's' 'c'o'm'p'l'e't'e' 'a'n'd' 'e'x'c'l'u's'i'v'e' 'S't'a't'e' 's'o'v'e'r'e'i'g'n't'y' 'o'v'e'r' 't'h'e' 'a'i'r's'p'a'c'e' 'a'b'o'v'e' 'i't's' 't'e'r'r'i't'o'r'y'?'",
+    "options": [
+      "'A'r't'i'c'l'e' '5'",
+      "'A'r't'i'c'l'e' '1'",
+      "'A'r't'i'c'l'e' '1'2'",
+      "'A'r't'i'c'l'e' '3'8'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A'r't'i'c'l'e' '1' 'e's't'a'b'l'i's'h'e's' 'c'o'm'p'l'e't'e' 'a'n'd' 'e'x'c'l'u's'i'v'e' 's'o'v'e'r'e'i'g'n't'y' 'o'v'e'r' 't'h'e' 'a'i'r's'p'a'c'e' 'a'b'o'v'e' 'a' 'S't'a't'e'''s' 't'e'r'r'i't'o'r'y'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 1"
+  },
+  {
+    "id": "REG-014",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 'A'r't'i'c'l'e' '6' 'r'e'q'u'i'r'e' 'b'e'f'o'r'e' 'a' 's'c'h'e'd'u'l'e'd' 'i'n't'e'r'n'a't'i'o'n'a'l' 'a'i'r' 's'e'r'v'i'c'e' 'o'p'e'r'a't'e's' 'o'v'e'r' 'o'r' 'i'n't'o' 'a'n'o't'h'e'r' 'S't'a't'e'?'",
+    "options": [
+      "'O'n'l'y' 'a' 'f'i'l'e'd' 'f'l'i'g'h't' 'p'l'a'n'",
+      "'A' 't'e'c'h'n'i'c'a'l' 's't'o'p'",
+      "'C'a'b'o't'a'g'e' 'a'p'p'r'o'v'a'l'",
+      "'S'p'e'c'i'a'l' 'p'e'r'm'i's's'i'o'n' 'o'r' 'a'u't'h'o'r'i's'a't'i'o'n' 'f'r'o'm' 't'h'a't' 'S't'a't'e'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'S'p'e'c'i'a'l' 'p'e'r'm'i's's'i'o'n' 'o'r' 'a'u't'h'o'r'i's'a't'i'o'n' 'f'r'o'm' 't'h'a't' 'S't'a't'e' 'i's' 'r'e'q'u'i'r'e'd' 'f'o'r' 'a' 's'c'h'e'd'u'l'e'd' 'i'n't'e'r'n'a't'i'o'n'a'l' 'a'i'r' 's'e'r'v'i'c'e' 'u'n'd'e'r' 'A'r't'i'c'l'e' '6'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 1"
+  },
+  {
+    "id": "REG-015",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'i't'e'm' 'i's' 'o'n'e' 'o'f' 't'h'e' 's'e'v'e'n' 'd'o'c'u'm'e'n't's' 'l'i's't'e'd' 'u'n'd'e'r' 'A'r't'i'c'l'e' '2'9'?'",
+    "options": [
+      "'C'e'r't'i'f'i'c'a't'e' 'o'f' 'r'e'g'i's't'r'a't'i'o'n'",
+      "'A'i'r'p'o'r't' 'e'n't'r'y' 'p'e'r'm'i't'",
+      "'P'a's's'e'n'g'e'r' 'h'e'a'l't'h' 'c'a'r'd' 'f'o'r' 'e'v'e'r'y' 'f'l'i'g'h't'",
+      "'A'e'r'o'd'r'o'm'e' 'l'i'c'e'n'c'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A' 'c'e'r't'i'f'i'c'a't'e' 'o'f' 'r'e'g'i's't'r'a't'i'o'n' 'i's' 'o'n'e' 'o'f' 't'h'e' 'd'o'c'u'm'e'n't's' 'A'r't'i'c'l'e' '2'9' 'r'e'q'u'i'r'e's' 'a'n' 'a'i'r'c'r'a'f't' 'i'n' 'i'n't'e'r'n'a't'i'o'n'a'l' 'n'a'v'i'g'a't'i'o'n' 't'o' 'c'a'r'r'y'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 2"
+  },
+  {
+    "id": "REG-016",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'i't'h'i'n' 'w'h'a't' 'p'e'r'i'o'd' 'd'o'e's' 'A'r't'i'c'l'e' '3'8' 'r'e'q'u'i'r'e' 'n'o't'i'c'e' 'a'f't'e'r' 'a'n' 'a'm'e'n'd'e'd' 'i'n't'e'r'n'a't'i'o'n'a'l' 'S't'a'n'd'a'r'd' 'w'h'e'n' 'a' 'S't'a't'e' 'd'o'e's' 'n'o't' 'a'm'e'n'd' 'i't's' 'o'w'n' 'p'r'a'c't'i'c'e'?'",
+    "options": [
+      "'3'0' 'd'a'y's'",
+      "'4'5' 'd'a'y's'",
+      "'6'0' 'd'a'y's'",
+      "'O'n'e' 'y'e'a'r'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'r'e'q'u'i'r'e'd' 'p'e'r'i'o'd' 's't'a't'e'd' 'b'y' 'A'r't'i'c'l'e' '3'8' 'i's' '6'0' 'd'a'y's' 'a'f't'e'r' 'a'd'o'p't'i'o'n' 'o'f' 't'h'e' 'a'm'e'n'd'm'e'n't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 2"
+  },
+  {
+    "id": "REG-017",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'I'C'A'O' 'b'o'd'y' 'h'a's' 'a'l'l' 'C'o'n't'r'a'c't'i'n'g' 'S't'a't'e's' 'r'e'p'r'e's'e'n't'e'd' 'w'i't'h' 'o'n'e' 'v'o't'e' 'e'a'c'h'?'",
+    "options": [
+      "'C'o'u'n'c'i'l'",
+      "'A'i'r' 'N'a'v'i'g'a't'i'o'n' 'C'o'm'm'i's's'i'o'n'",
+      "'A's's'e'm'b'l'y'",
+      "'S'e'c'r'e't'a'r'i'a't'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'A's's'e'm'b'l'y' 'i'n'c'l'u'd'e's' 'a'l'l' 'C'o'n't'r'a'c't'i'n'g' 'S't'a't'e's',' 'w'i't'h' 'o'n'e' 'v'o't'e' 'f'o'r' 'e'a'c'h' 'S't'a't'e'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 3"
+  },
+  {
+    "id": "REG-018",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'b'o'd'y' 'a'd'o'p't's' 'i'n't'e'r'n'a't'i'o'n'a'l' 'S't'a'n'd'a'r'd's' 'a'n'd' 'R'e'c'o'm'm'e'n'd'e'd' 'P'r'a'c't'i'c'e's'?'",
+    "options": [
+      "'T'h'e' 'C'o'u'n'c'i'l'",
+      "'T'h'e' 'S'e'c'r'e't'a'r'i'a't'",
+      "'A' 'r'e'g'i'o'n'a'l' 'o'f'f'i'c'e'",
+      "'T'h'e' 'A'i'r' 'T'r'a'n's'p'o'r't' 'C'o'm'm'i't't'e'e' 'a'l'o'n'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'C'o'u'n'c'i'l' 'a'd'o'p't's' 'i'n't'e'r'n'a't'i'o'n'a'l' 'S't'a'n'd'a'r'd's' 'a'n'd' 'R'e'c'o'm'm'e'n'd'e'd' 'P'r'a'c't'i'c'e's',' 'w'h'i'l'e' 't'e'c'h'n'i'c'a'l' 'b'o'd'i'e's' 'p'r'e'p'a'r'e' 'a'n'd' 'r'e'c'o'm'm'e'n'd' 'm'a't'e'r'i'a'l'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 3"
+  },
+  {
+    "id": "REG-019",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'A'n'n'e'x' 'a'd'd'r'e's's'e's' 's'a'f'e' 't'r'a'n's'p'o'r't' 'o'f' 'd'a'n'g'e'r'o'u's' 'g'o'o'd's' 'b'y' 'a'i'r'?'",
+    "options": [
+      "'A'n'n'e'x' '1'6'",
+      "'A'n'n'e'x' '1'7'",
+      "'A'n'n'e'x' '1'9'",
+      "'A'n'n'e'x' '1'8'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'A'n'n'e'x' '1'8' 'a'd'd'r'e's's'e's' 't'h'e' 's'a'f'e' 't'r'a'n's'p'o'r't' 'o'f' 'd'a'n'g'e'r'o'u's' 'g'o'o'd's' 'b'y' 'a'i'r'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 4"
+  },
+  {
+    "id": "REG-020",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 's't'a't'u's' 'd'o' 'R'e'g'i'o'n'a'l' 'S'u'p'p'l'e'm'e'n't'a'r'y' 'P'r'o'c'e'd'u'r'e's' 'h'a'v'e'?'",
+    "options": [
+      "'T'h'e'y' 'a'r'e' 'n'a't'i'o'n'a'l' 'l'a'w's' 'i'n' 'e'v'e'r'y' 'S't'a't'e'",
+      "'T'h'e'y' 'a'r'e' 'C'o'u'n'c'i'l'-'a'p'p'r'o'v'e'd' 'p'r'o'c'e'd'u'r'e's' 'f'o'r' 't'h'e' 'r'e'l'e'v'a'n't' 'r'e'g'i'o'n'",
+      "'T'h'e'y' 'r'e'p'l'a'c'e' 't'h'e' 'C'h'i'c'a'g'o' 'C'o'n'v'e'n't'i'o'n'",
+      "'T'h'e'y' 'a'p'p'l'y' 'o'n'l'y' 't'o' 'm'i'l'i't'a'r'y' 'a'i'r'c'r'a'f't'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'R'e'g'i'o'n'a'l' 'S'u'p'p'l'e'm'e'n't'a'r'y' 'P'r'o'c'e'd'u'r'e's' 'a'r'e' 'a'p'p'r'o'v'e'd' 'b'y' 't'h'e' 'C'o'u'n'c'i'l' 'a'n'd' 'a'p'p'l'y' 'o'n'l'y' 'i'n' 't'h'e' 'r'e'l'e'v'a'n't' 'r'e'g'i'o'n'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 4"
+  },
+  {
+    "id": "REG-021",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'f'r'e'e'd'o'm' 'p'e'r'm'i't's' 'l'a'n'd'i'n'g' 'i'n' 'a'n'o't'h'e'r' 'S't'a't'e' 'f'o'r' 'r'e'f'u'e'l'l'i'n'g' 'w'i't'h'o'u't' 't'a'k'i'n'g' 'o'n' 'o'r' 'p'u't't'i'n'g' 'd'o'w'n' 't'r'a'f'f'i'c'?'",
+    "options": [
+      "'S'e'c'o'n'd' 'f'r'e'e'd'o'm'",
+      "'F'i'r's't' 'f'r'e'e'd'o'm'",
+      "'F'o'u'r't'h' 'f'r'e'e'd'o'm'",
+      "'F'i'f't'h' 'f'r'e'e'd'o'm'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 's'e'c'o'n'd' 'f'r'e'e'd'o'm' 'p'e'r'm'i't's' 'a' 'n'o'n'-'t'r'a'f'f'i'c' 't'e'c'h'n'i'c'a'l' 'l'a'n'd'i'n'g' 's'u'c'h' 'a's' 'r'e'f'u'e'l'l'i'n'g' 'o'r' 'r'e'p'a'i'r'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 5"
+  },
+  {
+    "id": "REG-022",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'c'o'n'v'e'n't'i'o'n' 'c'h'i'e'f'l'y' 'a'd'd'r'e's's'e's' 'u'n'l'a'w'f'u'l' 's'e'i'z'u'r'e' 'o'f' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'T'o'k'y'o' '1'9'6'3'",
+      "'R'o'm'e' '1'9'5'2'",
+      "'T'h'e' 'H'a'g'u'e' '1'9'7'0'",
+      "'G'e'n'e'v'a' '1'9'4'8'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'H'a'g'u'e' 'C'o'n'v'e'n't'i'o'n' '1'9'7'0' 'c'h'i'e'f'l'y' 'a'd'd'r'e's's'e's' 's'u'p'p'r'e's's'i'o'n' 'o'f' 'u'n'l'a'w'f'u'l' 's'e'i'z'u'r'e' 'o'f' 'a'i'r'c'r'a'f't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 6"
+  },
+  {
+    "id": "REG-023",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'c'o'n'v'e'n't'i'o'n' 'c'o'n'c'e'r'n's' 'd'a'm'a'g'e' 'c'a'u's'e'd' 'b'y' 'f'o'r'e'i'g'n' 'a'i'r'c'r'a'f't' 't'o' 'p'e'r's'o'n's' 'o'r' 'p'r'o'p'e'r't'y' 'o'n' 't'h'e' 's'u'r'f'a'c'e'?'",
+    "options": [
+      "'W'a'r's'a'w' '1'9'2'9'",
+      "'R'o'm'e' '1'9'5'2'",
+      "'T'o'k'y'o' '1'9'6'3'",
+      "'C'a'p'e' 'T'o'w'n' '2'0'0'1'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'T'h'e' 'R'o'm'e' 'C'o'n'v'e'n't'i'o'n' '1'9'5'2' 'c'o'n'c'e'r'n's' 'l'i'a'b'i'l'i't'y' 'f'o'r' 'd'a'm'a'g'e' 'c'a'u's'e'd' 'b'y' 'f'o'r'e'i'g'n' 'a'i'r'c'r'a'f't' 't'o' 't'h'i'r'd' 'p'a'r't'i'e's' 'o'n' 't'h'e' 's'u'r'f'a'c'e'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 7"
+  },
+  {
+    "id": "REG-024",
+    "subject": "Air Regulations",
+    "topic": "ICAO Conventions and Annexes",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'I'n'd'i'a'n' 'b'o'd'y' 'i's' 'r'e's'p'o'n's'i'b'l'e' 'f'o'r' 'c'i'v'i'l' 'a'v'i'a't'i'o'n' 's'a'f'e't'y' 'r'e'g'u'l'a't'i'o'n',' 'l'i'c'e'n's'i'n'g' 'a'n'd' 'a'i'r'w'o'r't'h'i'n'e's's' 'o'v'e'r's'i'g'h't'?'",
+    "options": [
+      "'A'A'I'",
+      "'I'C'A'O'",
+      "'M'i'n'i's't'r'y' 'o'f' 'E'x't'e'r'n'a'l' 'A'f'f'a'i'r's'",
+      "'D'G'C'A'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'D'G'C'A' 'i's' 't'h'e' 'I'n'd'i'a'n' 's'a'f'e't'y' 'r'e'g'u'l'a't'o'r' 'r'e's'p'o'n's'i'b'l'e' 'f'o'r' 'l'i'c'e'n's'i'n'g',' 'a'i'r'w'o'r't'h'i'n'e's's' 'a'n'd' 'r'e'l'a't'e'd' 'o'v'e'r's'i'g'h't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'ICAO and Conventions', Sec 8"
+  },
+  {
+    "id": "REG-025",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'l'a'w' 'r'e'p'l'a'c'e'd' 't'h'e' 'A'i'r'c'r'a'f't' 'A'c't',' '1'9'3'4' 'a's' 'I'n'd'i'a'''s' 'p'r'i'n'c'i'p'a'l' 'c'i'v'i'l' 'a'v'i'a't'i'o'n' 'e'n'a'b'l'i'n'g' 's't'a't'u't'e'?'",
+    "options": [
+      "'T'h'e' 'B'h'a'r'a't'i'y'a' 'V'a'y'u'y'a'n' 'A'd'h'i'n'i'y'a'm',' '2'0'2'4'",
+      "'T'h'e' 'I'n'd'i'a'n' 'A'i'r'c'r'a'f't' 'R'u'l'e's',' '1'9'2'0'",
+      "'T'h'e' 'D'r'o'n'e' 'R'u'l'e's',' '2'0'2'1'",
+      "'T'h'e' 'A'i'r'c'r'a'f't' 'S'e'c'u'r'i't'y' 'R'u'l'e's',' '2'0'1'1'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'B'h'a'r'a't'i'y'a' 'V'a'y'u'y'a'n' 'A'd'h'i'n'i'y'a'm',' '2'0'2'4' 'r'e'p'l'a'c'e'd' 't'h'e' 'A'i'r'c'r'a'f't' 'A'c't',' '1'9'3'4' 'a's' 't'h'e' 'p'r'i'n'c'i'p'a'l' 'e'n'a'b'l'i'n'g' 's't'a't'u't'e'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 1"
+  },
+  {
+    "id": "REG-026",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'b'o'd'y' 'h'a's' 't'h'e' 'c'e'n't'r'a'l' 'r'o'l'e' 'o'f' 'i'n'v'e's't'i'g'a't'i'n'g' 'a'i'r'c'r'a'f't' 'a'c'c'i'd'e'n't's' 'a'n'd' 'i'n'c'i'd'e'n't's' 'i'n' 'I'n'd'i'a'?'",
+    "options": [
+      "'A'i'r'p'o'r't's' 'A'u't'h'o'r'i't'y' 'o'f' 'I'n'd'i'a'",
+      "'B'u'r'e'a'u' 'o'f' 'C'i'v'i'l' 'A'v'i'a't'i'o'n' 'S'e'c'u'r'i't'y'",
+      "'A'i'r'c'r'a'f't' 'A'c'c'i'd'e'n't' 'I'n'v'e's't'i'g'a't'i'o'n' 'B'u'r'e'a'u'",
+      "'D'i'r'e'c't'o'r'a't'e' 'G'e'n'e'r'a'l' 'o'f' 'H'e'a'l't'h' 'S'e'r'v'i'c'e's'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'A'i'r'c'r'a'f't' 'A'c'c'i'd'e'n't' 'I'n'v'e's't'i'g'a't'i'o'n' 'B'u'r'e'a'u' 'i's' 't'h'e' 'b'o'd'y' 'r'e's'p'o'n's'i'b'l'e' 'f'o'r' 'i'n'v'e's't'i'g'a't'i'n'g' 'a'i'r'c'r'a'f't' 'a'c'c'i'd'e'n't's' 'a'n'd' 'i'n'c'i'd'e'n't's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 1"
+  },
+  {
+    "id": "REG-027",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'm'u's't' 'a'n' 'I'n'd'i'a'n' 'r'e'g'i's't'e'r'e'd' 'a'i'r'c'r'a'f't' 'n'o'r'm'a'l'l'y' 'o'b't'a'i'n' 'b'e'f'o'r'e' 'l'e'a'v'i'n'g' 'I'n'd'i'a' 'f'o'r' 'a'n' 'o'v'e'r's'e'a's' 'f'l'i'g'h't'?'",
+    "options": [
+      "'A' 'c'u's't'o'm's' 's'e'a'l' 'o'n'l'y'",
+      "'R'e'q'u'i'r'e'd' 'D'G'C'A' 'p'e'r'm'i's's'i'o'n'",
+      "'A'n' 'A'I'C'",
+      "'A' 'n'e'w' 'c'e'r't'i'f'i'c'a't'e' 'o'f' 'r'e'g'i's't'r'a't'i'o'n'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'R'e'q'u'i'r'e'd' 'D'G'C'A' 'p'e'r'm'i's's'i'o'n' 'i's' 'n'e'e'd'e'd' 'b'e'f'o'r'e' 'a'n' 'I'n'd'i'a'n' 'r'e'g'i's't'e'r'e'd' 'a'i'r'c'r'a'f't' 'l'e'a'v'e's' 'I'n'd'i'a' 'f'o'r' 'a'n' 'o'v'e'r's'e'a's' 'f'l'i'g'h't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 2"
+  },
+  {
+    "id": "REG-028",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'I'f' 'a' 'p'i'l'o't' 's't'r'a'y's' 'i'n't'o' 'a' 'p'r'o'h'i'b'i't'e'd' 'a'r'e'a' 'u'n'd'e'r' 't'h'e' 'r'u'l'e' 's'u'm'm'a'r'i's'e'd' 'b'y' 'B'a'l'i',' 'w'h'a't' 'i's' 't'h'e' 'c'o'r'r'e'c't' 'i'm'm'e'd'i'a't'e' 'c'o'u'r's'e'?'",
+    "options": [
+      "'D'e's'c'e'n'd' 'i'm'm'e'd'i'a't'e'l'y' 'i'n's'i'd'e' 't'h'e' 'a'r'e'a'",
+      "'C'o'n't'i'n'u'e' 't'o' 'd'e's't'i'n'a't'i'o'n' 'w'i't'h'o'u't' 'r'e'p'o'r't'i'n'g'",
+      "'C'i'r'c'l'e' 'u'n't'i'l' 'a' 'c'l'e'a'r'a'n'c'e' 'i's' 'r'e'c'e'i'v'e'd'",
+      "'S'i'g'n'a'l' 'd'i's't'r'e's's',' 'l'e'a'v'e' 't'h'e' 'a'r'e'a' 'a'n'd' 'l'a'n'd' 'a't' 't'h'e' 'n'e'a'r'e's't' 'a'e'r'o'd'r'o'm'e'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'T'h'e' 's't'a't'e'd' 'r'e's'p'o'n's'e' 'i's' 't'o' 's'i'g'n'a'l' 'd'i's't'r'e's's',' 'l'e'a'v'e' 't'h'e' 'p'r'o'h'i'b'i't'e'd' 'a'r'e'a' 'a'n'd' 'l'a'n'd' 'a't' 't'h'e' 'n'e'a'r'e's't' 'a'e'r'o'd'r'o'm'e'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 2"
+  },
+  {
+    "id": "REG-029",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'H'o'w' 'l'o'n'g' 'b'e'f'o'r'e' 'f'l'i'g'h't' 'd'o'e's' 'B'a'l'i' 's't'a't'e' 't'h'a't' 'f'l'i'g'h't' 'c'r'e'w' 'm'u's't' 'a'v'o'i'd' 'a'l'c'o'h'o'l',' 's'e'd'a't'i'v'e's' 'a'n'd' 'n'a'r'c'o't'i'c's'?'",
+    "options": [
+      "'6' 'h'o'u'r's'",
+      "'1'2' 'h'o'u'r's'",
+      "'1'8' 'h'o'u'r's'",
+      "'2'4' 'h'o'u'r's'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'B'a'l'i' 's't'a't'e's' 'a' '1'2'-'h'o'u'r' 'p'r'o'h'i'b'i't'i'o'n' 'b'e'f'o'r'e' 'f'l'i'g'h't',' 't'o'g'e't'h'e'r' 'w'i't'h' 't'h'e' 'c'o'n't'i'n'u'i'n'g' 'r'u'l'e' 'a'g'a'i'n's't' 'o'p'e'r'a't'i'n'g' 'w'h'i'l'e' 'i'n't'o'x'i'c'a't'e'd'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 3"
+  },
+  {
+    "id": "REG-030",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'A't' 'w'h'a't' 'j'e't'-'e'x'h'a'u's't' 'd'i's't'a'n'c'e' 'd'o'e's' 't'h'e' 'f'u'e'l'l'i'n'g' 'r'u'l'e' 'i'n' 't'h'e' 'l'e's's'o'n' 'r'e'q'u'i'r'e' 'f'u'e'l'l'i'n'g' 't'o' 's't'o'p'?'",
+    "options": [
+      "'1'5' 'm'",
+      "'3'0' 'm'",
+      "'4'3' 'm'",
+      "'5'0' 'm'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'F'u'e'l'l'i'n'g' 's't'o'p's' 'w'h'e'n' 'h'a'z'a'r'd'o'u's' 'j'e't' 'e'x'h'a'u's't' 'c'o'm'e's' 'w'i't'h'i'n' '4'3' 'm' 'o'f' 't'h'e' 'f'u'e'l'l'i'n'g' 'e'q'u'i'p'm'e'n't' 'o'r' 'a'i'r'c'r'a'f't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 3"
+  },
+  {
+    "id": "REG-031",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'F'o'r' 'h'o'w' 'l'o'n'g' 'm'u's't' 'a' 'f'l'i'g'h't' 'c'r'e'w' 'l'o'g' 'b'o'o'k' 'b'e' 'p'r'e's'e'r'v'e'd' 'u'n'd'e'r' 't'h'e' 's't'a't'e'd' 'r'u'l'e'?'",
+    "options": [
+      "'A't' 'l'e'a's't' 'f'i'v'e' 'y'e'a'r's' 'a'f't'e'r' 't'h'e' 'l'a's't' 'e'n't'r'y'",
+      "'T'w'o' 'y'e'a'r's' 'a'f't'e'r' 't'h'e' 'f'i'r's't' 'e'n't'r'y'",
+      "'U'n't'i'l' 't'h'e' 'n'e'x't' 'l'i'c'e'n'c'e' 'r'e'n'e'w'a'l'",
+      "'F'o'r' 't'h'e' 'h'o'l'd'e'r'''s' 'l'i'f'e't'i'm'e'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'p'e'r's'o'n'a'l' 'f'l'i'g'h't' 'c'r'e'w' 'l'o'g' 'b'o'o'k' 'i's' 'r'e't'a'i'n'e'd' 'f'o'r' 'a't' 'l'e'a's't' 'f'i'v'e' 'y'e'a'r's' 'a'f't'e'r' 'i't's' 'l'a's't' 'e'n't'r'y'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 4"
+  },
+  {
+    "id": "REG-032",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'F'o'r' 'h'o'w' 'l'o'n'g' 'i's' 'a' 'd'r'a'f't' 'C'A'R' 'p'l'a'c'e'd' 'o'n' 't'h'e' 'D'G'C'A' 'w'e'b's'i't'e' 'f'o'r' 'o'b'j'e'c't'i'o'n's' 'a'n'd' 's'u'g'g'e's't'i'o'n's' 'b'e'f'o'r'e' 'f'i'n'a'l' 'i's's'u'e'?'",
+    "options": [
+      "'7' 'd'a'y's'",
+      "'1'4' 'd'a'y's'",
+      "'2'1' 'd'a'y's'",
+      "'3'0' 'd'a'y's'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'T'h'e' 's't'a't'e'd' 'c'o'n's'u'l't'a't'i'o'n' 'p'e'r'i'o'd' 'f'o'r' 'a' 'd'r'a'f't' 'C'A'R' 'i's' '3'0' 'd'a'y's' 'b'e'f'o'r'e' 'f'i'n'a'l' 'i's's'u'e'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 4"
+  },
+  {
+    "id": "REG-033",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'p'u'b'l'i'c'a't'i'o'n' 'i's' 'u's'e'd' 'f'o'r' 'u'r'g'e'n't',' 't'i'm'e'-'s'e'n's'i't'i'v'e' 'i'n'f'o'r'm'a't'i'o'n' 'a'b'o'u't' 'a' 'f'a'c'i'l'i't'y',' 's'e'r'v'i'c'e',' 'p'r'o'c'e'd'u'r'e' 'o'r' 'h'a'z'a'r'd'?'",
+    "options": [
+      "'A'I'C'",
+      "'N'O'T'A'M'",
+      "'O'p'e'r'a't'i'o'n's' 'M'a'n'u'a'l'",
+      "'C'e'r't'i'f'i'c'a't'e' 'o'f' 'a'i'r'w'o'r't'h'i'n'e's's'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A' 'N'O'T'A'M' 'p'r'o'v'i'd'e's' 't'i'm'e'-'s'e'n's'i't'i'v'e' 'o'p'e'r'a't'i'o'n'a'l' 'i'n'f'o'r'm'a't'i'o'n' 'w'h'o's'e' 't'i'm'e'l'y' 'k'n'o'w'l'e'd'g'e' 'i's' 'e's's'e'n't'i'a'l'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 5"
+  },
+  {
+    "id": "REG-034",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'a'i'r's'p'a'c'e' 't'y'p'e' 'p'e'r'm'i't's' 'f'l'i'g'h't' 'o'n'l'y' 'i'n' 'a'c'c'o'r'd'a'n'c'e' 'w'i't'h' 's'p'e'c'i'f'i'e'd' 'c'o'n'd'i't'i'o'n's'?'",
+    "options": [
+      "'R'e's't'r'i'c't'e'd' 'a'r'e'a'",
+      "'P'r'o'h'i'b'i't'e'd' 'a'r'e'a'",
+      "'D'a'n'g'e'r' 'a'r'e'a' 'i'n' 'e'v'e'r'y' 'c'i'r'c'u'm's't'a'n'c'e'",
+      "'A'e'r'o'd'r'o'm'e' 't'r'a'f'f'i'c' 'z'o'n'e' 'o'n'l'y'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A' 'r'e's't'r'i'c't'e'd' 'a'r'e'a' 'p'e'r'm'i't's' 'f'l'i'g'h't' 'o'n'l'y' 'i'n' 'a'c'c'o'r'd'a'n'c'e' 'w'i't'h' 'i't's' 's'p'e'c'i'f'i'e'd' 'c'o'n'd'i't'i'o'n's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 6"
+  },
+  {
+    "id": "REG-035",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i'd'e'n't'i'f'i'e'r' 'i's' 'a's's'i'g'n'e'd' 't'o' 'a' 'r'e'g'i's't'e'r'e'd' 'd'r'o'n'e' 'u'n'd'e'r' 't'h'e' 'D'r'o'n'e' 'R'u'l'e's' 's'y's't'e'm'?'",
+    "options": [
+      "'C'e'r't'i'f'i'c'a't'e' 'o'f' 'a'i'r'w'o'r't'h'i'n'e's's' 'n'u'm'b'e'r'",
+      "'S'S'R' 'c'o'd'e'",
+      "'U'n'i'q'u'e' 'I'd'e'n't'i'f'i'c'a't'i'o'n' 'N'u'm'b'e'r'",
+      "'A'e'r'o'd'r'o'm'e' 'r'e'f'e'r'e'n'c'e' 'c'o'd'e'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'A' 'r'e'g'i's't'e'r'e'd' 'd'r'o'n'e' 'r'e'c'e'i'v'e's' 'a' 'U'n'i'q'u'e' 'I'd'e'n't'i'f'i'c'a't'i'o'n' 'N'u'm'b'e'r',' 'c'o'm'm'o'n'l'y' 's'h'o'r't'e'n'e'd' 't'o' 'U'I'N'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 7"
+  },
+  {
+    "id": "REG-036",
+    "subject": "Air Regulations",
+    "topic": "Aircraft Act 1934 and Aircraft Rules 1937",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'g'e'n'e'r'a'l' 'm'a'x'i'm'u'm' 'f'i'n'e' 'i's' 's't'a't'e'd' 'i'n' 'B'a'l'i'''s' 's'u'm'm'a'r'y' 'o'f' 't'h'e' '2'0'2'4' 'A'c't'?'",
+    "options": [
+      "'R's'.' '1' 'l'a'k'h'",
+      "'R's'.' '1'0' 'l'a'k'h'",
+      "'R's'.' '5'0' 'l'a'k'h'",
+      "'R's'.' '1' 'c'r'o'r'e'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'B'a'l'i'''s' 's'u'm'm'a'r'y' 's't'a't'e's' 'a' 'g'e'n'e'r'a'l' 'm'a'x'i'm'u'm' 'f'i'n'e' 'o'f' 'R's'.' '1' 'c'r'o'r'e',' 'a'l'o'n'g's'i'd'e' 'i'm'p'r'i's'o'n'm'e'n't' 'u'p' 't'o' 't'w'o' 'y'e'a'r's' 'o'r' 'b'o't'h'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Indian Regulatory System', Sec 8"
+  },
+  {
+    "id": "REG-037",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'I'C'A'O' 'A'n'n'e'x' 'c'o'n't'a'i'n's' 't'h'e' 'S't'a'n'd'a'r'd's' 'f'o'r' 'a'i'r'c'r'a'f't' 'n'a't'i'o'n'a'l'i't'y' 'a'n'd' 'r'e'g'i's't'r'a't'i'o'n' 'm'a'r'k's'?'",
+    "options": [
+      "'A'n'n'e'x' '7'",
+      "'A'n'n'e'x' '1'",
+      "'A'n'n'e'x' '8'",
+      "'A'n'n'e'x' '9'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A'n'n'e'x' '7' 'c'o'n't'a'i'n's' 't'h'e' 'i'n't'e'r'n'a't'i'o'n'a'l' 'S't'a'n'd'a'r'd's' 'f'o'r' 'A'i'r'c'r'a'f't' 'N'a't'i'o'n'a'l'i't'y' 'a'n'd' 'R'e'g'i's't'r'a't'i'o'n' 'M'a'r'k's'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 1"
+  },
+  {
+    "id": "REG-038",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'o' 'a's's'i'g'n's' 't'h'e' 'i'n'd'i'v'i'd'u'a'l' 'r'e'g'i's't'r'a't'i'o'n' 'm'a'r'k' 't'o' 'a'n' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'T'h'e' 'a'i'r'c'r'a'f't' 'm'a'n'u'f'a'c't'u'r'e'r'",
+      "'T'h'e' 'I'n't'e'r'n'a't'i'o'n'a'l' 'T'e'l'e'c'o'm'm'u'n'i'c'a't'i'o'n' 'U'n'i'o'n' 'a'l'o'n'e'",
+      "'T'h'e' 'S't'a't'e' 'o'f' 'R'e'g'i's't'r'y' 'o'r' 'c'o'm'm'o'n' 'm'a'r'k' 'r'e'g'i's't'e'r'i'n'g' 'a'u't'h'o'r'i't'y'",
+      "'T'h'e' 'a'e'r'o'd'r'o'm'e' 'o'p'e'r'a't'o'r'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'S't'a't'e' 'o'f' 'R'e'g'i's't'r'y' 'o'r' 'c'o'm'm'o'n' 'm'a'r'k' 'r'e'g'i's't'e'r'i'n'g' 'a'u't'h'o'r'i't'y' 'a's's'i'g'n's' 't'h'e' 'a'i'r'c'r'a'f't'''s' 'r'e'g'i's't'r'a't'i'o'n' 'm'a'r'k'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 1"
+  },
+  {
+    "id": "REG-039",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'c'o'm'b'i'n'a't'i'o'n' 'm'u's't' 'b'e' 'e'x'c'l'u'd'e'd' 'b'e'c'a'u's'e' 'i't' 'c'a'n' 'b'e' 'c'o'n'f'u's'e'd' 'w'i't'h' 'a'n' 'u'r'g'e'n'c'y' 's'i'g'n'a'l'?'",
+    "options": [
+      "'R'C'C'",
+      "'P'A'N'",
+      "'D'D'D'",
+      "'L'L'L'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'P'A'N' 'i's' 'a'n' 'i'n't'e'r'n'a't'i'o'n'a'l'l'y' 'r'e'c'o'g'n'i's'e'd' 'u'r'g'e'n'c'y' 's'i'g'n'a'l' 'a'n'd' 'm'u's't' 'n'o't' 'b'e' 'u's'e'd' 'a's' 'a' 'r'e'g'i's't'r'a't'i'o'n'-'m'a'r'k' 'c'o'm'b'i'n'a't'i'o'n'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 1"
+  },
+  {
+    "id": "REG-040",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'm'a'r'k' 'd'o'e's' 'B'a'l'i' 'i'd'e'n't'i'f'y' 'f'o'r' 'I'n'd'i'a'n' 'c'i'v'i'l' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'A'T'",
+      "'V'U'",
+      "'U' 'f'o'l'l'o'w'e'd' 'b'y' 's'i'x' 'c'h'a'r'a'c't'e'r's'",
+      "'V'T'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'V'T' 'i's' 't'h'e' 'n'a't'i'o'n'a'l'i't'y' 'm'a'r'k' 't'h'a't' 'B'a'l'i' 'i'd'e'n't'i'f'i'e's' 'a's' 'c'o'n't'i'n'u'i'n'g' 'i'n' 'u's'e' 'f'o'r' 'I'n'd'i'a'n' 'c'i'v'i'l' 'a'i'r'c'r'a'f't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 2"
+  },
+  {
+    "id": "REG-041",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'i's' 't'h'e' 'm'i'n'i'm'u'm' 'h'e'i'g'h't' 'o'f' 'm'a'r'k's' 'o'n' 't'h'e' 'w'i'n'g's' 'o'f' 'a' 'h'e'a'v'i'e'r'-'t'h'a'n'-'a'i'r' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'3'0' 'c'm'",
+      "'4'0' 'c'm'",
+      "'5'0' 'c'm'",
+      "'6'0' 'c'm'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'w'i'n'g' 'm'a'r'k's' 'o'f' 'a' 'h'e'a'v'i'e'r'-'t'h'a'n'-'a'i'r' 'a'i'r'c'r'a'f't' 'm'u's't' 'b'e' 'a't' 'l'e'a's't' '5'0' 'c'm' 'h'i'g'h'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 3"
+  },
+  {
+    "id": "REG-042",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'e'r'e' 'a'r'e' 't'h'e' 'w'i'n'g' 'm'a'r'k's' 'p'l'a'c'e'd' 'o'n' 'a' 'h'e'a'v'i'e'r'-'t'h'a'n'-'a'i'r' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'O'n' 't'h'e' 'l'o'w'e'r' 'w'i'n'g' 's'u'r'f'a'c'e'",
+      "'O'n'l'y' 'o'n' 't'h'e' 'u'p'p'e'r' 'w'i'n'g' 's'u'r'f'a'c'e'",
+      "'O'n'l'y' 'o'n' 't'h'e' 'w'i'n'g' 't'i'p's'",
+      "'I'n's'i'd'e' 't'h'e' 'w'h'e'e'l' 'w'e'l'l's'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'T'h'e' 'r'e'q'u'i'r'e'd' 'w'i'n'g' 'm'a'r'k's' 'a'r'e' 'p'l'a'c'e'd' 'o'n' 't'h'e' 'l'o'w'e'r' 'w'i'n'g' 's'u'r'f'a'c'e' 'f'o'r' 'r'e'a'd'y' 'e'x't'e'r'n'a'l' 'i'd'e'n't'i'f'i'c'a't'i'o'n'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 3"
+  },
+  {
+    "id": "REG-043",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'm'i'n'i'm'u'm' 'h'e'i'g'h't' 'a'p'p'l'i'e's' 't'o' 'm'a'r'k's' 'o'n' 't'h'e' 'f'u's'e'l'a'g'e' 'o'r' 'v'e'r't'i'c'a'l' 't'a'i'l' 'o'f' 'a' 'h'e'a'v'i'e'r'-'t'h'a'n'-'a'i'r' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'2'0' 'c'm'",
+      "'3'0' 'c'm'",
+      "'4'0' 'c'm'",
+      "'5'0' 'c'm'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'F'u's'e'l'a'g'e' 'a'n'd' 'v'e'r't'i'c'a'l'-'t'a'i'l' 'm'a'r'k's' 'o'n' 'a' 'h'e'a'v'i'e'r'-'t'h'a'n'-'a'i'r' 'a'i'r'c'r'a'f't' 'm'u's't' 'b'e' 'a't' 'l'e'a's't' '3'0' 'c'm' 'h'i'g'h'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 3"
+  },
+  {
+    "id": "REG-044",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'd'o'c'u'm'e'n't' 'i's' 'e'v'i'd'e'n'c'e' 't'h'a't' 'a'n' 'a'i'r'c'r'a'f't' 'h'a's' 'b'e'e'n' 'e'n't'e'r'e'd' 'o'n' 't'h'e' 'n'a't'i'o'n'a'l' 'r'e'g'i's't'e'r'?'",
+    "options": [
+      "'C'e'r't'i'f'i'c'a't'e' 'o'f' 'A'i'r'w'o'r't'h'i'n'e's's'",
+      "'N'o'i's'e' 'c'e'r't'i'f'i'c'a't'e'",
+      "'J'o'u'r'n'e'y' 'l'o'g' 'b'o'o'k'",
+      "'C'e'r't'i'f'i'c'a't'e' 'o'f' 'R'e'g'i's't'r'a't'i'o'n'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'T'h'e' 'C'e'r't'i'f'i'c'a't'e' 'o'f' 'R'e'g'i's't'r'a't'i'o'n' 'i's' 't'h'e' 'o'f'f'i'c'i'a'l' 'e'v'i'd'e'n'c'e' 't'h'a't' 't'h'e' 'a'i'r'c'r'a'f't' 'h'a's' 'b'e'e'n' 'e'n't'e'r'e'd' 'o'n' 't'h'e' 'n'a't'i'o'n'a'l' 'r'e'g'i's't'e'r'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 4"
+  },
+  {
+    "id": "REG-045",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'i't'e'm' 'i's' 's'p'e'c'i'f'i'c'a'l'l'y' 'a'd'd'e'd' 't'o' 't'h'e' 'I'n'd'i'a'n' 'C'e'r't'i'f'i'c'a't'e' 'o'f' 'R'e'g'i's't'r'a't'i'o'n' 'f'o'r' 'a' 'l'e'a's'e'd' 'a'i'r'c'r'a'f't'?'",
+    "options": [
+      "'L'e'a's'e' 'v'a'l'i'd'i't'y' 'a'n'd' 'p'a'r't'i'c'u'l'a'r's' 'o'f' 'l'e's's'o'r' 'a'n'd' 'l'e's's'e'e'",
+      "'T'h'e' 'p'i'l'o't'''s' 'm'e'd'i'c'a'l' 'e'x'p'i'r'y'",
+      "'E'v'e'r'y' 'a'i'r'p'o'r't' 'i'n' 't'h'e' 'i'n't'e'n'd'e'd' 'r'o'u't'e' 'n'e't'w'o'r'k'",
+      "'A' 'p'a's's'e'n'g'e'r' 'm'a'n'i'f'e's't'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A' 'l'e'a's'e'd' 'a'i'r'c'r'a'f't'''s' 'c'e'r't'i'f'i'c'a't'e' 'i'n'c'l'u'd'e's' 't'h'e' 'l'e'a's'e' 'v'a'l'i'd'i't'y' 'a'n'd' 't'h'e' 'n'a'm'e's',' 'n'a't'i'o'n'a'l'i't'i'e's' 'a'n'd' 'a'd'd'r'e's's'e's' 'o'f' 'l'e's's'o'r' 'a'n'd' 'l'e's's'e'e'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 4"
+  },
+  {
+    "id": "REG-046",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'e'v'e'n't' 'i's' 'a' 's't'a't'e'd' 'g'r'o'u'n'd' 'f'o'r' 'D'G'C'A' 'c'a'n'c'e'l'l'a't'i'o'n' 'o'f' 'I'n'd'i'a'n' 'r'e'g'i's't'r'a't'i'o'n'?'",
+    "options": [
+      "'A' 'r'o'u't'i'n'e' 'c'h'a'n'g'e' 'o'f' 'p'a'r'k'i'n'g' 's't'a'n'd'",
+      "'T'h'e' 'C'e'r't'i'f'i'c'a't'e' 'o'f' 'A'i'r'w'o'r't'h'i'n'e's's' 'h'a's' 'b'e'e'n' 'e'x'p'i'r'e'd' 'f'o'r' 'f'i'v'e' 'y'e'a'r's' 'o'r' 'm'o'r'e'",
+      "'A' 's'i'n'g'l'e' 'd'e'l'a'y'e'd' 'd'e'p'a'r't'u'r'e'",
+      "'R'e'p'l'a'c'e'm'e'n't' 'o'f' 'a' 'c'a'b'i'n' 's'e'a't' 'c'o'v'e'r'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'A' 'C'e'r't'i'f'i'c'a't'e' 'o'f' 'A'i'r'w'o'r't'h'i'n'e's's' 't'h'a't' 'h'a's' 'r'e'm'a'i'n'e'd' 'e'x'p'i'r'e'd' 'f'o'r' 'f'i'v'e' 'y'e'a'r's' 'o'r' 'm'o'r'e' 'i's' 'a' 's't'a't'e'd' 'c'a'n'c'e'l'l'a't'i'o'n' 'g'r'o'u'n'd'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 5"
+  },
+  {
+    "id": "REG-047",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'o' 'e'x'e'r'c'i's'e's' 'o'p'e'r'a't'i'o'n'a'l' 'c'o'n't'r'o'l' 'o'v'e'r' 'a' 'l'e'a's'e'd' 'a'i'r'c'r'a'f't' 'i'n' 'B'a'l'i'''s' 's'u'm'm'a'r'y'?'",
+    "options": [
+      "'T'h'e' 'c'o'm'm'o'n' 'm'a'r'k' 'a'u't'h'o'r'i't'y'",
+      "'T'h'e' 'a'i'r'c'r'a'f't' 'm'a'n'u'f'a'c't'u'r'e'r'",
+      "'T'h'e' 'l'e's's'e'e' 'o'p'e'r'a't'o'r'",
+      "'T'h'e' 'a'e'r'o'd'r'o'm'e' 'l'i'c'e'n's'e'e'"
+    ],
+    "answerIndex": 2,
+    "explanation": "'T'h'e' 'l'e's's'e'e' 'o'p'e'r'a't'o'r' 'e'x'e'r'c'i's'e's' 'o'p'e'r'a't'i'o'n'a'l' 'c'o'n't'r'o'l' 'a'n'd' 'm'u's't' 'h'o'l'd' 't'h'e' 'n'e'c'e's's'a'r'y' 'e'c'o'n'o'm'i'c' 'a'n'd' 'o'p'e'r'a't'i'n'g' 'a'u't'h'o'r'i't'y'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 5"
+  },
+  {
+    "id": "REG-048",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'a't' 'd'o'e's' 'a' 'c'o'm'm'o'n' 'm'a'r'k' 'r'e'p'l'a'c'e' 'f'o'r' 'a' 'q'u'a'l'i'f'y'i'n'g' 'i'n't'e'r'n'a't'i'o'n'a'l' 'o'p'e'r'a't'i'n'g' 'a'g'e'n'c'y'?'",
+    "options": [
+      "'T'h'e' 'r'e'g'i's't'r'a't'i'o'n' 'c'e'r't'i'f'i'c'a't'e'",
+      "'T'h'e' 'i'd'e'n't'i'f'i'c'a't'i'o'n' 'p'l'a't'e'",
+      "'T'h'e' 'r'e'g'i's't'r'a't'i'o'n' 'm'a'r'k'",
+      "'T'h'e' 'n'a't'i'o'n'a'l'i't'y' 'm'a'r'k'"
+    ],
+    "answerIndex": 3,
+    "explanation": "'A' 'c'o'm'm'o'n' 'm'a'r'k' 'r'e'p'l'a'c'e's' 't'h'e' 'n'a't'i'o'n'a'l'i't'y' 'm'a'r'k' 'f'o'r' 'a' 'q'u'a'l'i'f'y'i'n'g' 'i'n't'e'r'n'a't'i'o'n'a'l' 'o'p'e'r'a't'i'n'g' 'a'g'e'n'c'y'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Nationality and Registration', Sec 5"
+  },
+  {
+    "id": "REG-049",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'I'C'A'O' 'A'n'n'e'x' 'c'o'n't'a'i'n's' 't'h'e' 'i'n't'e'r'n'a't'i'o'n'a'l' 'a'i'r'w'o'r't'h'i'n'e's's' 'S't'a'n'd'a'r'd's'?'",
+    "options": [
+      "'A'n'n'e'x' '8'",
+      "'A'n'n'e'x' '6'",
+      "'A'n'n'e'x' '7'",
+      "'A'n'n'e'x' '1'6'"
+    ],
+    "answerIndex": 0,
+    "explanation": "'A'n'n'e'x' '8' 'c'o'n't'a'i'n's' 't'h'e' 'i'n't'e'r'n'a't'i'o'n'a'l' 'S't'a'n'd'a'r'd's' 'f'o'r' 't'h'e' 'a'i'r'w'o'r't'h'i'n'e's's' 'o'f' 'a'i'r'c'r'a'f't'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Airworthiness', Sec 1"
+  },
+  {
+    "id": "REG-050",
+    "subject": "Air Regulations",
+    "topic": "Air Regulations",
+    "difficulty": "medium",
+    "question": "'W'h'i'c'h' 'S't'a't'e' 'd'e't'e'r'm'i'n'e's' 'w'h'e't'h'e'r' 'a'n' 'a'i'r'c'r'a'f't' 'o'n' 'i't's' 'r'e'g'i's't'e'r' 'c'o'n't'i'n'u'e's' 't'o' 'b'e' 'a'i'r'w'o'r't'h'y'?'",
+    "options": [
+      "'S't'a't'e' 'o'f' 'M'a'n'u'f'a'c't'u'r'e'",
+      "'S't'a't'e' 'o'f' 'R'e'g'i's't'r'y'",
+      "'S't'a't'e' 'o'f' 't'h'e' 'n'e'x't' 'l'a'n'd'i'n'g'",
+      "'S't'a't'e' 'o'f' 't'h'e' 'o'p'e'r'a't'o'r'''s' 'i'n's'u'r'e'r'"
+    ],
+    "answerIndex": 1,
+    "explanation": "'T'h'e' 'S't'a't'e' 'o'f' 'R'e'g'i's't'r'y' 'd'e't'e'r'm'i'n'e's' 'w'h'e't'h'e'r' 'a'n' 'a'i'r'c'r'a'f't' 'o'n' 'i't's' 'r'e'g'i's't'e'r' 'c'o'n't'i'n'u'e's' 't'o' 'b'e' 'a'i'r'w'o'r't'h'y'.'",
+    "source": "Air Regulation & Human Factors 17th Ed. / DGCA CAR, Chapter 'Airworthiness', Sec 1"
+  },
+  {
+    "id": "MET-001",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmosphere Composition and Structure",
+    "difficulty": "easy",
+    "question": "What is the lowest layer of the Earth's atmosphere, where virtually all aviation weather phenomena occur?",
+    "options": [
+      "Troposphere",
+      "Tropopause",
+      "Stratosphere",
+      "Mesosphere"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Troposphere is the lowest portion of the atmosphere extending from surface to 16-18 km over equator and 8-10 km over poles. About 70% of atmospheric mass and all weather is confined here.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 1 (Atmosphere), p. 5, Q1"
+  },
+  {
+    "id": "MET-002",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmosphere Composition and Structure",
+    "difficulty": "medium",
+    "question": "What is the average height of the Tropopause over the equator and over the poles respectively?",
+    "options": [
+      "8-10 km over Equator, 16-18 km over Poles",
+      "16-18 km over Equator, 8-10 km over Poles",
+      "12-14 km over Equator, 12-14 km over Poles",
+      "20-22 km over Equator, 6-8 km over Poles"
+    ],
+    "answerIndex": 1,
+    "explanation": "Due to intense convective heating at the equator, the troposphere expands upward to 16-18 km. Over cold polar regions it extends to only 8-10 km.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 1 (Atmosphere), p. 5, Q2 & Q3"
+  },
+  {
+    "id": "MET-003",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmosphere Composition and Structure",
+    "difficulty": "medium",
+    "question": "In the International Standard Atmosphere (ISA), what are the mean sea level temperature and pressure?",
+    "options": [
+      "15°C and 1013.25 hPa",
+      "20°C and 1000.00 hPa",
+      "0°C and 1013.25 hPa",
+      "15°C and 1020.00 hPa"
+    ],
+    "answerIndex": 0,
+    "explanation": "ICAO International Standard Atmosphere (ISA) MSL values: Temperature = 15°C (288.15 K), Pressure = 1013.25 hPa (29.92 inHg), Density = 1225 g/m³, Lapse rate = 6.5°C/km up to 11 km.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 1 (Atmosphere), p. 7, Q21"
+  },
+  {
+    "id": "MET-004",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmosphere Composition and Structure",
+    "difficulty": "hard",
+    "question": "In ISA, what is the temperature at 11 km and what happens to it between 11 km and 20 km?",
+    "options": [
+      "-45°C, and increases at 2°C/1000 ft",
+      "-56.5°C, and remains constant (isothermal)",
+      "-65.5°C, and decreases to -90°C",
+      "-35.5°C, and rises to 0°C"
+    ],
+    "answerIndex": 1,
+    "explanation": "In ISA, temperature decreases at 6.5°C/km (approx 1.98°C/1000 ft) up to 11 km where it reaches -56.5°C. From 11 km to 20 km it remains constant at -56.5°C (isothermal).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 1 (Atmosphere), p. 7, Q17"
+  },
+  {
+    "id": "MET-005",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmosphere Composition and Structure",
+    "difficulty": "easy",
+    "question": "By volume, what are the two predominant gases in dry atmospheric air and their approximate ratio?",
+    "options": [
+      "Nitrogen 78.08% and Oxygen 20.95% (approx 4:1 by volume)",
+      "Oxygen 78% and Nitrogen 21% (approx 4:1 by volume)",
+      "Nitrogen 50% and Oxygen 50% (approx 1:1 by volume)",
+      "Nitrogen 60% and Argon 40% (approx 3:2 by volume)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Dry air is composed of Nitrogen (78.08%), Oxygen (20.95%), Argon (0.93%), and CO2 (0.035%). The ratio of Nitrogen to Oxygen is approximately 4:1 by volume and 3:1 by weight.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 1 (Atmosphere), p. 1-2, Q18"
+  },
+  {
+    "id": "MET-006",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure and Altimetry",
+    "difficulty": "easy",
+    "question": "Near mean sea level, a change of 1 hPa in pressure corresponds approximately to what vertical distance?",
+    "options": [
+      "10 feet",
+      "27 to 30 feet",
+      "60 feet",
+      "100 feet"
+    ],
+    "answerIndex": 1,
+    "explanation": "At MSL, 1 hPa change in pressure is roughly equivalent to 27-30 feet (96 * T / p feet). At 20,000 ft it is ~50 ft, and at 40,000 ft it is ~100 ft per hPa.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 2 (Atmospheric Pressure), p. 12, Q13"
+  },
+  {
+    "id": "MET-007",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure and Altimetry",
+    "difficulty": "medium",
+    "question": "What altimeter sub-scale setting causes the altimeter to indicate zero when the aircraft is on the runway?",
+    "options": [
+      "QNH",
+      "QNE",
+      "QFF",
+      "QFE"
+    ],
+    "answerIndex": 3,
+    "explanation": "QFE is the actual atmospheric pressure at aerodrome elevation (or runway threshold). When set on the sub-scale, the altimeter reads zero at that reference point.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 2 (Atmospheric Pressure), p. 18, Q19"
+  },
+  {
+    "id": "MET-008",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure and Altimetry",
+    "difficulty": "medium",
+    "question": "What does QNH indicate when set on the altimeter subscale?",
+    "options": [
+      "Height above ground level (AGL)",
+      "Vertical distance above Mean Sea Level (MSL), reading aerodrome elevation on the ground",
+      "Pressure altitude with reference to standard 1013.25 hPa datum",
+      "Density altitude"
+    ],
+    "answerIndex": 1,
+    "explanation": "QNH is station level pressure reduced to MSL using ISA temperature lapse rate. On ground, it reads aerodrome elevation above MSL.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 2 (Atmospheric Pressure), p. 18, Q10"
+  },
+  {
+    "id": "MET-009",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure and Altimetry",
+    "difficulty": "hard",
+    "question": "When flying from an area of high pressure into an area of low pressure without resetting the altimeter subscale, the altimeter will:",
+    "options": [
+      "Under-read (indicate lower than true altitude)",
+      "Over-read (indicate higher than true altitude, so aircraft is lower than indicated)",
+      "Read accurately",
+      "Freeze at the last level"
+    ],
+    "answerIndex": 1,
+    "explanation": "Remember the golden rule 'High to Low — Look out below'. Flying from High pressure to Low pressure (or Warm to Cold), the altimeter OVER-READS (indicates higher than true altitude, meaning you are lower than you think).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 2 (Atmospheric Pressure), p. 19, Q4"
+  },
+  {
+    "id": "MET-010",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure and Altimetry",
+    "difficulty": "medium",
+    "question": "Lines on a weather chart connecting places having equal barometric pressure are known as:",
+    "options": [
+      "Isotherms",
+      "Isobars",
+      "Isogonals",
+      "Isallobars"
+    ],
+    "answerIndex": 1,
+    "explanation": "Isobars are lines connecting points of equal atmospheric pressure. (Isotherms = equal temp, Isogonals = equal magnetic variation, Isallobars = equal pressure tendency).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 2 (Atmospheric Pressure), p. 16, Q14"
+  },
+  {
+    "id": "MET-011",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature and Heat Transfer",
+    "difficulty": "easy",
+    "question": "At what time of day is surface temperature normally at its minimum value?",
+    "options": [
+      "Exactly at midnight",
+      "At sunset",
+      "About 30 minutes to 1 hour after sunrise",
+      "At 03:00 hours local time"
+    ],
+    "answerIndex": 2,
+    "explanation": "Due to nocturnal outgoing terrestrial radiation exceeding incoming solar radiation until sun angle climbs, minimum temperature occurs about 30 min to 1 hour after dawn/sunrise.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 3 (Temperature), p. 32, Q13"
+  },
+  {
+    "id": "MET-012",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature and Heat Transfer",
+    "difficulty": "medium",
+    "question": "What is 'Albedo' in atmospheric physics?",
+    "options": [
+      "The total solar radiation absorbed by the earth surface",
+      "The reflecting power of the Earth and its atmosphere (ratio of reflected to incident radiation)",
+      "The sensible heat transferred by convection",
+      "The temperature inversion in the stratosphere"
+    ],
+    "answerIndex": 1,
+    "explanation": "Albedo is the fraction of incident solar radiation reflected back into space by clouds, atmosphere and the Earth's surface (average planetary albedo is ~30%).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 3 (Temperature), p. 31, Q4"
+  },
+  {
+    "id": "MET-013",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density and Density Altitude",
+    "difficulty": "medium",
+    "question": "How does high density altitude affect aircraft take-off and climb performance?",
+    "options": [
+      "Decreases take-off distance and increases climb rate",
+      "Has no effect on engine thrust or lift",
+      "Increases take-off run and decreases rate of climb",
+      "Reduces true airspeed required for liftoff"
+    ],
+    "answerIndex": 2,
+    "explanation": "High density altitude means less dense air. Engines produce less thrust, wings produce less lift for a given TAS, and propellers produce less traction, leading to longer ground rolls and degraded climb.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 4 (Air Density), p. 36, Q5"
+  },
+  {
+    "id": "MET-014",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density and Density Altitude",
+    "difficulty": "medium",
+    "question": "For every 1°C increase in temperature above ISA at a given pressure altitude, density altitude increases by approximately:",
+    "options": [
+      "30 feet",
+      "60 feet",
+      "120 feet",
+      "250 feet"
+    ],
+    "answerIndex": 2,
+    "explanation": "Density Altitude = Pressure Altitude + [120 * (OAT - ISA Temp)]. For each 1°C above ISA, density altitude rises by approximately 120 ft.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 4 (Air Density), p. 36"
+  },
+  {
+    "id": "MET-015",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity and Adiabatic Processes",
+    "difficulty": "easy",
+    "question": "The temperature to which unsaturated air must be cooled at constant pressure to reach saturation is called the:",
+    "options": [
+      "Wet bulb temperature",
+      "Virtual temperature",
+      "Dew point temperature",
+      "Frost point"
+    ],
+    "answerIndex": 2,
+    "explanation": "Dew point (Td) is the temperature to which moist air must be cooled at constant pressure and water vapour content to become completely saturated (RH = 100%).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 5 (Humidity), p. 41, Q2"
+  },
+  {
+    "id": "MET-016",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity and Adiabatic Processes",
+    "difficulty": "medium",
+    "question": "When the air temperature (dry bulb) and dew point temperature are equal, what is the Relative Humidity?",
+    "options": [
+      "0%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answerIndex": 3,
+    "explanation": "When dry bulb equals dew point (spread = 0), the air is completely saturated with water vapour and Relative Humidity is 100%. Fog, mist or cloud formation is very likely.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 5 (Humidity), p. 41-42, Q3"
+  },
+  {
+    "id": "MET-017",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Stability and Instability",
+    "difficulty": "medium",
+    "question": "What is the standard Dry Adiabatic Lapse Rate (DALR) of an unsaturated ascending parcel of air?",
+    "options": [
+      "6.5°C per km (approx 2°C/1000 ft)",
+      "9.8°C per km (approx 3°C/1000 ft)",
+      "5.0°C per km (approx 1.5°C/1000 ft)",
+      "1.0°C per 1000 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dry Adiabatic Lapse Rate (DALR) is constant at 9.8°C per km, commonly taken as 3°C per 1000 feet (or 10°C/km) for unsaturated air.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 9 (Stability & Instability), p. 86, Q11"
+  },
+  {
+    "id": "MET-018",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Stability and Instability",
+    "difficulty": "hard",
+    "question": "When the Environmental Lapse Rate (ELR) is less than the Saturated Adiabatic Lapse Rate (SALR), the atmosphere is:",
+    "options": [
+      "Conditionally unstable",
+      "Absolutely unstable",
+      "Absolutely stable",
+      "Neutral"
+    ],
+    "answerIndex": 2,
+    "explanation": "When ELR < SALR, even a saturated lifted parcel will be cooler and denser than surrounding air, so it sinks back. Thus the air is Absolutely Stable.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 9 (Stability & Instability), p. 87, Q10"
+  },
+  {
+    "id": "MET-019",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Stability and Instability",
+    "difficulty": "easy",
+    "question": "An atmospheric layer in which temperature increases with increasing height is called an:",
+    "options": [
+      "Isothermal layer",
+      "Inversion",
+      "Super-adiabatic layer",
+      "Adiabatic layer"
+    ],
+    "answerIndex": 1,
+    "explanation": "An Inversion is a layer where temperature increases with altitude (negative lapse rate). Inversions act as lids to vertical motion and trap pollutants, fog and haze.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 9 (Stability & Instability), p. 86, Q19"
+  },
+  {
+    "id": "MET-020",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds and General Circulation",
+    "difficulty": "easy",
+    "question": "According to Buys Ballot's Law, if an observer in the Northern Hemisphere stands with their back to the wind, where is the low pressure?",
+    "options": [
+      "To their right",
+      "Directly ahead",
+      "To their left",
+      "Directly behind"
+    ],
+    "answerIndex": 2,
+    "explanation": "Buys Ballot's Law states: In Northern Hemisphere, if you stand with your back to the wind, low pressure is to your left and high pressure to your right (reversed in Southern Hemisphere).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 6 (Winds), p. 46, Q1"
+  },
+  {
+    "id": "MET-021",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds and General Circulation",
+    "difficulty": "medium",
+    "question": "Coriolis force is zero at the Equator and reaches its maximum value at:",
+    "options": [
+      "30° Latitude",
+      "45° Latitude",
+      "60° Latitude",
+      "The Poles (90° Latitude)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Coriolis force magnitude is given by 2 * Omega * V * sin(latitude). Since sin(0°) = 0 at equator, it is zero there and maximum at the poles where sin(90°) = 1.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 6 (Winds), p. 47, Q6"
+  },
+  {
+    "id": "MET-022",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds and General Circulation",
+    "difficulty": "medium",
+    "question": "A Geostrophic Wind is the horizontal wind that results from the exact balance between which two forces?",
+    "options": [
+      "Centrifugal force and Friction force",
+      "Pressure Gradient Force and Coriolis Force",
+      "Gravity and Buoyancy",
+      "Coriolis Force and Surface Friction"
+    ],
+    "answerIndex": 1,
+    "explanation": "Geostrophic wind blows parallel to straight isobars when Pressure Gradient Force is exactly balanced by Coriolis Force (ignoring friction).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 6 (Winds), p. 48, Q5"
+  },
+  {
+    "id": "MET-023",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds and General Circulation",
+    "difficulty": "medium",
+    "question": "What is the difference between an Anabatic wind and a Katabatic wind?",
+    "options": [
+      "Anabatic is warm up-slope wind during day; Katabatic is cold down-slope wind at night",
+      "Anabatic is cold down-slope wind; Katabatic is warm up-slope wind",
+      "Both are down-slope winds differing only in speed",
+      "Anabatic occurs over sea; Katabatic occurs over land"
+    ],
+    "answerIndex": 0,
+    "explanation": "Anabatic wind is the daytime up-slope wind caused by solar heating of mountain slopes. Katabatic wind is the nighttime down-slope drainage of dense, cold air cooled by nocturnal radiation.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 6 (Winds), p. 54, Q9, Q18, Q20"
+  },
+  {
+    "id": "MET-024",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds, Fog and Precipitation",
+    "difficulty": "easy",
+    "question": "By international definition, Fog is reported when horizontal visibility is reduced below:",
+    "options": [
+      "500 metres",
+      "1000 metres (1 km)",
+      "1500 metres",
+      "3000 metres"
+    ],
+    "answerIndex": 1,
+    "explanation": "Fog (FG) is water droplets suspended in air reducing surface visibility to less than 1000 m with RH near 100%. Between 1000 m and 5000 m it is reported as Mist (BR).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 7 (Visibility and Fog), p. 66 & 71, Q1, Q4"
+  },
+  {
+    "id": "MET-025",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds, Fog and Precipitation",
+    "difficulty": "medium",
+    "question": "Which cloud type is characterized as a heavy, dense cloud of immense vertical extent that produces lightning, thunder, and squalls?",
+    "options": [
+      "Cirrocumulus (CC)",
+      "Altostratus (AS)",
+      "Cumulonimbus (CB)",
+      "Nimbostratus (NS)"
+    ],
+    "answerIndex": 2,
+    "explanation": "Cumulonimbus (CB) is the thunderstorm cloud. It presents the greatest hazard in aviation, featuring severe turbulence, icing, hail, squall winds, microbursts and lightning.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 8 (Vertical Motion and Clouds), p. 78, Q4"
+  },
+  {
+    "id": "MET-026",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds, Fog and Precipitation",
+    "difficulty": "medium",
+    "question": "A continuous halo around the Sun or Moon is typically an optical phenomenon produced by refraction through ice crystals in which cloud?",
+    "options": [
+      "Altocumulus (AC)",
+      "Cirrostratus (CS)",
+      "Stratocumulus (SC)",
+      "Nimbostratus (NS)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Halo phenomena (22° and 46° rings) are produced by refraction of light through hexagonal ice crystals in Cirrostratus (CS) clouds. Corona is produced by diffraction in Altostratus/droplets.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 10 (Optical Phenomena), p. 94 & 99, Q10, Q12, Q14"
+  },
+  {
+    "id": "MET-027",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms, Icing and Turbulence",
+    "difficulty": "medium",
+    "question": "What are the three essential conditions required for the formation of a thunderstorm?",
+    "options": [
+      "Shallow lapse rate, low humidity, strong upper winds",
+      "Steep lapse rate (instability), adequate moisture supply, and a lifting trigger mechanism",
+      "High barometric pressure, clear sky, descending air",
+      "Sub-zero ground temperatures, calm wind, stratiform clouds"
+    ],
+    "answerIndex": 1,
+    "explanation": "The 3 essential ingredients are: (1) Steep lapse rate (environmental instability) through 5-6 km, (2) Abundant moisture in lower levels, (3) Triggering lifting mechanism (convection, frontal, or orographic).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 13 (Thunderstorm), p. 112 & 122, Q1"
+  },
+  {
+    "id": "MET-028",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms, Icing and Turbulence",
+    "difficulty": "hard",
+    "question": "What is the most severe and dangerous form of airframe icing, and in what temperature range is it most likely?",
+    "options": [
+      "Hoar frost, between -20°C and -40°C",
+      "Rime ice, between -15°C and -30°C",
+      "Glaze (Clear) Ice, between 0°C and -10°C in large supercooled water droplets",
+      "Mixed ice, between -30°C and -40°C"
+    ],
+    "answerIndex": 2,
+    "explanation": "Clear (Glaze) ice forms from large supercooled water droplets freezing slowly over the airframe, creating a smooth, heavy, tenacious sheet of ice that severely disrupts aerodynamics. Optimum temp is 0°C to -10°C.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 12 (Ice Accretion), p. 106 & 108, Q6"
+  },
+  {
+    "id": "MET-029",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms, Icing and Turbulence",
+    "difficulty": "hard",
+    "question": "What is a Microburst and what horizontal wind change can an aircraft encounter when penetrating it on approach?",
+    "options": [
+      "A horizontal whirlwind causing tailwind only",
+      "An intense localized downdraught (< 4 km diameter) producing strong headwind followed by downdraught and sudden severe tailwind",
+      "A thermal updraft lifting the aircraft above glidepath",
+      "A gentle sea breeze shift"
+    ],
+    "answerIndex": 1,
+    "explanation": "A microburst is a concentrated downdraft (< 4 km across) with ground outflow up to 90 km/h. On landing approach, the aircraft first encounters a strong headwind (lifts plane), then strong sink, then an abrupt tailwind (causing dangerous loss of airspeed and lift).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 13 (Thunderstorm), p. 117-118, Q20"
+  },
+  {
+    "id": "MET-030",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems, Western Disturbances and Indian Monsoon",
+    "difficulty": "medium",
+    "question": "What are Norwesters (locally called Kalbaishakhi) in the context of Indian aviation climatology?",
+    "options": [
+      "Gentle northwesterly winter breezes over Kerala",
+      "Violent severe thunderstorms and squall lines affecting West Bengal, Bihar, Orissa and Assam during Pre-monsoon (March-May)",
+      "Western disturbances over Jammu & Kashmir in December",
+      "Cold wave incursions from Siberia into Rajasthan"
+    ],
+    "answerIndex": 1,
+    "explanation": "Norwesters (Kalbaishakhi) are violent severe thunderstorms originating over Chota Nagpur plateau and moving SE across Bengal, Bihar, and Assam during pre-monsoon (March to May), packing severe squalls, hail and lightning.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 13 (Thunderstorm), p. 120 & 122, Q3, Q12, Q14"
+  },
+  {
+    "id": "MET-031",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems, Western Disturbances and Indian Monsoon",
+    "difficulty": "medium",
+    "question": "Western Disturbances (WDs) which affect North and Northwest India mainly originate over which region?",
+    "options": [
+      "The Bay of Bengal",
+      "The Mediterranean Sea, Caspian Sea and Black Sea region",
+      "The South Indian Ocean near Madagascar",
+      "The South China Sea"
+    ],
+    "answerIndex": 1,
+    "explanation": "Western Disturbances are extra-tropical low pressure systems/troughs in middle latitude westerlies that originate over Mediterranean, Caspian and Black Seas, moving eastward across Pakistan and North India in winter.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 14 (Air Masses, Fronts, WDs), p. 132 & 135, Q29"
+  },
+  {
+    "id": "MET-032",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems, Western Disturbances and Indian Monsoon",
+    "difficulty": "hard",
+    "question": "During the Southwest Monsoon season in India, where is the Sub-Tropical Westerly Jet (STJ) and what jet stream establishes over South India?",
+    "options": [
+      "STJ remains over Delhi; no other jet stream forms",
+      "STJ shifts north of the Himalayas, and Tropical Easterly Jet (TEJ) establishes near 13°N at 15 km altitude",
+      "STJ moves south to Sri Lanka and blows at 200 kt",
+      "Both jets blow as westerly winds over Central India"
+    ],
+    "answerIndex": 1,
+    "explanation": "In summer/monsoon, the STJ shifts north of the Tibetan Plateau. Simultaneously, the Tropical Easterly Jet (TEJ) develops over Peninsular India near 13°N (Chennai) at 15-16 km (FL450-500) with speeds 60-100 kt.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 15 (Jet Streams), p. 137-139, Q17, Q18"
+  },
+  {
+    "id": "MET-033",
+    "subject": "Aviation Meteorology",
+    "topic": "Aviation Weather Reports (METAR, SPECI, TAF, SIGMET)",
+    "difficulty": "easy",
+    "question": "In a METAR report, what does the descriptor 'CAVOK' signify?",
+    "options": [
+      "Clear air above 10,000 feet only",
+      "Visibility >= 10 km, no clouds below 1500 m (5000 ft) or MSA (whichever higher), no CB/TCU, and no significant weather",
+      "Cloud ceiling at 1000 ft and light rain",
+      "Current altimeter value is OK"
+    ],
+    "answerIndex": 1,
+    "explanation": "CAVOK (Ceiling and Visibility OK) requires: (1) Visibility >= 10 km, (2) No cloud below 1500 m (5000 ft) or highest MSA, (3) No CB or TCU, (4) No weather of significance.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 25 (METAR SPECI), p. 219 & 229, Q34, Q36"
+  },
+  {
+    "id": "MET-034",
+    "subject": "Aviation Meteorology",
+    "topic": "Aviation Weather Reports (METAR, SPECI, TAF, SIGMET)",
+    "difficulty": "medium",
+    "question": "What is the validity period of a TREND landing forecast appended to a METAR or SPECI?",
+    "options": [
+      "30 minutes",
+      "1 hour",
+      "2 hours",
+      "6 hours"
+    ],
+    "answerIndex": 2,
+    "explanation": "A TREND forecast is a landing forecast appended to METAR or SPECI and is valid for TWO (2) hours from the time of the report.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 25 (METAR SPECI & TREND), p. 223 & 228, Q15"
+  },
+  {
+    "id": "MET-035",
+    "subject": "Aviation Meteorology",
+    "topic": "Aviation Weather Reports (METAR, SPECI, TAF, SIGMET)",
+    "difficulty": "hard",
+    "question": "A METAR reads: 'METAR VIDP 160230Z 30015G25KT ... Q1003'. What does 'Q1003' indicate?",
+    "options": [
+      "Current station pressure QFE is 1003 hPa",
+      "Current QNH altimeter setting rounded down to nearest whole hectopascal is 1003 hPa",
+      "Temperature is 10.03°C",
+      "Runway Visual Range is 1003 metres"
+    ],
+    "answerIndex": 1,
+    "explanation": "Q indicates QNH (altimeter setting) in hectopascals, rounded down to the nearest whole number. Thus Q1003 means QNH is 1003 hPa (e.g., actual value between 1003.0 and 1003.9 hPa).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 25 (METAR SPECI), p. 219, 222 & 228, Q18, Q21"
+  },
+  {
+    "id": "MET-036",
+    "subject": "Aviation Meteorology",
+    "topic": "Aviation Weather Reports (METAR, SPECI, TAF, SIGMET)",
+    "difficulty": "medium",
+    "question": "What weather warning message is issued by a Meteorological Watch Office (MWO) for en-route hazards like severe turbulence, severe icing, or thunderstorms?",
+    "options": [
+      "METAR",
+      "SPECI",
+      "SIGMET",
+      "ROFOR"
+    ],
+    "answerIndex": 2,
+    "explanation": "SIGMET (Significant Meteorological Information) is issued by an MWO for information concerning en-route weather phenomena which may affect the safety of aircraft operations (valid up to 4 hrs, or 6 hrs for volcanic ash/tropical cyclone).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 21 & 27 (SIGMET), p. 192 & 196, Q19, Q20, Q21"
+  },
+  {
+    "id": "MET-037",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds and General Circulation",
+    "difficulty": "medium",
+    "question": "In the Southern Hemisphere, around a low pressure area (cyclonic circulation), winds blow in which direction?",
+    "options": [
+      "Anticlockwise",
+      "Clockwise",
+      "Straight across isobars from high to low with no curvature",
+      "Parallel to lines of latitude only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Because Coriolis force acts to the left in the Southern Hemisphere, winds blow CLOCKWISE around a low pressure center and anticlockwise around a high (the exact reverse of the Northern Hemisphere).",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 6 (Winds), p. 62, Q25"
+  },
+  {
+    "id": "MET-038",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds, Fog and Precipitation",
+    "difficulty": "medium",
+    "question": "What cloud species exhibits smooth, lens-shaped outlines and is a key visual indicator of mountain waves and severe turbulence?",
+    "options": [
+      "Fractostratus (FS)",
+      "Altocumulus Lenticularis (AC lent)",
+      "Towering Cumulus (TCU)",
+      "Cirrus Uncinus"
+    ],
+    "answerIndex": 1,
+    "explanation": "Lenticular clouds (Altocumulus lenticularis) form at the crests of standing mountain waves on the leeward side of mountain ranges. They indicate strong mountain wave activity and associated turbulence.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 8 (Vertical Motion and Clouds) & Ch 17, p. 81 & 146, Q12"
+  },
+  {
+    "id": "MET-039",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms, Icing and Turbulence",
+    "difficulty": "medium",
+    "question": "What is Carburetor Icing, and under what atmospheric conditions can serious carburetor icing occur?",
+    "options": [
+      "Icing only when flying through heavy snow below -20°C",
+      "Icing caused by fuel vaporization and throttle pressure drop, possible even in clear air at ambient temperatures up to +30°C with high humidity",
+      "Icing that occurs exclusively at cruising levels above FL250",
+      "Ice accumulating on the pitot tube"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pressure drop across the carburetor venturi and fuel vaporization causes a temperature drop up to 20-25°C. Thus carburetor icing can occur even in clear air at ambient temperatures between -10°C and +30°C if RH is above 60%.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 12 (Ice Accretion), p. 107 & 109, Q14"
+  },
+  {
+    "id": "MET-040",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure and Altimetry",
+    "difficulty": "hard",
+    "question": "If an aircraft is flying at a constant indicated altitude with altimeter subscale set to 1013.2 hPa, flying from warm air into cold air will cause the true altitude to:",
+    "options": [
+      "Increase",
+      "Decrease (the aircraft descends closer to the ground than indicated)",
+      "Remain completely unchanged",
+      "Oscillate rhythmically"
+    ],
+    "answerIndex": 1,
+    "explanation": "'From High to Low or Hot to Cold, Look out below!' In colder air columns, pressure levels are compressed closer together towards the ground. An altimeter measuring pressure will cause the aircraft to fly at a lower true altitude than indicated.",
+    "source": "I.C. Joshi Aviation Meteorology 3rd Ed., Chapter 2 (Atmospheric Pressure), p. 13-14 & 23, Q11"
+  }
+];
+
+    /* ══════════════════════════════════════════════════════════
+       SUBJECTS — derived from QUESTIONS
+       ══════════════════════════════════════════════════════════ */
+    const ALL_SUBJECTS = [
+      "Air Regulations", "Air Navigation", "Aviation Meteorology",
+      "Technical General", "Technical Specific", "RTR"
+    ];
+
+    /* ══════════════════════════════════════════════════════════
+       STORAGE HELPERS (safe try/catch wrappers)
+       ══════════════════════════════════════════════════════════ */
+    function storageGet(key, fallback) {
+      try { const v = localStorage.getItem(key); return v !== null ? JSON.parse(v) : fallback; }
+      catch { return fallback; }
+    }
+    function storageSet(key, val) {
+      try { localStorage.setItem(key, JSON.stringify(val)); } catch { }
+    }
+    function storageDel(key) {
+      try { localStorage.removeItem(key); } catch { }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       APP STATE
+       ══════════════════════════════════════════════════════════ */
+    let state = {
+      selectedSubjects: [],   // [] means "All Subjects"
+      mode: "practice",       // "practice" | "timed"
+      timerMinutes: 30,
+      questions: [],           // current quiz questions (shuffled, with shuffled options)
+      currentIdx: 0,
+      answers: [],             // user's chosen option index per question (-1 = unanswered)
+      flags: [],               // boolean per question
+      revealed: [],            // boolean per question (practice mode — answer shown)
+      startTime: 0,
+      endTime: 0,
+      timerInterval: null,
+      timerRemaining: 0,       // seconds left (timed mode)
+      gridOpen: false,
+      finished: false,
+    };
+
+    // History stored per subject: { attempted, correct }
+    let history = storageGet("cpl_history", {});
+    let darkMode = storageGet("cpl_dark", false);
+
+    /* ══════════════════════════════════════════════════════════
+       DOM REFS
+       ══════════════════════════════════════════════════════════ */
+    const $ = id => document.getElementById(id);
+    const screens = {
+      home: $("homeScreen"), quiz: $("quizScreen"),
+      result: $("resultScreen"), review: $("reviewScreen"),
+    };
+
+    function showScreen(name) {
+      Object.values(screens).forEach(s => s.classList.remove("active"));
+      screens[name].classList.add("active");
+      window.scrollTo(0, 0);
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       DARK MODE
+       ══════════════════════════════════════════════════════════ */
+    function applyDark() {
+      document.body.classList.toggle("dark", darkMode);
+      $("darkToggle").textContent = darkMode ? "☀️" : "🌙";
+    }
+    applyDark();
+    $("darkToggle").addEventListener("click", () => {
+      darkMode = !darkMode;
+      storageSet("cpl_dark", darkMode);
+      applyDark();
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       HOME SCREEN — Subject chips
+       ══════════════════════════════════════════════════════════ */
+    function renderSubjectChips() {
+      const wrap = $("subjectChips");
+      wrap.innerHTML = "";
+      // "All" chip
+      const allChip = document.createElement("button");
+      allChip.className = "chip" + (state.selectedSubjects.length === 0 ? " selected" : "");
+      allChip.textContent = "All Subjects";
+      allChip.addEventListener("click", () => {
+        state.selectedSubjects = [];
+        renderSubjectChips();
+        updateStartBtn();
+      });
+      wrap.appendChild(allChip);
+
+      ALL_SUBJECTS.forEach(subj => {
+        const count = QUESTIONS.filter(q => q.subject === subj).length;
+        const chip = document.createElement("button");
+        chip.className = "chip" + (state.selectedSubjects.includes(subj) ? " selected" : "");
+        chip.textContent = subj + " (" + count + ")";
+        chip.addEventListener("click", () => {
+          const idx = state.selectedSubjects.indexOf(subj);
+          if (idx >= 0) state.selectedSubjects.splice(idx, 1);
+          else state.selectedSubjects.push(subj);
+          renderSubjectChips();
+          updateStartBtn();
+        });
+        wrap.appendChild(chip);
+      });
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       HOME SCREEN — Mode selector
+       ══════════════════════════════════════════════════════════ */
+    document.querySelectorAll(".mode-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        state.mode = btn.dataset.mode;
+        $("timerInput").classList.toggle("show", state.mode === "timed");
+      });
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       HOME SCREEN — Weakness panel
+       ══════════════════════════════════════════════════════════ */
+    function renderWeakness() {
+      const panel = $("weaknessPanel");
+      const card = $("weaknessCard");
+      const entries = [];
+      ALL_SUBJECTS.forEach(subj => {
+        const h = history[subj];
+        if (h && h.attempted > 0) {
+          entries.push({ subject: subj, pct: Math.round(100 * h.correct / h.attempted), attempted: h.attempted });
+        }
+      });
+      if (entries.length === 0) { card.style.display = "none"; return; }
+      card.style.display = "";
+      entries.sort((a, b) => a.pct - b.pct); // weakest first
+      panel.innerHTML = entries.map(e => {
+        const color = e.pct >= 70 ? "var(--correct)" : e.pct >= 40 ? "var(--flag)" : "var(--wrong)";
+        return `<div class="weakness-bar-wrap">
+      <div class="weakness-label"><span>${e.subject}</span><span>${e.pct}% (${e.attempted} Qs)</span></div>
+      <div class="weakness-track"><div class="weakness-fill" style="width:${e.pct}%;background:${color}"></div></div>
+    </div>`;
+      }).join("");
+    }
+
+    function renderStats() {
+      let totalA = 0, totalC = 0;
+      Object.values(history).forEach(h => { totalA += h.attempted; totalC += h.correct; });
+      if (totalA === 0) { $("statsLine").textContent = "No attempts yet."; return; }
+      $("statsLine").textContent = `${totalA} questions attempted · ${Math.round(100 * totalC / totalA)}% overall accuracy`;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       HOME SCREEN — Start
+       ══════════════════════════════════════════════════════════ */
+    function getFilteredQuestions() {
+      const subs = state.selectedSubjects.length > 0 ? state.selectedSubjects : ALL_SUBJECTS;
+      return QUESTIONS.filter(q => subs.includes(q.subject));
+    }
+
+    function updateStartBtn() {
+      const n = getFilteredQuestions().length;
+      $("startBtn").disabled = n === 0;
+      $("startBtn").textContent = n === 0 ? "No questions available" : `🚀 Start Quiz (${n} Qs)`;
+    }
+
+    $("startBtn").addEventListener("click", () => startQuiz(getFilteredQuestions()));
+
+    /* ══════════════════════════════════════════════════════════
+       SHUFFLE HELPERS
+       ══════════════════════════════════════════════════════════ */
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function prepareQuestion(q) {
+      // Shuffle options and remap answer index
+      const indices = q.options.map((_, i) => i);
+      const shuffled = shuffle(indices);
+      return {
+        ...q,
+        _origOptions: q.options,
+        _origAnswer: q.answer,
+        options: shuffled.map(i => q.options[i]),
+        answer: shuffled.indexOf(q.answer),
+      };
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       START QUIZ
+       ══════════════════════════════════════════════════════════ */
+    function startQuiz(pool, retryMode = false) {
+      if (pool.length === 0) return;
+      const shuffledPool = shuffle(pool).map(prepareQuestion);
+      state.questions = shuffledPool;
+      state.currentIdx = 0;
+      state.answers = new Array(shuffledPool.length).fill(-1);
+      state.flags = new Array(shuffledPool.length).fill(false);
+      state.revealed = new Array(shuffledPool.length).fill(false);
+      state.startTime = Date.now();
+      state.endTime = 0;
+      state.finished = false;
+      state.gridOpen = false;
+      state.timerMinutes = parseInt($("timerMin").value) || 30;
+
+      if (state.mode === "timed") {
+        state.timerRemaining = state.timerMinutes * 60;
+        startTimer();
+      } else {
+        state.timerRemaining = 0;
+        if (state.timerInterval) clearInterval(state.timerInterval);
+        state.timerInterval = null;
+      }
+
+      showScreen("quiz");
+      renderQuestion();
+      renderGrid();
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       TIMER
+       ══════════════════════════════════════════════════════════ */
+    function startTimer() {
+      if (state.timerInterval) clearInterval(state.timerInterval);
+      state.timerInterval = setInterval(() => {
+        state.timerRemaining--;
+        renderTimer();
+        if (state.timerRemaining <= 0) {
+          clearInterval(state.timerInterval);
+          state.timerInterval = null;
+          finishQuiz();
+        }
+      }, 1000);
+    }
+
+    function renderTimer() {
+      if (state.mode === "timed") {
+        const m = Math.floor(state.timerRemaining / 60);
+        const s = state.timerRemaining % 60;
+        $("qTimer").textContent = `⏱ ${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        $("qTimer").style.color = state.timerRemaining <= 60 ? "var(--wrong)" : "var(--text)";
+      } else {
+        // Show elapsed time in practice mode
+        const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
+        const m = Math.floor(elapsed / 60);
+        const s = elapsed % 60;
+        $("qTimer").textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        $("qTimer").style.color = "var(--text2)";
+      }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       RENDER QUESTION
+       ══════════════════════════════════════════════════════════ */
+    const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
+    function renderQuestion() {
+      const q = state.questions[state.currentIdx];
+      const i = state.currentIdx;
+      $("qSubject").textContent = q.subject;
+      $("qProgress").textContent = `Q ${i + 1} / ${state.questions.length}`;
+      $("qText").textContent = `Q${i + 1}. ${q.question}`;
+      renderTimer();
+
+      // Options
+      const optWrap = $("qOptions");
+      optWrap.innerHTML = "";
+      q.options.forEach((opt, oi) => {
+        const btn = document.createElement("button");
+        btn.className = "option-btn";
+        const answered = state.answers[i] >= 0;
+        const revealed = state.revealed[i];
+
+        if (answered && state.mode === "practice" && revealed) {
+          btn.classList.add("disabled");
+          if (oi === q.answer) btn.classList.add("correct");
+          if (oi === state.answers[i] && oi !== q.answer) btn.classList.add("wrong");
+        } else if (answered && state.mode === "timed") {
+          if (oi === state.answers[i]) btn.classList.add("selected");
+        } else if (answered && state.mode === "practice" && !revealed) {
+          if (oi === state.answers[i]) btn.classList.add("selected");
+        }
+
+        btn.innerHTML = `<span class="opt-letter">${LETTERS[oi]}</span><span>${opt}</span>`;
+        btn.addEventListener("click", () => selectOption(oi));
+        optWrap.appendChild(btn);
+      });
+
+      // Feedback (practice mode)
+      const fb = $("qFeedback");
+      fb.className = "feedback-box";
+      fb.innerHTML = "";
+      if (state.mode === "practice" && state.revealed[i]) {
+        const correct = state.answers[i] === q.answer;
+        fb.classList.add("show", correct ? "correct-fb" : "wrong-fb");
+        fb.innerHTML = `<strong>${correct ? "✅ Correct!" : "❌ Incorrect"}</strong>${q.explanation}<div class="feedback-source">📖 ${q.source}</div>`;
+      }
+
+      // Flag button
+      $("flagBtn").classList.toggle("flagged", state.flags[i]);
+      $("flagBtn").textContent = state.flags[i] ? "🚩 Flagged" : "🚩 Flag";
+
+      // Nav buttons
+      $("prevBtn").disabled = i === 0;
+      $("nextBtn").textContent = i === state.questions.length - 1 ? "Next ▶" : "Next ▶";
+
+      updateGridHighlight();
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       SELECT OPTION
+       ══════════════════════════════════════════════════════════ */
+    function selectOption(oi) {
+      const i = state.currentIdx;
+      if (state.finished) return;
+      if (state.mode === "practice" && state.revealed[i]) return; // already revealed
+
+      state.answers[i] = oi;
+
+      if (state.mode === "practice") {
+        state.revealed[i] = true;
+      }
+
+      renderQuestion();
+      updateGridHighlight();
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════════════════════════ */
+    $("prevBtn").addEventListener("click", () => {
+      if (state.currentIdx > 0) { state.currentIdx--; renderQuestion(); }
+    });
+    $("nextBtn").addEventListener("click", () => {
+      if (state.currentIdx < state.questions.length - 1) { state.currentIdx++; renderQuestion(); }
+    });
+    $("flagBtn").addEventListener("click", () => {
+      state.flags[state.currentIdx] = !state.flags[state.currentIdx];
+      renderQuestion();
+      updateGridHighlight();
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       QUESTION GRID
+       ══════════════════════════════════════════════════════════ */
+    function renderGrid() {
+      const wrap = $("qGrid");
+      wrap.innerHTML = "";
+      state.questions.forEach((_, qi) => {
+        const cell = document.createElement("div");
+        cell.className = "q-cell";
+        cell.textContent = qi + 1;
+        cell.addEventListener("click", () => { state.currentIdx = qi; renderQuestion(); });
+        wrap.appendChild(cell);
+      });
+      wrap.classList.toggle("show", state.gridOpen);
+      $("gridToggle").textContent = state.gridOpen ? "▲ Question Grid" : "▼ Question Grid";
+      updateGridHighlight();
+    }
+
+    function updateGridHighlight() {
+      const cells = $("qGrid").children;
+      for (let qi = 0; qi < cells.length; qi++) {
+        const c = cells[qi];
+        c.className = "q-cell";
+        if (qi === state.currentIdx) c.classList.add("current");
+        if (state.answers[qi] >= 0) c.classList.add("answered");
+        if (state.flags[qi]) c.classList.add("flagged");
+      }
+    }
+
+    $("gridToggle").addEventListener("click", () => {
+      state.gridOpen = !state.gridOpen;
+      $("qGrid").classList.toggle("show", state.gridOpen);
+      $("gridToggle").textContent = state.gridOpen ? "▲ Question Grid" : "▼ Question Grid";
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       FINISH QUIZ
+       ══════════════════════════════════════════════════════════ */
+    $("finishBtn").addEventListener("click", () => {
+      const unanswered = state.answers.filter(a => a < 0).length;
+      const flagged = state.flags.filter(f => f).length;
+      let msg = "Submit your quiz?";
+      if (unanswered > 0) msg = `You have ${unanswered} unanswered question${unanswered > 1 ? 's' : ''}. Submit anyway?`;
+      if (flagged > 0) msg += ` (${flagged} flagged for review)`;
+      showModal(msg, finishQuiz);
+    });
+
+    $("quitBtn").addEventListener("click", () => {
+      showModal("Quit this quiz? Progress will be lost.", () => {
+        if (state.timerInterval) clearInterval(state.timerInterval);
+        state.timerInterval = null;
+        showScreen("home");
+      });
+    });
+
+    function finishQuiz() {
+      if (state.timerInterval) clearInterval(state.timerInterval);
+      state.timerInterval = null;
+      state.endTime = Date.now();
+      state.finished = true;
+
+      // Save history
+      state.questions.forEach((q, qi) => {
+        if (state.answers[qi] < 0) return; // skip unanswered
+        if (!history[q.subject]) history[q.subject] = { attempted: 0, correct: 0 };
+        history[q.subject].attempted++;
+        if (state.answers[qi] === q.answer) history[q.subject].correct++;
+      });
+      storageSet("cpl_history", history);
+
+      showResults();
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       RESULTS SCREEN
+       ══════════════════════════════════════════════════════════ */
+    function showResults() {
+      showScreen("result");
+      const total = state.questions.length;
+      const answered = state.answers.filter(a => a >= 0).length;
+      const correct = state.questions.filter((q, i) => state.answers[i] === q.answer).length;
+      const pct = total > 0 ? Math.round(100 * correct / total) : 0;
+      const elapsed = Math.floor((state.endTime - state.startTime) / 1000);
+      const m = Math.floor(elapsed / 60);
+      const s = elapsed % 60;
+
+      $("rScore").textContent = `${correct} / ${total}`;
+      $("rPct").textContent = `${pct}%`;
+      $("rTime").textContent = `⏱ Time: ${m}m ${s}s · Answered: ${answered}/${total}`;
+
+      // Per-subject breakdown
+      const subjMap = {};
+      state.questions.forEach((q, i) => {
+        if (!subjMap[q.subject]) subjMap[q.subject] = { total: 0, correct: 0 };
+        subjMap[q.subject].total++;
+        if (state.answers[i] === q.answer) subjMap[q.subject].correct++;
+      });
+
+      const colors = ["#1565c0", "#2e7d32", "#ef6c00", "#6a1b9a", "#c62828", "#00838f"];
+      let bi = 0;
+      $("rBreakdown").innerHTML = Object.entries(subjMap).map(([subj, data]) => {
+        const p = Math.round(100 * data.correct / data.total);
+        const clr = colors[bi++ % colors.length];
+        return `<div class="breakdown-bar-wrap">
+      <div class="breakdown-label"><span>${subj}</span><span>${data.correct}/${data.total} (${p}%)</span></div>
+      <div class="breakdown-track"><div class="breakdown-fill" style="width:${p}%;background:${clr}"></div></div>
+    </div>`;
+      }).join("");
+
+      // Hide "retry wrong" if none wrong
+      const wrongCount = state.questions.filter((q, i) => state.answers[i] >= 0 && state.answers[i] !== q.answer).length;
+      $("retryWrongBtn").style.display = wrongCount > 0 ? "" : "none";
+      $("reviewBtn").style.display = wrongCount > 0 ? "" : "none";
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       REVIEW MISTAKES
+       ══════════════════════════════════════════════════════════ */
+    $("reviewBtn").addEventListener("click", () => {
+      showScreen("review");
+      const list = $("reviewList");
+      list.innerHTML = "";
+
+      state.questions.forEach((q, i) => {
+        if (state.answers[i] < 0 || state.answers[i] === q.answer) return;
+        const div = document.createElement("div");
+        div.className = "review-item";
+        div.innerHTML = `
+      <div class="review-q">Q${i + 1}. ${q.question}</div>
+      <div class="review-ans your">Your answer: ${LETTERS[state.answers[i]]}. ${q.options[state.answers[i]]}</div>
+      <div class="review-ans right">Correct: ${LETTERS[q.answer]}. ${q.options[q.answer]}</div>
+      <div class="review-expl">${q.explanation}</div>
+      <div class="review-src">📖 ${q.source}</div>
+    `;
+        list.appendChild(div);
+      });
+
+      if (list.children.length === 0) {
+        list.innerHTML = '<p style="color:var(--text2);text-align:center;padding:20px">No mistakes — perfect score! 🎉</p>';
+      }
+    });
+
+    $("backFromReview").addEventListener("click", () => showScreen("result"));
+
+    /* ══════════════════════════════════════════════════════════
+       RETRY ACTIONS
+       ══════════════════════════════════════════════════════════ */
+    $("retryBtn").addEventListener("click", () => {
+      // Gather same pool of original questions (un-shuffled originals)
+      const origPool = state.questions.map(q => ({
+        subject: q.subject,
+        question: q.question,
+        options: q._origOptions,
+        answer: q._origAnswer,
+        explanation: q.explanation,
+        source: q.source,
+      }));
+      startQuiz(origPool);
+    });
+
+    $("retryWrongBtn").addEventListener("click", () => {
+      const wrongPool = [];
+      state.questions.forEach((q, i) => {
+        if (state.answers[i] >= 0 && state.answers[i] !== q.answer) {
+          wrongPool.push({
+            subject: q.subject,
+            question: q.question,
+            options: q._origOptions,
+            answer: q._origAnswer,
+            explanation: q.explanation,
+            source: q.source,
+          });
+        }
+      });
+      if (wrongPool.length === 0) return;
+      startQuiz(wrongPool, true);
+    });
+
+    $("homeFromResult").addEventListener("click", () => {
+      renderWeakness();
+      renderStats();
+      showScreen("home");
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       RESET PROGRESS
+       ══════════════════════════════════════════════════════════ */
+    $("resetBtn").addEventListener("click", () => {
+      showModal("Reset ALL progress and history? This cannot be undone.", () => {
+        history = {};
+        storageDel("cpl_history");
+        renderWeakness();
+        renderStats();
+      });
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       MODAL
+       ══════════════════════════════════════════════════════════ */
+    let modalCallback = null;
+    function showModal(msg, onConfirm) {
+      $("modalMsg").textContent = msg;
+      $("modal").classList.add("show");
+      modalCallback = onConfirm;
+    }
+    $("modalCancel").addEventListener("click", () => $("modal").classList.remove("show"));
+    $("modalConfirm").addEventListener("click", () => {
+      $("modal").classList.remove("show");
+      if (modalCallback) modalCallback();
+      modalCallback = null;
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       KEYBOARD SHORTCUTS
+       ══════════════════════════════════════════════════════════ */
+    document.addEventListener("keydown", e => {
+      if (!screens.quiz.classList.contains("active") || state.finished) return;
+      if (e.key === "ArrowLeft" || e.key === "p") $("prevBtn").click();
+      else if (e.key === "ArrowRight" || e.key === "n") $("nextBtn").click();
+      else if (e.key === "f") $("flagBtn").click();
+      else if (e.key >= "1" && e.key <= "4") {
+        const idx = parseInt(e.key) - 1;
+        if (idx < state.questions[state.currentIdx].options.length) selectOption(idx);
+      }
+    });
+
+    /* ══════════════════════════════════════════════════════════
+       PRACTICE-MODE ELAPSED TIMER UPDATE
+       ══════════════════════════════════════════════════════════ */
+    setInterval(() => {
+      if (screens.quiz.classList.contains("active") && state.mode === "practice" && !state.finished) {
+        renderTimer();
+      }
+    }, 1000);
+
+    /* ══════════════════════════════════════════════════════════
+       INIT
+       ══════════════════════════════════════════════════════════ */
+    renderSubjectChips();
+    updateStartBtn();
+    renderWeakness();
+    renderStats();
+
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,38 @@
+# Node modules & dependencies
+node_modules/
+dist/
+dist-ssr/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment & Local files
+.env
+.env.local
+.env.*.local
+
+# Editor directories
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Copyrighted PDFs and raw source extraction dumps
+# Reference sources by title and author only as per repository guidelines
+*.pdf
+scripts/*_raw.json
+scripts/nav_raw.json
+scripts/reg_raw.json
+

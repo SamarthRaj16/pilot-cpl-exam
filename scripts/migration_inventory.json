@@ -1,0 +1,181 @@
+{
+  "total_questions": 839,
+  "total_subjects": 6,
+  "total_topics": 94,
+  "exam_config": {
+    "passMark": 70,
+    "negativeMarking": false,
+    "negativeMarkValue": 0,
+    "note": "DGCA CPL exams are conducted via the Pariksha portal (pariksha.dgca.gov.in) as Computer-Based Tests (CBTs). Each paper must be passed independently at 70% minimum. Cleared papers are valid for 5 years.",
+    "subjects": {
+      "Air Navigation": {
+        "questions": 100,
+        "durationMinutes": 180,
+        "passMark": 70,
+        "split": {
+          "General Navigation": "~55%",
+          "Radio Navigation": "~35%",
+          "Instruments & Flight Planning": "~10%"
+        }
+      },
+      "Aviation Meteorology": {
+        "questions": 50,
+        "durationMinutes": 120,
+        "passMark": 70
+      },
+      "Air Regulations": {
+        "questions": 50,
+        "durationMinutes": 90,
+        "passMark": 70
+      },
+      "Technical General": {
+        "questions": 100,
+        "durationMinutes": 150,
+        "passMark": 70
+      },
+      "Technical Specific": {
+        "questions": 50,
+        "durationMinutes": 90,
+        "passMark": 70
+      },
+      "RTR": {
+        "questions": 50,
+        "durationMinutes": 60,
+        "passMark": 70,
+        "note": "RTR(A) is a separate licensing exam, not part of the standard DGCA CPL written papers."
+      }
+    }
+  },
+  "subjects": {
+    "Air Navigation": {
+      "question_count": 298,
+      "topic_count": 25,
+      "topics": [
+        "Aircraft Magnetism and the Compasses",
+        "Convergency and Conversion Angle",
+        "Dead Reckoning and the Triangle of Velocities",
+        "Departure",
+        "Earth Magnetism",
+        "General Chart Properties",
+        "Great Circles and Rhumb Lines",
+        "In-flight Navigation Technique",
+        "Lambert's Conformal Chart: Part 1",
+        "Lambert's Conformal Chart: Part 2",
+        "Mercator Charts: Properties",
+        "Mercator Charts: Scale",
+        "Navigation Problems: Relative Velocity, PNR and CP",
+        "Navigation Using the 1 in 60 Rule",
+        "Other Applications of the 1 in 60 Rule",
+        "Plotting",
+        "Polar Stereographic and Grid Navigation",
+        "Scale",
+        "TAS, Mach Number and Density Altitude",
+        "The 1 in 60 Rule",
+        "The Earth, Direction and Position",
+        "Time 1: The Solar System and Time",
+        "Time 2: UTC, Zone Time and the Date Line",
+        "Time 3: Sunrise, Sunset and Twilight",
+        "Topographical Maps and Map Reading"
+      ]
+    },
+    "Air Regulations": {
+      "question_count": 300,
+      "topic_count": 25,
+      "topics": [
+        "ATS Surveillance",
+        "Accident Investigation",
+        "Aerodrome Control",
+        "Aerodromes: Lighting and Services",
+        "Aerodromes: Markings",
+        "Aeronautical Information",
+        "Airspace and ATS",
+        "Airworthiness",
+        "Altimeter Setting",
+        "Definitions and Framework",
+        "Facilitation",
+        "ICAO and Conventions",
+        "Indian Regulatory System",
+        "Instrument Approaches and Holding",
+        "Instrument Departures",
+        "Nationality and Registration",
+        "Operational Hazards",
+        "Operational Procedures",
+        "Personnel Licensing",
+        "Rules of the Air: General",
+        "Rules of the Air: VFR, IFR and Signals",
+        "Search and Rescue",
+        "Security",
+        "Separation",
+        "Separation Near Aerodromes"
+      ]
+    },
+    "Aviation Meteorology": {
+      "question_count": 93,
+      "topic_count": 19,
+      "topics": [
+        "Air Density",
+        "Air Masses & Fronts",
+        "Atmospheric Pressure",
+        "Clear Air Turbulence",
+        "Climatology of India",
+        "Clouds & Precipitation",
+        "General Circulation",
+        "Humidity",
+        "Ice Accretion",
+        "Jet Streams",
+        "Local Winds",
+        "Meteorological Services & Codes",
+        "Stability & Adiabatics",
+        "Temperature & Heat",
+        "The Atmosphere",
+        "Thunderstorms",
+        "Tropical Systems & Monsoon",
+        "Visibility & Fog",
+        "Winds"
+      ]
+    },
+    "Technical General": {
+      "question_count": 59,
+      "topic_count": 8,
+      "topics": [
+        "Aircraft Systems",
+        "Airspeed Definitions",
+        "Gyroscopic Instruments",
+        "Piston Engines",
+        "Pitot-Static Instruments",
+        "Principles of Flight",
+        "Propellers",
+        "Weight & Balance"
+      ]
+    },
+    "Technical Specific": {
+      "question_count": 42,
+      "topic_count": 7,
+      "topics": [
+        "Airspeed indicator markings",
+        "Altimeter setting procedures",
+        "Fuel grades and colors",
+        "POH sections",
+        "Performance charts",
+        "V-speeds and their meanings",
+        "Weight limits"
+      ]
+    },
+    "RTR": {
+      "question_count": 47,
+      "topic_count": 10,
+      "topics": [
+        "ATC clearances and readback",
+        "ATIS",
+        "Distress and urgency calls",
+        "Frequency management",
+        "Lost communication procedures",
+        "Phonetic alphabet",
+        "Readability scale",
+        "Standard phraseology",
+        "Transponder codes",
+        "VHF propagation basics"
+      ]
+    }
+  }
+}

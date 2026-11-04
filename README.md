@@ -1,189 +1,66 @@
-# DGCA CPL Exam Practice Quiz
+# CPL Practice — DGCA Written Examination Platform
 
-A personalised, offline-capable Multiple Choice Question practice app for the **DGCA Commercial Pilot Licence (CPL) written exams** in India.
+A premium, offline-first DGCA Commercial Pilot Licence (CPL, India) written examination preparation platform featuring **839 verified questions**, persistent **Zero-Repeat Question Rotation**, unconditional authoritative answer feedback, and a rich charcoal dashboard inspired by modern aviation LMS interfaces.
 
-> **Offline first** — works entirely in the browser with no server, no backend, and no internet required after the first load.
-
----
-
-## Screenshots
-
-_(Add screenshots here after running the app)_
+> **100% Client-Side & Offline-First** — Operates entirely inside the web browser with zero server requirements, zero dependencies, and zero database setup. Deploys directly to Vercel, GitHub Pages, or runs locally.
 
 ---
 
-## Features
+## 🚀 Key Highlights & Architecture
 
-| Feature | Details |
-|---------|---------|
-| **6 Subjects** | Air Navigation, Air Regulations, Aviation Meteorology, Technical General, Technical Specific, RTR |
-| **Practice Mode** | Instant right/wrong feedback with full explanation and source reference |
-| **Timed Mode** | User-configurable countdown timer; results shown at the end |
-| **Mock Exam Mode** | Follows DGCA exam paper counts and durations from `examConfig.json` |
-| **Topic Filter** | Filter questions by specific chapter/topic within a subject |
-| **Question Navigator** | Visual grid showing answered ✅, flagged 🚩, current 🔵, unanswered ⬜ |
-| **Flag for Review** | Mark any question; see count on finish prompt |
-| **Results Screen** | Score, %, pass/fail, time taken, subject breakdown with bar charts, topic breakdown |
-| **Review Mistakes** | Every wrong answer shown with your choice, correct answer, explanation, and source |
-| **Retry Wrong Only** | One-click to retry only the questions you got wrong |
-| **Progress Saved** | `localStorage` (try/catch guarded) — survives refresh; per-subject accuracy history |
-| **Weak Areas Panel** | Home screen shows your weakest subjects sorted by accuracy |
-| **Dark Mode** | Toggle (persisted across sessions) |
-| **Randomised** | Question order and option order shuffled on every attempt |
-| **Keyboard shortcuts** | `←/p` prev · `→/n/Space` next · `1–4` select option · `f` flag |
-| **Responsive** | Mobile-first, large tap targets, works on phone and laptop |
-| **Accessible** | Keyboard-navigable, good colour contrast, focus indicators |
+| Capability | Specification |
+|---|---|
+| **Question Bank** | **839 authentic questions** across all 6 DGCA CPL subjects and 94 topics |
+| **Duplicate Prevention** | Multi-layer normalized & semantic check — **108 duplicate candidates intercepted** (0 duplicates in bank) |
+| **Zero-Repeat Rotation** | Previously served questions do NOT repeat on retakes until that chapter/subject pool is exhausted |
+| **Authoritative Feedback** | Unconditional display of authoritative correct answer (+1 pt), student choice (0 pts / +1 pt), verified explanations, and source citations |
+| **Examination Modes** | **Practice Mode** (instant feedback & educational explanations), **Timed Exam**, and **DGCA Mock Exam** (full CBT simulation) |
+| **Scoring Engine** | 70% passing threshold per DGCA paper rules, points tracking, and persistent analytics |
+| **CBT Question Navigator** | Interactive grid showing Answered (green), Flagged (orange), Current (purple ring), and Unanswered |
+| **Design System** | FLyP Academy-inspired premium dark charcoal aesthetic (`#19191D`, `#202126`, `#292A30`, `#9484F5`, `#719CFF`, `#51C6C1`, `#69CF9B`, `#E5C36C`, `#ED7078`) |
 
 ---
 
-## DGCA CPL Exam Scheme (from `examConfig.json`)
+## 📚 Question Bank Inventory (839 Total Questions)
 
-| Subject | Questions | Duration | Pass Mark |
-|---------|-----------|----------|-----------|
-| Air Navigation | 100 MCQs | 3 h | 70% |
-| Aviation Meteorology | 50 MCQs | 2 h | 70% |
-| Air Regulations | 50 MCQs | 1.5 h | 70% |
-| Technical General | 100 MCQs | 2.5 h | 70% |
-| Technical Specific | 50 MCQs | 1.5 h | 70% |
-| RTR(A) | Separate exam | — | — |
-
-**No negative marking.** Each paper must be passed independently at ≥ 70%.
+| Subject | Questions | Topics | Official Source & Reference |
+|---|---|---|---|
+| **Air Navigation** | **298 Qs** | 25 Topics (12 Qs/ch) | Oxford ATPL General Navigation / R.K. Bali / CAR Section 7 |
+| **Air Regulations** | **300 Qs** | 25 Topics (12 Qs/ch) | DGCA Aircraft Rules 1937, Bharatiya Vayuyan Adhiniyam 2024, CARs |
+| **Aviation Meteorology** | **93 Qs** | 18 Topics | I.C. Joshi Aviation Meteorology (Chapters 1–26) |
+| **Technical General** | **59 Qs** | 9 Topics | Oxford ATPL Aircraft General Knowledge, Engines, Systems, Principles of Flight |
+| **Technical Specific** | **42 Qs** | 7 Topics | Pilot's Operating Handbooks (POH), V-speeds, Limitations, Fuel & Altimetry |
+| **RTR (Radio Telephony)** | **47 Qs** | 10 Topics | ICAO Doc 9432, Doc 8400, WPC RTR(A) Syllabus, SSR Transponder Codes |
 
 ---
 
-## How to Run Locally
+## 🔄 Zero-Repeat Question Rotation Engine
 
-### Option A — Just open the standalone HTML (no install needed)
-
-```bash
-# Open directly in any browser:
-open cpl-quiz-standalone.html
-```
-
-### Option B — Run from source (Vite dev server)
-
-```bash
-npm install
-npm run dev
-# Open http://localhost:5173
-```
-
-### Build production bundle
-
-```bash
-npm run build
-# Output goes to dist/
-```
+The application includes a persistent question rotation tracking engine (`cpl_served_ids` in `localStorage`):
+- When a quiz is initiated, served question IDs are permanently recorded.
+- When re-taking a quiz for any chapter or subject, **previously served questions are filtered out**.
+- The student experiences fresh, unattempted questions on every retake.
+- When an individual topic or subject pool is fully exhausted, the app displays a clear completion banner and enables a one-click **"Reset Question Pool"** option to cycle through the chapter again without clearing long-term performance scores (`cpl_history`).
 
 ---
 
-## How to Add or Replace Questions
+## 📋 Question Bank Audit Modal
 
-1. Open `src/data/questions.json`
-2. Each question follows this schema:
-
-```json
-{
-  "id": "NAV-001",
-  "subject": "Air Navigation",
-  "topic": "The Earth, Direction and Position",
-  "difficulty": "easy",
-  "question": "What does the term 'graticule' describe?",
-  "options": [
-    "Every line printed on a chart",
-    "The network of meridians and parallels on a globe, map or chart",
-    "Only the small circles near a pole",
-    "A magnetic compass correction card"
-  ],
-  "answerIndex": 1,
-  "explanation": "The graticule is the network formed by meridians and parallels, with the prime meridian and equator as its reference lines.",
-  "source": "R.K. Bali Air Navigation / Oxford ATPL Gen Nav, Chapter 'The Earth, Direction and Position', Sec 4"
-}
-```
-
-3. Run the validator to check for errors:
-
-```bash
-python scripts/validate_questions.py
-```
-
-4. Rebuild the standalone HTML:
-
-```bash
-python scripts/build_standalone.py
-```
+Click **"Audit Bank (839 Qs)"** in the top navigation bar to inspect:
+- Total active questions and difficulty breakdown (Easy: 125, Medium: 641, Hard: 73).
+- Duplicate prevention audit log summary.
+- Real-time unserved vs served questions counters across all subjects.
+- Quick-action buttons to reset question rotation pools or review coverage.
 
 ---
 
-## Project Structure
+## 📁 Repository Files
 
-```
-dgcacpllearning/
-├── src/
-│   └── data/
-│       ├── questions.json        ← Question bank (edit here)
-│       └── examConfig.json       ← DGCA exam scheme
-├── scripts/
-│   ├── validate_questions.py     ← Validation tool (run before pushing)
-│   └── build_standalone.py       ← Builds the single-file HTML
-├── cpl-exam-direct.html          ← App template (with placeholder)
-├── cpl-quiz-standalone.html      ← Built output — open this!
-├── public/
-├── index.html
-├── package.json
-└── README.md
-```
-
----
-
-## How to Deploy on Vercel
-
-1. Push to GitHub:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit — DGCA CPL quiz app"
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
-
-2. Go to [vercel.com](https://vercel.com), click **Add New Project**, import your GitHub repo.
-3. Vercel auto-detects Vite; set:
-   - **Framework preset**: Vite
-   - **Output directory**: `dist`
-   - **Build command**: `npm run build`
-4. Click **Deploy**. Done! 🚀
-
-> **Alternative**: For the standalone HTML, just drag `cpl-quiz-standalone.html` to [tiiny.host](https://tiiny.host) or any static host — no config needed.
-
----
-
-## Source Books Referenced
-
-The question bank is based on these standard textbooks (not included in this repo):
-
-- **R.K. Bali** — Air Navigation, Air Regulations (India DGCA syllabus)
-- **I.C. Joshi** — Aviation Meteorology
-- **CAE Oxford ATPL** manuals (Gen Nav, Meteorology, AGK, Air Law)
-- **aviationgrade.in** — Chapter-wise study notes and question breakdowns
-
-> ⚠️ Source books are **not** included in this repository (copyrighted material).
-
----
-
-## Keyboard Shortcuts
-
-| Key | Action |
-|-----|--------|
-| `←` or `p` | Previous question |
-| `→`, `n`, or `Space` | Next question |
-| `1` – `4` | Select option A–D |
-| `f` | Flag / unflag current question |
-
----
-
-## License
-
-MIT — free for personal use. Source book content belongs to respective publishers.
-
+- `index.html` — Root entry point for Vercel / GitHub Pages / browser.
+- `cpl-exam-direct.html` / `cpl-quiz-standalone.html` — Standalone mirrors for direct offline double-click execution.
+- `src/data/questions.json` — The master database containing all 839 validated questions.
+- `src/data/examConfig.json` — DGCA CPL examination paper duration and question schemes.
+- `scripts/build_direct_html_v2.py` — High-performance compiler script that builds the self-contained app.
+- `scripts/rejected_duplicates.json` — Full audit log of 108 duplicate candidates intercepted and rejected.
+- `scripts/test_zero_repeat_and_feedback.py` — Automated verification test suite.
+- `dgca-cpl-github-upload.zip` — Ready-to-upload zip archive for GitHub web interface.

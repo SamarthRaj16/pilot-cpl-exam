@@ -1,0 +1,974 @@
+[
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "The Earth, Direction and Position",
+    "candidate_question": "For navigation calculations, what is the Earth's approximate compression?",
+    "matched_id": "NAV-041",
+    "matched_question": "For navigation calculations, what is the Earth's approximate compression'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "The Earth, Direction and Position",
+    "candidate_question": "What does the term graticule describe?",
+    "matched_id": "NAV-042",
+    "matched_question": "What does the term graticule describe'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Great Circles and Rhumb Lines",
+    "candidate_question": "Which description defines a great circle?",
+    "matched_id": "NAV-013",
+    "matched_question": "Which description defines a great circle'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Great Circles and Rhumb Lines",
+    "candidate_question": "What is the defining property of a rhumb line?",
+    "matched_id": "NAV-014",
+    "matched_question": "What is the defining property of a rhumb line'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Earth Magnetism",
+    "candidate_question": "In the red and blue pole convention, the Earth behaves as if which polarity lies in the northern magnetic region?",
+    "matched_id": "NAV-009",
+    "matched_question": "In the red and blue pole convention, the Earth behaves as if which polarity lies in the northern magnetic region'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Earth Magnetism",
+    "candidate_question": "Magnetic variation is the angle between",
+    "matched_id": "NAV-010",
+    "matched_question": "Magnetic variation is the angle between",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Aircraft Magnetism and the Compasses",
+    "candidate_question": "Compass deviation is the angle between",
+    "matched_id": "NAV-001",
+    "matched_question": "Compass deviation is the angle between",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Aircraft Magnetism and the Compasses",
+    "candidate_question": "A constant deviation on every heading is normally represented by which coefficient?",
+    "matched_id": "NAV-002",
+    "matched_question": "A constant deviation on every heading is normally represented by which coefficient'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Departure",
+    "candidate_question": "What is departure in navigation?",
+    "matched_id": "NAV-007",
+    "matched_question": "What is departure in navigation'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Departure",
+    "candidate_question": "Two meridians differ by 20 degrees at latitude 52 degrees. What is the departure?",
+    "matched_id": "NAV-008",
+    "matched_question": "Two meridians differ by 20 degrees at latitude 52 degrees. What is the departure'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Convergency and Conversion Angle",
+    "candidate_question": "Earth convergency is best defined as",
+    "matched_id": "NAV-003",
+    "matched_question": "Earth convergency is best defined as",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Convergency and Conversion Angle",
+    "candidate_question": "Two meridians are 40 degrees apart at latitude 30 degrees north. Their convergency is",
+    "matched_id": "NAV-004",
+    "matched_question": "Two meridians are 40 degrees apart at latitude 30 degrees north. Their convergency is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Scale",
+    "candidate_question": "Chart scale is the relationship between",
+    "matched_id": "NAV-035",
+    "matched_question": "Chart scale is the relationship between",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Scale",
+    "candidate_question": "Which set gives the three common methods of expressing scale?",
+    "matched_id": "NAV-036",
+    "matched_question": "Which set gives the three common methods of expressing scale'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Scale",
+    "candidate_question": "At RF 1:1,000,000, what chart length represents 400 kilometres?",
+    "matched_id": "NAV-116",
+    "matched_question": "On a chart with RF 1:1,000,000, what chart length represents 50 kilometres?",
+    "similarity_score": 0.881,
+    "rejection_reason": "Semantic token/sequence overlap (0.88)"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "General Chart Properties",
+    "candidate_question": "In chart projection, the reduced Earth is",
+    "matched_id": "NAV-011",
+    "matched_question": "In chart projection, the reduced Earth is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "General Chart Properties",
+    "candidate_question": "The three general developable projection surfaces are",
+    "matched_id": "NAV-012",
+    "matched_question": "The three general developable projection surfaces are",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Mercator Charts: Properties",
+    "candidate_question": "A normal Mercator chart is correctly described as",
+    "matched_id": "NAV-021",
+    "matched_question": "A normal Mercator chart is correctly described as",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Mercator Charts: Properties",
+    "candidate_question": "The graticule of a direct Mercator chart is",
+    "matched_id": "NAV-022",
+    "matched_question": "The graticule of a direct Mercator chart is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Mercator Charts: Scale",
+    "candidate_question": "The scale at latitude L on a normal Mercator is",
+    "matched_id": "NAV-023",
+    "matched_question": "The scale at latitude L on a normal Mercator is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Mercator Charts: Scale",
+    "candidate_question": "A Mercator has scale 1:1,000,000 at the equator. Its scale at 60 degrees north is",
+    "matched_id": "NAV-024",
+    "matched_question": "A Mercator has scale 1:1,000,000 at the equator. Its scale at 60 degrees north is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Lambert's Conformal Chart: Part 1",
+    "candidate_question": "The principal navigation advantages sought in a Lambert conformal chart are",
+    "matched_id": "NAV-017",
+    "matched_question": "The principal navigation advantages sought in a Lambert conformal chart are",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Lambert's Conformal Chart: Part 1",
+    "candidate_question": "On a simple conic projection, scale is correct at",
+    "matched_id": "NAV-018",
+    "matched_question": "On a simple conic projection, scale is correct at",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Lambert's Conformal Chart: Part 2",
+    "candidate_question": "For practical aviation use, a chart may be treated as constant scale when its scale distortion does not exceed about",
+    "matched_id": "NAV-019",
+    "matched_question": "For practical aviation use, a chart may be treated as constant scale when its scale distortion does not exceed about",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Lambert's Conformal Chart: Part 2",
+    "candidate_question": "A Lambert chart whose standard parallels are 16 degrees apart has an approximate maximum scale error of",
+    "matched_id": "NAV-020",
+    "matched_question": "A Lambert chart whose standard parallels are 16 degrees apart has an approximate maximum scale error of",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Polar Stereographic and Grid Navigation",
+    "candidate_question": "For a North Polar stereographic chart, the plane touches the North Pole and the projection point is at",
+    "matched_id": "NAV-033",
+    "matched_question": "For a North Polar stereographic chart, the plane touches the North Pole and the projection point is at",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Polar Stereographic and Grid Navigation",
+    "candidate_question": "The co-latitude of 70 degrees north is",
+    "matched_id": "NAV-034",
+    "matched_question": "The co-latitude of 70 degrees north is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Topographical Maps and Map Reading",
+    "candidate_question": "Which of these chart scales normally gives the greater ground detail?",
+    "matched_id": "NAV-049",
+    "matched_question": "Which of these chart scales normally gives the greater ground detail'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Topographical Maps and Map Reading",
+    "candidate_question": "On a contour chart, very closely spaced contours indicate",
+    "matched_id": "NAV-050",
+    "matched_question": "On a contour chart, very closely spaced contours indicate",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Time 1: The Solar System and Time",
+    "candidate_question": "The measurement of a day is based primarily on Earth's",
+    "matched_id": "NAV-043",
+    "matched_question": "The measurement of a day is based primarily on Earth's",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Time 1: The Solar System and Time",
+    "candidate_question": "Perihelion normally occurs in",
+    "matched_id": "NAV-044",
+    "matched_question": "Perihelion normally occurs in",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Time 2: UTC, Zone Time and the Date Line",
+    "candidate_question": "An arc of 153 degrees 30 minutes is equivalent to approximately",
+    "matched_id": "NAV-045",
+    "matched_question": "An arc of 153 degrees 30 minutes is equivalent to approximately",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Time 2: UTC, Zone Time and the Date Line",
+    "candidate_question": "To find LMT from UTC at an easterly longitude, the longitude expressed as time is",
+    "matched_id": "NAV-046",
+    "matched_question": "To find LMT from UTC at an easterly longitude, the longitude expressed as time is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Time 3: Sunrise, Sunset and Twilight",
+    "candidate_question": "On 21 June, the lowest listed northerly latitude at which the Sun remains above the horizon all day is",
+    "matched_id": "NAV-047",
+    "matched_question": "On 21 June, the lowest listed northerly latitude at which the Sun remains above the horizon all day is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Time 3: Sunrise, Sunset and Twilight",
+    "candidate_question": "On 21 December, the lowest listed northerly latitude at which the Sun does not rise is",
+    "matched_id": "NAV-048",
+    "matched_question": "On 21 December, the lowest listed northerly latitude at which the Sun does not rise is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Dead Reckoning and the Triangle of Velocities",
+    "candidate_question": "The direction in which the longitudinal axis of an aircraft points is its",
+    "matched_id": "NAV-005",
+    "matched_question": "The direction in which the longitudinal axis of an aircraft points is its",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Dead Reckoning and the Triangle of Velocities",
+    "candidate_question": "The direction of the path actually followed over the Earth's surface is the",
+    "matched_id": "NAV-006",
+    "matched_question": "The direction of the path actually followed over the Earth's surface is the",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "TAS, Mach Number and Density Altitude",
+    "candidate_question": "Pressure altitude is the altitude indicated when the altimeter subscale is set to",
+    "matched_id": "NAV-037",
+    "matched_question": "Pressure altitude is the altitude indicated when the altimeter subscale is set to",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "TAS, Mach Number and Density Altitude",
+    "candidate_question": "Calibrated airspeed is obtained by correcting IAS for",
+    "matched_id": "NAV-038",
+    "matched_question": "Calibrated airspeed is obtained by correcting IAS for",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "TAS, Mach Number and Density Altitude",
+    "candidate_question": "Density altitude is best defined as",
+    "matched_id": "MET-011",
+    "matched_question": "Density altitude is defined as:",
+    "similarity_score": 0.929,
+    "rejection_reason": "Semantic token/sequence overlap (0.93)"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "The 1 in 60 Rule",
+    "candidate_question": "After 60 NM an aircraft is 7 NM left of planned track. Its track error is approximately",
+    "matched_id": "NAV-039",
+    "matched_question": "After 60 NM an aircraft is 7 NM left of planned track. Its track error is approximately",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "The 1 in 60 Rule",
+    "candidate_question": "After travelling 120 NM from an on-track fix, an aircraft is 8 NM right of track. The track error is",
+    "matched_id": "NAV-040",
+    "matched_question": "After travelling 120 NM from an on-track fix, an aircraft is 8 NM right of track. The track error is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Navigation Using the 1 in 60 Rule",
+    "candidate_question": "An aircraft is 4 NM left of track after 30 NM. Its approximate track error is",
+    "matched_id": "NAV-027",
+    "matched_question": "An aircraft is 4 NM left of track after 30 NM. Its approximate track error is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Navigation Using the 1 in 60 Rule",
+    "candidate_question": "A 78 NM leg has 30 NM gone and a fix 4 NM left of track. What is the closing angle to destination?",
+    "matched_id": "NAV-028",
+    "matched_question": "A 78 NM leg has 30 NM gone and a fix 4 NM left of track. What is the closing angle to destination'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Other Applications of the 1 in 60 Rule",
+    "candidate_question": "At 2 NM on a 3.5 degree glidepath, the approximate height above the touchdown reference is",
+    "matched_id": "NAV-029",
+    "matched_question": "At 2 NM on a 3.5 degree glidepath, the approximate height above the touchdown reference is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Other Applications of the 1 in 60 Rule",
+    "candidate_question": "At 4 NM on a 2.6 degree glidepath, the approximate height is",
+    "matched_id": "NAV-030",
+    "matched_question": "At 4 NM on a 2.6 degree glidepath, the approximate height is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "In-flight Navigation Technique",
+    "candidate_question": "Two checkpoints are 20 NM apart and elapsed time is 8 minutes. Measured groundspeed is",
+    "matched_id": "NAV-015",
+    "matched_question": "Two checkpoints are 20 NM apart and elapsed time is 8 minutes. Measured groundspeed is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "In-flight Navigation Technique",
+    "candidate_question": "An aircraft passes A at 1010 and B, 30 NM farther, at 1027. If 20 NM remains, revised ETA is approximately",
+    "matched_id": "NAV-016",
+    "matched_question": "An aircraft passes A at 1010 and B, 30 NM farther, at 1027. If 20 NM remains, revised ETA is approximately",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Plotting",
+    "candidate_question": "A position line is best described as",
+    "matched_id": "NAV-031",
+    "matched_question": "A position line is best described as",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Plotting",
+    "candidate_question": "Fixes at 1700 and 1730 are 100 NM apart. The measured groundspeed is",
+    "matched_id": "NAV-032",
+    "matched_question": "Fixes at 1700 and 1730 are 100 NM apart. The measured groundspeed is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Navigation Problems: Relative Velocity, PNR and CP",
+    "candidate_question": "Two aircraft 460 NM apart fly directly towards each other at groundspeeds of 250 kt and 210 kt. Their closing speed is",
+    "matched_id": "NAV-025",
+    "matched_question": "Two aircraft 460 NM apart fly directly towards each other at groundspeeds of 250 kt and 210 kt. Their closing speed is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Navigation",
+    "candidate_topic": "Navigation Problems: Relative Velocity, PNR and CP",
+    "candidate_question": "An aircraft at 220 kt is 80 NM behind traffic at 180 kt on the same track. Time to overtake is",
+    "matched_id": "NAV-026",
+    "matched_question": "An aircraft at 220 kt is 80 NM behind traffic at 180 kt on the same track. Time to overtake is",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Definitions and Framework",
+    "candidate_question": "Which instrument is the principal current Indian statute in the hierarchy described in this chapter?",
+    "matched_id": "REG-019",
+    "matched_question": "Which instrument is the principal current Indian statute in the hierarchy described in this chapter'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Definitions and Framework",
+    "candidate_question": "Which Indian authority has the core civil aviation security oversight role?",
+    "matched_id": "REG-020",
+    "matched_question": "Which Indian authority has the core civil aviation security oversight role'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "ICAO and Conventions",
+    "candidate_question": "Which Chicago Convention Article establishes complete and exclusive State sovereignty over the airspace above its territory?",
+    "matched_id": "REG-023",
+    "matched_question": "Which Chicago Convention Article establishes complete and exclusive State sovereignty over the airspace above its territory'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "ICAO and Conventions",
+    "candidate_question": "What does Article 6 require before a scheduled international air service operates over or into another State?",
+    "matched_id": "REG-024",
+    "matched_question": "What does Article 6 require before a scheduled international air service operates over or into another State'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Indian Regulatory System",
+    "candidate_question": "Which law replaced the Aircraft Act, 1934 as India's principal civil aviation enabling statute?",
+    "matched_id": "REG-025",
+    "matched_question": "Which law replaced the Aircraft Act, 1934 as India's principal civil aviation enabling statute'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Indian Regulatory System",
+    "candidate_question": "Which body has the central role of investigating aircraft accidents and incidents in India?",
+    "matched_id": "REG-026",
+    "matched_question": "Which body has the central role of investigating aircraft accidents and incidents in India'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Nationality and Registration",
+    "candidate_question": "Which ICAO Annex contains the Standards for aircraft nationality and registration marks?",
+    "matched_id": "REG-031",
+    "matched_question": "Which ICAO Annex contains the Standards for aircraft nationality and registration marks'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Nationality and Registration",
+    "candidate_question": "Who assigns the individual registration mark to an aircraft?",
+    "matched_id": "REG-032",
+    "matched_question": "Who assigns the individual registration mark to an aircraft'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Airworthiness",
+    "candidate_question": "Which ICAO Annex contains the international airworthiness Standards?",
+    "matched_id": "REG-015",
+    "matched_question": "Which ICAO Annex contains the international airworthiness Standards'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Airworthiness",
+    "candidate_question": "Which State determines whether an aircraft on its register continues to be airworthy?",
+    "matched_id": "REG-016",
+    "matched_question": "Which State determines whether an aircraft on its register continues to be airworthy'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Personnel Licensing",
+    "candidate_question": "What is the minimum age stated by Bali for an aeroplane CPL?",
+    "matched_id": "REG-037",
+    "matched_question": "What is the minimum age stated by Bali for an aeroplane CPL'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Personnel Licensing",
+    "candidate_question": "Which language level is Operational and must be re-evaluated every three years?",
+    "matched_id": "REG-038",
+    "matched_question": "Which language level is Operational and must be re-evaluated every three years'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Rules of the Air: General",
+    "candidate_question": "When may the pilot-in-command depart from a Rule of the Air?",
+    "matched_id": "REG-039",
+    "matched_question": "When may the pilot-in-command depart from a Rule of the Air'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Rules of the Air: General",
+    "candidate_question": "What must pre-flight action include for an IFR flight?",
+    "matched_id": "REG-040",
+    "matched_question": "What must pre-flight action include for an IFR flight'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Rules of the Air: VFR, IFR and Signals",
+    "candidate_question": "What flight visibility is required at or above 10,000 ft AMSL under the standard VMC table?",
+    "matched_id": "REG-041",
+    "matched_question": "What flight visibility is required at or above 10,000 ft AMSL under the standard VMC table'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Rules of the Air: VFR, IFR and Signals",
+    "candidate_question": "Which statement describes a Special VFR flight?",
+    "matched_id": "REG-042",
+    "matched_question": "Which statement describes a Special VFR flight'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Airspace and ATS",
+    "candidate_question": "Which ATS objective is served by notifying rescue organisations about an aircraft needing aid?",
+    "matched_id": "REG-013",
+    "matched_question": "Which ATS objective is served by notifying rescue organisations about an aircraft needing aid'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Airspace and ATS",
+    "candidate_question": "Which airspace structure begins at the surface and protects arriving and departing controlled flights?",
+    "matched_id": "REG-014",
+    "matched_question": "Which airspace structure begins at the surface and protects arriving and departing controlled flights'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Separation",
+    "candidate_question": "What is the normal vertical separation minimum below FL 290?",
+    "matched_id": "REG-047",
+    "matched_question": "What is the normal vertical separation minimum below FL 290'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Separation",
+    "candidate_question": "When does the Bali VOR divergence method establish lateral separation?",
+    "matched_id": "REG-048",
+    "matched_question": "When does the Bali VOR divergence method establish lateral separation'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Separation Near Aerodromes",
+    "candidate_question": "When may a one-minute interval be used between two departures under Bali's stated divergence case?",
+    "matched_id": "REG-049",
+    "matched_question": "When may a one-minute interval be used between two departures under Bali's stated divergence case'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Separation Near Aerodromes",
+    "candidate_question": "What speed relationship supports Bali's two-minute same-track departure interval?",
+    "matched_id": "REG-050",
+    "matched_question": "What speed relationship supports Bali's two-minute same-track departure interval'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aerodrome Control",
+    "candidate_question": "Which working position normally controls traffic on the manoeuvring area except runways?",
+    "matched_id": "REG-005",
+    "matched_question": "Which working position normally controls traffic on the manoeuvring area except runways'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aerodrome Control",
+    "candidate_question": "During low-visibility procedures, how should vehicle and person movements on the manoeuvring area be managed?",
+    "matched_id": "REG-006",
+    "matched_question": "During low-visibility procedures, how should vehicle and person movements on the manoeuvring area be managed'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "ATS Surveillance",
+    "candidate_question": "Which surveillance system can detect a reflecting aircraft without an airborne transponder?",
+    "matched_id": "REG-001",
+    "matched_question": "Which surveillance system can detect a reflecting aircraft without an airborne transponder'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "ATS Surveillance",
+    "candidate_question": "What determines when ADS-C sends a normal surveillance report?",
+    "matched_id": "REG-002",
+    "matched_question": "What determines when ADS-C sends a normal surveillance report'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Instrument Departures",
+    "candidate_question": "Where is full MOC provided in a track-guided protected area?",
+    "matched_id": "REG-029",
+    "matched_question": "Where is full MOC provided in a track-guided protected area'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Instrument Departures",
+    "candidate_question": "What engine condition is assumed in the design of a published instrument departure?",
+    "matched_id": "REG-030",
+    "matched_question": "What engine condition is assumed in the design of a published instrument departure'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Instrument Approaches and Holding",
+    "candidate_question": "Which threshold IAS places an aeroplane in Category C?",
+    "matched_id": "REG-027",
+    "matched_question": "Which threshold IAS places an aeroplane in Category C'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Instrument Approaches and Holding",
+    "candidate_question": "Which segment normally connects the en-route phase to the IAF?",
+    "matched_id": "REG-028",
+    "matched_question": "Which segment normally connects the en-route phase to the IAF'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Altimeter Setting",
+    "candidate_question": "Which setting makes an altimeter indicate altitude above mean sea level?",
+    "matched_id": "REG-017",
+    "matched_question": "Which setting makes an altimeter indicate altitude above mean sea level'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Altimeter Setting",
+    "candidate_question": "What should a correctly set QFE altimeter indicate at its reference datum?",
+    "matched_id": "REG-018",
+    "matched_question": "What should a correctly set QFE altimeter indicate at its reference datum'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aeronautical Information",
+    "candidate_question": "Which ICAO Annex contains the Standards and Recommended Practices for aeronautical information services?",
+    "matched_id": "REG-011",
+    "matched_question": "Which ICAO Annex contains the Standards and Recommended Practices for aeronautical information services'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aeronautical Information",
+    "candidate_question": "Which product is primarily used for a permanent change to AIP content?",
+    "matched_id": "REG-012",
+    "matched_question": "Which product is primarily used for a permanent change to AIP content'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aerodromes: Markings",
+    "candidate_question": "Which area includes the manoeuvring area and aprons?",
+    "matched_id": "REG-009",
+    "matched_question": "Which area includes the manoeuvring area and aprons'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aerodromes: Markings",
+    "candidate_question": "What determines aerodrome reference-code element 2?",
+    "matched_id": "REG-010",
+    "matched_question": "What determines aerodrome reference-code element 2'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aerodromes: Lighting and Services",
+    "candidate_question": "What display identifies a land-aerodrome identification beacon?",
+    "matched_id": "REG-007",
+    "matched_question": "What display identifies a land-aerodrome identification beacon'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Aerodromes: Lighting and Services",
+    "candidate_question": "What distinguishes the inner 300 m of a precision category II or III approach-light system?",
+    "matched_id": "REG-008",
+    "matched_question": "What distinguishes the inner 300 m of a precision category II or III approach-light system'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Operational Procedures",
+    "candidate_question": "What does an AOC or permit authorise?",
+    "matched_id": "REG-035",
+    "matched_question": "What does an AOC or permit authorise'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Operational Procedures",
+    "candidate_question": "Which item belongs in the operational-manual group carried on board?",
+    "matched_id": "REG-036",
+    "matched_question": "Which item belongs in the operational-manual group carried on board'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Operational Hazards",
+    "candidate_question": "What is the relationship between an operator's MEL and the approved MMEL?",
+    "matched_id": "REG-033",
+    "matched_question": "What is the relationship between an operator's MEL and the approved MMEL'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Operational Hazards",
+    "candidate_question": "When does holdover time begin?",
+    "matched_id": "REG-034",
+    "matched_question": "When does holdover time begin'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Search and Rescue",
+    "candidate_question": "Which unit coordinates search and rescue operations throughout one SAR region?",
+    "matched_id": "REG-043",
+    "matched_question": "Which unit coordinates search and rescue operations throughout one SAR region'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Search and Rescue",
+    "candidate_question": "Which organisation coordinates maritime SAR policy in Bali's Indian framework?",
+    "matched_id": "REG-044",
+    "matched_question": "Which organisation coordinates maritime SAR policy in Bali's Indian framework'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Accident Investigation",
+    "candidate_question": "What is the sole objective of an Annex 13 safety investigation?",
+    "matched_id": "REG-003",
+    "matched_question": "What is the sole objective of an Annex 13 safety investigation'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Accident Investigation",
+    "candidate_question": "When does an injury count as fatal under Bali's national accident definition?",
+    "matched_id": "REG-004",
+    "matched_question": "When does an injury count as fatal under Bali's national accident definition'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Facilitation",
+    "candidate_question": "What is the main purpose of Annex 9 facilitation?",
+    "matched_id": "REG-021",
+    "matched_question": "What is the main purpose of Annex 9 facilitation'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Facilitation",
+    "candidate_question": "What happens when an aircraft-clearance document has been accepted electronically?",
+    "matched_id": "REG-022",
+    "matched_question": "What happens when an aircraft-clearance document has been accepted electronically'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Security",
+    "candidate_question": "What is the primary objective of Annex 17 security measures?",
+    "matched_id": "REG-045",
+    "matched_question": "What is the primary objective of Annex 17 security measures'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Air Regulations",
+    "candidate_topic": "Security",
+    "candidate_question": "Which body is India's specialist civil aviation security regulator and oversight authority?",
+    "matched_id": "REG-046",
+    "matched_question": "Which body is India's specialist civil aviation security regulator and oversight authority'",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Aviation Meteorology",
+    "candidate_topic": "Air Density",
+    "candidate_question": "Density altitude is defined as:",
+    "matched_id": "MET-011",
+    "matched_question": "Density altitude is defined as:",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Aviation Meteorology",
+    "candidate_topic": "Humidity",
+    "candidate_question": "The temperature to which moist air must be cooled at constant pressure to become saturated is called:",
+    "matched_id": "MET-013",
+    "matched_question": "The temperature to which moist air must be cooled at constant pressure to reach saturation is called the:",
+    "similarity_score": 0.912,
+    "rejection_reason": "Semantic token/sequence overlap (0.91)"
+  },
+  {
+    "candidate_subject": "Aviation Meteorology",
+    "candidate_topic": "Visibility & Fog",
+    "candidate_question": "Advection fog forms when:",
+    "matched_id": "MET-021",
+    "matched_question": "Advection fog forms when:",
+    "similarity_score": 1.0,
+    "rejection_reason": "Exact normalized text match"
+  },
+  {
+    "candidate_subject": "Aviation Meteorology",
+    "candidate_topic": "Thunderstorms",
+    "candidate_question": "The mature stage of a thunderstorm is definitively marked by:",
+    "matched_id": "MET-030",
+    "matched_question": "The mature stage of a thunderstorm lifecycle is definitively marked by:",
+    "similarity_score": 0.919,
+    "rejection_reason": "Semantic token/sequence overlap (0.92)"
+  },
+  {
+    "candidate_subject": "Aviation Meteorology",
+    "candidate_topic": "Clear Air Turbulence",
+    "candidate_question": "Clear Air Turbulence (CAT) is most frequently encountered in which region relative to a jet stream core?",
+    "matched_id": "MET-036",
+    "matched_question": "Clear Air Turbulence (CAT) is most severe and most frequently encountered in which region relative to a jet stream'",
+    "similarity_score": 0.905,
+    "rejection_reason": "Semantic token/sequence overlap (0.91)"
+  },
+  {
+    "candidate_subject": "Technical Specific",
+    "candidate_topic": "V-speeds and their meanings",
+    "candidate_question": "What does the abbreviation 'Vno' represent?",
+    "matched_id": "TS-027",
+    "matched_question": "What does the abbreviation 'Vx' represent?",
+    "similarity_score": 0.957,
+    "rejection_reason": "Semantic token/sequence overlap (0.96)"
+  }
+]

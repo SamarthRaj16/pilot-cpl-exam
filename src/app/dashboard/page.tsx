@@ -6,11 +6,13 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import rawQuestions from "@/data/questions.json";
+import SubjectArtwork from "@/components/SubjectArtwork";
 
 interface SubjectMeta {
   name: string;
   code: string;
   icon: string;
+  accent: string;
   desc: string;
 }
 
@@ -19,36 +21,42 @@ const BASE_SUBJECTS_METADATA: SubjectMeta[] = [
     name: "Air Navigation",
     code: "CAR SEC 7",
     icon: "🧭",
+    accent: "#48A9FF",
     desc: "General Navigation, Chart Projections, Instrumentation, Dead Reckoning & PNR/CP.",
   },
   {
     name: "Air Regulations",
     code: "ICAO / CAR",
     icon: "📜",
+    accent: "#A58BFA",
     desc: "Aircraft Rules 1937, Bharatiya Vayuyan Adhiniyam 2024, Airspace & Aerodromes.",
   },
   {
     name: "Aviation Meteorology",
     code: "I.C. JOSHI 3RD ED",
     icon: "⛅",
+    accent: "#3ED1B0",
     desc: "Atmospheric Pressure, Wind Systems, Monsoon Dynamics, Icing, METAR & TAF.",
   },
   {
     name: "Technical General",
     code: "AGK / ENGINES",
     icon: "⚙️",
+    accent: "#3ED1B0",
     desc: "Principles of Flight, Piston Engines, Hydraulics, Propellers & Flight Instruments.",
   },
   {
     name: "Technical Specific",
     code: "POH / PERF",
     icon: "🛩️",
+    accent: "#F2B94B",
     desc: "Light Aircraft POH, V-speeds, Limitations, Fuel & Altimetry Procedures.",
   },
   {
     name: "RTR",
     code: "ICAO DOC 9432",
     icon: "🎙️",
+    accent: "#48A9FF",
     desc: "Radio Telephony Restricted, Phraseology, Distress/Urgency, & VHF Propagation.",
   },
 ];
@@ -182,109 +190,161 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="space-y-8 max-w-6xl mx-auto">
-      {/* A. Welcome Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border-charcoal pb-4">
-        <div>
-          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-text-primary">
+    <div className="space-y-9 max-w-7xl mx-auto">
+      {/* 1. Aviation Luxe Hero Banner */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#171D28] via-[#1B2332] to-[#141B26] border border-border-charcoal p-6 sm:p-8 shadow-elevated">
+        {/* Subtle decorative background vector */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-15 pointer-events-none hidden md:block">
+          <svg viewBox="0 0 400 200" className="w-full h-full" fill="none">
+            <circle cx="300" cy="100" r="120" stroke="#48A9FF" strokeWidth="1" strokeDasharray="4 4" />
+            <circle cx="300" cy="100" r="80" stroke="#3ED1B0" strokeWidth="1.2" />
+            <line x1="180" y1="100" x2="420" y2="100" stroke="#48A9FF" strokeWidth="0.8" />
+            <line x1="300" y1="-20" x2="300" y2="220" stroke="#48A9FF" strokeWidth="0.8" />
+            <path d="M120 180 Q220 80 340 30" stroke="#F2B94B" strokeWidth="2" strokeDasharray="6 4" />
+          </svg>
+        </div>
+
+        <div className="relative z-10 max-w-2xl space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/15 border border-brand-blue/30 text-xs font-bold text-brand-blue">
+            <span>✈️</span>
+            <span>DGCA CBT Written Examination Platform</span>
+          </div>
+
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-text-primary tracking-tight">
             Welcome back, Pilot.
           </h1>
-          <p className="text-xs sm:text-sm text-text-secondary mt-0.5">
-            Continue your journey towards your Commercial Pilot Licence.
+
+          <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+            Your next step towards becoming a Commercial Pilot. 959 verified questions, authentic DGCA Computer-Based Testing, and zero-repeat question rotation.
           </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Link
-            href="/dashboard/custom-practice"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-interactive hover:bg-surface-hover text-brand-sky text-xs font-semibold border border-border-charcoal transition-colors"
-          >
-            <span>⚡ Custom Quiz Builder</span>
-          </Link>
+
+          <div className="pt-2 flex flex-wrap items-center gap-3">
+            <button
+              onClick={() => handleStartExam(lastSession?.subject || "Air Navigation", lastSession?.topic || "")}
+              className="px-6 py-3 rounded-xl bg-brand-blue hover:bg-brand-skyDark text-bg-main font-black text-sm shadow-glow transition-all flex items-center gap-2 hover:scale-[1.02]"
+            >
+              <span>Continue Practice</span>
+              <span>&rarr;</span>
+            </button>
+
+            <Link
+              href="/dashboard/custom-practice"
+              className="px-5 py-3 rounded-xl bg-card-elevated hover:bg-surface-interactive text-text-primary font-bold text-xs sm:text-sm border border-border-charcoal transition-all flex items-center gap-2"
+            >
+              <span>⚡ Custom Quiz Builder</span>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* B. Continue Learning (Compact) */}
-      <div className="p-4 sm:p-5 rounded-xl bg-card-primary border border-border-charcoal flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="space-y-1">
+      {/* 2. Continue Learning Section (The Focal Point) */}
+      <div className="p-5 sm:p-6 rounded-2xl bg-card-primary border-l-4 border-l-brand-teal border border-border-charcoal shadow-card flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+        <div className="space-y-1.5">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-brand-teal"></span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-text-muted">
-              Continue Learning
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-teal animate-pulse"></span>
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-teal">
+              Active Study Plan
             </span>
             {lastSession?.date && (
-              <span className="text-[11px] text-text-muted">&bull; Last practiced {lastSession.date}</span>
+              <span className="text-xs text-text-muted">&bull; Last session {lastSession.date}</span>
             )}
           </div>
-          <div className="text-base font-bold text-text-primary">
+          <h2 className="text-lg sm:text-xl font-bold text-text-primary">
             {lastSession?.subject || "Air Navigation"}
-          </div>
-          <div className="text-xs text-text-secondary">
+          </h2>
+          <p className="text-xs sm:text-sm text-text-secondary">
             {lastSession?.topic && lastSession.topic !== "General Syllabus"
-              ? `Chapter: ${lastSession.topic}`
-              : "General Navigation, Chart Projections & Instrumentation"}
-          </div>
+              ? `Chapter focus: ${lastSession.topic}`
+              : "General Navigation, Chart Projections, Instrumentation & Dead Reckoning"}
+          </p>
         </div>
 
-        <div className="flex items-center gap-3 w-full sm:w-auto">
+        <div className="flex items-center gap-3 w-full md:w-auto">
           <button
             onClick={() => handleStartExam(lastSession?.subject || "Air Navigation", lastSession?.topic || "")}
-            className="w-full sm:w-auto px-4 py-2 rounded-lg bg-brand-sky hover:bg-brand-skyDark text-bg-main font-bold text-xs shadow-sm transition-colors flex items-center justify-center gap-1.5"
+            className="w-full md:w-auto px-5 py-2.5 rounded-xl bg-brand-teal hover:bg-brand-teal/90 text-bg-main font-extrabold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-2"
           >
-            <span>Continue Practice</span>
+            <span>Resume Chapter Quiz</span>
             <span>&rarr;</span>
           </button>
         </div>
       </div>
 
-      {/* C. Performance Overview (Compact 4-Metric Grid) */}
-      <div className="space-y-3">
+      {/* 3. Performance Indicators (High Contrast, Distinctive Accents) */}
+      <div className="space-y-3.5">
         <div className="flex items-center justify-between">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-text-muted">
+          <h2 className="text-xs font-extrabold uppercase tracking-widest text-text-muted">
             Performance Overview
           </h2>
           {isExhausted && (
-            <span className="text-xs text-brand-gold font-medium">
+            <span className="text-xs text-brand-gold font-bold">
               Selected pool completed &bull; Click reset in launcher to retake
             </span>
           )}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal">
-            <div className="text-[11px] text-text-muted">Total Bank</div>
-            <div className="text-xl font-bold text-text-primary mt-1">{totalBankCount}</div>
-            <div className="text-[10px] text-text-secondary mt-0.5">Across 6 DGCA subjects</div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Total Bank */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-card-primary border-t-2 border-t-brand-blue border border-border-charcoal shadow-card">
+            <div className="flex items-center justify-between text-xs text-text-muted font-bold">
+              <span>Question Bank</span>
+              <span className="text-lg">📚</span>
+            </div>
+            <div className="text-2xl sm:text-3xl font-black text-text-primary mt-2">
+              {totalBankCount}
+            </div>
+            <div className="text-xs text-text-secondary mt-1">Across 6 DGCA subjects</div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal">
-            <div className="text-[11px] text-text-muted">Questions Seen</div>
-            <div className="text-xl font-bold text-brand-sky mt-1">{servedIds.size}</div>
-            <div className="text-[10px] text-text-secondary mt-0.5">
-              {Math.round((servedIds.size / totalBankCount) * 100)}% question bank coverage
+          {/* Questions Seen */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-card-primary border-t-2 border-t-brand-teal border border-border-charcoal shadow-card">
+            <div className="flex items-center justify-between text-xs text-text-muted font-bold">
+              <span>Zero-Repeat Seen</span>
+              <span className="text-lg">🔄</span>
+            </div>
+            <div className="text-2xl sm:text-3xl font-black text-brand-teal mt-2">
+              {servedIds.size}
+            </div>
+            <div className="text-xs text-text-secondary mt-1">
+              {Math.round((servedIds.size / totalBankCount) * 100)}% bank exposure
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal">
-            <div className="text-[11px] text-text-muted">Pending Mistakes</div>
-            <div className="text-xl font-bold text-brand-red mt-1">{activeMistakes}</div>
-            <div className="text-[10px] text-text-secondary mt-0.5">In mistake notebook queue</div>
+          {/* Pending Mistakes */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-card-primary border-t-2 border-t-brand-red border border-border-charcoal shadow-card">
+            <div className="flex items-center justify-between text-xs text-text-muted font-bold">
+              <span>Pending Mistakes</span>
+              <span className="text-lg">⚠️</span>
+            </div>
+            <div className="text-2xl sm:text-3xl font-black text-brand-red mt-2">
+              {activeMistakes}
+            </div>
+            <div className="text-xs text-text-secondary mt-1">In revision queue</div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal">
-            <div className="text-[11px] text-text-muted">Recovered Questions</div>
-            <div className="text-xl font-bold text-brand-green mt-1">{recoveredCount}</div>
-            <div className="text-[10px] text-text-secondary mt-0.5">Mastered after revision</div>
+          {/* Recovered Questions */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-card-primary border-t-2 border-t-brand-gold border border-border-charcoal shadow-card">
+            <div className="flex items-center justify-between text-xs text-text-muted font-bold">
+              <span>Recovered Questions</span>
+              <span className="text-lg">⭐</span>
+            </div>
+            <div className="text-2xl sm:text-3xl font-black text-brand-gold mt-2">
+              {recoveredCount}
+            </div>
+            <div className="text-xs text-text-secondary mt-1">Mastered after mistake</div>
           </div>
         </div>
       </div>
 
-      {/* D. Subject Selection Grid */}
-      <div id="subjects" className="space-y-3 scroll-mt-20">
-        <div className="flex items-center justify-between">
+      {/* 4. Image-Led Subject Cards (Main Visual Interest) */}
+      <div id="subjects" className="space-y-4 scroll-mt-24">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h2 className="text-base font-bold text-text-primary">DGCA Written Subjects</h2>
-            <p className="text-xs text-text-secondary">
-              Select a subject to practice or launch a targeted quiz
+            <h2 className="text-lg sm:text-xl font-black text-text-primary tracking-tight">
+              DGCA CPL Written Subjects
+            </h2>
+            <p className="text-xs sm:text-sm text-text-secondary mt-0.5">
+              Comprehensive syllabus coverage with verified questions &amp; explanations
             </p>
           </div>
           <button
@@ -292,17 +352,17 @@ export default function DashboardPage() {
               setSelectedSubjects([]);
               setSelectedTopic("");
             }}
-            className={`text-xs font-semibold px-2.5 py-1 rounded-lg border transition-colors ${
+            className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition-all ${
               selectedSubjects.length === 0
-                ? "bg-brand-sky/10 text-brand-sky border-brand-sky/30"
+                ? "bg-brand-blue/20 text-brand-blue border-brand-blue/40"
                 : "border-border-charcoal text-text-secondary hover:text-text-primary"
             }`}
           >
-            All Subjects
+            Select All Subjects
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {BASE_SUBJECTS_METADATA.map((subj) => {
             const isSelected = selectedSubjects.includes(subj.name);
             const totalInSubj = subjectStats[subj.name]?.total || 0;
@@ -317,37 +377,55 @@ export default function DashboardPage() {
               <div
                 key={subj.name}
                 onClick={() => handleToggleSubject(subj.name)}
-                className={`p-4 rounded-xl bg-card-primary border cursor-pointer transition-all flex flex-col justify-between min-h-[145px] hover:-translate-y-0.5 ${
+                className={`group rounded-2xl bg-card-primary border overflow-hidden cursor-pointer transition-all duration-200 flex flex-col justify-between shadow-card hover:-translate-y-1 ${
                   isSelected
-                    ? "border-brand-sky ring-1 ring-brand-sky/50 bg-card-elevated"
-                    : "border-border-charcoal hover:border-brand-sky/50"
+                    ? "border-brand-blue ring-2 ring-brand-blue/50 shadow-glow"
+                    : "border-border-charcoal hover:border-brand-blue/60"
                 }`}
               >
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xl">{subj.icon}</span>
-                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-surface-interactive text-text-secondary border border-border-charcoal">
+                {/* Visual Image Header */}
+                <div className="relative w-full h-36 bg-card-elevated overflow-hidden border-b border-border-charcoal/60">
+                  <SubjectArtwork subject={subj.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  
+                  {/* Dark gradient overlay for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-card-primary via-card-primary/40 to-transparent"></div>
+
+                  {/* Syllabus Badge */}
+                  <div className="absolute top-3 right-3">
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md bg-bg-main/80 backdrop-blur-md border border-border-charcoal text-text-secondary">
                       {subj.code}
                     </span>
                   </div>
-                  <h3 className="text-sm font-bold text-text-primary">{subj.name}</h3>
-                  <p className="text-xs text-text-secondary mt-1 line-clamp-2 leading-relaxed">
-                    {subj.desc}
-                  </p>
+
+                  {/* Icon & Subject Title overlay */}
+                  <div className="absolute bottom-2.5 left-4 right-4 flex items-center gap-2.5">
+                    <span className="text-2xl drop-shadow-md">{subj.icon}</span>
+                    <h3 className="text-base sm:text-lg font-black text-white drop-shadow-md leading-tight">
+                      {subj.name}
+                    </h3>
+                  </div>
                 </div>
 
-                <div className="mt-3 pt-2.5 border-t border-border-charcoal/60">
-                  <div className="flex items-center justify-between text-[11px] text-text-muted mb-1">
-                    <span>
-                      {unservedInSubj} unserved / {totalInSubj} Qs
-                    </span>
-                    <span className="font-semibold text-brand-sky">{completionPct}%</span>
-                  </div>
-                  <div className="w-full h-1 bg-surface-interactive rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-brand-sky transition-all duration-300 rounded-full"
-                      style={{ width: `${completionPct}%` }}
-                    ></div>
+                {/* Card Content */}
+                <div className="p-4 pt-3 flex-1 flex flex-col justify-between space-y-3">
+                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed line-clamp-2">
+                    {subj.desc}
+                  </p>
+
+                  <div className="pt-2 border-t border-border-charcoal/50 space-y-2">
+                    <div className="flex items-center justify-between text-xs text-text-muted font-bold">
+                      <span>
+                        {unservedInSubj} unserved of {totalInSubj} Qs &bull; {topicCount} Topics
+                      </span>
+                      <span className="text-brand-blue">{completionPct}%</span>
+                    </div>
+
+                    <div className="w-full h-1.5 bg-surface-interactive rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-brand-blue transition-all duration-500 rounded-full"
+                        style={{ width: `${completionPct}%` }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -356,45 +434,48 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* E. Quick Exam Launcher (Clean & Compact) */}
-      <div className="p-5 rounded-xl bg-card-primary border border-border-charcoal space-y-4">
-        <div className="flex items-center justify-between">
+      {/* 5. Quick Exam Launcher (Flight Operations Console) */}
+      <div className="p-6 rounded-2xl bg-card-primary border border-border-charcoal shadow-card space-y-5">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-charcoal pb-4">
           <div>
-            <h2 className="text-sm font-bold text-text-primary">Quick Exam Launcher</h2>
-            <p className="text-xs text-text-muted">
-              Configure your test parameters and start immediately
+            <h2 className="text-base sm:text-lg font-bold text-text-primary flex items-center gap-2">
+              <span>🎯</span>
+              <span>Quick Exam Launcher</span>
+            </h2>
+            <p className="text-xs text-text-secondary mt-0.5">
+              Launch an immediate exam session with custom parameters
             </p>
           </div>
           {servedIds.size > 0 && (
             <button
               onClick={handleResetRotation}
               type="button"
-              className="text-xs text-brand-gold hover:underline font-medium"
+              className="text-xs text-brand-gold hover:underline font-bold"
             >
-              Reset Exposure
+              Reset Exposure for Selection
             </button>
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Mode Selector */}
           <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-text-muted mb-1.5">
-              Mode
+            <label className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
+              Examination Mode
             </label>
-            <div className="grid grid-cols-3 gap-1 p-1 bg-bg-secondary rounded-lg border border-border-charcoal text-xs">
+            <div className="grid grid-cols-3 gap-1 p-1 bg-card-elevated rounded-xl border border-border-charcoal text-xs">
               {(["practice", "timed", "mock"] as const).map((m) => (
                 <button
                   key={m}
                   type="button"
                   onClick={() => setMode(m)}
-                  className={`py-1.5 rounded-md font-semibold capitalize transition-colors ${
+                  className={`py-2 rounded-lg font-bold capitalize transition-all ${
                     mode === m
-                      ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
+                      ? "bg-brand-blue text-bg-main shadow-sm"
                       : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
-                  {m === "mock" ? "Mock" : m}
+                  {m === "mock" ? "Mock Exam" : m}
                 </button>
               ))}
             </div>
@@ -402,15 +483,15 @@ export default function DashboardPage() {
 
           {/* Chapter Filter */}
           <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-text-muted mb-1.5">
+            <label className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
               Chapter Filter ({availableTopics.length} available)
             </label>
             <select
               value={selectedTopic}
               onChange={(e) => setSelectedTopic(e.target.value)}
-              className="w-full px-3 py-1.5 rounded-lg bg-bg-secondary border border-border-charcoal text-text-primary text-xs focus:outline-none focus:border-brand-sky"
+              className="w-full px-3.5 py-2 rounded-xl bg-card-elevated border border-border-charcoal text-text-primary text-xs font-semibold focus:outline-none focus:border-brand-blue"
             >
-              <option value="">All Chapters</option>
+              <option value="">All Topics in selected subjects</option>
               {availableTopics.map((t) => (
                 <option key={t} value={t}>
                   {t}
@@ -421,18 +502,18 @@ export default function DashboardPage() {
 
           {/* Question Count Selector */}
           <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-text-muted mb-1.5">
+            <label className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
               Question Count
             </label>
-            <div className="grid grid-cols-5 gap-1 p-1 bg-bg-secondary rounded-lg border border-border-charcoal text-xs">
+            <div className="grid grid-cols-5 gap-1 p-1 bg-card-elevated rounded-xl border border-border-charcoal text-xs">
               {[10, 20, 30, 40, 50].map((count) => (
                 <button
                   key={count}
                   type="button"
                   onClick={() => setQuestionCount(count)}
-                  className={`py-1.5 rounded-md font-semibold transition-colors ${
+                  className={`py-2 rounded-lg font-bold transition-all ${
                     questionCount === count
-                      ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
+                      ? "bg-brand-blue text-bg-main shadow-sm"
                       : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
@@ -447,7 +528,7 @@ export default function DashboardPage() {
         <button
           onClick={() => handleStartExam()}
           disabled={loading || candidatePool.length === 0}
-          className="w-full py-2.5 rounded-lg bg-brand-sky hover:bg-brand-skyDark text-bg-main font-bold text-xs sm:text-sm shadow-sm transition-colors flex items-center justify-center gap-1.5 disabled:opacity-40"
+          className="w-full py-3.5 rounded-xl bg-brand-blue hover:bg-brand-skyDark text-bg-main font-black text-sm shadow-glow transition-all flex items-center justify-center gap-2 disabled:opacity-40"
         >
           {isExhausted
             ? `Pool Completed — Click to Reset & Retake (${candidatePool.length} Qs)`
@@ -455,71 +536,71 @@ export default function DashboardPage() {
         </button>
       </div>
 
-      {/* F. Specialized Learning Tools (Clean Icon Grid) */}
-      <div className="space-y-3 pt-2">
-        <h2 className="text-xs font-bold uppercase tracking-wider text-text-muted">
+      {/* 6. Specialised Learning Tools */}
+      <div className="space-y-4 pt-2">
+        <h2 className="text-xs font-extrabold uppercase tracking-widest text-text-muted">
           Specialised Learning Tools
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           <Link
             href="/dashboard/notebook"
-            className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal hover:border-brand-sky/40 transition-colors group flex flex-col justify-between"
+            className="p-4 rounded-2xl bg-card-primary border border-border-charcoal hover:border-brand-red/50 transition-all group flex flex-col justify-between shadow-card hover:-translate-y-0.5"
           >
             <div>
-              <div className="text-xl mb-1.5">📓</div>
-              <div className="text-xs font-bold text-text-primary group-hover:text-brand-sky">Mistake Notebook</div>
-              <p className="text-[10px] text-text-muted mt-0.5 line-clamp-2">Target &amp; revise previous mistakes</p>
+              <div className="text-2xl mb-2">📓</div>
+              <div className="text-sm font-bold text-text-primary group-hover:text-brand-red">Mistake Notebook</div>
+              <p className="text-xs text-text-muted mt-1 leading-relaxed">Target &amp; revise previous mistakes</p>
             </div>
-            <span className="text-[10px] text-brand-sky mt-2 font-medium">Open &rarr;</span>
+            <span className="text-xs text-brand-red mt-3 font-bold">Open &rarr;</span>
           </Link>
 
           <Link
             href="/dashboard/revision"
-            className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal hover:border-brand-sky/40 transition-colors group flex flex-col justify-between"
+            className="p-4 rounded-2xl bg-card-primary border border-border-charcoal hover:border-brand-teal/50 transition-all group flex flex-col justify-between shadow-card hover:-translate-y-0.5"
           >
             <div>
-              <div className="text-xl mb-1.5">🔄</div>
-              <div className="text-xs font-bold text-text-primary group-hover:text-brand-sky">Spaced Revision</div>
-              <p className="text-[10px] text-text-muted mt-0.5 line-clamp-2">Interval retention algorithm</p>
+              <div className="text-2xl mb-2">🔄</div>
+              <div className="text-sm font-bold text-text-primary group-hover:text-brand-teal">Spaced Revision</div>
+              <p className="text-xs text-text-muted mt-1 leading-relaxed">Interval retention algorithm</p>
             </div>
-            <span className="text-[10px] text-brand-sky mt-2 font-medium">Open &rarr;</span>
+            <span className="text-xs text-brand-teal mt-3 font-bold">Open &rarr;</span>
           </Link>
 
           <Link
             href="/dashboard/readiness"
-            className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal hover:border-brand-sky/40 transition-colors group flex flex-col justify-between"
+            className="p-4 rounded-2xl bg-card-primary border border-border-charcoal hover:border-brand-gold/50 transition-all group flex flex-col justify-between shadow-card hover:-translate-y-0.5"
           >
             <div>
-              <div className="text-xl mb-1.5">📊</div>
-              <div className="text-xs font-bold text-text-primary group-hover:text-brand-sky">Exam Readiness</div>
-              <p className="text-[10px] text-text-muted mt-0.5 line-clamp-2">Predicted pass probability</p>
+              <div className="text-2xl mb-2">📊</div>
+              <div className="text-sm font-bold text-text-primary group-hover:text-brand-gold">Exam Readiness</div>
+              <p className="text-xs text-text-muted mt-1 leading-relaxed">Predicted pass probability</p>
             </div>
-            <span className="text-[10px] text-brand-sky mt-2 font-medium">Open &rarr;</span>
+            <span className="text-xs text-brand-gold mt-3 font-bold">Open &rarr;</span>
           </Link>
 
           <Link
             href="/dashboard/planner"
-            className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal hover:border-brand-sky/40 transition-colors group flex flex-col justify-between"
+            className="p-4 rounded-2xl bg-card-primary border border-border-charcoal hover:border-brand-blue/50 transition-all group flex flex-col justify-between shadow-card hover:-translate-y-0.5"
           >
             <div>
-              <div className="text-xl mb-1.5">📅</div>
-              <div className="text-xs font-bold text-text-primary group-hover:text-brand-sky">Study Planner</div>
-              <p className="text-[10px] text-text-muted mt-0.5 line-clamp-2">Topic schedule &amp; timeline</p>
+              <div className="text-2xl mb-2">📅</div>
+              <div className="text-sm font-bold text-text-primary group-hover:text-brand-blue">Study Planner</div>
+              <p className="text-xs text-text-muted mt-1 leading-relaxed">Topic schedule &amp; timeline</p>
             </div>
-            <span className="text-[10px] text-brand-sky mt-2 font-medium">Open &rarr;</span>
+            <span className="text-xs text-brand-blue mt-3 font-bold">Open &rarr;</span>
           </Link>
 
           <Link
             href="/dashboard/library"
-            className="p-3.5 rounded-xl bg-card-primary border border-border-charcoal hover:border-brand-sky/40 transition-colors group flex flex-col justify-between"
+            className="p-4 rounded-2xl bg-card-primary border border-border-charcoal hover:border-brand-blue/50 transition-all group flex flex-col justify-between shadow-card hover:-translate-y-0.5"
           >
             <div>
-              <div className="text-xl mb-1.5">📚</div>
-              <div className="text-xs font-bold text-text-primary group-hover:text-brand-sky">Reference Library</div>
-              <p className="text-[10px] text-text-muted mt-0.5 line-clamp-2">CARs, syllabi &amp; I.C. Joshi</p>
+              <div className="text-2xl mb-2">📚</div>
+              <div className="text-sm font-bold text-text-primary group-hover:text-brand-blue">Reference Library</div>
+              <p className="text-xs text-text-muted mt-1 leading-relaxed">CARs, syllabi &amp; I.C. Joshi</p>
             </div>
-            <span className="text-[10px] text-brand-sky mt-2 font-medium">Open &rarr;</span>
+            <span className="text-xs text-brand-blue mt-3 font-bold">Open &rarr;</span>
           </Link>
         </div>
       </div>

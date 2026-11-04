@@ -54,7 +54,7 @@ export default function DashboardLayout({
     loadUser();
   }, []);
 
-  // Close dropdowns on outside click or route change
+  // Close dropdowns on outside click
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (practiceRef.current && !practiceRef.current.contains(e.target as Node)) {
@@ -99,38 +99,38 @@ export default function DashboardLayout({
   const isDashboardActive = pathname === "/dashboard";
 
   return (
-    <div className="min-h-screen bg-bg-main text-text-primary flex flex-col font-sans">
-      {/* Top Navigation Bar - Midnight Aviation */}
-      <header className="sticky top-0 z-40 bg-bg-main/95 backdrop-blur-md border-b border-border-charcoal px-4 sm:px-6 py-2.5">
+    <div className="min-h-screen bg-bg-main text-text-primary flex flex-col font-sans selection:bg-brand-blue/30 selection:text-white">
+      {/* Top Navigation Bar - Aviation Luxe Header */}
+      <header className="sticky top-0 z-40 bg-bg-header/95 backdrop-blur-md border-b border-border-charcoal px-4 sm:px-6 py-3 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           
-          {/* Logo & Platform Badge */}
-          <Link href="/dashboard" className="flex items-center gap-2.5 text-decoration-none group">
-            <div className="w-8 h-8 rounded-lg bg-card-elevated border border-border-charcoal flex items-center justify-center text-lg shadow-card group-hover:border-brand-sky transition-colors">
+          {/* Brand Logo & Aviation Badge */}
+          <Link href="/dashboard" className="flex items-center gap-3 text-decoration-none group">
+            <div className="w-9 h-9 rounded-xl bg-card-elevated border border-border-charcoal flex items-center justify-center text-xl shadow-card group-hover:border-brand-blue transition-all group-hover:shadow-glow">
               ✈️
             </div>
             <div>
-              <div className="text-sm font-bold tracking-tight text-text-primary flex items-center gap-1.5 leading-none">
+              <div className="text-base font-extrabold tracking-tight text-text-primary flex items-center gap-2 leading-none">
                 CPL Practice
-                <span className="text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-brand-sky/10 text-brand-sky border border-brand-sky/25">
+                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-brand-blue/15 text-brand-blue border border-brand-blue/30">
                   DGCA CBT
                 </span>
               </div>
-              <div className="text-[10px] text-text-muted mt-0.5 leading-none">
-                Commercial Pilot Licence
+              <div className="text-[11px] text-text-muted mt-1 leading-none font-medium">
+                Commercial Pilot Licence Platform
               </div>
             </div>
           </Link>
 
           {/* Grouped Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 text-xs font-semibold">
+          <nav className="hidden md:flex items-center gap-1.5 text-xs font-semibold">
             {/* Dashboard */}
             <Link
               href="/dashboard"
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3.5 py-2 rounded-lg transition-all ${
                 isDashboardActive
-                  ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
-                  : "text-text-secondary hover:text-text-primary hover:bg-surface-interactive/40"
+                  ? "bg-card-elevated text-brand-blue font-bold shadow-sm border border-brand-blue/30"
+                  : "text-text-secondary hover:text-text-primary hover:bg-card-primary"
               }`}
             >
               Dashboard
@@ -144,10 +144,10 @@ export default function DashboardLayout({
                   setPracticeOpen(!practiceOpen);
                   setProgressOpen(false);
                 }}
-                className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-colors ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg transition-all ${
                   isPracticeActive || practiceOpen
-                    ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
-                    : "text-text-secondary hover:text-text-primary hover:bg-surface-interactive/40"
+                    ? "bg-card-elevated text-brand-blue font-bold shadow-sm border border-brand-blue/30"
+                    : "text-text-secondary hover:text-text-primary hover:bg-card-primary"
                 }`}
               >
                 <span>Practice</span>
@@ -155,27 +155,27 @@ export default function DashboardLayout({
               </button>
 
               {practiceOpen && (
-                <div className="absolute left-0 mt-1.5 w-52 bg-card-primary border border-border-charcoal rounded-xl shadow-elevated p-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="absolute left-0 mt-2 w-56 bg-card-primary border border-border-charcoal rounded-xl shadow-elevated p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
                   <Link
                     href="/dashboard/custom-practice"
-                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
                   >
-                    <span className="font-bold text-xs text-text-primary">Custom Practice</span>
-                    <span className="text-[10px] text-text-muted">Multi-topic quiz builder</span>
+                    <span className="font-bold text-xs text-text-primary group-hover:text-brand-blue">Custom Practice</span>
+                    <span className="text-[10px] text-text-muted mt-0.5">Multi-topic quiz builder</span>
                   </Link>
                   <Link
                     href="/dashboard#subjects"
-                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
                   >
-                    <span className="font-bold text-xs text-text-primary">Subject Practice</span>
-                    <span className="text-[10px] text-text-muted">Direct syllabus chapters</span>
+                    <span className="font-bold text-xs text-text-primary group-hover:text-brand-blue">Subject Practice</span>
+                    <span className="text-[10px] text-text-muted mt-0.5">Direct syllabus chapters</span>
                   </Link>
                   <Link
                     href="/dashboard/exam?mode=mock"
-                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
                   >
-                    <span className="font-bold text-xs text-text-primary">Mock Examination</span>
-                    <span className="text-[10px] text-text-muted">50-question DGCA simulation</span>
+                    <span className="font-bold text-xs text-text-primary group-hover:text-brand-gold">Mock Examination</span>
+                    <span className="text-[10px] text-text-muted mt-0.5">50-question DGCA simulation</span>
                   </Link>
                 </div>
               )}
@@ -189,10 +189,10 @@ export default function DashboardLayout({
                   setProgressOpen(!progressOpen);
                   setPracticeOpen(false);
                 }}
-                className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-colors ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg transition-all ${
                   isProgressActive || progressOpen
-                    ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
-                    : "text-text-secondary hover:text-text-primary hover:bg-surface-interactive/40"
+                    ? "bg-card-elevated text-brand-blue font-bold shadow-sm border border-brand-blue/30"
+                    : "text-text-secondary hover:text-text-primary hover:bg-card-primary"
                 }`}
               >
                 <span>Progress</span>
@@ -200,27 +200,27 @@ export default function DashboardLayout({
               </button>
 
               {progressOpen && (
-                <div className="absolute left-0 mt-1.5 w-56 bg-card-primary border border-border-charcoal rounded-xl shadow-elevated p-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="absolute left-0 mt-2 w-60 bg-card-primary border border-border-charcoal rounded-xl shadow-elevated p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
                   <Link
                     href="/dashboard/notebook"
-                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
                   >
-                    <span className="font-bold text-xs text-text-primary">Mistake Notebook</span>
-                    <span className="text-[10px] text-text-muted">All active mistake questions</span>
+                    <span className="font-bold text-xs text-text-primary group-hover:text-brand-red">Mistake Notebook</span>
+                    <span className="text-[10px] text-text-muted mt-0.5">All active mistake questions</span>
                   </Link>
                   <Link
                     href="/dashboard/revision"
-                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
                   >
-                    <span className="font-bold text-xs text-text-primary">Spaced Revision</span>
-                    <span className="text-[10px] text-text-muted">Interval-based memory retention</span>
+                    <span className="font-bold text-xs text-text-primary group-hover:text-brand-teal">Spaced Revision</span>
+                    <span className="text-[10px] text-text-muted mt-0.5">Interval memory retention</span>
                   </Link>
                   <Link
                     href="/dashboard/readiness"
-                    className="flex flex-col px-3 py-2 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
                   >
-                    <span className="font-bold text-xs text-text-primary">Exam Readiness</span>
-                    <span className="text-[10px] text-text-muted">Predicted pass probability</span>
+                    <span className="font-bold text-xs text-text-primary group-hover:text-brand-gold">Exam Readiness</span>
+                    <span className="text-[10px] text-text-muted mt-0.5">Predicted pass probability</span>
                   </Link>
                 </div>
               )}
@@ -229,10 +229,10 @@ export default function DashboardLayout({
             {/* Resources */}
             <Link
               href="/dashboard/library"
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3.5 py-2 rounded-lg transition-all ${
                 isResourcesActive
-                  ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
-                  : "text-text-secondary hover:text-text-primary hover:bg-surface-interactive/40"
+                  ? "bg-card-elevated text-brand-blue font-bold shadow-sm border border-brand-blue/30"
+                  : "text-text-secondary hover:text-text-primary hover:bg-card-primary"
               }`}
             >
               Resources
@@ -241,10 +241,10 @@ export default function DashboardLayout({
             {/* Planner */}
             <Link
               href="/dashboard/planner"
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3.5 py-2 rounded-lg transition-all ${
                 isPlannerActive
-                  ? "bg-card-elevated text-brand-sky font-bold shadow-sm"
-                  : "text-text-secondary hover:text-text-primary hover:bg-surface-interactive/40"
+                  ? "bg-card-elevated text-brand-blue font-bold shadow-sm border border-brand-blue/30"
+                  : "text-text-secondary hover:text-text-primary hover:bg-card-primary"
               }`}
             >
               Planner
@@ -254,7 +254,7 @@ export default function DashboardLayout({
             {isAdmin && (
               <Link
                 href="/admin"
-                className="px-2.5 py-1 rounded-lg text-brand-gold bg-brand-gold/10 border border-brand-gold/25 hover:bg-brand-gold/20 ml-1 font-bold"
+                className="px-3 py-1.5 rounded-lg text-brand-gold bg-brand-gold/15 border border-brand-gold/30 hover:bg-brand-gold/25 ml-1 font-bold"
               >
                 Admin
               </Link>
@@ -262,23 +262,23 @@ export default function DashboardLayout({
           </nav>
 
           {/* Right: Points, Profile, Sign Out */}
-          <div className="flex items-center gap-2.5">
-            {/* Points Indicator */}
-            <div className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-card-primary border border-border-charcoal text-xs font-semibold text-brand-gold">
+          <div className="flex items-center gap-3">
+            {/* Amber Gold Points Indicator */}
+            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-card-primary border border-brand-gold/30 text-xs font-bold text-brand-gold shadow-sm">
               <span>⭐</span>
               <span>{totalPoints} pts</span>
             </div>
 
-            {/* Pilot Profile */}
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-card-primary border border-border-charcoal text-xs font-medium text-text-primary">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-              <span className="max-w-[110px] truncate">{studentName}</span>
+            {/* Pilot Status Tag */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-card-primary border border-border-charcoal text-xs font-semibold text-text-primary">
+              <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+              <span className="max-w-[120px] truncate">{studentName}</span>
             </div>
 
-            {/* Sign Out */}
+            {/* Exit Action */}
             <button
               onClick={handleSignOut}
-              className="text-xs font-semibold text-text-muted hover:text-brand-red px-2.5 py-1 rounded-lg border border-border-charcoal hover:border-brand-red/30 transition-colors"
+              className="text-xs font-semibold text-text-muted hover:text-brand-red px-3 py-1.5 rounded-lg border border-border-charcoal hover:border-brand-red/40 transition-colors"
               title="Sign Out"
             >
               Exit
@@ -287,7 +287,7 @@ export default function DashboardLayout({
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-1.5 rounded-lg border border-border-charcoal text-text-secondary hover:text-text-primary hover:bg-card-elevated"
+              className="md:hidden p-2 rounded-lg border border-border-charcoal text-text-secondary hover:text-text-primary hover:bg-card-elevated"
               aria-label="Toggle Navigation Menu"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -303,11 +303,11 @@ export default function DashboardLayout({
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-2 pt-2 border-t border-border-charcoal pb-3 space-y-1 text-xs">
+          <div className="md:hidden mt-3 pt-3 border-t border-border-charcoal pb-3 space-y-1 text-xs">
             <Link
               href="/dashboard"
               className={`block px-3 py-2 rounded-lg font-semibold ${
-                isDashboardActive ? "bg-card-elevated text-brand-sky" : "text-text-secondary hover:text-white"
+                isDashboardActive ? "bg-card-elevated text-brand-blue" : "text-text-secondary hover:text-white"
               }`}
             >
               Dashboard
@@ -370,13 +370,13 @@ export default function DashboardLayout({
       </header>
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-8">
         {children}
       </main>
 
-      {/* Footer - Minimal Midnight Aviation */}
-      <footer className="border-t border-border-charcoal py-4 px-6 text-center text-[11px] text-text-muted bg-bg-secondary/40">
-        <p>CPL Practice &bull; DGCA India Commercial Pilot Licence Examination Preparation</p>
+      {/* Footer */}
+      <footer className="border-t border-border-charcoal py-5 px-6 text-center text-xs text-text-muted bg-bg-header/50">
+        <p>CPL Practice &bull; DGCA India Commercial Pilot Licence Written Examination Platform</p>
       </footer>
     </div>
   );

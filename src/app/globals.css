@@ -3,49 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --bg-main: #0B1220;
-  --bg-secondary: #101A2A;
-  --card-primary: #131E30;
-  --card-elevated: #1D2B40;
-  --surface-interactive: #26374D;
-  --surface-hover: #2F435E;
-  --border: #29384C;
-  --border-subtle: #1E2A3A;
+  --bg-main: #101116;
+  --bg-header: #171A21;
+  --bg-secondary: #1C2029;
+  --card-primary: #242A35;
+  --card-elevated: #2C3441;
+  --surface-interactive: #343E4B;
+  --surface-hover: #3D4857;
+  --border: #394452;
+  --border-subtle: #2A323D;
 
-  --primary: #6EA8FE;
-  --primary-dark: #5694F0;
-  --aviation-blue: #6EA8FE;
-  --teal: #36CFC0;
-  --success: #34D399;
-  --gold: #E9C46A;
-  --warning: #E9C46A;
-  --error: #F87171;
+  --primary: #48A9FF;
+  --primary-dark: #3190E8;
+  --aviation-blue: #48A9FF;
+  --gold: #F2B94B;
+  --amber: #F2B94B;
+  --teal: #3ED1B0;
+  --violet: #A58BFA;
+  --success: #3ED1B0;
+  --warning: #F2B94B;
+  --error: #F16D75;
 
-  --text-primary: #F1F5F9;
-  --text-secondary: #A7B4C8;
-  --text-muted: #718198;
+  --text-primary: #F5F6FA;
+  --text-secondary: #B8C3D2;
+  --text-muted: #8592A3;
 }
 
 body {
   background-color: var(--bg-main);
   color: var(--text-primary);
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  font-family: Inter, Manrope, -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
 /* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-secondary);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--surface-hover);
+  background: var(--surface-interactive);
 }

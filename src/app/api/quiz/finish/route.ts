@@ -121,6 +121,8 @@ export async function POST(request: NextRequest) {
     const accuracy = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
     const passed = accuracy >= 70; // DGCA 70% requirement
 
+    let recoveredInThisSession = 0;
+
     // Persist to Supabase if authenticated
     if (user) {
       const adminClient = createAdminClient();
@@ -157,7 +159,7 @@ export async function POST(request: NextRequest) {
       }
 
       // Check existing mistakes for revision recovery
-      let recoveredInThisSession = 0;
+      recoveredInThisSession = 0;
       const { data: existingMistakes } = await adminClient
         .from("student_mistakes")
         .select("question_id, status, incorrect_count")
@@ -231,7 +233,7 @@ export async function POST(request: NextRequest) {
       passed,
       durationSeconds,
       passMark: 70,
-      recoveredCount: typeof recoveredInThisSession !== "undefined" ? recoveredInThisSession : 0,
+      recoveredCount: recoveredInThisSession,
       reviewItems,
     });
   } catch (err: any) {

@@ -266,54 +266,54 @@ html_content = '''<!DOCTYPE html>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root {
   /* Surfaces */
-  --bg-main: #19191D;
-  --bg-secondary: #202126;
-  --card-primary: #292A30;
-  --card-elevated: #303139;
-  --surface-interactive: #373942;
-  --surface-hover: #434552;
-  --border: #40414B;
-  --border-subtle: #33343d;
-  --border-focus: #9484F5;
+  --bg-main: #0B1220;
+  --bg-secondary: #101A2A;
+  --card-primary: #131E30;
+  --card-elevated: #1D2B40;
+  --surface-interactive: #26374D;
+  --surface-hover: #2F435E;
+  --border: #29384C;
+  --border-subtle: #1E2A3A;
+  --border-focus: #6EA8FE;
 
   /* Typography */
-  --text-primary: #F5F5F7;
-  --text-secondary: #B1B2BE;
-  --text-muted: #81838F;
+  --text-primary: #F1F5F9;
+  --text-secondary: #A7B4C8;
+  --text-muted: #718198;
 
   /* Accent Colors */
-  --primary: #9484F5;
-  --primary-glow: rgba(148, 132, 245, 0.25);
-  --primary-dark: #7b6ae6;
-  --aviation-blue: #719CFF;
-  --teal: #51C6C1;
-  --success: #69CF9B;
-  --gold: #E5C36C;
-  --warning: #ECA85B;
-  --error: #ED7078;
+  --primary: #6EA8FE;
+  --primary-glow: rgba(110, 168, 254, 0.20);
+  --primary-dark: #5694F0;
+  --aviation-blue: #6EA8FE;
+  --teal: #36CFC0;
+  --success: #34D399;
+  --gold: #E9C46A;
+  --warning: #E9C46A;
+  --error: #F87171;
 
   /* Tints */
-  --tint-green: rgba(105, 207, 155, 0.12);
-  --tint-green-border: rgba(105, 207, 155, 0.35);
-  --tint-red: rgba(237, 112, 120, 0.12);
-  --tint-red-border: rgba(237, 112, 120, 0.35);
-  --tint-orange: rgba(236, 168, 91, 0.12);
-  --tint-orange-border: rgba(236, 168, 91, 0.35);
-  --tint-purple: rgba(148, 132, 245, 0.14);
-  --tint-purple-border: rgba(148, 132, 245, 0.4);
+  --tint-green: rgba(52, 211, 153, 0.12);
+  --tint-green-border: rgba(52, 211, 153, 0.35);
+  --tint-red: rgba(248, 113, 113, 0.12);
+  --tint-red-border: rgba(248, 113, 113, 0.35);
+  --tint-orange: rgba(233, 196, 106, 0.12);
+  --tint-orange-border: rgba(233, 196, 106, 0.35);
+  --tint-purple: rgba(110, 168, 254, 0.12);
+  --tint-purple-border: rgba(110, 168, 254, 0.35);
 
   /* Radius & Shadows */
-  --radius-xl: 18px;
-  --radius-lg: 14px;
-  --radius-md: 10px;
+  --radius-xl: 16px;
+  --radius-lg: 12px;
+  --radius-md: 8px;
   --radius-sm: 6px;
 
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
-  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 24px rgba(148, 132, 245, 0.2);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 20px rgba(110, 168, 254, 0.20);
 
-  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --transition: all 0.15s ease-out;
 }
 
 .light {

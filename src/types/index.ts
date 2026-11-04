@@ -192,3 +192,4 @@ export interface ReadinessScore {
   strongestSubject?: string;
   recommendedActions: string[];
 }
+

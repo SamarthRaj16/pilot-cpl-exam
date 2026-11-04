@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import rawQuestions from "@/data/questions.json";
 
-export default function ExamPage() {
+function ExamSessionContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -426,3 +426,23 @@ export default function ExamPage() {
     </div>
   );
 }
+
+export default function ExamPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-[500px] flex items-center justify-center">
+          <div className="text-center space-y-3">
+            <div className="text-3xl animate-bounce">✈️</div>
+            <p className="text-sm font-bold text-text-secondary">
+              Preparing examination environment...
+            </p>
+          </div>
+        </div>
+      }
+    >
+      <ExamSessionContent />
+    </Suspense>
+  );
+}
+

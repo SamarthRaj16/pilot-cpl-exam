@@ -150,3 +150,4 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: err.message || "Failed to start quiz" }, { status: 500 });
   }
 }
+

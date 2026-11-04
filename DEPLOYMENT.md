@@ -115,3 +115,4 @@ npm start
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY`
 4. Click **Deploy**. Vercel will build and deploy the Next.js application automatically.
+

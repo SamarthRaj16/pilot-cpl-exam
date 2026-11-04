@@ -23,6 +23,8 @@ ids_in_html = set(re.findall(r'id=["\']([^"\']+)["\']', html_part))
 missing = ids_in_script - ids_in_html
 print(f"Total IDs in script: {len(ids_in_script)}")
 print(f"Total IDs in HTML: {len(ids_in_html)}")
+for item in sorted(ids_in_script):
+    print(f"  ID: {item}")
 if missing:
     print(f"❌ Missing IDs in HTML: {missing}")
 else:

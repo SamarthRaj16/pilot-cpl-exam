@@ -156,18 +156,68 @@ export async function POST(request: NextRequest) {
           .upsert(spacedRepetitionUpdates, { onConflict: "student_id,question_id" });
       }
 
-      // Update student points in Profile
+      // Check existing mistakes for revision recovery
+      let recoveredInThisSession = 0;
+      const { data: existingMistakes } = await adminClient
+        .from("student_mistakes")
+        .select("question_id, status, incorrect_count")
+        .eq("student_id", studentId)
+        .in("status", ["unresolved", "pending_revision"]);
+
+      const existingMistakeMap = new Map();
+      if (existingMistakes) {
+        existingMistakes.forEach((m) => existingMistakeMap.set(m.question_id, m));
+      }
+
+      for (const qId of questionIds) {
+        const studentChoice = answers[qId] !== undefined ? answers[qId] : -1;
+        const q = qMap.get(qId);
+        if (!q) continue;
+        const correctChoice = q.answer_index !== undefined ? q.answer_index : q.answerIndex;
+        const isCorrect = studentChoice === correctChoice && studentChoice >= 0;
+
+        if (isCorrect && existingMistakeMap.has(qId)) {
+          recoveredInThisSession += 1;
+          await adminClient
+            .from("student_mistakes")
+            .update({
+              status: "resolved",
+              recovered_at: now,
+            })
+            .match({ student_id: studentId, question_id: qId });
+        } else if (!isCorrect) {
+          const prev = existingMistakeMap.get(qId);
+          const incCount = prev ? (prev.incorrect_count || 1) + 1 : 1;
+          await adminClient
+            .from("student_mistakes")
+            .upsert({
+              student_id: studentId,
+              question_id: qId,
+              subject_id: q.subject || q.subject_id,
+              topic_id: q.topic || q.topic_name,
+              status: "pending_revision",
+              incorrect_count: incCount,
+              last_incorrect_choice: studentChoice,
+              authoritative_answer: correctChoice,
+              last_attempted_at: now,
+            }, { onConflict: "student_id,question_id" });
+        }
+      }
+
+      // Update student points & recovered questions in Profile
       const { data: profile } = await adminClient
         .from("profiles")
-        .select("total_points")
+        .select("total_points, recovered_questions")
         .eq("id", studentId)
         .single();
 
       const currentPoints = profile?.total_points || 0;
+      const currentRecovered = profile?.recovered_questions || 0;
       await adminClient
         .from("profiles")
         .update({
           total_points: currentPoints + score,
+          recovered_questions: currentRecovered + recoveredInThisSession,
           last_active_at: now,
         })
         .eq("id", studentId);
@@ -181,6 +231,7 @@ export async function POST(request: NextRequest) {
       passed,
       durationSeconds,
       passMark: 70,
+      recoveredCount: typeof recoveredInThisSession !== "undefined" ? recoveredInThisSession : 0,
       reviewItems,
     });
   } catch (err: any) {

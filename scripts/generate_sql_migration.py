@@ -443,3 +443,4 @@ with open(seed_path, "w", encoding="utf-8") as f:
 
 print(f"Generated complete Seed SQL: {seed_path} ({len(seed_lines)} SQL statements)")
 print("MIGRATION SCRIPTS COMPLETE!")
+

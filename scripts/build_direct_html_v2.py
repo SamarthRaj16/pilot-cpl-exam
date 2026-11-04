@@ -1342,9 +1342,10 @@ input, select { font-family: inherit; outline: none; }
   padding-right: 4px;
 }
 .q-cell {
+  position: relative;
   aspect-ratio: 1;
   border-radius: 8px;
-  background: var(--card-elevated);
+  background: #373942;
   border: 1px solid var(--border);
   color: var(--text-secondary);
   font-size: 0.85rem;
@@ -1356,23 +1357,36 @@ input, select { font-family: inherit; outline: none; }
   transition: var(--transition);
 }
 .q-cell:hover {
-  border-color: var(--primary);
-  color: var(--text-primary);
-}
-.q-cell.current {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 2px var(--primary);
+  border-color: #9484F5;
   color: #fff;
 }
-.q-cell.answered {
-  background: var(--tint-green);
-  border-color: var(--success);
-  color: var(--success);
+.q-cell.current {
+  box-shadow: 0 0 0 2.5px #9484F5;
 }
-.q-cell.flagged {
-  background: var(--tint-orange);
-  border-color: var(--warning);
-  color: var(--warning);
+.q-cell.answered-neutral {
+  background: #40414B;
+  border-color: #719CFF;
+  color: #F5F5F7;
+}
+.q-cell.answered-correct {
+  background: rgba(105, 207, 155, 0.22) !important;
+  border-color: #69CF9B !important;
+  color: #69CF9B !important;
+}
+.q-cell.answered-incorrect {
+  background: rgba(237, 112, 120, 0.22) !important;
+  border-color: #ED7078 !important;
+  color: #ED7078 !important;
+}
+.q-cell .flag-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ECA85B;
+  box-shadow: 0 0 4px #ECA85B;
 }
 .nav-summary-chips {
   display: flex;
@@ -1918,10 +1932,11 @@ input, select { font-family: inherit; outline: none; }
         </div>
 
         <div class="grid-legend">
-          <span class="leg"><span class="leg-dot answered"></span>Answered</span>
-          <span class="leg"><span class="leg-dot flagged"></span>Flagged</span>
-          <span class="leg"><span class="leg-dot current"></span>Current</span>
-          <span class="leg"><span class="leg-dot unanswered"></span>Unanswered</span>
+          <span class="leg"><span class="leg-dot" style="background:#69CF9B"></span>Correct</span>
+          <span class="leg"><span class="leg-dot" style="background:#ED7078"></span>Incorrect</span>
+          <span class="leg"><span class="leg-dot" style="background:#ECA85B"></span>Flagged</span>
+          <span class="leg"><span class="leg-dot" style="background:#9484F5"></span>Current</span>
+          <span class="leg"><span class="leg-dot" style="background:#373942"></span>Unattempted</span>
         </div>
       </div>
 
@@ -2721,14 +2736,33 @@ function updateGridHighlight(){
 
   for(let qi = 0; qi < cells.length; qi++){
     const c = cells[qi];
+    const q = state.questions[qi];
+    const ans = state.answers[qi];
+    const isCurrent = (qi === state.idx);
+    const isFlagged = state.flags[qi];
+
     c.className = "q-cell";
-    if(qi === state.idx) c.classList.add("current");
-    if(state.answers[qi] >= 0){
-      c.classList.add("answered");
-      ansCount++;
+    c.innerHTML = `${qi + 1}${isFlagged ? '<span class="flag-badge" title="Flagged for review"></span>' : ''}`;
+
+    if(isCurrent){
+      c.classList.add("current");
     }
-    if(state.flags[qi]){
-      c.classList.add("flagged");
+
+    if(ans >= 0){
+      ansCount++;
+      if(state.mode === "practice"){
+        if(ans === q.answer){
+          c.classList.add("answered-correct");
+        } else {
+          c.classList.add("answered-incorrect");
+        }
+      } else {
+        // Timed and Mock modes remain neutral before submission
+        c.classList.add("answered-neutral");
+      }
+    }
+
+    if(isFlagged){
       flagCount++;
     }
   }

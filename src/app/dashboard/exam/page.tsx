@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import React, { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import rawQuestions from "@/data/questions.json";
@@ -10,7 +12,11 @@ function ExamSessionContent() {
 
   const subjectsParam = searchParams.get("subjects");
   const topicParam = searchParams.get("topic");
+  const topicsParam = searchParams.get("topics");
   const mode = (searchParams.get("mode") || "practice") as "practice" | "timed" | "mock";
+  const practiceMode = searchParams.get("practiceMode") || "smart";
+  const limitParam = Number(searchParams.get("limit") || searchParams.get("questionCount") || (mode === "mock" ? 50 : 30));
+  const questionLimit = Math.min(50, Math.max(10, limitParam || 50));
 
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,21 +26,57 @@ function ExamSessionContent() {
   const [timeRemaining, setTimeRemaining] = useState(mode === "mock" ? 90 * 60 : 30 * 60);
   const [showSubmitModal, setShowSubmitModal] = useState(false);
   const [attemptId, setAttemptId] = useState("");
+  const [availabilityNotice, setAvailabilityNotice] = useState<string | null>(null);
 
   const LETTERS = ["A", "B", "C", "D"];
 
-  // Initialize Quiz Session via API
+  // Initialize Quiz Session via API with Client-Side Fallback
   useEffect(() => {
     async function initSession() {
+      // Gather local mistake and served IDs
+      let clientMistakeIds: string[] = [];
+      let clientServedIds: string[] = [];
+      try {
+        const storedMistakes = localStorage.getItem("cpl_mistakes");
+        if (storedMistakes) {
+          const mObj = JSON.parse(storedMistakes);
+          clientMistakeIds = Object.keys(mObj).filter(
+            (id) => mObj[id].status === "pending_revision" || mObj[id].status === "unresolved"
+          );
+        }
+        const storedServed = localStorage.getItem("cpl_served_ids");
+        if (storedServed) {
+          clientServedIds = JSON.parse(storedServed);
+        }
+      } catch {
+        // Ignored
+      }
+
+      // Parse subjects and topics arrays
+      let subjectsList: string[] = [];
+      if (subjectsParam) {
+        subjectsList = subjectsParam.split(",").map((s) => s.trim()).filter(Boolean);
+      }
+
+      let topicsList: string[] = [];
+      if (topicsParam) {
+        topicsList = topicsParam.split(",").map((t) => t.trim()).filter(Boolean);
+      } else if (topicParam) {
+        topicsList = [topicParam.trim()];
+      }
+
       try {
         const res = await fetch("/api/quiz/start", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            subjectId: subjectsParam ? subjectsParam.split(",")[0] : undefined,
-            topicId: topicParam || undefined,
+            subjectIds: subjectsList,
+            topicIds: topicsList,
             mode,
-            questionCount: mode === "mock" ? 50 : 30,
+            practiceMode,
+            questionCount: questionLimit,
+            clientMistakeIds,
+            clientServedIds,
           }),
         });
 
@@ -45,34 +87,98 @@ function ExamSessionContent() {
           setFlags(new Array(data.questions.length).fill(false));
           setRevealed(new Array(data.questions.length).fill(false));
           setAttemptId(data.attemptId || `att-${Date.now()}`);
+          if (data.availabilityNotice) {
+            setAvailabilityNotice(data.availabilityNotice);
+          }
 
           // Track served IDs locally for Zero-Repeat
           try {
             const stored = localStorage.getItem("cpl_served_ids");
             const set = new Set(stored ? JSON.parse(stored) : []);
-            data.questions.forEach((q: any) => set.add(q.id));
+            data.questions.forEach((q: any) => {
+              if (!q.isRevision) set.add(q.id);
+            });
             localStorage.setItem("cpl_served_ids", JSON.stringify(Array.from(set)));
           } catch {
             // Ignored
           }
-        } else {
-          // Fallback from rawQuestions
-          const filtered = rawQuestions.slice(0, 30);
-          setQuestions(filtered);
-          setAnswers(new Array(filtered.length).fill(-1));
-          setFlags(new Array(filtered.length).fill(false));
-          setRevealed(new Array(filtered.length).fill(false));
+          return;
         }
       } catch {
-        const filtered = rawQuestions.slice(0, 30);
-        setQuestions(filtered);
-        setAnswers(new Array(filtered.length).fill(-1));
-        setFlags(new Array(filtered.length).fill(false));
-        setRevealed(new Array(filtered.length).fill(false));
+        // Network or offline fallback
+      }
+
+      // Offline Standalone Selection Logic
+      const servedSet = new Set(clientServedIds);
+      const pendingMistakeSet = new Set(clientMistakeIds);
+
+      const candidate = (rawQuestions as any[]).filter((q) => {
+        if (practiceMode === "all_incorrect") return pendingMistakeSet.has(q.id);
+        if (subjectsList.length > 0 && !subjectsList.includes(q.subject)) return false;
+        if (topicsList.length > 0 && !topicsList.includes(q.topic)) return false;
+        return true;
+      });
+
+      const poolRevision: any[] = [];
+      const poolFresh: any[] = [];
+
+      candidate.forEach((q) => {
+        if (pendingMistakeSet.has(q.id)) {
+          poolRevision.push({ ...q, isRevision: true });
+        } else if (!servedSet.has(q.id)) {
+          poolFresh.push({ ...q, isRevision: false });
+        }
+      });
+
+      let selected: any[] = [];
+      if (practiceMode === "revision_only" || practiceMode === "all_incorrect") {
+        selected = poolRevision.slice(0, questionLimit);
+      } else if (practiceMode === "fresh_only") {
+        selected = poolFresh.sort(() => Math.random() - 0.5).slice(0, questionLimit);
+      } else {
+        // Smart mode: combine up to 20 revision + fresh questions
+        const maxRev = Math.min(20, Math.floor(questionLimit * 0.4) || 5);
+        const revPicked = poolRevision.slice(0, maxRev);
+        const freshPicked = poolFresh
+          .sort(() => Math.random() - 0.5)
+          .slice(0, questionLimit - revPicked.length);
+        selected = [...revPicked, ...freshPicked];
+
+        if (selected.length < questionLimit && poolRevision.length > maxRev) {
+          selected.push(...poolRevision.slice(maxRev, maxRev + (questionLimit - selected.length)));
+        }
+      }
+
+      if (selected.length === 0) {
+        selected = candidate.slice(0, Math.min(questionLimit, candidate.length));
+      }
+
+      if (selected.length < questionLimit) {
+        setAvailabilityNotice(
+          `${selected.length} unique questions are currently available for your selected topics.`
+        );
+      }
+
+      setQuestions(selected.sort(() => Math.random() - 0.5));
+      setAnswers(new Array(selected.length).fill(-1));
+      setFlags(new Array(selected.length).fill(false));
+      setRevealed(new Array(selected.length).fill(false));
+      setAttemptId(`att-offline-${Date.now()}`);
+
+      // Record offline exposures
+      try {
+        const stored = localStorage.getItem("cpl_served_ids");
+        const set = new Set(stored ? JSON.parse(stored) : []);
+        selected.forEach((q) => {
+          if (!q.isRevision) set.add(q.id);
+        });
+        localStorage.setItem("cpl_served_ids", JSON.stringify(Array.from(set)));
+      } catch {
+        // Ignored
       }
     }
     initSession();
-  }, [subjectsParam, topicParam, mode]);
+  }, [subjectsParam, topicParam, topicsParam, mode, practiceMode, questionLimit]);
 
   // Timer countdown
   useEffect(() => {
@@ -101,7 +207,6 @@ function ExamSessionContent() {
 
   const currentQ = questions[currentIndex];
   const totalQuestions = questions.length;
-  const isAnswered = answers[currentIndex] >= 0;
   const isRevealed = revealed[currentIndex];
   const isCurrentFlagged = flags[currentIndex];
 
@@ -116,6 +221,37 @@ function ExamSessionContent() {
       const newRevealed = [...revealed];
       newRevealed[currentIndex] = true;
       setRevealed(newRevealed);
+
+      // Real-time persistent mistake and recovery tracking
+      const isRight = optIndex === (currentQ.answerIndex !== undefined ? currentQ.answerIndex : currentQ.answer_index);
+      try {
+        const stored = localStorage.getItem("cpl_mistakes");
+        const mistakes = stored ? JSON.parse(stored) : {};
+
+        if (!isRight) {
+          const existing = mistakes[currentQ.id];
+          mistakes[currentQ.id] = {
+            questionId: currentQ.id,
+            subject: currentQ.subject,
+            topic: currentQ.topic,
+            studentChoice: optIndex,
+            correctChoice: currentQ.answerIndex,
+            incorrectCount: (existing?.incorrectCount || 0) + 1,
+            lastIncorrectAt: new Date().toISOString(),
+            status: "pending_revision",
+          };
+        } else {
+          if (mistakes[currentQ.id] && mistakes[currentQ.id].status === "pending_revision") {
+            mistakes[currentQ.id].status = "recovered";
+            mistakes[currentQ.id].recoveredAt = new Date().toISOString();
+            const prevRecovered = Number(localStorage.getItem("cpl_recovered_count") || "0");
+            localStorage.setItem("cpl_recovered_count", String(prevRecovered + 1));
+          }
+        }
+        localStorage.setItem("cpl_mistakes", JSON.stringify(mistakes));
+      } catch {
+        // Storage fail
+      }
     }
   };
 
@@ -149,7 +285,42 @@ function ExamSessionContent() {
       sessionStorage.setItem("last_exam_result", JSON.stringify(resultData));
       router.push("/dashboard/results");
     } catch {
-      router.push("/dashboard");
+      // Offline result calculation fallback
+      let score = 0;
+      const reviewItems = questions.map((q, idx) => {
+        const studentChoice = answers[idx];
+        const correctChoice = q.answerIndex !== undefined ? q.answerIndex : q.answer_index;
+        const isCorrect = studentChoice === correctChoice && studentChoice >= 0;
+        if (isCorrect) score += 1;
+        return {
+          questionId: q.id,
+          subject: q.subject,
+          topic: q.topic,
+          difficulty: q.difficulty,
+          question: q.question,
+          options: q.options,
+          studentChoice,
+          correctChoice,
+          isCorrect,
+          pointsAwarded: isCorrect ? 1 : 0,
+          explanation: q.explanation,
+          source: q.source,
+        };
+      });
+
+      const accuracy = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
+      const offlineResult = {
+        attemptId,
+        score,
+        totalQuestions,
+        accuracy,
+        passed: accuracy >= 70,
+        durationSeconds: (mode === "mock" ? 90 * 60 : 30 * 60) - timeRemaining,
+        passMark: 70,
+        reviewItems,
+      };
+      sessionStorage.setItem("last_exam_result", JSON.stringify(offlineResult));
+      router.push("/dashboard/results");
     }
   };
 
@@ -165,12 +336,32 @@ function ExamSessionContent() {
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
       {/* Main CBT Question Area */}
       <div className="lg:col-span-3 bg-card-primary border border-border-charcoal rounded-2xl p-6 sm:p-8 shadow-card space-y-6">
+        {/* Availability Notification Banner */}
+        {availabilityNotice && (
+          <div className="p-3.5 rounded-xl bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-bold flex items-center justify-between">
+            <span>ℹ️ {availabilityNotice}</span>
+            <button
+              onClick={() => setAvailabilityNotice(null)}
+              className="text-text-muted hover:text-white px-2 py-0.5 rounded"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
         {/* Header */}
         <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-border-charcoal">
           <div>
-            <span className="text-xs font-bold text-brand-purple uppercase tracking-wider">
-              {currentQ.subject}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-brand-purple uppercase tracking-wider">
+                {currentQ.subject}
+              </span>
+              {currentQ.isRevision && (
+                <span className="text-[10px] uppercase font-extrabold px-2 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange border border-brand-orange/40">
+                  ↺ Revision Question
+                </span>
+              )}
+            </div>
             <div className="text-sm font-extrabold text-white mt-0.5">
               {currentQ.topic || "General"}
             </div>
@@ -179,94 +370,60 @@ function ExamSessionContent() {
             <span className="text-xs uppercase font-bold px-2.5 py-1 rounded-md bg-card-elevated border border-border-charcoal text-brand-gold">
               {currentQ.difficulty || "Medium"}
             </span>
-            <span className="text-xs uppercase font-bold px-2.5 py-1 rounded-md bg-surface-interactive text-text-muted">
-              {mode.toUpperCase()}
-            </span>
-          </div>
-        </div>
-
-        {/* Progress Bar */}
-        <div>
-          <div className="flex justify-between text-xs text-text-muted font-bold mb-2">
-            <span>
+            <span className="text-xs font-bold text-text-muted">
               Question {currentIndex + 1} of {totalQuestions}
             </span>
-            <span>{Math.round(((currentIndex + 1) / totalQuestions) * 100)}% Complete</span>
-          </div>
-          <div className="w-full h-1.5 bg-surface-interactive rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-brand-blue to-brand-purple transition-all duration-300 rounded-full"
-              style={{ width: `${((currentIndex + 1) / totalQuestions) * 100}%` }}
-            ></div>
           </div>
         </div>
 
-        {/* Question Prompt */}
-        <div className="py-2">
-          <h3 className="text-base sm:text-lg font-bold text-white leading-relaxed">
+        {/* Question Text */}
+        <div className="space-y-4">
+          <p className="text-base sm:text-lg font-medium text-text-primary leading-relaxed">
             {currentQ.question}
-          </h3>
+          </p>
         </div>
 
-        {/* Options */}
-        <div className="space-y-3">
-          {currentQ.options.map((opt: string, oi: number) => {
-            const isSelected = answers[currentIndex] === oi;
-            const isCorrect = mode === "practice" && isRevealed && oi === currentQ.answerIndex;
-            const isWrong =
-              mode === "practice" && isRevealed && isSelected && oi !== currentQ.answerIndex;
+        {/* Answer Options */}
+        <div className="space-y-3 pt-2">
+          {currentQ.options.map((opt: string, optIndex: number) => {
+            const isSelected = answers[currentIndex] === optIndex;
+            const isCorrect = currentQ.answerIndex === optIndex;
+            const isStudentWrong = isSelected && !isCorrect;
 
-            let btnStyle =
-              "bg-card-elevated border-border-charcoal text-text-primary hover:border-brand-purple hover:bg-surface-interactive";
-            if (isCorrect) {
-              btnStyle = "bg-brand-green/20 border-brand-green text-white";
-            } else if (isWrong) {
-              btnStyle = "bg-brand-red/20 border-brand-red text-white";
+            let optStyle =
+              "bg-card-elevated hover:bg-surface-interactive border-border-charcoal text-text-primary";
+
+            if (mode === "practice" && isRevealed) {
+              if (isCorrect) {
+                optStyle = "bg-brand-green/20 border-brand-green text-brand-green font-bold";
+              } else if (isStudentWrong) {
+                optStyle = "bg-brand-red/20 border-brand-red text-brand-red font-bold";
+              } else {
+                optStyle = "bg-card-elevated/40 border-border-charcoal/40 text-text-muted opacity-60";
+              }
             } else if (isSelected) {
-              btnStyle = "bg-surface-interactive border-brand-purple text-white shadow-glow";
+              optStyle = "bg-brand-purple/20 border-brand-purple text-white font-bold";
             }
 
             return (
               <button
-                key={oi}
-                onClick={() => handleSelectOption(oi)}
-                className={`w-full p-4 rounded-xl border text-left text-sm font-medium transition-all flex items-center justify-between gap-4 ${btnStyle}`}
+                key={optIndex}
+                onClick={() => handleSelectOption(optIndex)}
+                className={`w-full p-4 rounded-xl border text-left flex items-start gap-3.5 transition-all ${optStyle}`}
               >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`w-7 h-7 rounded-lg flex items-center justify-center font-extrabold text-xs flex-shrink-0 ${
-                      isCorrect
-                        ? "bg-brand-green text-black"
-                        : isWrong
-                        ? "bg-brand-red text-white"
-                        : isSelected
-                        ? "bg-brand-purple text-white"
-                        : "bg-surface-interactive text-text-secondary"
-                    }`}
-                  >
-                    {LETTERS[oi]}
-                  </span>
-                  <span>{opt}</span>
+                <div className="w-7 h-7 rounded-lg border border-border-charcoal bg-card-primary flex items-center justify-center font-bold text-xs shrink-0">
+                  {LETTERS[optIndex]}
                 </div>
-                {isCorrect && (
-                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-brand-green text-black">
-                    ✓ Correct (+1 pt)
-                  </span>
-                )}
-                {isWrong && (
-                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-brand-red text-white">
-                    ✗ Your Choice (0 pts)
-                  </span>
-                )}
+                <div className="text-sm pt-0.5 leading-relaxed">{opt}</div>
               </button>
             );
           })}
         </div>
 
-        {/* Instant Authoritative Feedback (Practice Mode) */}
+        {/* Instant Authoritative Feedback (Practice Mode strictly) */}
         {mode === "practice" && isRevealed && (
           <div
-            className={`p-5 rounded-xl border text-sm space-y-2 animate-fadeIn ${
+            className={`p-5 rounded-xl border text-sm space-y-3 animate-fadeIn ${
               answers[currentIndex] === currentQ.answerIndex
                 ? "bg-brand-green/10 border-brand-green/30 text-text-primary"
                 : "bg-brand-red/10 border-brand-red/30 text-text-primary"
@@ -274,18 +431,38 @@ function ExamSessionContent() {
           >
             <div className="font-extrabold flex items-center gap-2">
               {answers[currentIndex] === currentQ.answerIndex ? (
-                <span className="text-brand-green">✓ Correct! (+1 Point Received)</span>
+                <span className="text-brand-green text-base font-extrabold flex items-center gap-1.5">
+                  ✓ Correct Answer! (+1 Mark Awarded)
+                </span>
               ) : (
-                <span className="text-brand-red">
-                  ✗ Incorrect (0 Points) &bull; Authoritative Answer:{" "}
-                  {LETTERS[currentQ.answerIndex]}. {currentQ.options[currentQ.answerIndex]}
+                <span className="text-brand-red text-base font-extrabold flex items-center gap-1.5">
+                  ✗ Incorrect (0 Marks Awarded)
                 </span>
               )}
             </div>
-            <p className="text-text-secondary leading-relaxed pt-1">
-              <strong>Explanation:</strong> {currentQ.explanation}
+
+            {/* Exact Authoritative Answer Display when incorrect */}
+            {answers[currentIndex] !== currentQ.answerIndex && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs py-2.5 px-3 rounded-lg bg-card-primary/80 border border-border-charcoal">
+                <div>
+                  <span className="text-text-muted font-bold block mb-0.5">Your answer:</span>
+                  <span className="text-brand-red font-bold">
+                    {LETTERS[answers[currentIndex]]}. {currentQ.options[answers[currentIndex]]}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-text-muted font-bold block mb-0.5">Authoritative Correct Answer:</span>
+                  <span className="text-brand-green font-bold">
+                    {LETTERS[currentQ.answerIndex]}. {currentQ.options[currentQ.answerIndex]}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            <p className="text-text-secondary leading-relaxed pt-1 text-xs sm:text-sm">
+              <strong className="text-white">Explanation:</strong> {currentQ.explanation}
             </p>
-            <div className="text-xs font-bold text-text-muted pt-2 border-t border-border-charcoal/40">
+            <div className="text-[11px] font-bold text-text-muted pt-2 border-t border-border-charcoal/40">
               📚 Source Reference: {currentQ.source}
             </div>
           </div>
@@ -351,28 +528,62 @@ function ExamSessionContent() {
             </span>
           </div>
 
+          {/* CRITICAL FIX: Question Navigator Colours */}
           <div className="grid grid-cols-5 gap-2 max-h-60 overflow-y-auto pr-1">
-            {questions.map((_, idx) => {
+            {questions.map((q, idx) => {
               const isCurrent = idx === currentIndex;
-              const ans = answers[idx] >= 0;
-              const flag = flags[idx];
+              const studentAns = answers[idx];
+              const isAttempted = studentAns >= 0;
+              const correctAns = q.answerIndex !== undefined ? q.answerIndex : q.answer_index;
+              const isCorrect = isAttempted && studentAns === correctAns;
+              const isRev = revealed[idx];
+              const isFlag = flags[idx];
 
-              let cellStyle = "bg-card-elevated border-border-charcoal text-text-secondary";
-              if (isCurrent) {
-                cellStyle = "border-brand-purple ring-2 ring-brand-purple text-white";
-              } else if (ans) {
-                cellStyle = "bg-brand-green/20 border-brand-green text-brand-green";
-              } else if (flag) {
-                cellStyle = "bg-brand-orange/20 border-brand-orange text-brand-orange";
+              // Base state: Unanswered is Grey (#373942)
+              let cellBg = "bg-card-elevated border-border-charcoal text-text-secondary";
+
+              if (mode === "practice") {
+                // In Practice Mode: Green if correct, Red if incorrect!
+                if (isRev && isAttempted) {
+                  if (isCorrect) {
+                    cellBg = "bg-brand-green/20 border-brand-green text-brand-green";
+                  } else {
+                    cellBg = "bg-brand-red/20 border-brand-red text-brand-red";
+                  }
+                }
+              } else {
+                // In Timed / Mock Mode: Neutral answered state (NO PREMATURE GREEN/RED)
+                if (isAttempted) {
+                  cellBg = "bg-brand-blue/20 border-brand-blue text-brand-blue";
+                }
               }
+
+              // Selected state: Purple ring that DOES NOT overwrite green/red/grey
+              const currentRing = isCurrent
+                ? "ring-2 ring-brand-purple border-brand-purple shadow-glow"
+                : "";
 
               return (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`aspect-square rounded-lg border text-xs font-extrabold flex items-center justify-center transition-all ${cellStyle}`}
+                  className={`relative aspect-square rounded-lg border text-xs font-extrabold flex items-center justify-center transition-all ${cellBg} ${currentRing}`}
                 >
-                  {idx + 1}
+                  <span>{idx + 1}</span>
+
+                  {/* Flag indicator: Orange badge that overlays without replacing tile color */}
+                  {isFlag && (
+                    <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-brand-orange text-black text-[9px] font-extrabold flex items-center justify-center shadow-sm">
+                      ⚑
+                    </span>
+                  )}
+
+                  {/* Subtle Revision indicator */}
+                  {q.isRevision && (
+                    <span className="absolute bottom-0.5 right-1 text-[8px] text-brand-gold opacity-90 font-bold">
+                      ↺
+                    </span>
+                  )}
                 </button>
               );
             })}
@@ -445,4 +656,3 @@ export default function ExamPage() {
     </Suspense>
   );
 }
-

@@ -59,3 +59,4 @@ with open(inv_path, "w", encoding="utf-8") as f:
     json.dump(inv, f, indent=2)
 
 print(f"\nSaved migration inventory to {inv_path}")
+

@@ -13422,5 +13422,2045 @@
     "answerIndex": 0,
     "explanation": "ICAO Annex 2 Rule 3.6.5.2 mandates that in IMC (or when weather prevents VMC landing), an aircraft with communication failure shall: maintain the last assigned speed and level (or minimum flight altitude if higher) for 20 minutes following the failure to report over a compulsory reporting point, and thereafter adjust level and speed according with the filed flight plan, flying the assigned or filed route to the destination IAF.",
     "source": "ICAO Annex 2 'Rules of the Air' / DGCA CAR Section 9"
+  },
+  {
+    "id": "MET-094",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "easy",
+    "question": "What percentage of the total atmospheric mass is concentrated below 6 km (approx 20,000 ft)?",
+    "options": [
+      "25%",
+      "50%",
+      "75%",
+      "90%"
+    ],
+    "answerIndex": 1,
+    "explanation": "Due to gravitational compression of air molecules, half (50%) of the total atmospheric mass lies below 6 km, and 75% lies below 10 km.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 3 & Q31",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-095",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "easy",
+    "question": "Which gas is the third most abundant by volume in dry atmospheric air?",
+    "options": [
+      "Carbon Dioxide",
+      "Argon",
+      "Neon",
+      "Helium"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dry air consists of Nitrogen (78.08%), Oxygen (20.95%), Argon (0.93%), and Carbon Dioxide (0.035%). Argon is the third most abundant.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 1",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-096",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "medium",
+    "question": "Why is the tropopause temperature colder over the Equator (-75°C to -80°C) than over the Poles (-45°C to -50°C)?",
+    "options": [
+      "Because solar radiation is weaker at the equator",
+      "Because vigorous vertical thermal convection in the tropics lifts the tropopause much higher (16–18 km) before adiabatic cooling ceases",
+      "Because polar regions receive more geothermal radiation",
+      "Because the ozone layer is thickest over the equator"
+    ],
+    "answerIndex": 1,
+    "explanation": "Intense solar heating at the equator causes deep convective overturning, pushing the tropopause up to 16-18 km. Continued adiabatic expansion cools the air to between -75°C and -85°C. At the poles, where convection is weak, the tropopause sits at only 8-10 km with temperatures near -45°C to -50°C.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 5 & Q6",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-097",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "medium",
+    "question": "In the Jet Standard Atmosphere (JSA), what is the assumed temperature lapse rate?",
+    "options": [
+      "1.5°C / 1,000 ft",
+      "2.0°C / 1,000 ft",
+      "3.0°C / 1,000 ft",
+      "6.5°C / 1,000 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Jet Standard Atmosphere (JSA) assumes a mean sea-level temperature of 15°C and a uniform lapse rate of 2°C per 1,000 ft without a tropopause, used for space and extreme high altitude engineering.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 8 & Q32",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-098",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "hard",
+    "question": "If the ambient temperature at 19 km altitude is measured at -60°C, what is the ISA temperature deviation?",
+    "options": [
+      "-4.5°C",
+      "-05.5°C",
+      "-03.5°C",
+      "+03.5°C"
+    ],
+    "answerIndex": 2,
+    "explanation": "ISA temperature from 11 km to 20 km is constant at -56.5°C. With actual temperature at -60°C, ISA deviation = Actual - ISA = (-60) - (-56.5) = -3.5°C (ISA -3.5).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 8 & Q28",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-099",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "medium",
+    "question": "The middle atmosphere layer where temperature increases with height up to the stratopause at 50 km is the:",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Stratosphere extends from the tropopause up to 50 km (stratopause). Temperature increases with height in this layer due to the absorption of solar ultraviolet radiation by ozone.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 6 & Q14/Q15",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-100",
+    "subject": "Aviation Meteorology",
+    "topic": "The Atmosphere",
+    "difficulty": "easy",
+    "question": "In the lower atmosphere, what percentage of the total heat transfer from the Earth's surface to the air is in the form of Latent Heat?",
+    "options": [
+      "23%",
+      "50%",
+      "77%",
+      "99%"
+    ],
+    "answerIndex": 2,
+    "explanation": "Heat transfer from the Earth's surface to the atmosphere consists of 23% sensible heat (conduction, convection, radiation) and 77% latent heat of evaporation/condensation.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 1 'Atmosphere', p. 4 & p. 34 Q26",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-101",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "easy",
+    "question": "When flying with an altimeter set to 1013.25 hPa, the altimeter displays:",
+    "options": [
+      "Height above ground level (AGL)",
+      "Altitude above mean sea level (AMSL)",
+      "Pressure Altitude (Flight Level)",
+      "Density Altitude"
+    ],
+    "answerIndex": 2,
+    "explanation": "Setting standard sea level pressure 1013.25 hPa (29.92 inHg) on the subscale causes the altimeter to indicate Pressure Altitude, referred to as Flight Levels (e.g., FL300 = 30,000 ft pressure altitude) above the Transition Level.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 17",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-102",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "medium",
+    "question": "An aircraft flies from an area of Low pressure into an area of High pressure without resetting its altimeter subscale. The altimeter will:",
+    "options": [
+      "Overread (indicate higher than true altitude)",
+      "Underread (indicate lower than true altitude)",
+      "Indicate correct true altitude throughout",
+      "Freeze at the last indicated altitude"
+    ],
+    "answerIndex": 1,
+    "explanation": "Flying from Low to High pressure, isobaric surfaces slope upwards in geometric height. Maintaining a constant indicated pressure will cause the aircraft to climb. The altimeter indicates lower than actual true altitude (Underreading: 'Low to High, clear the sky').",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 19 & Q4",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-103",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "medium",
+    "question": "At mean sea level in ISA, what vertical distance corresponds to a 1 hPa pressure change?",
+    "options": [
+      "10 ft",
+      "27 to 30 ft",
+      "50 ft",
+      "100 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Near sea level, 1 hPa corresponds to approximately 27 to 30 feet (standard rule of thumb is 30 ft/hPa). At 20,000 ft, 1 hPa corresponds to 50 ft; at 40,000 ft, 1 hPa corresponds to 100 ft.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 12",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-104",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "hard",
+    "question": "Station Level Pressure (QFE) is 970 hPa, and aerodrome elevation is 1,290 ft. What is the approximate QNH (using 1 hPa = 30 ft)?",
+    "options": [
+      "927 hPa",
+      "970 hPa",
+      "1013 hPa",
+      "1025 hPa"
+    ],
+    "answerIndex": 2,
+    "explanation": "Pressure equivalent of elevation = 1,290 ft / 30 ft per hPa = 43 hPa. Since sea level is lower than the airfield, pressure is higher: QNH = QFE + 43 = 970 + 43 = 1013 hPa.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 18",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-105",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "hard",
+    "question": "An aircraft is cruising at FL180 with an outside air temperature of -35°C. ISA temperature at FL180 is -21°C. What is the true altitude (approximate 4 ft per 1,000 ft per °C deviation rule)?",
+    "options": [
+      "18,000 ft",
+      "16,992 ft",
+      "19,008 ft",
+      "17,500 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Temperature deviation = Actual - ISA = -35 - (-21) = -14°C (ISA -14). Correction = 4 ft * 18 (thousands) * (-14°C) = -1,008 ft. True altitude = 18,000 - 1,008 = 16,992 ft.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 16",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-106",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "easy",
+    "question": "Lines drawn on a weather chart connecting points of equal atmospheric pressure are called:",
+    "options": [
+      "Isotherms",
+      "Isobars",
+      "Isotachs",
+      "Isallobars"
+    ],
+    "answerIndex": 1,
+    "explanation": "Isobars are lines connecting geographical locations of equal barometric pressure reduced to mean sea level.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 16 & Q14",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-107",
+    "subject": "Aviation Meteorology",
+    "topic": "Atmospheric Pressure",
+    "difficulty": "medium",
+    "question": "In a Trough of Low pressure in the Northern Hemisphere, when an aircraft crosses the trough axis, the wind will:",
+    "options": [
+      "Veer sharply",
+      "Back sharply",
+      "Remain completely unchanged in direction",
+      "Drop to zero knots"
+    ],
+    "answerIndex": 1,
+    "explanation": "Across a trough axis in the Northern Hemisphere, isobars change direction cyclonically. As the axis is crossed from west to east or south to north, winds back (turn counter-clockwise) abruptly.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 2 'Atmospheric Pressure', p. 22 & Q15",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-108",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "easy",
+    "question": "What is the primary process responsible for heating the atmosphere directly adjacent to the Earth's surface?",
+    "options": [
+      "Conduction",
+      "Advection",
+      "Nuclear fusion",
+      "Sublimation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Conduction transfers heat from the warmed Earth's surface directly to the thin boundary layer of air in physical contact with the ground.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', p. 28",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-109",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "medium",
+    "question": "Under which conditions is the diurnal variation of surface temperature greatest?",
+    "options": [
+      "Over deep ocean waters with strong gale winds",
+      "Over dry desert land on clear days with calm or light winds",
+      "Under thick overcast nimbostratus clouds with heavy rain",
+      "Over snow-covered polar plateaus in winter"
+    ],
+    "answerIndex": 1,
+    "explanation": "Diurnal temperature range is maximized over dry land with low specific heat, under clear skies (permitting maximum daytime solar heating and nocturnal radiation loss), and with calm or light winds (preventing turbulent vertical mixing).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', p. 31 & Q1/Q2",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-110",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "medium",
+    "question": "Which surface has the highest albedo (reflecting power)?",
+    "options": [
+      "Deep ocean water",
+      "Freshly fallen snow",
+      "Dark moist soil",
+      "Dense green forest"
+    ],
+    "answerIndex": 1,
+    "explanation": "Fresh snow reflects approximately 80% to 90% of incident solar radiation, giving it the highest albedo of natural earth surfaces. Ocean water reflects only 5-10% at high solar angles.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', p. 31 & Q8",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-111",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "hard",
+    "question": "In meteorology, the horizontal transport of heat and atmospheric properties by the wind is termed:",
+    "options": [
+      "Convection",
+      "Advection",
+      "Radiation",
+      "Subsidence"
+    ],
+    "answerIndex": 1,
+    "explanation": "Advection is the horizontal transport of an atmospheric property (such as heat, cold, or moisture) by the mass motion of the wind.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', p. 28",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-112",
+    "subject": "Aviation Meteorology",
+    "topic": "Temperature & Heat",
+    "difficulty": "medium",
+    "question": "The door of a standard meteorological Stevenson screen in the Northern Hemisphere should always open towards the:",
+    "options": [
+      "South",
+      "North",
+      "East",
+      "West"
+    ],
+    "answerIndex": 1,
+    "explanation": "In the Northern Hemisphere, the door of the Stevenson screen opens towards the North so that direct sunlight never strikes the thermometers during observation.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 3 'Temperature', p. 35 Q29",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-113",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density",
+    "difficulty": "easy",
+    "question": "What is the relationship between air density, pressure, and temperature according to the equation of state (P = ρRT)?",
+    "options": [
+      "Density is directly proportional to temperature and inversely proportional to pressure",
+      "Density is directly proportional to pressure and inversely proportional to absolute temperature",
+      "Density is independent of temperature and pressure",
+      "Density doubles whenever temperature drops by 1°C"
+    ],
+    "answerIndex": 1,
+    "explanation": "From the ideal gas law ρ = P / (RT), density increases with higher atmospheric pressure and decreases with higher absolute temperature.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 4 'Air Density', p. 37",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-114",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density",
+    "difficulty": "medium",
+    "question": "A decrease in air density of approximately 1 percent is produced by:",
+    "options": [
+      "A pressure fall of 10 hPa, or a temperature rise of 3°C, or a height increase of 300 ft",
+      "A pressure rise of 10 hPa",
+      "A temperature drop of 10°C",
+      "Flying at 10,000 ft"
+    ],
+    "answerIndex": 0,
+    "explanation": "As a rule of thumb, a 1% reduction in air density results from: a pressure decrease of 10 hPa, an increase in temperature of 3°C, or an altitude increase of 300 feet.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 4 'Air Density', p. 38",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-115",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Density",
+    "difficulty": "hard",
+    "question": "Why does a piston-engine aircraft require approximately 10% more runway length when taking off in high humidity?",
+    "options": [
+      "Because high humidity increases wheel rolling friction on tarmac",
+      "Because water vapour reduces air density and displaces oxygen, reducing engine power output and aerodynamic lift",
+      "Because instruments read calibrated airspeed 10 knots too low",
+      "Because tires slip on wet runways"
+    ],
+    "answerIndex": 1,
+    "explanation": "Water vapour has a lower molecular mass (18) than dry air (29), decreasing air density. Furthermore, humidity displaces oxygen in engine combustion chambers, reducing power output by up to 5% to 7%, mandating longer takeoff runs.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 4 'Air Density', p. 38",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-116",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "easy",
+    "question": "Relative Humidity (RH) is defined as the ratio of:",
+    "options": [
+      "Actual vapour pressure to saturation vapour pressure at the same temperature, expressed as a percentage",
+      "Dew point to dry bulb temperature",
+      "Mass of water vapour to mass of dry air in grams",
+      "Volume of air to volume of water"
+    ],
+    "answerIndex": 0,
+    "explanation": "Relative Humidity is the ratio (in %) of the actual water vapour pressure present in the air to the maximum saturation vapour pressure possible at that temperature: RH = (e / es) * 100%.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 5 'Humidity', p. 41 & Q1",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-117",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "medium",
+    "question": "If unsaturated air is warmed without adding or removing moisture, what happens to its Relative Humidity and Dew Point?",
+    "options": [
+      "RH decreases while Dew Point remains unchanged",
+      "Both RH and Dew Point increase",
+      "RH remains unchanged while Dew Point falls",
+      "Both RH and Dew Point decrease"
+    ],
+    "answerIndex": 0,
+    "explanation": "Warming air increases its capacity to hold moisture (higher saturation vapour pressure), so Relative Humidity drops. However, since the actual moisture content is unchanged, the Dew Point remains constant.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 5 'Humidity', p. 41",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-118",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "hard",
+    "question": "At temperatures below 0°C, the saturation vapour pressure over supercooled water is:",
+    "options": [
+      "Lower than that over ice",
+      "Greater than that over ice",
+      "Equal to that over ice",
+      "Zero"
+    ],
+    "answerIndex": 1,
+    "explanation": "Water molecules are bound more tightly in an ice crystal lattice than in a liquid droplet. Therefore, at the same sub-zero temperature, saturation vapour pressure over supercooled water is greater than that over ice.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 5 'Humidity', p. 42 & Q6",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-119",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "easy",
+    "question": "What is the relationship between 1 metre per second (m/s) and knots (kt)?",
+    "options": [
+      "1 m/s = 0.54 kt",
+      "1 m/s = 1.94 kt (approx 2 kt)",
+      "1 m/s = 3.6 kt",
+      "1 m/s = 10 kt"
+    ],
+    "answerIndex": 1,
+    "explanation": "1 knot = 0.514 m/s. Therefore, 1 m/s = 1.944 kt (approximately 2 knots). 1 km/h = 0.54 kt.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 44",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-120",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "medium",
+    "question": "A clockwise change in wind direction (e.g., from 090° to 120°) is defined as:",
+    "options": [
+      "Backing",
+      "Veering",
+      "Gusting",
+      "Squalling"
+    ],
+    "answerIndex": 1,
+    "explanation": "Veering is defined as a clockwise change in wind direction (e.g. 060° to 090°, or 270° to 300°). Backing is an anti-clockwise change (e.g. 090° to 060°).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 46 & Q32/Q33",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-121",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "medium",
+    "question": "In a Low pressure system in the Southern Hemisphere, winds blow:",
+    "options": [
+      "Clockwise and converge towards the centre",
+      "Anticlockwise and converge towards the centre",
+      "Clockwise and diverge outwards",
+      "Directly straight across isobars from High to Low"
+    ],
+    "answerIndex": 0,
+    "explanation": "In the Southern Hemisphere, Coriolis force deflects moving air to the left. Around a Low pressure system, winds blow in a clockwise direction, spiraling inward (converging) due to surface friction.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 47 & Q18/Q25",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-122",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "hard",
+    "question": "What is a Fohn (or Chinook) wind?",
+    "options": [
+      "A cold, moist wind blowing up a windward mountain slope",
+      "A warm, dry, gusty wind blowing down the leeward slope of a mountain range",
+      "A sea breeze blowing onto a desert coastline",
+      "A freezing katabatic wind flowing into a polar fjord"
+    ],
+    "answerIndex": 1,
+    "explanation": "Air ascending the windward mountain cools at DALR until saturated, then at SALR releasing latent heat and precipitating. When descending the leeward side, it warms dry adiabatically at the full DALR (9.8°C/km), becoming much warmer and drier.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 53 & Q8",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-123",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "medium",
+    "question": "A cold gravity wind that flows down mountain slopes and valleys at night due to nocturnal radiational cooling is a:",
+    "options": [
+      "Anabatic wind",
+      "Katabatic wind",
+      "Fohn wind",
+      "Geostrophic wind"
+    ],
+    "answerIndex": 1,
+    "explanation": "At night, mountain slopes lose heat rapidly by terrestrial radiation, cooling the adjacent air. The chilled, denser air drains downslope under gravity into valleys as a Katabatic (down-slope) wind.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 54 & Q9/Q20",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-124",
+    "subject": "Aviation Meteorology",
+    "topic": "Winds",
+    "difficulty": "easy",
+    "question": "An Anabatic wind flows:",
+    "options": [
+      "Down a mountain slope at night",
+      "Up a mountain slope during the daytime due to surface solar heating",
+      "Horizontally along a coastline",
+      "Vertically downward beneath a cumulonimbus cloud"
+    ],
+    "answerIndex": 1,
+    "explanation": "Anabatic winds are daytime up-slope winds caused by solar heating of mountain faces, warming the adjacent air which becomes buoyant and flows up the valley walls.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 54 & Q18",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-125",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "easy",
+    "question": "What is 'Mist' (BR) officially defined as in aviation meteorology?",
+    "options": [
+      "Visibility less than 1,000 m with RH 100%",
+      "Visibility between 1,000 m and 5,000 m caused by microscopic water droplets with high relative humidity (>90%)",
+      "Visibility between 5,000 m and 10,000 m caused by dry dust",
+      "Smoke and pollutants trapped under an inversion"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mist (BR) is reported when horizontal visibility is between 1,000 m and 5,000 m due to water droplets in suspension, with high relative humidity (typically >90%).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', p. 66 & Q4",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-126",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "medium",
+    "question": "What type of fog occurs when cold Arctic air moves over a warmer open sea surface?",
+    "options": [
+      "Radiation fog",
+      "Steaming fog (Arctic Sea Smoke)",
+      "Advection fog",
+      "Frontal fog"
+    ],
+    "answerIndex": 1,
+    "explanation": "Steaming fog (Arctic sea smoke or evaporation fog) forms when very cold, dry air drifts over relatively warm water. Intense evaporation from the water saturates the cold air, condensing into rising streamers of fog.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', p. 70",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-127",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "medium",
+    "question": "Why does radiation fog almost never form over the open ocean?",
+    "options": [
+      "Because salt prevents condensation",
+      "Because the diurnal temperature variation of the ocean surface is negligible (< 1°C)",
+      "Because ocean air is always unsaturated",
+      "Because winds over oceans are never calm"
+    ],
+    "answerIndex": 1,
+    "explanation": "Radiation fog requires rapid nocturnal cooling of the underlying surface. Since water has high thermal capacity and mixes constantly, its diurnal temperature variation is under 1°C, preventing sufficient radiation cooling.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', p. 71 Q3",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-128",
+    "subject": "Aviation Meteorology",
+    "topic": "Visibility & Fog",
+    "difficulty": "hard",
+    "question": "In north and northwest India, radiation fog is most frequent during which months?",
+    "options": [
+      "May to June",
+      "July to September",
+      "December to February",
+      "October to November"
+    ],
+    "answerIndex": 2,
+    "explanation": "Over northern India (Punjab, Haryana, Delhi, UP, and Bihar), dense radiation fog occurs primarily in winter from December to February following the passage of Western Disturbances.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 7 'Visibility and Fog', p. 69 & Q5",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-129",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "easy",
+    "question": "Which cloud genus is capable of producing violent thunderstorms, hail, tornadoes, and severe microbursts?",
+    "options": [
+      "Cumulus humilis",
+      "Nimbostratus",
+      "Cumulonimbus (CB)",
+      "Altocumulus"
+    ],
+    "answerIndex": 2,
+    "explanation": "Cumulonimbus (CB) is a heavy, dense cloud of immense vertical extent (often reaching 40,000 to 60,000 ft in tropics) capable of producing violent turbulence, severe icing, hail, lightning, and squalls.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 'Vertical Motion and Clouds', p. 78",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-130",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "medium",
+    "question": "In aerodrome meteorological reports (METAR/TAF), which two cloud types are considered of operational significance and must ALWAYS be reported by name?",
+    "options": [
+      "Altocumulus and Stratus",
+      "Cumulonimbus (CB) and Towering Cumulus (TCU)",
+      "Cirrus and Cirrostratus",
+      "Stratocumulus and Nimbostratus"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under ICAO Annex 3 and WMO standards, Cumulonimbus (CB) and Towering Cumulus / Cumulus congestus of great vertical extent (TCU) are the only cloud types identified by name in METAR and TAF due to their severe convective hazards.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 'Vertical Motion and Clouds', p. 78 & Chapter 25 p. 219",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-131",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "hard",
+    "question": "What is the Mintra Level in high-altitude aviation?",
+    "options": [
+      "The altitude above which engine thrust decreases by 50%",
+      "The minimum flight level above which aircraft exhaust condensation trails (contrails) can form in saturated air (around -45°C)",
+      "The level of maximum clear air turbulence",
+      "The freezing level over the equator"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mintra Level is the lowest flight level where condensation trails (contrails) will form if the air is 100% relative humidity. A flight level temperature of about -45°C provides a good operational estimate.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 'Vertical Motion and Clouds', p. 82 & Q13",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-132",
+    "subject": "Aviation Meteorology",
+    "topic": "Clouds & Precipitation",
+    "difficulty": "medium",
+    "question": "What is the standard ICAO reporting term for a cloud amount of 3 to 4 oktas?",
+    "options": [
+      "FEW (Few)",
+      "SCT (Scattered)",
+      "BKN (Broken)",
+      "OVC (Overcast)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cloud coverage in oktas: FEW = 1-2 oktas, SCT (Scattered) = 3-4 oktas, BKN (Broken) = 5-7 oktas, OVC (Overcast) = 8 oktas, SKC/NSC = 0 oktas.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 'Vertical Motion and Clouds', p. 80 (Table 8.3)",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-133",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "easy",
+    "question": "An atmospheric layer where the Environmental Lapse Rate (ELR) is zero (temperature constant with height) is termed:",
+    "options": [
+      "Inversion",
+      "Isothermal layer",
+      "Super-adiabatic layer",
+      "Adiabatic zone"
+    ],
+    "answerIndex": 1,
+    "explanation": "An Isothermal layer is a layer where temperature remains constant with increasing altitude (lapse rate = 0°C/km). It represents a stable atmosphere.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability & Instability', p. 85 & Q9",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-134",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "medium",
+    "question": "When the Environmental Lapse Rate (ELR) is greater than the Dry Adiabatic Lapse Rate (ELR > DALR), the layer is:",
+    "options": [
+      "Absolutely Stable",
+      "Conditionally Unstable",
+      "Absolutely Unstable",
+      "Neutral for saturated air"
+    ],
+    "answerIndex": 2,
+    "explanation": "When ELR > DALR (steeper than 9.8°C/km), both dry and saturated air parcels lifted will always be warmer and less dense than the surrounding environment, accelerating upward (Absolutely Unstable).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability & Instability', p. 87 & Q4",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-135",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "hard",
+    "question": "What thermodynamic diagram is primarily used in India for plotting upper air radiosonde soundings and evaluating atmospheric instability?",
+    "options": [
+      "Skew-T log-P diagram",
+      "Tphigram (Tephigram)",
+      "Stuve diagram",
+      "Mollier chart"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Tephigram (Tphigram, T-phi gram) is the official thermodynamic diagram used by the India Meteorological Department (IMD) to evaluate atmospheric stability, condensation levels, and thunderstorm potential.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability & Instability', p. 89",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-136",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "easy",
+    "question": "The Dissipating stage of a thunderstorm is characterized by:",
+    "options": [
+      "Strong updrafts throughout the cell",
+      "Downdrafts dominating the entire cell and precipitation gradually tapering off",
+      "Rapid increase in thunderstorm cell diameter to 100 km",
+      "Maximum frequency of cloud-to-ground lightning"
+    ],
+    "answerIndex": 1,
+    "explanation": "In the dissipating stage, downdrafts spread throughout the entire lower and middle levels of the cell, cutting off the inflow of warm, moist updrafts. The cloud spreads out into an anvil and gradually dissolves.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 113",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-137",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "medium",
+    "question": "What is the typical diameter of an individual single-cell thunderstorm cumulonimbus tower?",
+    "options": [
+      "100 to 200 metres",
+      "1 to 10 km",
+      "50 to 100 km",
+      "500 km"
+    ],
+    "answerIndex": 1,
+    "explanation": "An individual thunderstorm cell typically has a diameter of 1 to 10 km. A cluster of multiple cells may span tens to hundreds of kilometers.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 110",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-138",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "hard",
+    "question": "What causes the initial sharp pressure rise ('thunderstorm nose') observed at a ground station immediately before rain commences?",
+    "options": [
+      "A sudden surge of solar heat",
+      "The arrival of the cold, dense downdraft hitting the ground and spreading out under gravity",
+      "Severe atmospheric ionization from lightning",
+      "The weight of falling hail stones in the upper troposphere"
+    ],
+    "answerIndex": 1,
+    "explanation": "The cold downdraft, chilled by the evaporation of rain in dry air aloft, is much denser than the warm ambient surface air. When it hits the surface, it spreads out as a cold dome, creating a sudden sharp barometric pressure jump.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 114",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-139",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "hard",
+    "question": "On weather radar, what characteristic echo shape is indicative of a severe supercell thunderstorm producing a tornado?",
+    "options": [
+      "A concentric circular ring",
+      "A Hook Echo (figure '6' shape)",
+      "A completely diffuse fuzzy blob",
+      "A straight uniform line"
+    ],
+    "answerIndex": 1,
+    "explanation": "A 'Hook Echo' or figure '6' appendage on radar reflectivity indicates a rotating mesocyclone in a severe supercell thunderstorm, wrapping precipitation around the updraft, strongly correlated with tornado formation.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 117 & Chapter 22 p. 200",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-140",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "medium",
+    "question": "Why do jet streams form in the upper troposphere?",
+    "options": [
+      "Due to magnetic variations near the Earth's poles",
+      "Due to strong horizontal temperature contrasts across frontal boundaries, which create steep horizontal pressure gradients that strengthen with height (thermal wind effect)",
+      "Due to lunar gravitational tides in the stratosphere",
+      "Due to ocean currents transferring kinetic energy upward"
+    ],
+    "answerIndex": 1,
+    "explanation": "Jet streams result from strong horizontal temperature gradients across air mass boundaries (polar front and subtropical ridge). The thermal wind equation dictates that vertical wind shear increases with height as long as this gradient persists, peaking at the tropopause.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 139",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-141",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "medium",
+    "question": "What is the typical vertical wind shear threshold within a jet stream layer?",
+    "options": [
+      "1 m/s per km",
+      "5 to 10 m/s per km (approx 3 to 6 kt / 1,000 ft)",
+      "25 m/s per km",
+      "50 m/s per km"
+    ],
+    "answerIndex": 1,
+    "explanation": "WMO defines jet streams as having vertical wind shears of roughly 5 to 10 m/s per km (approx 3-6 kt per 1,000 ft) and lateral shears around 5 m/s per 100 km.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 136 & Q3",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-142",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "medium",
+    "question": "A smooth stationary cloud resting directly over the summit of a mountain ridge in standing wave conditions is known as a:",
+    "options": [
+      "Rotor cloud",
+      "Cap Cloud (Fohn Wall)",
+      "Mamma cloud",
+      "Castellanus"
+    ],
+    "answerIndex": 1,
+    "explanation": "A Cap Cloud (or mountain cap/fohn wall) forms directly over the mountain crest where moist air is forced to rise over the peak and condenses, dissolving as it descends the lee side.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 146",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-143",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "hard",
+    "question": "Why are mountain waves especially hazardous to aircraft crossing high terrain on instruments (IFR)?",
+    "options": [
+      "VHF radios fail completely in mountain waves",
+      "Strong downdrafts (up to 25 m/s / 5,000 fpm) can exceed aircraft climb performance while altimeter errors cause the altimeter to overread, leading to CFIT",
+      "Magnetic compasses spin uncontrollably",
+      "Pitot heat is extinguished by lee waves"
+    ],
+    "answerIndex": 1,
+    "explanation": "Severe downdrafts on the leeward slope can exceed maximum aircraft climb rates (2,000 to 5,000 ft/min). Simultaneously, local low pressure in the wave trough makes the altimeter overread (reading higher than true altitude), creating catastrophic Controlled Flight Into Terrain (CFIT) hazards.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 146-147",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-144",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "medium",
+    "question": "Why do Tropical Cyclones rarely or never form within 5° of the Equator?",
+    "options": [
+      "Sea surface temperatures are too cold at the equator",
+      "The Coriolis force is virtually zero at the equator, preventing the initiation of cyclonic rotation",
+      "Trade winds are too strong at the equator",
+      "Atmospheric pressure at the equator is too high"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tropical cyclogenesis requires a minimum Coriolis parameter to impart cyclonic spin to converging air currents. Since Coriolis force is zero at the equator (f = 2Ω sin 0°), tropical revolving storms only form poleward of 5° latitude (typically 5° to 15°N/S).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 155 & Q6/Q35",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-145",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "hard",
+    "question": "What is the 'Eye Wall' of a tropical cyclone?",
+    "options": [
+      "The calm boundary between the ocean and beach",
+      "The ring of towering cumulonimbus clouds surrounding the eye, containing the most violent winds, heaviest rain, and severe turbulence",
+      "The outermost edge of the cirrus canopy at 50,000 ft",
+      "A warm front extending ahead of the cyclone"
+    ],
+    "answerIndex": 1,
+    "explanation": "The eye wall is a dense ring of towering convective clouds (width 50-150 km) immediately enclosing the central eye. It exhibits the steepest pressure gradient, the highest sustained surface winds, torrential rain, and extreme turbulence.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 157 & Q15/Q19",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-146",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "easy",
+    "question": "Which of the following months represent the Northeast (Retreating) Monsoon season over India?",
+    "options": [
+      "March to May",
+      "June to September",
+      "October to December",
+      "January to February"
+    ],
+    "answerIndex": 2,
+    "explanation": "The Northeast Monsoon (Post-monsoon / Retreating monsoon) season occurs from October to December. It brings the primary annual rainfall to Tamil Nadu, coastal Andhra Pradesh, and parts of Kerala.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 19 'Climatology of India', p. 164 (Table 19.1) & Q13",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-147",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "medium",
+    "question": "What is the 'Monsoon Trough' over India during the Southwest Monsoon?",
+    "options": [
+      "An ocean trench in the Bay of Bengal",
+      "A quasi-stationary low pressure trough extending from Ganganagar (Rajasthan) through Allahabad to the Head Bay of Bengal",
+      "A cold front along the Western Ghats",
+      "An upper tropospheric easterly wind anomaly"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Monsoon Trough is an elongated semi-permanent low pressure trough extending across northern India from northwest Rajasthan through Allahabad to the Head Bay of Bengal. Its north-south oscillations dictate rainfall across India.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 19 'Climatology of India', p. 170 & Q8/Q9",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-148",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "easy",
+    "question": "A routine aerodrome weather report issued every 30 minutes in aeronautical code is designated as a:",
+    "options": [
+      "TAF",
+      "METAR",
+      "SPECI",
+      "ROFOR"
+    ],
+    "answerIndex": 1,
+    "explanation": "METAR (Aviation Routine Weather Report) is issued every half hour (or hourly at smaller stations) to report actual surface weather conditions observed at an aerodrome.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR & SPECI Codes', p. 217",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-149",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "In a METAR report, what does the group '24015G28KT' indicate?",
+    "options": [
+      "Surface wind from 240° True at 15 knots, gusting to 28 knots",
+      "Surface wind from 240° Magnetic at 28 knots",
+      "Temperature 24°C with dew point 15°C and QNH 1028 hPa",
+      "Runway 24 visual range 1500 m to 2800 m"
+    ],
+    "answerIndex": 0,
+    "explanation": "In METAR wind reporting: '240' is wind direction in degrees True, '15' is mean speed in knots, 'G28' indicates gusts reaching 28 knots, followed by speed units 'KT'.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR & SPECI Codes', p. 218",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-150",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "hard",
+    "question": "In an Aerodrome Forecast (TAF), what does the change indicator 'TEMPO 1416 3000 TSRA' mean?",
+    "options": [
+      "Permanent weather change commencing at 1400 UTC",
+      "Temporary fluctuations lasting for less than one hour at a time between 1400 UTC and 1600 UTC with visibility 3,000 m in thunderstorm with moderate rain",
+      "Gradual trend becoming effective at 1600 UTC",
+      "Probable thunderstorm with 14% to 16% likelihood"
+    ],
+    "answerIndex": 1,
+    "explanation": "TEMPO denotes frequent or infrequent temporary fluctuations to forecast conditions lasting less than one hour in each instance and covering less than half the total period between the stated start (1400Z) and end (1600Z) times.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 26 'Aviation Forecasts', p. 223",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-151",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "easy",
+    "question": "An air mass which originates over the sea in high polar latitudes is classified as:",
+    "options": [
+      "Polar Maritime (Pm)",
+      "Tropical Continental (Tc)",
+      "Tropical Maritime (Tm)",
+      "Equatorial Maritime (Em)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Air masses originating over high-latitude oceans (sub-polar oceanic areas) are cold and moist, classified as Polar Maritime (Pm).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 126 & Q1",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-152",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "easy",
+    "question": "The primary air mass prevailing over peninsular India during the Southwest Monsoon is:",
+    "options": [
+      "Tropical Continental (Tc)",
+      "Equatorial Maritime (Em)",
+      "Polar Continental (Pc)",
+      "Arctic (A)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Equatorial Maritime (Em) air mass originates over the tropical oceans south of the equator, crossing into the Indian subcontinent during the SW monsoon with high temperature and extreme humidity.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 126 & Q2",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-153",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "medium",
+    "question": "If the advancing cold front air mass is colder than the retreating cold air ahead of the warm front, the resulting occlusion is a:",
+    "options": [
+      "Warm Occlusion",
+      "Cold Occlusion",
+      "Stationary Occlusion",
+      "Neutral Occlusion"
+    ],
+    "answerIndex": 1,
+    "explanation": "In a Cold Occlusion, the air behind the advancing cold front is colder (denser) than the cool air ahead of the warm front, forcing the cool air and the warm front to ride up over it.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 130 & Q3",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-154",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "medium",
+    "question": "When a warm air mass actively overtakes and ascends over a retreating colder air mass, the front is termed a:",
+    "options": [
+      "Cold Front",
+      "Warm Front",
+      "Occluded Front",
+      "Squall Line"
+    ],
+    "answerIndex": 1,
+    "explanation": "A Warm Front is the transition zone where an advancing warm air mass overtakes and glides gently up over a retreating wedge of colder, denser air.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 129 & Q5",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-155",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "hard",
+    "question": "Pre-frontal squall lines (lines of violent thunderstorms) typically occur at what distance ahead of a fast-moving cold front?",
+    "options": [
+      "10 to 20 km",
+      "100 to 300 km",
+      "500 to 800 km",
+      "At the exact surface front only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Squall lines frequently develop in the warm sector 100 to 300 km ahead of an active, fast-moving cold front, triggered by gravity waves and upper-level divergence.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 128 & Q8/Q11",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-156",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "medium",
+    "question": "A cold front typically travels at what speed compared to a warm front?",
+    "options": [
+      "The same speed",
+      "Approximately double the speed of a warm front",
+      "Half the speed",
+      "One quarter the speed"
+    ],
+    "answerIndex": 1,
+    "explanation": "A cold front moves roughly twice as fast (typically 20 to 30 kt) as a warm front (typically 10 to 15 kt). This speed difference leads to the cold front overtaking the warm front, forming an occlusion.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 130 & Q10",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-157",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "hard",
+    "question": "What is the typical sequence of clouds observed as an active warm front approaches an observer from 1,000 km away?",
+    "options": [
+      "Cumulonimbus, Altocumulus, Stratus",
+      "Cirrus (CI), Cirrostratus (CS), Altostratus (AS), Nimbostratus (NS), and Stratus (ST)",
+      "Stratocumulus, Cumulus, Cirrus",
+      "Nimbostratus followed directly by clear skies"
+    ],
+    "answerIndex": 1,
+    "explanation": "Due to the gentle slope of the warm front (1:150), clouds thicken and lower progressively: high Cirrus appear ~1000 km ahead, followed by Cirrostratus (halo), Altostratus (~500 km), and finally dark Nimbostratus with continuous rain.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 129 & Q20",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-158",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "medium",
+    "question": "Freezing Rain (FZRA) and Freezing Drizzle (FZDZ) are most commonly encountered in which frontal zone?",
+    "options": [
+      "Well behind a cold front",
+      "Ahead of a warm front where warm rain falls through an underlying sub-zero surface cold air wedge",
+      "Directly in a tropical depression",
+      "Along a summer dry line"
+    ],
+    "answerIndex": 1,
+    "explanation": "Freezing rain occurs ahead of a warm front when rain drops falling from the overriding warm air parcel enter a below-freezing shallow cold air wedge near the ground and become supercooled.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 135 & Q25",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-159",
+    "subject": "Aviation Meteorology",
+    "topic": "Air Masses & Fronts",
+    "difficulty": "easy",
+    "question": "When an active cold front passes over an airfield, what happens to barometric pressure?",
+    "options": [
+      "Pressure falls continuously for 24 hours",
+      "The pressure fall is arrested and pressure begins to rise abruptly",
+      "Pressure remains perfectly constant",
+      "Pressure fluctuates wildly between 900 and 1100 hPa"
+    ],
+    "answerIndex": 1,
+    "explanation": "Ahead of the cold front, pressure falls; as the cold front passes, the pressure drop is sharply arrested and pressure begins to rise rapidly due to the dense cold air mass.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 14 'Air Masses Fronts', p. 143 (Appendix I)",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-160",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "easy",
+    "question": "The central tubular zone of highest wind speed within a jet stream is termed the:",
+    "options": [
+      "Jet stream Axis",
+      "Jet Core",
+      "Jet Streak",
+      "Trough line"
+    ],
+    "answerIndex": 1,
+    "explanation": "The path of maximum wind speed is known as the axis, and the tubular cross-sectional volume of maximum speed immediately enclosing the axis is called the Core.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 136 & Q5/Q6",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-161",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "medium",
+    "question": "In a wavy jet stream, localized regions of maximum wind speed along the jet axis are called:",
+    "options": [
+      "Jet Streaks (Wind Maxima)",
+      "Jet vortices",
+      "Tropopause folds",
+      "Rotor pockets"
+    ],
+    "answerIndex": 0,
+    "explanation": "Along the axis of a jet stream, wind speed is not uniform; distinct centers of maximum speed (wind maxima) occur, known as Jet Streaks.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 136 & Q7",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-162",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "medium",
+    "question": "The Sub-Tropical Westerly Jet Stream (STJ) over India reaches its southernmost latitude position in which month?",
+    "options": [
+      "October",
+      "December",
+      "February (near 22°N)",
+      "May"
+    ],
+    "answerIndex": 2,
+    "explanation": "The STJ shifts progressively southward over India with the progress of winter, reaching its southernmost position of approximately 22°N in February before moving north.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 137 & Q11",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-163",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "hard",
+    "question": "How does vertical wind shear compare above the jet core versus below the jet core?",
+    "options": [
+      "Vertical shear is greater above the core than below the core",
+      "Vertical shear is identical above and below",
+      "Vertical shear is greater below the core than above the core",
+      "There is zero shear above the core"
+    ],
+    "answerIndex": 0,
+    "explanation": "Vertical wind shear in the Sub-Tropical Jet is significantly greater above the jet core (in the lower stratosphere) than below the core in the troposphere.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 139 & Q16",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-164",
+    "subject": "Aviation Meteorology",
+    "topic": "Jet Streams",
+    "difficulty": "medium",
+    "question": "Flying at right angles across a westerly jet stream with falling barometric pressure, an aircraft will experience:",
+    "options": [
+      "Wind from the right and decreasing speed",
+      "Wind from the left and increasing headwind",
+      "Wind from the left (port drift)",
+      "Wind from the right (starboard drift)"
+    ],
+    "answerIndex": 2,
+    "explanation": "Falling pressure indicates the aircraft is heading towards lower pressure (poleward). By Buys Ballot's Law, with low pressure ahead and to the left, the westerly jet blows from the left (producing starboard drift, wind from the left).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 15 'Jet Streams', p. 142 Q24",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-165",
+    "subject": "Aviation Meteorology",
+    "topic": "Clear Air Turbulence",
+    "difficulty": "medium",
+    "question": "In the vicinity of an upper westerly jet stream, where is Clear Air Turbulence (CAT) most prevalent?",
+    "options": [
+      "Directly inside the calm central core",
+      "On the cyclonic (low-pressure/northern) side of the core and along the tropopause boundary",
+      "Only on the south side at low altitudes",
+      "Exclusively in the troposphere below 10,000 ft"
+    ],
+    "answerIndex": 1,
+    "explanation": "Most CAT occurs in the fringes (not within the core) of the jet stream, specifically on the cold/cyclonic side where horizontal and vertical shears are greatest.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 16 'Clear Air Turbulence', p. 143 & Q8",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-166",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "easy",
+    "question": "In a mountain wave system, where do turbulent Rotor Clouds form?",
+    "options": [
+      "In the wave crests at 40,000 ft",
+      "In the troughs beneath the wave crests on the leeward side of the mountain ridge",
+      "On the windward upwind slope",
+      "Above the tropopause only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rotor clouds form in the troughs of the lee waves, beneath the crests. The air rotates in a closed circular eddy with violent vertical gusts and extreme turbulence.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 146 & Q6",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-167",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "medium",
+    "question": "For well-developed mountain waves to form, the atmosphere up to the mountain ridge crest must be:",
+    "options": [
+      "Super-adiabatically unstable",
+      "Stable",
+      "Isothermal above 50,000 ft only",
+      "Completely saturated"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mountain wave formation requires a stable layer of air near and just above the mountain crest. The stability acts as a restoring force, setting up oscillation when air is displaced over the ridge.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 145 & Q4",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-168",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "hard",
+    "question": "When approaching a mountainous area where standing lee waves are reported, a pilot should anticipate:",
+    "options": [
+      "Calm, smooth gliding conditions throughout",
+      "Roll clouds, lenticular clouds, severe up- and down-drafts on the lee side extending 20 to 30 miles downwind, and altimeter overreading",
+      "Constant magnetic deviation",
+      "Immediate engine flameout on all cylinders"
+    ],
+    "answerIndex": 1,
+    "explanation": "Approaching mountain waves, pilots must watch for roll and lenticular clouds, anticipate strong vertical currents (up to 5,000 fpm sink rates), severe rotor turbulence downwind, and altimeter errors.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 146-147 & Q10",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-169",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "easy",
+    "question": "What is the typical diameter of a mature Tropical Cyclone over the North Indian Ocean?",
+    "options": [
+      "10 to 50 km",
+      "300 to 600 km",
+      "2,000 to 5,000 km",
+      "100 metres"
+    ],
+    "answerIndex": 1,
+    "explanation": "Over the Bay of Bengal and Arabian Sea, the diameter of a typical tropical cyclone ranges from 300 to 600 km, with extreme cases reaching 1,000 km.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 158",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-170",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "medium",
+    "question": "In the mature stage of a tropical cyclone, why are surface temperatures in the central eye slightly warmer than outside?",
+    "options": [
+      "Due to intense solar radiation focused by the cloud walls",
+      "Due to adiabatic compression of slowly subsiding air within the eye",
+      "Because ocean water boils in the eye",
+      "Due to friction of rotating winds"
+    ],
+    "answerIndex": 1,
+    "explanation": "Air in the eye sinks slowly (subsidence). As it descends, it is compressed and warms dry adiabatically, raising temperatures in the eye 0°C to 2°C warmer at the surface and up to 10°C warmer aloft.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 157",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-171",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "medium",
+    "question": "In which months do the maximum number of Severe Cyclonic Storms form over the Bay of Bengal and Arabian Sea?",
+    "options": [
+      "January and February",
+      "March and April",
+      "May (pre-monsoon) and October–November (post-monsoon)",
+      "July and August"
+    ],
+    "answerIndex": 2,
+    "explanation": "Tropical cyclones over the Indian seas exhibit a bimodal peak: pre-monsoon (May) and post-monsoon (October-November). October and November experience the most severe cyclones.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 159 & Q5",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-172",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "hard",
+    "question": "What is the approximate rate of movement of a Tropical Cyclone across the ocean?",
+    "options": [
+      "50 to 100 km/day",
+      "300 to 500 km per day (15 to 20 km/h)",
+      "1,500 km per day",
+      "Zero (they never move)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tropical cyclones move at a typical translation speed of 15 to 20 km/h (8 to 12 knots), covering approximately 300 to 500 km in 24 hours.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 157 & Q39",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-173",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "medium",
+    "question": "When a tropical cyclone makes landfall and crosses inland, it weakens rapidly primarily because of:",
+    "options": [
+      "Loss of its primary heat/moisture source (evaporation from warm sea water) and increased surface friction",
+      "Coriolis force reversing direction",
+      "Cold air from the Himalayas filling the eye instantly",
+      "Solar radiation stopping completely"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cut off from the warm ocean's latent heat of condensation, the cyclone's thermodynamic engine starves. Concurrently, high surface friction over land increases convergence into the center, filling the low.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 158 & Q14",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-174",
+    "subject": "Aviation Meteorology",
+    "topic": "General Circulation",
+    "difficulty": "easy",
+    "question": "The low-latitude vertical atmospheric circulation cell between the Equator and approximately 30° latitude is known as the:",
+    "options": [
+      "Hadley Cell",
+      "Ferrel Cell",
+      "Polar Cell",
+      "Walker Cell"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Hadley Cell features rising air near the thermal equator (ITCZ), poleward flow aloft, sinking air in the subtropical high pressure belts near 30°N/S, and returning trade winds.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 20 'General Circulation', p. 182 & Q5",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-175",
+    "subject": "Aviation Meteorology",
+    "topic": "General Circulation",
+    "difficulty": "medium",
+    "question": "The major world deserts (Sahara, Arabian, Thar) are located around 30°N and 30°S latitudes primarily due to:",
+    "options": [
+      "Large-scale atmospheric subsidence and dry anticyclonic conditions in the descending branch of the Hadley cell",
+      "High frequency of tropical cyclones",
+      "Absence of solar radiation",
+      "Constant frontal rain"
+    ],
+    "answerIndex": 0,
+    "explanation": "Subtropical high pressure belts (Horse Latitudes) at 30°N/S are formed by subsiding air from the Hadley cell. Sinking air warms adiabatically and dries out, suppressing cloudiness and creating vast deserts.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 20 'General Circulation', p. 182 & Q3",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-176",
+    "subject": "Aviation Meteorology",
+    "topic": "General Circulation",
+    "difficulty": "medium",
+    "question": "In the Southern Hemisphere, the strong westerly winds blowing between 40°S and 50°S latitudes are called the:",
+    "options": [
+      "Roaring Forties",
+      "Doldrums",
+      "Trade Winds",
+      "Polar Easterlies"
+    ],
+    "answerIndex": 0,
+    "explanation": "Unbroken by land masses, the Southern Hemisphere mid-latitude westerlies blow with intense gale force, famously known as the 'Roaring Forties' (and Furious Fifties).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 20 'General Circulation', p. 184",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-177",
+    "subject": "Aviation Meteorology",
+    "topic": "General Circulation",
+    "difficulty": "hard",
+    "question": "What is the direction of the upper tropospheric winds over the equatorial regions?",
+    "options": [
+      "Westerlies",
+      "Easterlies",
+      "Northerlies",
+      "Southerlies"
+    ],
+    "answerIndex": 1,
+    "explanation": "In the equatorial upper troposphere, upper air flow is dominated by broad tropical Easterlies, whereas middle latitudes are dominated by Zonal Westerlies.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 20 'General Circulation', p. 185 & Q8",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-178",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "easy",
+    "question": "Under the World Area Forecast System (WAFS), the two global World Area Forecast Centres (WAFC) are located at:",
+    "options": [
+      "London and Washington",
+      "Paris and Tokyo",
+      "New Delhi and Geneva",
+      "Montreal and Chicago"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under ICAO WAFS, the two designated World Area Forecast Centres are WAFC London (Met Office UK) and WAFC Washington (NOAA/NWS USA).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 21 'Met Services', p. 188 & Q3",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-179",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "What is an AIRMET message issued for?",
+    "options": [
+      "Information issued by a Meteorological Watch Office (MWO) concerning low-level en-route weather phenomena not already included in area forecasts that may affect low-level flights",
+      "Notifying airline ticket price adjustments",
+      "Reporting stratospheric volcanic ash only",
+      "Routine upper wind forecasts for supersonic jets"
+    ],
+    "answerIndex": 0,
+    "explanation": "AIRMET is advisory information issued by an MWO concerning low-level flights (below FL100 or FL150 in mountainous terrain) regarding moderate turbulence, moderate icing, mountain obscuration, or widespread low cloud/visibility.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 21 'Met Services', p. 193 & Q23",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-180",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "In India, VOLMET radio telephony broadcasts are transmitted on HF frequencies from which two stations?",
+    "options": [
+      "Mumbai and Kolkata",
+      "Delhi and Chennai",
+      "Bangalore and Hyderabad",
+      "Nagpur and Ahmedabad"
+    ],
+    "answerIndex": 0,
+    "explanation": "In India, continuous HF VOLMET meteorological broadcasts for aircraft in flight are operated from Mumbai (covering western/southern aerodromes) and Kolkata (covering eastern/northern aerodromes).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 21 'Met Services', p. 194 & Q31",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-181",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "hard",
+    "question": "An Aerodrome Warning (Airfield Warning) is issued for aerodrome safety on the ground when mean wind speed is expected to reach at least:",
+    "options": [
+      "15 knots",
+      "20 knots",
+      "30 knots (or gusts of 35 kt)",
+      "50 knots"
+    ],
+    "answerIndex": 2,
+    "explanation": "Aerodrome warnings for moored aircraft and ground facilities are issued when mean surface wind speed is expected to reach 30 knots or more, or when wind direction changes by >= 45° with speed >= 20 kt.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 21 'Met Services', p. 193 & Q26/Q27",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-182",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "easy",
+    "question": "On a plotted station model chart, how is a barometric pressure of 1014.2 hPa encoded in the standard 3-digit PPP group?",
+    "options": [
+      "014",
+      "142",
+      "101",
+      "420"
+    ],
+    "answerIndex": 1,
+    "explanation": "PPP encodes tenths of hPa with the leading 9 or 10 omitted: 1014.2 hPa is plotted as '142'. (e.g., 998.5 hPa is plotted as '985').",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 24 'Station Model', p. 207 & p. 215 Q11",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-183",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "In a METAR report, what does the present weather code '+TSRA' mean?",
+    "options": [
+      "Moderate rain without thunder",
+      "Thunderstorm with heavy rain",
+      "Light shower with hail",
+      "Thunderstorm with ice pellets"
+    ],
+    "answerIndex": 1,
+    "explanation": "'+' indicates heavy intensity, 'TS' stands for Thunderstorm, and 'RA' stands for Rain. Hence, '+TSRA' translates to Thunderstorm with heavy rain.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR & SPECI Codes', p. 219 (Table 25.3)",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-184",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "medium",
+    "question": "In a METAR report, the air temperature and dew point are given as '02/M03'. What do these figures signify?",
+    "options": [
+      "Air temperature +02°C, Dew Point -03°C",
+      "Air temperature -02°C, Dew Point +03°C",
+      "Altimeter setting 02.03 inHg",
+      "Wind 020 degrees at 3 knots"
+    ],
+    "answerIndex": 0,
+    "explanation": "'02' is dry bulb temperature (+2°C), '/' is separator, 'M' denotes minus/sub-zero temperature, and '03' is dew point temperature (-3°C).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR & SPECI Codes', p. 222 (Table 25.1)",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-185",
+    "subject": "Aviation Meteorology",
+    "topic": "Meteorological Services & Codes",
+    "difficulty": "hard",
+    "question": "What is the meaning of the METAR code 'WS ALL RWY'?",
+    "options": [
+      "All runways are wet and slippery",
+      "Wind shear reported on all runways up to 500 m (1,600 ft)",
+      "Wind speed exceeding 100 knots on all runways",
+      "All runways are closed due to fog"
+    ],
+    "answerIndex": 1,
+    "explanation": "'WS' stands for Wind Shear. 'WS ALL RWY' warns pilots of wind shear along the takeoff or final approach path of all runways up to 500 m (1,600 ft) above runway elevation.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 25 'METAR & SPECI Codes', p. 218 & p. 222",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-186",
+    "subject": "Aviation Meteorology",
+    "topic": "Clear Air Turbulence",
+    "difficulty": "medium",
+    "question": "Clear Air Turbulence (CAT) is predominantly generated by which atmospheric dynamic?",
+    "options": [
+      "Convective sensible heating of dark farm fields",
+      "Kelvin-Helmholtz shear waves breaking in regions of strong vertical and horizontal wind shear",
+      "Ozone layer dissociation",
+      "Horizontal pressure gradients across the equator"
+    ],
+    "answerIndex": 1,
+    "explanation": "CAT is produced by breaking Kelvin-Helmholtz shear waves where strong vertical wind shear (> 6 kt/1,000 ft) overcomes static stability (Richardson Number Ri < 0.25).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 16 'Clear Air Turbulence', p. 143",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-187",
+    "subject": "Aviation Meteorology",
+    "topic": "Clear Air Turbulence",
+    "difficulty": "medium",
+    "question": "Over India, the frequency of Clear Air Turbulence (CAT) reaches its annual maximum during:",
+    "options": [
+      "July and August over South India due to the Tropical Easterly Jet (TEJ), and December to February over North India due to the Sub-Tropical Westerly Jet (STJ)",
+      "March to May over Central India only",
+      "October over the Thar desert",
+      "September during monsoon withdrawal"
+    ],
+    "answerIndex": 0,
+    "explanation": "CAT frequency over India peaks in winter (Dec-Feb) over North India associated with the STJ, and in mid-monsoon (July-August) over South India associated with the Tropical Easterly Jet.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 16 'Clear Air Turbulence', p. 144",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-188",
+    "subject": "Aviation Meteorology",
+    "topic": "Clear Air Turbulence",
+    "difficulty": "hard",
+    "question": "What is the typical vertical thickness of an intense CAT layer in the upper troposphere?",
+    "options": [
+      "100 to 200 feet",
+      "1,000 to 2,000 feet (occasionally up to 3,000 ft)",
+      "10,000 to 15,000 feet",
+      "50,000 feet"
+    ],
+    "answerIndex": 1,
+    "explanation": "A CAT layer is generally shallow in the vertical, typically 1,000 to 2,000 ft thick (though spanning 100 to 200 km horizontally). A climb or descent of 2,000 to 4,000 ft usually exits the turbulence layer.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 16 'Clear Air Turbulence', p. 144",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-189",
+    "subject": "Aviation Meteorology",
+    "topic": "Clear Air Turbulence",
+    "difficulty": "easy",
+    "question": "Which of the following high-altitude cloud forms provides a visual warning of potential CAT nearby?",
+    "options": [
+      "Cirrus streaks with billows or transverse bands",
+      "Stratus fractus",
+      "Thick altostratus",
+      "Fair weather cumulus"
+    ],
+    "answerIndex": 0,
+    "explanation": "Transverse banding or billows in Cirrus clouds indicate strong vertical wind shear and atmospheric wave motion, providing a visual warning of CAT.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 16 'Clear Air Turbulence', p. 144 & Q23",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-190",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "medium",
+    "question": "How far downwind from a mountain barrier can standing lee waves and turbulence extend?",
+    "options": [
+      "500 metres",
+      "2 to 5 km",
+      "20 to 100 nautical miles (sometimes up to 150 km)",
+      "Over 2,000 km"
+    ],
+    "answerIndex": 2,
+    "explanation": "Lee wave trains can propagate downstream for 20 to 100 nautical miles (often 100–150 km) downwind of a major mountain barrier.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 145",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-191",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "hard",
+    "question": "If an aircraft must fly across a mountain range where mountain waves are active, at what angle should the ridge ideally be crossed?",
+    "options": [
+      "At 90° directly perpendicular at the lowest possible ridge clearance",
+      "At an angle of approximately 45° to the ridge line, to allow a quick escape turn away from down-drafts if needed",
+      "Parallel to the ridge inside the lee trough",
+      "Inside the rotor cloud"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aviation procedures recommend crossing mountain ridges at a 45° angle rather than 90°. If severe downdrafts or loss of terrain clearance occur, a 45° angle permits a rapid 90° turn away from the mountain into lower terrain.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 147",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-192",
+    "subject": "Aviation Meteorology",
+    "topic": "Mountain Waves",
+    "difficulty": "medium",
+    "question": "The wavelength of standing mountain waves typically ranges between:",
+    "options": [
+      "100 to 200 metres",
+      "2 to 10 nautical miles (5 to 20 km)",
+      "50 to 100 miles",
+      "0.1 nautical miles"
+    ],
+    "answerIndex": 1,
+    "explanation": "The typical wavelength of lee waves ranges from 2 to 10 nautical miles (approximately 5 to 20 km), depending on wind speed and atmospheric stability.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 17 'Mountain Waves', p. 145",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-193",
+    "subject": "Aviation Meteorology",
+    "topic": "Local Winds",
+    "difficulty": "easy",
+    "question": "The daytime wind blowing along the floor and sides of a valley towards the head of the valley is called a:",
+    "options": [
+      "Katabatic wind",
+      "Valley wind (Anabatic)",
+      "Mountain breeze",
+      "Fohn wind"
+    ],
+    "answerIndex": 1,
+    "explanation": "During daytime, the air in valleys and slopes heats up, becomes less dense, and flows up the valley axis towards the mountain peaks as a Valley wind (Anabatic flow).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 54",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-194",
+    "subject": "Aviation Meteorology",
+    "topic": "Local Winds",
+    "difficulty": "medium",
+    "question": "The 'Loo' is a well-known local wind affecting north India during pre-monsoon summer months. It is characterized as:",
+    "options": [
+      "A cold, moist wind from the Himalayas",
+      "An extremely hot, dry, dusty westerly wind blowing across the plains of Punjab, Haryana, UP, and Bihar",
+      "A humid coastal sea breeze",
+      "A freezing katabatic night wind"
+    ],
+    "answerIndex": 1,
+    "explanation": "The 'Loo' is a scorching, dry, dust-laden westerly wind blowing over the northern plains of India in May and June with afternoon temperatures exceeding 45°C to 48°C.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 19 'Climatology of India', p. 169",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-195",
+    "subject": "Aviation Meteorology",
+    "topic": "Local Winds",
+    "difficulty": "medium",
+    "question": "What is a 'Land Breeze' and when does it reach its maximum strength?",
+    "options": [
+      "Wind from sea to land at 1400 hrs local",
+      "Wind blowing from land towards the sea, reaching maximum strength just before or around sunrise",
+      "Wind blowing along the equator at midday",
+      "A gale force squall in a thunderstorm"
+    ],
+    "answerIndex": 1,
+    "explanation": "At night, land cools faster than the sea. Higher pressure over the chilled land drives a breeze toward the relatively warmer water. It reaches its maximum speed near dawn.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 55",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-196",
+    "subject": "Aviation Meteorology",
+    "topic": "Local Winds",
+    "difficulty": "hard",
+    "question": "What is the 'Mistral'?",
+    "options": [
+      "A cold, dry, violent katabatic northerly wind blowing down the Rhone Valley into the Mediterranean Gulf of Lions",
+      "A warm desert wind in Egypt",
+      "A tropical depression in the Indian Ocean",
+      "A sea breeze in Japan"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Mistral is a strong, cold, dry northwesterly katabatic wind that funnels through the Rhone River valley between the Alps and Massif Central into the Mediterranean.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 6 'Winds', p. 60",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-197",
+    "subject": "Aviation Meteorology",
+    "topic": "Ice Accretion",
+    "difficulty": "easy",
+    "question": "In flight, which aircraft component is typically the first to accumulate structural ice?",
+    "options": [
+      "Main fuselage belly",
+      "Thin, small-radius surfaces such as the outside air temperature (OAT) probe, pitot tube, and leading-edge antennae",
+      "The broad upper wing surface",
+      "The cabin windows"
+    ],
+    "answerIndex": 1,
+    "explanation": "Collection efficiency (catch rate) of supercooled water droplets is highest on narrow, sharp objects. Thin probes, antenna masts, and pitot tubes catch ice before the broader wing leading edges.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 12 'Ice Accretion', p. 105",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-198",
+    "subject": "Aviation Meteorology",
+    "topic": "Ice Accretion",
+    "difficulty": "medium",
+    "question": "What is 'Hoar Frost' on an aircraft airframe?",
+    "options": [
+      "A glassy transparent ice layer formed by rain",
+      "A white, crystalline, feathery ice deposit formed in clear air when water vapour sublimates directly onto a cold airframe whose temperature is below the frost point",
+      "Slush deposited on runways during takeoff",
+      "Carburetor ice in the throttle bore"
+    ],
+    "answerIndex": 1,
+    "explanation": "Hoar frost forms on parked aircraft on clear, cold winter nights (or when descending rapidly from sub-zero altitudes into warm moist air) when water vapour sublimates directly into ice crystals without passing through the liquid phase.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 12 'Ice Accretion', p. 105 & Q1/Q15",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-199",
+    "subject": "Aviation Meteorology",
+    "topic": "Ice Accretion",
+    "difficulty": "hard",
+    "question": "Why is the temperature range of 0°C to -10°C considered the most dangerous for severe Clear (Glaze) airframe icing?",
+    "options": [
+      "Because aircraft engines cannot produce power below 0°C",
+      "Because clouds in this temperature range hold the highest liquid water content (LWC) with large supercooled droplets",
+      "Because pitot heat fails at -10°C",
+      "Because ice crystals melt into water at -10°C"
+    ],
+    "answerIndex": 1,
+    "explanation": "Between 0°C and -10°C, clouds have their highest liquid water content and droplets are large. Large droplets do not freeze instantaneously on contact; they spread back as a film before freezing into clear, heavy glaze ice.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 12 'Ice Accretion', p. 106 (Table 12.1) & p. 109 Q13",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-200",
+    "subject": "Aviation Meteorology",
+    "topic": "Ice Accretion",
+    "difficulty": "medium",
+    "question": "When flying through Cumulonimbus (CB) clouds, in which temperature zone is severe icing most significant?",
+    "options": [
+      "0°C to -20°C level",
+      "Below -40°C level",
+      "+10°C to +20°C level",
+      "At all flight levels equally"
+    ],
+    "answerIndex": 0,
+    "explanation": "In CB clouds, severe airframe icing may range from light to severe from 0°C up to the -20°C level. Above -20°C (and especially below -40°C), clouds consist predominantly of ice crystals, diminishing severe liquid icing.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 12 'Ice Accretion', p. 107 & Q12",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-201",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "easy",
+    "question": "A cumulonimbus cloud with an unmistakable fibrous, flattened, or striated anvil top is classified as species:",
+    "options": [
+      "Calvus",
+      "Capillatus",
+      "Castellanus",
+      "Lenticularis"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cumulonimbus capillatus is characterized by distinctly fibrous, glaciated cirriform cloud structures at its upper portion, often spreading out into an anvil.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 8 p. 81 & Chapter 13 p. 113 Q15",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-202",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "medium",
+    "question": "The 'Gust Front' of a thunderstorm cell marks the boundary between:",
+    "options": [
+      "The cold downdraft spreading out at the surface and the warm ambient inflow air",
+      "The anvil cloud and the stratosphere",
+      "The lightning channel and surrounding air",
+      "The virga and ground rain"
+    ],
+    "answerIndex": 0,
+    "explanation": "The gust front is the leading edge of the cold, dense air rushing out ahead of the thunderstorm cell at the ground. It creates sudden wind shifts, sharp temperature drops, and strong turbulence.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 113",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-203",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "hard",
+    "question": "What is a 'Downburst'?",
+    "options": [
+      "A strong updraft carrying sailplanes to 30,000 ft",
+      "A localized intense downdraft with damaging outflow winds emerging from a thunderstorm or rain shower",
+      "Rain falling into a dry lake",
+      "A gentle descending katabatic current"
+    ],
+    "answerIndex": 1,
+    "explanation": "A downburst is a concentrated, severe downdraft causing an outward burst of damaging horizontal winds at or near the surface, divided into macrobursts (> 4 km) and microbursts (< 4 km).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 117",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-204",
+    "subject": "Aviation Meteorology",
+    "topic": "Thunderstorms",
+    "difficulty": "medium",
+    "question": "What is the primary cause of lightning during a thunderstorm?",
+    "options": [
+      "Nuclear fission inside ice crystals",
+      "Charge separation resulting from collisions between graupel, ice crystals, and supercooled water in intense vertical updrafts",
+      "Magnetic friction between the aircraft fuselage and raindrops",
+      "Solar radiation ionizing nitrogen molecules"
+    ],
+    "answerIndex": 1,
+    "explanation": "Convective updrafts cause collisions between soft hail (graupel) and ice crystals. Positive charges are transferred to smaller ice crystals carried to the cloud top, while heavier negative particles remain at lower levels, establishing huge electrical potentials (up to millions of volts).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 'Thunderstorm', p. 116",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-205",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "easy",
+    "question": "What instrument is used for continuously recording atmospheric Relative Humidity on a moving paper drum?",
+    "options": [
+      "Barograph",
+      "Hygrograph",
+      "Anemograph",
+      "Thermograph"
+    ],
+    "answerIndex": 1,
+    "explanation": "A Hygrograph uses human hair or synthetic sensors whose length changes with moisture to provide a continuous recording of relative humidity.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 23 'Met Instruments', p. 204",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-206",
+    "subject": "Aviation Meteorology",
+    "topic": "Humidity",
+    "difficulty": "medium",
+    "question": "The Wet Bulb depression is defined as:",
+    "options": [
+      "Dry bulb temperature minus Wet bulb temperature",
+      "Wet bulb temperature minus Dew point",
+      "Pressure drop in a rain shower",
+      "Relative humidity divided by 100"
+    ],
+    "answerIndex": 0,
+    "explanation": "Wet bulb depression is the difference between dry bulb temperature and wet bulb temperature (TT - Tw). In saturated air, the depression is zero.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 5 'Humidity', p. 41",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-207",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "medium",
+    "question": "If an air parcel is displaced vertically and its temperature remains identical to the surrounding ambient air at all levels, the atmosphere is in:",
+    "options": [
+      "Stable equilibrium",
+      "Unstable equilibrium",
+      "Neutral equilibrium",
+      "Latent instability"
+    ],
+    "answerIndex": 2,
+    "explanation": "In neutral equilibrium, the environmental lapse rate equals the adiabatic lapse rate of the parcel. When displaced, the parcel neither accelerates nor returns; it stays at the new level.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability & Instability', p. 87 & Q6",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-208",
+    "subject": "Aviation Meteorology",
+    "topic": "Stability & Adiabatics",
+    "difficulty": "hard",
+    "question": "What is the approximate average value of the Saturated Adiabatic Lapse Rate (SALR) in the warm lower tropical troposphere?",
+    "options": [
+      "1.0°C / km",
+      "4.0°C to 5.0°C / km (approx 1.5°C / 1,000 ft)",
+      "9.8°C / km",
+      "15.0°C / km"
+    ],
+    "answerIndex": 1,
+    "explanation": "In warm tropical air, moisture content is high, so abundant latent heat is liberated during condensation. This reduces SALR to roughly 4°C to 5°C per km (~1.5°C / 1,000 ft). At cold upper levels, SALR approaches the DALR (9.8°C/km).",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 9 'Stability & Instability', p. 86 & Q12/Q13",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-209",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "easy",
+    "question": "Monsoon Depressions over the Bay of Bengal typically move in which direction?",
+    "options": [
+      "East to West / West-Northwest (towards central India)",
+      "South to North along the equator",
+      "West to East across Myanmar",
+      "Directly into Tibet"
+    ],
+    "answerIndex": 0,
+    "explanation": "Monsoon depressions forming in the Head Bay of Bengal are steered by the prevailing easterly flow aloft and travel West-Northwestwards across Orissa, West Bengal, and Madhya Pradesh.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 154",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-210",
+    "subject": "Aviation Meteorology",
+    "topic": "Tropical Systems & Monsoon",
+    "difficulty": "medium",
+    "question": "In a tropical cyclone, what is the 'Spiral Rainband' (or feeder band)?",
+    "options": [
+      "Concentric rings of stratocumulus clouds",
+      "Long curved bands of cumulonimbus clouds spiraling inwards towards the eye wall, producing heavy rain squalls",
+      "Cirrus clouds at 60,000 ft",
+      "The dry zone surrounding the storm"
+    ],
+    "answerIndex": 1,
+    "explanation": "Spiral rainbands (feeder bands) are dense curved convective bands of thunderstorms spiraling inward toward the central eye wall, containing severe turbulence and wind shear.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 18 'Tropical Systems', p. 157",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-211",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "easy",
+    "question": "Which meteorological agency is the national authority responsible for all aeronautical weather services in India?",
+    "options": [
+      "Airports Authority of India (AAI)",
+      "India Meteorological Department (IMD)",
+      "DGCA Central Office",
+      "Indian Air Force Met Command"
+    ],
+    "answerIndex": 1,
+    "explanation": "The India Meteorological Department (IMD) is the national agency designated by the Government of India and ICAO to provide meteorological forecasting, observation, and warning services for civil aviation in India.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 21 'Met Services', p. 189",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-212",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "medium",
+    "question": "During the pre-monsoon summer, severe dust storms known as 'Andhi' occur frequently over:",
+    "options": [
+      "Kerala and Tamil Nadu",
+      "Northwest India (Rajasthan, Punjab, Haryana, and Western UP)",
+      "Assam and Meghalaya",
+      "The Andaman Sea"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Andhi' are violent convective dust storms occurring in pre-monsoon summer (April–June) over northwest India. Convective downdrafts whip up loose sand/dust into massive walls reducing visibility to near zero.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 13 p. 119 & Chapter 19 p. 169 & Q18",
+    "validation_status": "approved"
+  },
+  {
+    "id": "MET-213",
+    "subject": "Aviation Meteorology",
+    "topic": "Climatology of India",
+    "difficulty": "hard",
+    "question": "In the upper troposphere at 200 hPa during the Southwest Monsoon, a massive semi-permanent anticyclone establishes over:",
+    "options": [
+      "The Tibetan Plateau",
+      "Sri Lanka",
+      "The Arabian Sea",
+      "The North Pole"
+    ],
+    "answerIndex": 0,
+    "explanation": "Intense solar heating of the elevated Tibetan plateau in summer creates an upper-tropospheric high pressure system called the Tibetan Anticyclone (centered at 200 hPa / 12 km), which drives the Tropical Easterly Jet south of it.",
+    "source": "I.C. Joshi Aviation Meteorology, Chapter 19 'Climatology of India', p. 171",
+    "validation_status": "approved"
   }
 ]

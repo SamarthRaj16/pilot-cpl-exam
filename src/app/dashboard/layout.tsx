@@ -58,6 +58,7 @@ export default function DashboardLayout({
 
   const navItems = [
     { label: "Dashboard", href: "/dashboard" },
+    { label: "Custom Practice", href: "/dashboard/custom-practice" },
     { label: "Mistake Notebook", href: "/dashboard/notebook" },
     { label: "Spaced Revision", href: "/dashboard/revision" },
     { label: "Exam Readiness", href: "/dashboard/readiness" },

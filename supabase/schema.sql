@@ -12,6 +12,9 @@ CREATE TABLE IF NOT EXISTS public.profiles (
     email TEXT NOT NULL,
     full_name TEXT NOT NULL,
     role TEXT NOT NULL DEFAULT 'student' CHECK (role IN ('student', 'admin')),
+    account_status VARCHAR(30) NOT NULL DEFAULT 'active' CHECK (account_status IN ('active', 'suspended')),
+    suspended_at TIMESTAMPTZ,
+    suspended_reason TEXT,
     avatar_url TEXT,
     study_streak INTEGER NOT NULL DEFAULT 0,
     total_points INTEGER NOT NULL DEFAULT 0,
@@ -85,11 +88,14 @@ CREATE TABLE IF NOT EXISTS public.quiz_attempts (
     subject_id TEXT REFERENCES public.subjects(id) ON DELETE SET NULL,
     topic_id TEXT REFERENCES public.topics(id) ON DELETE SET NULL,
     mode TEXT NOT NULL CHECK (mode IN ('practice', 'timed', 'mock')),
+    status VARCHAR(30) NOT NULL DEFAULT 'in_progress' CHECK (status IN ('created', 'in_progress', 'submitting', 'submitted', 'abandoned')),
     total_questions INTEGER NOT NULL,
     score INTEGER NOT NULL DEFAULT 0,
     accuracy NUMERIC(5,2) NOT NULL DEFAULT 0.00,
     passed BOOLEAN NOT NULL DEFAULT FALSE,
     duration_seconds INTEGER NOT NULL DEFAULT 0,
+    answers_snapshot JSONB DEFAULT '{}'::jsonb,
+    last_saved_at TIMESTAMPTZ DEFAULT NOW(),
     started_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     completed_at TIMESTAMPTZ
 );
@@ -425,6 +431,18 @@ DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
     AFTER INSERT ON auth.users
     FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+
+CREATE INDEX IF NOT EXISTS idx_student_answers_attempt_q 
+ON public.student_answers (attempt_id, question_id);
+
+CREATE INDEX IF NOT EXISTS idx_student_answers_attempt_student 
+ON public.student_answers (attempt_id, student_id);
+
+CREATE INDEX IF NOT EXISTS idx_quiz_attempts_student_status 
+ON public.quiz_attempts (student_id, status, started_at DESC);
+
+CREATE INDEX IF NOT EXISTS idx_profiles_role_status 
+ON public.profiles (role, account_status);
 
 -- ====================================================================
 -- ROLES & PRIVILEGES (Fixes "permission denied for table ...")

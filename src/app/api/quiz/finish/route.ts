@@ -169,7 +169,7 @@ export async function POST(request: NextRequest) {
       }
 
       // Execute ALL database write operations simultaneously in parallel
-      const dbPromises: Promise<any>[] = [
+      const dbPromises: any[] = [
         adminClient
           .from("quiz_attempts")
           .update({

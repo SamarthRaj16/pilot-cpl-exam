@@ -13,7 +13,8 @@ export default function AdminLayout({
 
   const adminNav = [
     { label: "Overview", href: "/admin" },
-    { label: "Question Bank (839 Qs)", href: "/admin/questions" },
+    { label: "Question Bank (959+ Qs)", href: "/admin/questions" },
+    { label: "Student Management", href: "/admin/students" },
     { label: "Return to Pilot Portal", href: "/dashboard" },
   ];
 

@@ -6,6 +6,7 @@ import Link from "next/link";
 import rawQuestions from "@/data/questions.json";
 import syllabusHierarchy from "@/data/syllabusHierarchy.json";
 import SubjectArtwork from "@/components/SubjectArtwork";
+import PerformanceTrendCharts from "@/components/PerformanceTrendCharts";
 
 interface SubjectMeta {
   name: string;
@@ -677,6 +678,9 @@ export default function DashboardPage() {
             : `Start ${mode === "mock" ? "Mock Exam" : mode === "timed" ? "Timed Exam" : "Practice"} (${unservedPool.length} unserved Qs) →`}
         </button>
       </div>
+
+      {/* 5.5 Feature C2: Continuous Performance Trend Charts */}
+      <PerformanceTrendCharts />
 
       {/* 6. Specialised Learning Tools */}
       <div className="space-y-4 pt-2">

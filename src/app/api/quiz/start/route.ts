@@ -52,22 +52,9 @@ export async function POST(request: NextRequest) {
 
     const studentId = user?.id || "demo-student-id";
 
-    // 1. Determine Exposed (Served) Questions (Zero-Repeat Engine)
+    // 1 & 2. Concurrently Fetch Exposed Questions & Pending Revision Mistakes (Parallel DB IO)
     const exposedIds = new Set<string>(clientServedIds);
-    if (user) {
-      const { data: exposures } = await supabase
-        .from("question_exposure_history")
-        .select("question_id")
-        .eq("student_id", studentId);
-
-      if (exposures) {
-        exposures.forEach((e) => exposedIds.add(e.question_id));
-      }
-    }
-
-    // 2. Determine Pending Revision Mistakes (Pool B)
     const pendingRevisionMap = new Map<string, any>();
-    // Add client-provided mistake IDs
     if (Array.isArray(clientMistakeIds)) {
       clientMistakeIds.forEach((id: string) => {
         pendingRevisionMap.set(id, { question_id: id, incorrect_count: 1 });
@@ -75,15 +62,24 @@ export async function POST(request: NextRequest) {
     }
 
     if (user) {
-      let mistakeQuery = supabase
-        .from("student_mistakes")
-        .select("question_id, incorrect_count, last_attempted_at, status")
-        .eq("student_id", studentId)
-        .in("status", ["unresolved", "pending_revision"]);
+      const [exposureRes, mistakeRes] = await Promise.all([
+        supabase
+          .from("question_exposure_history")
+          .select("question_id")
+          .eq("student_id", studentId),
+        supabase
+          .from("student_mistakes")
+          .select("question_id, incorrect_count, last_attempted_at, status")
+          .eq("student_id", studentId)
+          .in("status", ["unresolved", "pending_revision"]),
+      ]);
 
-      const { data: dbMistakes } = await mistakeQuery;
-      if (dbMistakes) {
-        dbMistakes.forEach((m) => {
+      if (exposureRes.data) {
+        exposureRes.data.forEach((e: any) => exposedIds.add(e.question_id));
+      }
+
+      if (mistakeRes.data) {
+        mistakeRes.data.forEach((m: any) => {
           pendingRevisionMap.set(m.question_id, m);
         });
       }
@@ -205,10 +201,13 @@ export async function POST(request: NextRequest) {
     // Shuffle questions so revision questions are smoothly interleaved
     finalSelectedQuestions.sort(() => Math.random() - 0.5);
 
-    // 6. Record Question Exposure for Fresh Questions (Zero-Repeat DB persistence)
+    // 6 & 7. Concurrently Record Question Exposure & Create Quiz Attempt (Parallel DB writes)
+    let attemptId = `att-${Date.now()}`;
     if (user) {
       const adminClient = createAdminClient();
       const freshOnly = finalSelectedQuestions.filter((q) => !q.isRevision);
+      const writeTasks: Promise<any>[] = [];
+
       if (freshOnly.length > 0) {
         const exposureInserts = freshOnly.map((q: any) => ({
           student_id: studentId,
@@ -217,33 +216,36 @@ export async function POST(request: NextRequest) {
           topic_id: q.topic_id || q.topic,
         }));
 
-        await adminClient
-          .from("question_exposure_history")
-          .upsert(exposureInserts, { onConflict: "student_id,question_id" });
+        writeTasks.push(
+          adminClient
+            .from("question_exposure_history")
+            .upsert(exposureInserts, { onConflict: "student_id,question_id" })
+        );
       }
-    }
 
-    // 7. Create Quiz Attempt record
-    let attemptId = `att-${Date.now()}`;
-    if (user) {
       const primarySubject = targetSubjects.length > 0 ? targetSubjects.join(", ") : "Multi-Subject";
       const primaryTopic = targetTopics.length > 0 ? targetTopics.join(", ") : "Combined Practice";
 
-      const { data: attempt, error: attemptErr } = await supabase
+      const attemptPromise = supabase
         .from("quiz_attempts")
         .insert({
           student_id: studentId,
           subject_id: primarySubject,
           topic_id: primaryTopic,
           mode,
+          status: "in_progress",
           total_questions: finalSelectedQuestions.length,
           started_at: new Date().toISOString(),
         })
         .select("id")
         .single();
 
-      if (!attemptErr && attempt) {
-        attemptId = attempt.id;
+      writeTasks.push(attemptPromise);
+
+      const results = await Promise.all(writeTasks);
+      const attemptRes = results[results.length - 1];
+      if (attemptRes && attemptRes.data?.id) {
+        attemptId = attemptRes.data.id;
       }
     }
 

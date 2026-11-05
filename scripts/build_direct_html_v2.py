@@ -252,7 +252,7 @@ function getSubjectSvg(subject) {
 }
 """
 
-print("Compiling Direct HTML template with 839 questions...")
+print(f"Compiling Direct HTML template with {len(questions)} questions...")
 
 html_content = '''<!DOCTYPE html>
 <html lang="en">

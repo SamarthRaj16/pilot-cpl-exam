@@ -5,9 +5,9 @@ import Link from "next/link";
 import rawQuestions from "@/data/questions.json";
 
 export default function AdminOverviewPage() {
-  const totalQuestions = rawQuestions.length; // 839
+  const totalQuestions = rawQuestions.length; // 959
   const totalSubjects = 6;
-  const totalTopics = 94;
+  const totalTopics = 95;
   const interceptedDuplicates = 108;
 
   return (
@@ -51,7 +51,7 @@ export default function AdminOverviewPage() {
       </div>
 
       {/* Quick Action Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="p-6 rounded-2xl bg-card-primary border border-border-charcoal shadow-card space-y-4">
           <h3 className="text-base font-extrabold text-white">Question Bank Management</h3>
           <p className="text-xs text-text-secondary leading-relaxed">
@@ -59,16 +59,29 @@ export default function AdminOverviewPage() {
           </p>
           <Link
             href="/admin/questions"
-            className="inline-block px-4 py-2.5 rounded-xl bg-brand-purple hover:bg-brand-purpleDark text-white text-xs font-bold shadow-card transition-all"
+            className="inline-block px-4 py-2.5 rounded-xl bg-brand-gold text-bg-base hover:opacity-90 text-xs font-black uppercase tracking-wider shadow-card transition-all"
           >
-            Open Question Bank Manager &rarr;
+            Open Question Bank &rarr;
+          </Link>
+        </div>
+
+        <div className="p-6 rounded-2xl bg-card-primary border border-border-charcoal shadow-card space-y-4">
+          <h3 className="text-base font-extrabold text-white">Student Account Management</h3>
+          <p className="text-xs text-text-secondary leading-relaxed">
+            Manage pilot profiles, monitor study streaks and syllabus coverage, handle account suspensions, and review audit logs.
+          </p>
+          <Link
+            href="/admin/students"
+            className="inline-block px-4 py-2.5 rounded-xl bg-surface-interactive border border-border-charcoal text-white hover:border-brand-gold/50 text-xs font-bold shadow-card transition-all"
+          >
+            Manage Pilot Accounts &rarr;
           </Link>
         </div>
 
         <div className="p-6 rounded-2xl bg-card-primary border border-border-charcoal shadow-card space-y-4">
           <h3 className="text-base font-extrabold text-white">Database Seed & Backup</h3>
           <p className="text-xs text-text-secondary leading-relaxed">
-            All 839 questions are synchronized with Supabase SQL migrations in <code>supabase/seed.sql</code>. Full backup is archived in <code>cpl-exam-direct.html</code>.
+            All 959 questions are synchronized with Supabase SQL migrations in <code>supabase/seed.sql</code>. Full backup is archived in <code>cpl-exam-direct.html</code>.
           </p>
           <div className="text-xs font-mono text-brand-teal bg-surface-interactive p-3 rounded-lg border border-border-charcoal">
             Status: Synchronized &bull; 0 Database Anomalies Detected

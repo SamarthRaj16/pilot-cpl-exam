@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import PerformanceTrendCharts from "@/components/PerformanceTrendCharts";
 
 export default function ReadinessPage() {
   const [data, setData] = useState<any>(null);
@@ -158,6 +159,9 @@ export default function ReadinessPage() {
           })}
         </div>
       </div>
+
+      {/* Feature C2: Performance Trend Charts */}
+      <PerformanceTrendCharts />
 
       {/* Recommended Action Priorities */}
       <div className="bg-card-primary border border-border-charcoal rounded-2xl p-6 shadow-card space-y-3">

@@ -14,6 +14,54 @@ export async function POST(request: NextRequest) {
     } = await supabase.auth.getUser();
 
     const studentId = user?.id || "demo-student-id";
+    const adminClient = createAdminClient();
+
+    // IDEMPOTENCY GUARD: Check if this attempt has already been submitted
+    if (user && attemptId && !attemptId.startsWith("att-")) {
+      const { data: existingAttempt } = await adminClient
+        .from("quiz_attempts")
+        .select("status, score, total_questions, accuracy, passed, duration_seconds")
+        .eq("id", attemptId)
+        .maybeSingle();
+
+      if (existingAttempt && existingAttempt.status === "submitted") {
+        // Build review items fast from master bank and return existing result
+        const qMapFast = new Map<string, any>();
+        rawQuestions.forEach((q: any) => qMapFast.set(q.id, q));
+        const idempotentReview = Object.keys(answers).map((qId) => {
+          const q = qMapFast.get(qId) || {};
+          const studentChoice = answers[qId] ?? -1;
+          const correctChoice = q.answer_index ?? q.answerIndex;
+          const isCorrect = studentChoice === correctChoice && studentChoice >= 0;
+          return {
+            questionId: q.id || qId,
+            subject: q.subject || q.subject_id || "General",
+            topic: q.topic || q.topic_name || "General",
+            difficulty: q.difficulty || "medium",
+            question: q.question || "",
+            options: q.options || [],
+            studentChoice,
+            correctChoice,
+            isCorrect,
+            pointsAwarded: isCorrect ? 1 : 0,
+            explanation: q.explanation || "",
+            source: q.source || "DGCA Question Bank",
+          };
+        });
+
+        return NextResponse.json({
+          attemptId,
+          score: existingAttempt.score,
+          totalQuestions: existingAttempt.total_questions,
+          accuracy: Number(existingAttempt.accuracy),
+          passed: existingAttempt.passed,
+          durationSeconds: existingAttempt.duration_seconds,
+          passMark: 70,
+          isDuplicateSubmission: true,
+          reviewItems: idempotentReview,
+        });
+      }
+    }
 
     // Fast in-memory lookup map from master bank (0ms latency)
     const qMap = new Map<string, any>();
@@ -173,10 +221,13 @@ export async function POST(request: NextRequest) {
         adminClient
           .from("quiz_attempts")
           .update({
+            status: "submitted",
             score,
             accuracy,
             passed,
             duration_seconds: durationSeconds,
+            answers_snapshot: answers,
+            last_saved_at: now,
             completed_at: now,
           })
           .eq("id", attemptId),
@@ -247,15 +298,52 @@ export async function POST(request: NextRequest) {
       } catch {}
     }
 
+    // Compute analytical breakdowns
+    const correctAnswers = score;
+    const unansweredCount = reviewItems.filter((r) => r.studentChoice < 0).length;
+    const incorrectAnswers = totalQuestions - correctAnswers - unansweredCount;
+
+    const subjectBreakdown: Record<string, { total: number; correct: number; accuracy: number }> = {};
+    const topicBreakdown: Record<string, { total: number; correct: number; accuracy: number }> = {};
+
+    reviewItems.forEach((r) => {
+      const subj = r.subject || "General";
+      const top = r.topic || "General";
+
+      if (!subjectBreakdown[subj]) subjectBreakdown[subj] = { total: 0, correct: 0, accuracy: 0 };
+      subjectBreakdown[subj].total += 1;
+      if (r.isCorrect) subjectBreakdown[subj].correct += 1;
+
+      if (!topicBreakdown[top]) topicBreakdown[top] = { total: 0, correct: 0, accuracy: 0 };
+      topicBreakdown[top].total += 1;
+      if (r.isCorrect) topicBreakdown[top].correct += 1;
+    });
+
+    Object.keys(subjectBreakdown).forEach((s) => {
+      const item = subjectBreakdown[s];
+      item.accuracy = Math.round((item.correct / item.total) * 100);
+    });
+
+    Object.keys(topicBreakdown).forEach((t) => {
+      const item = topicBreakdown[t];
+      item.accuracy = Math.round((item.correct / item.total) * 100);
+    });
+
     return NextResponse.json({
       attemptId,
       score,
+      totalPoints: score,
+      correctAnswers,
+      incorrectAnswers,
+      unansweredCount,
       totalQuestions,
       accuracy,
       passed,
       durationSeconds,
       passMark: 70,
       recoveredCount: recoveredInThisSession,
+      subjectBreakdown,
+      topicBreakdown,
       reviewItems,
     });
   } catch (err: any) {

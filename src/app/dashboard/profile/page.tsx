@@ -99,17 +99,30 @@ export default function ProfilePage() {
     setStatusMsg(null);
 
     try {
-      const supabase = createClient();
-      const { error } = await supabase
-        .from("profiles")
-        .update({
+      const res = await fetch("/api/profile", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           full_name: profile.full_name,
           study_preferences: preferences,
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", user.id);
+        }),
+      });
 
-      if (error) throw error;
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to update profile.");
+      }
+
+      // Update cached profile in sessionStorage so top nav updates immediately
+      try {
+        const cached = sessionStorage.getItem("cpl_cached_profile");
+        const existing = cached ? JSON.parse(cached) : {};
+        sessionStorage.setItem(
+          "cpl_cached_profile",
+          JSON.stringify({ ...existing, full_name: profile.full_name })
+        );
+      } catch {}
+
       setStatusMsg({ type: "success", text: "Profile & study preferences updated successfully!" });
     } catch (err: any) {
       setStatusMsg({ type: "error", text: err.message || "Failed to update profile." });

@@ -206,7 +206,7 @@ export async function POST(request: NextRequest) {
     if (user) {
       const adminClient = createAdminClient();
       const freshOnly = finalSelectedQuestions.filter((q) => !q.isRevision);
-      const writeTasks: Promise<any>[] = [];
+      const writeTasks: any[] = [];
 
       if (freshOnly.length > 0) {
         const exposureInserts = freshOnly.map((q: any) => ({

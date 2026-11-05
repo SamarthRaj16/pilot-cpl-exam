@@ -298,16 +298,27 @@ function ExamSessionContent() {
 
   // Answer Selection with Debounced Auto-Save & Indicators
   const handleSelectOption = (optIndex: number) => {
-    if (mode === "practice" && revealed[currentIndex]) return; // Locked in practice mode
+    const isAnswerRevealed =
+      (mode === "practice" && answers[currentIndex] !== undefined && answers[currentIndex] >= 0) ||
+      Boolean(revealed[currentIndex]);
+
+    if (mode === "practice" && isAnswerRevealed) return; // Locked in practice mode once answered
     if (isSubmitting) return;
 
     const newAnswers = [...answers];
     newAnswers[currentIndex] = optIndex;
     setAnswers(newAnswers);
 
-    // Update active session locally
+    let newRevealed = [...revealed];
+    if (mode === "practice") {
+      newRevealed[currentIndex] = true;
+      setRevealed(newRevealed);
+    }
+
+    // Update active session locally with BOTH answers and revealed states
     saveActiveSessionSnapshot({
       answers: newAnswers,
+      revealed: newRevealed,
       currentIndex,
     });
 
@@ -341,16 +352,16 @@ function ExamSessionContent() {
       }
     }, 250);
 
-    // Practice Mode immediate feedback
+    // Practice Mode immediate feedback & mistake notebook logging
     if (mode === "practice") {
-      const newRevealed = [...revealed];
-      newRevealed[currentIndex] = true;
-      setRevealed(newRevealed);
-
       const currentQ = questions[currentIndex];
-      const isRight =
-        optIndex ===
-        (currentQ.answerIndex !== undefined ? currentQ.answerIndex : currentQ.answer_index);
+      const correctIdx =
+        currentQ.answerIndex !== undefined
+          ? currentQ.answerIndex
+          : currentQ.answer_index !== undefined
+          ? currentQ.answer_index
+          : -1;
+      const isRight = optIndex === correctIdx;
 
       try {
         const stored = localStorage.getItem("cpl_mistakes");
@@ -602,12 +613,21 @@ function ExamSessionContent() {
 
   const currentQ = questions[currentIndex] || {};
   const totalQuestions = questions.length;
-  const isRevealed = revealed[currentIndex];
+  const isRevealed =
+    (mode === "practice" && answers[currentIndex] !== undefined && answers[currentIndex] >= 0) ||
+    Boolean(revealed[currentIndex]);
   const isCurrentFlagged = flags[currentIndex];
 
   const answeredCount = answers.filter((a) => a >= 0).length;
   const flaggedCount = flags.filter((f) => f).length;
   const unansweredCount = totalQuestions - answeredCount;
+
+  const practiceCorrectCount = questions.filter((q, idx) => {
+    if (answers[idx] < 0) return false;
+    const cIdx = q.answerIndex !== undefined ? q.answerIndex : q.answer_index;
+    return answers[idx] === cIdx;
+  }).length;
+  const practiceIncorrectCount = answeredCount - practiceCorrectCount;
 
   const minutes = Math.floor(timeRemaining / 60);
   const seconds = timeRemaining % 60;
@@ -692,44 +712,64 @@ function ExamSessionContent() {
           {currentQ.options?.map((opt: string, optIdx: number) => {
             const isSelected = answers[currentIndex] === optIdx;
             const correctIdx =
-              currentQ.answerIndex !== undefined ? currentQ.answerIndex : currentQ.answer_index;
+              currentQ.answerIndex !== undefined
+                ? currentQ.answerIndex
+                : currentQ.answer_index !== undefined
+                ? currentQ.answer_index
+                : -1;
             const isCorrectAnswer = optIdx === correctIdx;
 
             let cardStyle =
               "bg-surface-primary border-border-charcoal hover:border-brand-gold/40 text-text-secondary hover:text-white";
+            let bubbleStyle =
+              "bg-surface-interactive text-text-muted border border-border-charcoal";
+            let tagBadge = null;
 
-            if (isSelected) {
+            if (isSelected && !isRevealed) {
               cardStyle = "bg-brand-gold/10 border-brand-gold text-white font-bold shadow-card";
+              bubbleStyle = "bg-brand-gold text-bg-base font-black shadow-sm";
             }
 
             // In Practice Mode post-reveal styling
             if (mode === "practice" && isRevealed) {
               if (isCorrectAnswer) {
-                cardStyle = "bg-brand-green/20 border-brand-green text-brand-green font-bold";
+                // Correct Option: Turns GREEN (#3ED1B0)
+                cardStyle = "bg-[#3ED1B0]/15 border-2 border-[#3ED1B0] text-white font-bold shadow-card";
+                bubbleStyle = "bg-[#3ED1B0] text-[#101116] font-black shadow-sm ring-2 ring-[#3ED1B0]/40";
+                tagBadge = (
+                  <span className="ml-auto inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider text-[#3ED1B0] bg-[#3ED1B0]/20 px-2.5 py-1 rounded-full border border-[#3ED1B0]/40 shrink-0">
+                    ✓ Correct Answer
+                  </span>
+                );
               } else if (isSelected && !isCorrectAnswer) {
-                cardStyle = "bg-brand-red/20 border-brand-red text-brand-red font-bold";
+                // Incorrect Selected Option: Turns RED (#F16D75)
+                cardStyle = "bg-[#F16D75]/15 border-2 border-[#F16D75] text-white font-bold shadow-card";
+                bubbleStyle = "bg-[#F16D75] text-white font-black shadow-sm ring-2 ring-[#F16D75]/40";
+                tagBadge = (
+                  <span className="ml-auto inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider text-[#F16D75] bg-[#F16D75]/20 px-2.5 py-1 rounded-full border border-[#F16D75]/40 shrink-0">
+                    ✕ Your Choice
+                  </span>
+                );
               } else {
-                cardStyle = "opacity-50 bg-surface-primary border-border-charcoal text-text-muted";
+                cardStyle = "opacity-40 bg-surface-primary/70 border-border-charcoal text-text-muted cursor-not-allowed";
+                bubbleStyle = "bg-surface-interactive/50 text-text-muted/60 border border-border-charcoal/50";
               }
             }
 
             return (
               <button
                 key={optIdx}
-                disabled={isSubmitting}
+                disabled={isSubmitting || (mode === "practice" && isRevealed)}
                 onClick={() => handleSelectOption(optIdx)}
                 className={`w-full text-left p-4 rounded-xl border transition-all flex items-center gap-4 ${cardStyle}`}
               >
                 <span
-                  className={`w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-xs shrink-0 ${
-                    isSelected
-                      ? "bg-brand-gold text-bg-base"
-                      : "bg-surface-interactive text-text-muted"
-                  }`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center text-xs shrink-0 transition-all ${bubbleStyle}`}
                 >
                   {LETTERS[optIdx]}
                 </span>
-                <span className="text-sm leading-snug">{opt}</span>
+                <span className="text-sm leading-snug flex-1">{opt}</span>
+                {tagBadge}
               </button>
             );
           })}
@@ -737,21 +777,71 @@ function ExamSessionContent() {
 
         {/* Practice Mode Explanation Box */}
         {mode === "practice" && isRevealed && (
-          <div className="p-5 rounded-xl bg-surface-primary border border-border-charcoal space-y-2 mt-4">
-            <div className="flex items-center gap-2">
-              <span className="text-sm">💡</span>
-              <h5 className="text-xs font-extrabold text-brand-gold uppercase tracking-wider">
-                DGCA Regulatory Explanation & Reference
-              </h5>
-            </div>
-            <p className="text-xs text-text-secondary leading-relaxed pl-6">
-              {currentQ.explanation || "No regulatory explanation attached for this question."}
-            </p>
-            {currentQ.source && (
-              <p className="text-[10px] text-text-muted font-bold pl-6">
-                Source: {currentQ.source}
+          <div className="space-y-4 mt-4">
+            {/* Scenario A (Correct) vs Scenario B (Incorrect) Result Banner */}
+            {(() => {
+              const studentChoice = answers[currentIndex];
+              const correctIdx =
+                currentQ.answerIndex !== undefined
+                  ? currentQ.answerIndex
+                  : currentQ.answer_index !== undefined
+                  ? currentQ.answer_index
+                  : -1;
+              const isRight = studentChoice === correctIdx && studentChoice >= 0;
+
+              if (isRight) {
+                return (
+                  <div className="p-4 rounded-2xl bg-[#3ED1B0]/10 border border-[#3ED1B0]/40 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-2.5 text-[#3ED1B0] font-black text-xs sm:text-sm">
+                      <span className="w-5 h-5 rounded-full bg-[#3ED1B0] text-bg-main flex items-center justify-center text-xs font-bold">
+                        ✓
+                      </span>
+                      <span>Correct Answer! (+1 Point Awarded)</span>
+                    </div>
+                    <span className="text-xs font-mono font-bold text-[#3ED1B0] bg-[#3ED1B0]/20 px-3 py-1 rounded-full border border-[#3ED1B0]/30">
+                      Option {LETTERS[correctIdx]}
+                    </span>
+                  </div>
+                );
+              } else {
+                return (
+                  <div className="p-4 rounded-2xl bg-[#F16D75]/10 border border-[#F16D75]/40 flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5 text-[#F16D75] font-black text-xs sm:text-sm">
+                      <span className="w-5 h-5 rounded-full bg-[#F16D75] text-white flex items-center justify-center text-xs font-bold">
+                        ✕
+                      </span>
+                      <span>Incorrect Answer (0 Points Awarded)</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs font-mono font-bold">
+                      <span className="text-[#F16D75] bg-[#F16D75]/20 px-2.5 py-1 rounded-full border border-[#F16D75]/30">
+                        Your answer: {studentChoice >= 0 ? LETTERS[studentChoice] : "None"}
+                      </span>
+                      <span className="text-[#3ED1B0] bg-[#3ED1B0]/20 px-2.5 py-1 rounded-full border border-[#3ED1B0]/30">
+                        Correct answer: {LETTERS[correctIdx]}
+                      </span>
+                    </div>
+                  </div>
+                );
+              }
+            })()}
+
+            {/* Detailed DGCA Regulatory Explanation */}
+            <div className="p-5 rounded-xl bg-surface-primary border border-border-charcoal space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-sm">💡</span>
+                <h5 className="text-xs font-extrabold text-brand-gold uppercase tracking-wider">
+                  DGCA Regulatory Explanation & Reference
+                </h5>
+              </div>
+              <p className="text-xs text-text-secondary leading-relaxed pl-6">
+                {currentQ.explanation || "No regulatory explanation attached for this question."}
               </p>
-            )}
+              {currentQ.source && (
+                <p className="text-[10px] text-text-muted font-bold pl-6">
+                  Source: {currentQ.source}
+                </p>
+              )}
+            </div>
           </div>
         )}
 
@@ -816,9 +906,27 @@ function ExamSessionContent() {
               const isCur = currentIndex === idx;
 
               let btnStyle = "bg-surface-primary text-text-muted border-border-charcoal";
-              if (isAns) btnStyle = "bg-brand-green/20 text-brand-green border-brand-green/50";
-              if (isFlg) btnStyle = "bg-brand-orange/20 text-brand-orange border-brand-orange";
-              if (isCur) btnStyle += " ring-2 ring-brand-purple ring-brand-gold";
+
+              if (mode === "practice" && isAns) {
+                const qCorrect = q.answerIndex !== undefined ? q.answerIndex : q.answer_index;
+                const isRight = answers[idx] === qCorrect;
+                if (isRight) {
+                  btnStyle = "bg-brand-green/20 text-brand-green border-brand-green/60 font-bold";
+                } else {
+                  btnStyle = "bg-brand-red/20 text-brand-red border-brand-red/60 font-bold";
+                }
+              } else if (isAns) {
+                // In Timed and Mock exams, maintain neutral answered indicator
+                btnStyle = "bg-brand-green/20 text-brand-green border-brand-green/50";
+              }
+
+              if (isFlg) {
+                btnStyle = "bg-brand-orange/20 text-brand-orange border-brand-orange";
+              }
+
+              if (isCur) {
+                btnStyle += " ring-2 ring-brand-purple ring-brand-gold";
+              }
 
               return (
                 <button
@@ -839,9 +947,19 @@ function ExamSessionContent() {
           </div>
 
           <div className="flex justify-between text-[10px] font-bold text-text-muted pt-2 border-t border-border-charcoal">
-            <span className="text-brand-green">{answeredCount} Answered</span>
-            <span className="text-brand-orange">{flaggedCount} Flagged</span>
-            <span>{unansweredCount} Left</span>
+            {mode === "practice" ? (
+              <>
+                <span className="text-brand-green">{practiceCorrectCount} Correct</span>
+                <span className="text-brand-red">{practiceIncorrectCount} Wrong</span>
+                <span>{unansweredCount} Left</span>
+              </>
+            ) : (
+              <>
+                <span className="text-brand-green">{answeredCount} Answered</span>
+                <span className="text-brand-orange">{flaggedCount} Flagged</span>
+                <span>{unansweredCount} Left</span>
+              </>
+            )}
           </div>
 
           <button

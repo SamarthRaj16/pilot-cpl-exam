@@ -8,7 +8,7 @@ interface Student {
   email: string;
   full_name: string;
   role: string;
-  account_status: "active" | "suspended";
+  account_status: string;
   study_streak?: number;
   total_points?: number;
   recovered_questions?: number;
@@ -504,3 +504,4 @@ export default function AdminStudentsPage() {
     </div>
   );
 }
+

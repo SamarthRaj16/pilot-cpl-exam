@@ -64,17 +64,19 @@ export async function GET(request: NextRequest) {
     const { data: profiles, count, error } = await query;
 
     // Fallback Mock Students for offline/preview mode if database has no rows
-    let studentList = profiles || [];
+    let studentList: any[] = profiles || [];
     let totalCount = count || 0;
 
     if (studentList.length === 0 && (!process.env.NEXT_PUBLIC_SUPABASE_URL || totalCount === 0)) {
-      const mockStudents = [
+      const mockStudents: any[] = [
         {
           id: "stu-101",
           email: "captain.vikram@gmail.com",
           full_name: "Capt. Vikram Malhotra",
           role: "student",
           account_status: "active",
+          suspended_at: null,
+          suspended_reason: null,
           study_streak: 12,
           total_points: 1480,
           recovered_questions: 42,
@@ -89,6 +91,8 @@ export async function GET(request: NextRequest) {
           full_name: "Ananya Sharma",
           role: "student",
           account_status: "active",
+          suspended_at: null,
+          suspended_reason: null,
           study_streak: 5,
           total_points: 920,
           recovered_questions: 19,
@@ -119,6 +123,8 @@ export async function GET(request: NextRequest) {
           full_name: "Priya Verma",
           role: "student",
           account_status: "active",
+          suspended_at: null,
+          suspended_reason: null,
           study_streak: 21,
           total_points: 2450,
           recovered_questions: 88,
@@ -210,3 +216,4 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ error: err.message || "Failed to update student status" }, { status: 500 });
   }
 }
+

@@ -775,3 +775,4 @@ export default function SyllabusTrackerPage() {
     </div>
   );
 }
+

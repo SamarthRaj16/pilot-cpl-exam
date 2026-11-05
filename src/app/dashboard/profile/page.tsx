@@ -151,7 +151,8 @@ export default function ProfilePage() {
   };
 
   const handleMigrateGuestData = async () => {
-    if (!user) return;
+    if (!user || !user.id) return;
+    const studentId = user.id;
     setMigrating(true);
     try {
       const supabase = createClient();
@@ -162,7 +163,7 @@ export default function ProfilePage() {
         const ids: string[] = JSON.parse(served);
         if (ids.length > 0) {
           const rows = ids.map((qid) => ({
-            student_id: user.id,
+            student_id: studentId,
             question_id: qid,
             subject_id: "Air Navigation",
             topic_id: "General",
@@ -176,7 +177,7 @@ export default function ProfilePage() {
       if (syllabus) {
         const dict = JSON.parse(syllabus);
         const rows = Object.values(dict).map((item: any) => ({
-          student_id: user.id,
+          student_id: studentId,
           subject_name: item.subject_name,
           topic_name: item.topic_name,
           theory_completed: item.theory_completed || false,
@@ -433,3 +434,4 @@ export default function ProfilePage() {
     </div>
   );
 }
+

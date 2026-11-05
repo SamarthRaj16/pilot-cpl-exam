@@ -74,8 +74,9 @@ export default function RegisterPage() {
 
       // Ensure profile record is inserted
       if (data.user) {
+        const studentUserId = data.user.id;
         await supabase.from("profiles").upsert({
-          id: data.user.id,
+          id: studentUserId,
           email,
           full_name: fullName,
           role: "student",
@@ -88,7 +89,7 @@ export default function RegisterPage() {
             const ids: string[] = JSON.parse(guestServed);
             if (ids.length > 0) {
               const rows = ids.map((qid) => ({
-                student_id: data.user.id,
+                student_id: studentUserId,
                 question_id: qid,
                 subject_id: "Air Navigation",
                 topic_id: "General",

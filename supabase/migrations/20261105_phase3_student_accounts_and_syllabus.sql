@@ -92,3 +92,4 @@ DROP TRIGGER IF EXISTS trg_syllabus_updated_at ON public.student_syllabus_progre
 CREATE TRIGGER trg_syllabus_updated_at
     BEFORE UPDATE ON public.student_syllabus_progress
     FOR EACH ROW EXECUTE FUNCTION public.handle_syllabus_updated_at();
+

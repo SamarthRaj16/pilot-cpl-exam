@@ -146,3 +146,4 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ error: err.message || "Failed to bulk sync syllabus" }, { status: 500 });
   }
 }
+

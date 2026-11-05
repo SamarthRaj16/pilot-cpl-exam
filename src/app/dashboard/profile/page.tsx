@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
 export default function ProfilePage() {
@@ -219,6 +220,30 @@ export default function ProfilePage() {
           </p>
         </div>
       </div>
+
+      {/* Guest Mode Banner if not authenticated */}
+      {!user && (
+        <div className="p-6 rounded-2xl bg-card-primary border border-brand-blue/40 shadow-card flex flex-col sm:flex-row items-center justify-between gap-5">
+          <div className="space-y-1 text-center sm:text-left">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-brand-blue">
+              Guest Pilot Mode
+            </span>
+            <h2 className="text-base font-bold text-text-primary">
+              Sign in to unlock Cloud Sync &amp; Personalized Flight Records
+            </h2>
+            <p className="text-xs text-text-secondary">
+              Create an account or sign in to permanently back up your syllabus progress, test scores, and study goals to Supabase.
+            </p>
+          </div>
+          <Link
+            href="/auth/login"
+            className="px-5 py-2.5 rounded-xl bg-brand-blue text-bg-main text-xs font-black shadow-card hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
+          >
+            <span>🔑</span>
+            <span>Sign In or Register</span>
+          </Link>
+        </div>
+      )}
 
       {statusMsg && (
         <div

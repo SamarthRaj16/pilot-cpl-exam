@@ -69,6 +69,9 @@ function LoginForm() {
   };
 
   const handleGuestLogin = () => {
+    try {
+      document.cookie = "cpl_guest_session=true; path=/; max-age=2592000";
+    } catch {}
     router.push("/dashboard");
   };
 

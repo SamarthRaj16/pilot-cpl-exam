@@ -16,6 +16,7 @@ export default function DashboardLayout({
   const [studentName, setStudentName] = useState("Cadet Pilot");
   const [isAdmin, setIsAdmin] = useState(false);
   const [totalPoints, setTotalPoints] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Dropdown states for desktop
   const [practiceOpen, setPracticeOpen] = useState(false);
@@ -35,6 +36,7 @@ export default function DashboardLayout({
         if (p.full_name) setStudentName(p.full_name);
         if (p.role !== undefined) setIsAdmin(p.role === "admin");
         if (p.total_points !== undefined) setTotalPoints(p.total_points);
+        setIsLoggedIn(true);
       }
     } catch {}
 
@@ -47,6 +49,7 @@ export default function DashboardLayout({
         } = await supabase.auth.getUser();
 
         if (user) {
+          setIsLoggedIn(true);
           const { data: profile } = await supabase
             .from("profiles")
             .select("full_name, role, total_points")
@@ -61,9 +64,15 @@ export default function DashboardLayout({
               sessionStorage.setItem("cpl_cached_profile", JSON.stringify(profile));
             } catch {}
           }
+        } else {
+          setIsLoggedIn(false);
+          try {
+            sessionStorage.removeItem("cpl_cached_profile");
+          } catch {}
         }
       } catch {
         // Fallback to offline / guest mode
+        setIsLoggedIn(false);
       }
     }
     loadUser();
@@ -93,6 +102,11 @@ export default function DashboardLayout({
     try {
       const supabase = createClient();
       await supabase.auth.signOut();
+      sessionStorage.removeItem("cpl_cached_profile");
+      try {
+        document.cookie = "cpl_guest_session=; path=/; max-age=0";
+      } catch {}
+      setIsLoggedIn(false);
       router.push("/auth/login");
       router.refresh();
     } catch {
@@ -287,33 +301,54 @@ export default function DashboardLayout({
             )}
           </nav>
 
-          {/* Right: Points, Profile, Sign Out */}
+          {/* Right: Points, Profile, Sign In / Sign Out */}
           <div className="flex items-center gap-3">
-            {/* Amber Gold Points Indicator */}
-            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-card-primary border border-brand-gold/30 text-xs font-bold text-brand-gold shadow-sm">
-              <span>⭐</span>
-              <span>{totalPoints} pts</span>
-            </div>
+            {isLoggedIn ? (
+              <>
+                {/* Amber Gold Points Indicator */}
+                <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-card-primary border border-brand-gold/30 text-xs font-bold text-brand-gold shadow-sm">
+                  <span>⭐</span>
+                  <span>{totalPoints} pts</span>
+                </div>
 
-            {/* Pilot Status Tag / Profile Link */}
-            <Link
-              href="/dashboard/profile"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-card-primary hover:bg-card-elevated border border-border-charcoal hover:border-brand-blue/50 text-xs font-semibold text-text-primary transition-all group"
-              title="View Pilot Profile & Settings"
-            >
-              <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
-              <span className="max-w-[120px] truncate group-hover:text-brand-blue">{studentName}</span>
-              <span className="text-[10px] text-text-muted">⚙️</span>
-            </Link>
+                {/* Pilot Status Tag / Profile Link */}
+                <Link
+                  href="/dashboard/profile"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-card-primary hover:bg-card-elevated border border-border-charcoal hover:border-brand-blue/50 text-xs font-semibold text-text-primary transition-all group"
+                  title="View Pilot Profile & Settings"
+                >
+                  <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+                  <span className="max-w-[120px] truncate group-hover:text-brand-blue">{studentName}</span>
+                  <span className="text-[10px] text-text-muted">⚙️</span>
+                </Link>
 
-            {/* Exit Action */}
-            <button
-              onClick={handleSignOut}
-              className="text-xs font-semibold text-text-muted hover:text-brand-red px-3 py-1.5 rounded-lg border border-border-charcoal hover:border-brand-red/40 transition-colors"
-              title="Sign Out"
-            >
-              Exit
-            </button>
+                {/* Sign Out Action */}
+                <button
+                  onClick={handleSignOut}
+                  className="text-xs font-semibold text-text-muted hover:text-brand-red px-3 py-1.5 rounded-lg border border-border-charcoal hover:border-brand-red/40 transition-colors"
+                  title="Sign Out"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                {/* Guest Mode Indicator */}
+                <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-card-primary border border-border-charcoal text-xs font-semibold text-text-muted">
+                  <span className="w-2 h-2 rounded-full bg-brand-gold"></span>
+                  <span>Guest Pilot</span>
+                </div>
+
+                {/* Prominent Sign In / Register CTA */}
+                <Link
+                  href="/auth/login"
+                  className="px-4 py-2 rounded-xl bg-brand-blue text-bg-main text-xs font-black shadow-card hover:bg-opacity-90 transition-all flex items-center gap-1.5"
+                >
+                  <span>🔑</span>
+                  <span>Sign In</span>
+                </Link>
+              </>
+            )}
 
             {/* Mobile Hamburger Button */}
             <button
@@ -402,6 +437,31 @@ export default function DashboardLayout({
             >
               &bull; Study Planner
             </Link>
+
+            <div className="pt-2 px-3 text-[10px] font-bold uppercase tracking-wider text-text-muted">Account</div>
+            {isLoggedIn ? (
+              <>
+                <Link
+                  href="/dashboard/profile"
+                  className="block px-3 py-1.5 rounded-lg text-text-secondary hover:text-white pl-5"
+                >
+                  &bull; Pilot Profile &amp; Settings
+                </Link>
+                <button
+                  onClick={handleSignOut}
+                  className="w-full text-left px-3 py-1.5 rounded-lg text-brand-red hover:bg-brand-red/10 pl-5 font-semibold"
+                >
+                  &bull; Sign Out
+                </button>
+              </>
+            ) : (
+              <Link
+                href="/auth/login"
+                className="block mx-3 my-2 text-center py-2 rounded-xl bg-brand-blue text-bg-main font-bold"
+              >
+                🔑 Sign In / Register
+              </Link>
+            )}
           </div>
         )}
       </header>

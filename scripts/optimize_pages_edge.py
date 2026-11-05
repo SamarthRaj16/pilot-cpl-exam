@@ -32,3 +32,4 @@ for rel in target_files:
             print(f'Optimized {rel}')
 
 print(f'Successfully optimized {updated} pages for static edge delivery.')
+

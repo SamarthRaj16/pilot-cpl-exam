@@ -90,6 +90,7 @@ export default function DashboardLayout({
     pathname.startsWith("/dashboard/exam");
 
   const isProgressActive =
+    pathname.startsWith("/dashboard/syllabus") ||
     pathname.startsWith("/dashboard/notebook") ||
     pathname.startsWith("/dashboard/revision") ||
     pathname.startsWith("/dashboard/readiness");
@@ -200,7 +201,17 @@ export default function DashboardLayout({
               </button>
 
               {progressOpen && (
-                <div className="absolute left-0 mt-2 w-60 bg-card-primary border border-border-charcoal rounded-xl shadow-elevated p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="absolute left-0 mt-2 w-64 bg-card-primary border border-border-charcoal rounded-xl shadow-elevated p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                  <Link
+                    href="/dashboard/syllabus"
+                    className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group border-b border-border-charcoal/60 mb-1"
+                  >
+                    <span className="font-bold text-xs text-brand-blue flex items-center justify-between">
+                      <span>Syllabus Tracker</span>
+                      <span className="text-[10px] px-1.5 py-0.2 bg-brand-blue/20 rounded">95 Topics</span>
+                    </span>
+                    <span className="text-[10px] text-text-muted mt-0.5">Theory, Practice & Mock checklists</span>
+                  </Link>
                   <Link
                     href="/dashboard/notebook"
                     className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-card-elevated text-text-secondary hover:text-text-primary transition-colors group"
@@ -269,11 +280,16 @@ export default function DashboardLayout({
               <span>{totalPoints} pts</span>
             </div>
 
-            {/* Pilot Status Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-card-primary border border-border-charcoal text-xs font-semibold text-text-primary">
+            {/* Pilot Status Tag / Profile Link */}
+            <Link
+              href="/dashboard/profile"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-card-primary hover:bg-card-elevated border border-border-charcoal hover:border-brand-blue/50 text-xs font-semibold text-text-primary transition-all group"
+              title="View Pilot Profile & Settings"
+            >
               <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
-              <span className="max-w-[120px] truncate">{studentName}</span>
-            </div>
+              <span className="max-w-[120px] truncate group-hover:text-brand-blue">{studentName}</span>
+              <span className="text-[10px] text-text-muted">⚙️</span>
+            </Link>
 
             {/* Exit Action */}
             <button
@@ -333,6 +349,12 @@ export default function DashboardLayout({
             </Link>
 
             <div className="pt-2 px-3 text-[10px] font-bold uppercase tracking-wider text-text-muted">Progress</div>
+            <Link
+              href="/dashboard/syllabus"
+              className="block px-3 py-1.5 rounded-lg text-brand-blue font-bold pl-5"
+            >
+              &bull; Syllabus Tracker (95 Topics)
+            </Link>
             <Link
               href="/dashboard/notebook"
               className="block px-3 py-1.5 rounded-lg text-text-secondary hover:text-white pl-5"

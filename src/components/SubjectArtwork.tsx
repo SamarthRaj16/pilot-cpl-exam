@@ -263,3 +263,4 @@ export default function SubjectArtwork({ subject, className = "w-full h-32" }: S
     </svg>
   );
 }
+

@@ -6,6 +6,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import rawQuestions from "@/data/questions.json";
+import syllabusHierarchy from "@/data/syllabusHierarchy.json";
 import SubjectArtwork from "@/components/SubjectArtwork";
 
 interface SubjectMeta {
@@ -72,6 +73,7 @@ export default function DashboardPage() {
   const [activeMistakes, setActiveMistakes] = useState<number>(0);
   const [recoveredCount, setRecoveredCount] = useState<number>(0);
   const [lastSession, setLastSession] = useState<{ subject: string; topic?: string; date?: string } | null>(null);
+  const [syllabusProgress, setSyllabusProgress] = useState<Record<string, any>>({});
   const [loading, setLoading] = useState(false);
 
   // Compute live question & topic counts directly from authoritative question bank
@@ -112,7 +114,58 @@ export default function DashboardPage() {
         setLastSession(JSON.parse(storedSession));
       }
     } catch {}
+
+    try {
+      const storedSyllabus = localStorage.getItem("cpl_syllabus_progress");
+      if (storedSyllabus) {
+        setSyllabusProgress(JSON.parse(storedSyllabus));
+      }
+    } catch {}
   }, []);
+
+  // Compute Syllabus Tracker Metrics (95 Topics * 3 Milestones = 285 Items)
+  const syllabusMetrics = useMemo(() => {
+    const totalTopics = 95;
+    const totalItems = totalTopics * 3;
+    let theoryDone = 0;
+    let practiceDone = 0;
+    let mockDone = 0;
+
+    const subList = syllabusHierarchy.map((sub: any) => {
+      let subDone = 0;
+      sub.topics.forEach((t: any) => {
+        const key = `${sub.name}:::${t.name}`;
+        const p = syllabusProgress[key];
+        if (p?.theory_completed) { theoryDone++; subDone++; }
+        if (p?.practice_completed) { practiceDone++; subDone++; }
+        if (p?.mock_completed) { mockDone++; subDone++; }
+      });
+      const subPct = sub.topics.length > 0 ? Math.round((subDone / (sub.topics.length * 3)) * 100) : 0;
+      return { name: sub.name, pct: subPct, icon: sub.meta.icon, slug: sub.slug };
+    });
+
+    const totalDone = theoryDone + practiceDone + mockDone;
+    const overallPct = Math.round((totalDone / totalItems) * 100);
+    const theoryPct = Math.round((theoryDone / totalTopics) * 100);
+    const practicePct = Math.round((practiceDone / totalTopics) * 100);
+    const mockPct = Math.round((mockDone / totalTopics) * 100);
+
+    const sortedSubs = [...subList].sort((a, b) => a.pct - b.pct);
+    const lowestSub = sortedSubs.length > 0 ? sortedSubs[0] : null;
+
+    return {
+      totalDone,
+      totalItems,
+      overallPct,
+      theoryDone,
+      theoryPct,
+      practiceDone,
+      practicePct,
+      mockDone,
+      mockPct,
+      lowestSub,
+    };
+  }, [syllabusProgress]);
 
   const totalBankCount = rawQuestions.length; // 959
 
@@ -332,6 +385,97 @@ export default function DashboardPage() {
               {recoveredCount}
             </div>
             <div className="text-xs text-text-secondary mt-1">Mastered after mistake</div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3.5. Interactive Syllabus Coverage Widget */}
+      <div className="p-5 sm:p-6 rounded-2xl bg-card-primary border border-border-charcoal shadow-card relative overflow-hidden">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          {/* Left: Overall Ring & Title */}
+          <div className="flex items-center gap-4 sm:gap-6">
+            <div className="relative w-20 h-20 flex-shrink-0 flex items-center justify-center">
+              <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="42" className="stroke-surface-interactive" strokeWidth="8" fill="transparent" />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="42"
+                  className="stroke-brand-blue transition-all duration-700 ease-out"
+                  strokeWidth="8"
+                  strokeDasharray={263.89}
+                  strokeDashoffset={263.89 - (263.89 * syllabusMetrics.overallPct) / 100}
+                  strokeLinecap="round"
+                  fill="transparent"
+                />
+              </svg>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <span className="text-base font-black text-text-primary">{syllabusMetrics.overallPct}%</span>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-blue">
+                  Interactive Syllabus Tracker
+                </span>
+                <span className="text-[10px] font-mono px-2 py-0.5 bg-surface-interactive rounded text-text-muted">
+                  95 Topics • 285 Milestones
+                </span>
+              </div>
+              <h2 className="text-base sm:text-lg font-bold text-text-primary mt-0.5">
+                {syllabusMetrics.totalDone} of {syllabusMetrics.totalItems} Checklist Milestones Completed
+              </h2>
+              {syllabusMetrics.lowestSub && (
+                <p className="text-xs text-text-secondary mt-1">
+                  Recommended Focus: <strong className="text-brand-gold">{syllabusMetrics.lowestSub.name}</strong> ({syllabusMetrics.lowestSub.pct}% completed)
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Middle: 3 Milestone Bars */}
+          <div className="w-full lg:w-72 space-y-2 border-t lg:border-t-0 lg:border-l border-border-charcoal pt-4 lg:pt-0 lg:pl-6">
+            <div className="space-y-1">
+              <div className="flex justify-between text-[11px]">
+                <span className="text-text-secondary font-medium">📚 Theory</span>
+                <span className="font-mono text-text-primary font-bold">{syllabusMetrics.theoryPct}%</span>
+              </div>
+              <div className="w-full bg-surface-interactive h-1.5 rounded-full overflow-hidden">
+                <div className="bg-brand-blue h-full rounded-full transition-all" style={{ width: `${syllabusMetrics.theoryPct}%` }}></div>
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex justify-between text-[11px]">
+                <span className="text-text-secondary font-medium">✍️ Practice</span>
+                <span className="font-mono text-semantic-teal font-bold">{syllabusMetrics.practicePct}%</span>
+              </div>
+              <div className="w-full bg-surface-interactive h-1.5 rounded-full overflow-hidden">
+                <div className="bg-semantic-teal h-full rounded-full transition-all" style={{ width: `${syllabusMetrics.practicePct}%` }}></div>
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <div className="flex justify-between text-[11px]">
+                <span className="text-text-secondary font-medium">🎯 Mock Exam</span>
+                <span className="font-mono text-brand-gold font-bold">{syllabusMetrics.mockPct}%</span>
+              </div>
+              <div className="w-full bg-surface-interactive h-1.5 rounded-full overflow-hidden">
+                <div className="bg-brand-gold h-full rounded-full transition-all" style={{ width: `${syllabusMetrics.mockPct}%` }}></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: CTA Button */}
+          <div className="flex-shrink-0 w-full lg:w-auto">
+            <Link
+              href="/dashboard/syllabus"
+              className="w-full lg:w-auto px-5 py-2.5 rounded-xl bg-brand-blue text-bg-main text-xs font-black shadow-card hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+            >
+              <span>Continue Syllabus</span>
+              <span>&rarr;</span>
+            </Link>
           </div>
         </div>
       </div>

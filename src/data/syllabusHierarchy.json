@@ -1,0 +1,939 @@
+[
+  {
+    "name": "Air Navigation",
+    "slug": "air-navigation",
+    "meta": {
+      "code": "CAR SEC 7",
+      "icon": "\ud83e\udded",
+      "color": "#719CFF",
+      "id": "air-navigation"
+    },
+    "topics": [
+      {
+        "name": "Aircraft Magnetism and the Compasses",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-001",
+          "NAV-002",
+          "NAV-081"
+        ]
+      },
+      {
+        "name": "Convergency and Conversion Angle",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-003",
+          "NAV-004",
+          "NAV-101"
+        ]
+      },
+      {
+        "name": "Dead Reckoning and the Triangle of Velocities",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-005",
+          "NAV-006",
+          "NAV-220"
+        ]
+      },
+      {
+        "name": "Departure",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-007",
+          "NAV-008",
+          "NAV-091"
+        ]
+      },
+      {
+        "name": "Earth Magnetism",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-009",
+          "NAV-010",
+          "NAV-071"
+        ]
+      },
+      {
+        "name": "General Chart Properties",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-011",
+          "NAV-012",
+          "NAV-120"
+        ]
+      },
+      {
+        "name": "Great Circles and Rhumb Lines",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-013",
+          "NAV-014",
+          "NAV-061"
+        ]
+      },
+      {
+        "name": "In-flight Navigation Technique",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-015",
+          "NAV-016",
+          "NAV-269"
+        ]
+      },
+      {
+        "name": "Lambert's Conformal Chart: Part 1",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-017",
+          "NAV-018",
+          "NAV-150"
+        ]
+      },
+      {
+        "name": "Lambert's Conformal Chart: Part 2",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-019",
+          "NAV-020",
+          "NAV-160"
+        ]
+      },
+      {
+        "name": "Mercator Charts: Properties",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-021",
+          "NAV-022",
+          "NAV-130"
+        ]
+      },
+      {
+        "name": "Mercator Charts: Scale",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-023",
+          "NAV-024",
+          "NAV-140"
+        ]
+      },
+      {
+        "name": "Navigation Problems: Relative Velocity, PNR and CP",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-025",
+          "NAV-026",
+          "NAV-289"
+        ]
+      },
+      {
+        "name": "Navigation Using the 1 in 60 Rule",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-027",
+          "NAV-028",
+          "NAV-249"
+        ]
+      },
+      {
+        "name": "Other Applications of the 1 in 60 Rule",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-029",
+          "NAV-030",
+          "NAV-259"
+        ]
+      },
+      {
+        "name": "Plotting",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-031",
+          "NAV-032",
+          "NAV-279"
+        ]
+      },
+      {
+        "name": "Polar Stereographic and Grid Navigation",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-033",
+          "NAV-034",
+          "NAV-170"
+        ]
+      },
+      {
+        "name": "Scale",
+        "question_count": 11,
+        "sample_ids": [
+          "NAV-035",
+          "NAV-036",
+          "NAV-111"
+        ]
+      },
+      {
+        "name": "TAS, Mach Number and Density Altitude",
+        "question_count": 11,
+        "sample_ids": [
+          "NAV-037",
+          "NAV-038",
+          "NAV-230"
+        ]
+      },
+      {
+        "name": "The 1 in 60 Rule",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-039",
+          "NAV-040",
+          "NAV-239"
+        ]
+      },
+      {
+        "name": "The Earth, Direction and Position",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-041",
+          "NAV-042",
+          "NAV-051"
+        ]
+      },
+      {
+        "name": "Time 1: The Solar System and Time",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-043",
+          "NAV-044",
+          "NAV-190"
+        ]
+      },
+      {
+        "name": "Time 2: UTC, Zone Time and the Date Line",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-045",
+          "NAV-046",
+          "NAV-200"
+        ]
+      },
+      {
+        "name": "Time 3: Sunrise, Sunset and Twilight",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-047",
+          "NAV-048",
+          "NAV-210"
+        ]
+      },
+      {
+        "name": "Topographical Maps and Map Reading",
+        "question_count": 12,
+        "sample_ids": [
+          "NAV-049",
+          "NAV-050",
+          "NAV-180"
+        ]
+      }
+    ],
+    "topic_count": 25,
+    "question_count": 298
+  },
+  {
+    "name": "Air Regulations",
+    "slug": "air-regulations",
+    "meta": {
+      "code": "ICAO / CAR",
+      "icon": "\ud83d\udcdc",
+      "color": "#9484F5",
+      "id": "air-regulations"
+    },
+    "topics": [
+      {
+        "name": "ATS Surveillance",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-001",
+          "REG-002",
+          "REG-171"
+        ]
+      },
+      {
+        "name": "Accident Investigation",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-003",
+          "REG-004",
+          "REG-271"
+        ]
+      },
+      {
+        "name": "Aerodrome Control",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-005",
+          "REG-006",
+          "REG-161"
+        ]
+      },
+      {
+        "name": "Aerodromes: Lighting and Services",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-007",
+          "REG-008",
+          "REG-231"
+        ]
+      },
+      {
+        "name": "Aerodromes: Markings",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-009",
+          "REG-010",
+          "REG-221"
+        ]
+      },
+      {
+        "name": "Aeronautical Information",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-011",
+          "REG-012",
+          "REG-211"
+        ]
+      },
+      {
+        "name": "Airspace and ATS",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-013",
+          "REG-014",
+          "REG-131"
+        ]
+      },
+      {
+        "name": "Airworthiness",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-015",
+          "REG-016",
+          "REG-091"
+        ]
+      },
+      {
+        "name": "Altimeter Setting",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-017",
+          "REG-018",
+          "REG-201"
+        ]
+      },
+      {
+        "name": "Definitions and Framework",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-019",
+          "REG-020",
+          "REG-051"
+        ]
+      },
+      {
+        "name": "Facilitation",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-021",
+          "REG-022",
+          "REG-281"
+        ]
+      },
+      {
+        "name": "ICAO and Conventions",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-023",
+          "REG-024",
+          "REG-061"
+        ]
+      },
+      {
+        "name": "Indian Regulatory System",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-025",
+          "REG-026",
+          "REG-071"
+        ]
+      },
+      {
+        "name": "Instrument Approaches and Holding",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-027",
+          "REG-028",
+          "REG-191"
+        ]
+      },
+      {
+        "name": "Instrument Departures",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-029",
+          "REG-030",
+          "REG-181"
+        ]
+      },
+      {
+        "name": "Nationality and Registration",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-031",
+          "REG-032",
+          "REG-081"
+        ]
+      },
+      {
+        "name": "Operational Hazards",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-033",
+          "REG-034",
+          "REG-251"
+        ]
+      },
+      {
+        "name": "Operational Procedures",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-035",
+          "REG-036",
+          "REG-241"
+        ]
+      },
+      {
+        "name": "Personnel Licensing",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-037",
+          "REG-038",
+          "REG-101"
+        ]
+      },
+      {
+        "name": "Rules of the Air: General",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-039",
+          "REG-040",
+          "REG-111"
+        ]
+      },
+      {
+        "name": "Rules of the Air: VFR, IFR and Signals",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-041",
+          "REG-042",
+          "REG-121"
+        ]
+      },
+      {
+        "name": "Search and Rescue",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-043",
+          "REG-044",
+          "REG-261"
+        ]
+      },
+      {
+        "name": "Security",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-045",
+          "REG-046",
+          "REG-291"
+        ]
+      },
+      {
+        "name": "Separation",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-047",
+          "REG-048",
+          "REG-141"
+        ]
+      },
+      {
+        "name": "Separation Near Aerodromes",
+        "question_count": 12,
+        "sample_ids": [
+          "REG-049",
+          "REG-050",
+          "REG-151"
+        ]
+      }
+    ],
+    "topic_count": 25,
+    "question_count": 300
+  },
+  {
+    "name": "Aviation Meteorology",
+    "slug": "aviation-meteorology",
+    "meta": {
+      "code": "I.C. JOSHI",
+      "icon": "\u26c5",
+      "color": "#51C6C1",
+      "id": "aviation-meteorology"
+    },
+    "topics": [
+      {
+        "name": "Air Density",
+        "question_count": 7,
+        "sample_ids": [
+          "MET-011",
+          "MET-012",
+          "MET-056"
+        ]
+      },
+      {
+        "name": "Air Masses & Fronts",
+        "question_count": 13,
+        "sample_ids": [
+          "MET-032",
+          "MET-033",
+          "MET-079"
+        ]
+      },
+      {
+        "name": "Atmospheric Pressure",
+        "question_count": 15,
+        "sample_ids": [
+          "MET-005",
+          "MET-006",
+          "MET-007"
+        ]
+      },
+      {
+        "name": "Clear Air Turbulence",
+        "question_count": 7,
+        "sample_ids": [
+          "MET-036",
+          "MET-088",
+          "MET-165"
+        ]
+      },
+      {
+        "name": "Climatology of India",
+        "question_count": 11,
+        "sample_ids": [
+          "MET-038",
+          "MET-039",
+          "MET-081"
+        ]
+      },
+      {
+        "name": "Clouds & Precipitation",
+        "question_count": 11,
+        "sample_ids": [
+          "MET-022",
+          "MET-023",
+          "MET-024"
+        ]
+      },
+      {
+        "name": "General Circulation",
+        "question_count": 5,
+        "sample_ids": [
+          "MET-045",
+          "MET-174",
+          "MET-175"
+        ]
+      },
+      {
+        "name": "Humidity",
+        "question_count": 8,
+        "sample_ids": [
+          "MET-013",
+          "MET-014",
+          "MET-058"
+        ]
+      },
+      {
+        "name": "Ice Accretion",
+        "question_count": 9,
+        "sample_ids": [
+          "MET-028",
+          "MET-029",
+          "MET-074"
+        ]
+      },
+      {
+        "name": "Jet Streams",
+        "question_count": 11,
+        "sample_ids": [
+          "MET-034",
+          "MET-035",
+          "MET-077"
+        ]
+      },
+      {
+        "name": "Local Winds",
+        "question_count": 6,
+        "sample_ids": [
+          "MET-068",
+          "MET-069",
+          "MET-193"
+        ]
+      },
+      {
+        "name": "Meteorological Services & Codes",
+        "question_count": 21,
+        "sample_ids": [
+          "MET-040",
+          "MET-041",
+          "MET-042"
+        ]
+      },
+      {
+        "name": "Mountain Waves",
+        "question_count": 8,
+        "sample_ids": [
+          "MET-142",
+          "MET-143",
+          "MET-166"
+        ]
+      },
+      {
+        "name": "Stability & Adiabatics",
+        "question_count": 10,
+        "sample_ids": [
+          "MET-026",
+          "MET-027",
+          "MET-059"
+        ]
+      },
+      {
+        "name": "Temperature & Heat",
+        "question_count": 11,
+        "sample_ids": [
+          "MET-009",
+          "MET-010",
+          "MET-053"
+        ]
+      },
+      {
+        "name": "The Atmosphere",
+        "question_count": 14,
+        "sample_ids": [
+          "MET-001",
+          "MET-002",
+          "MET-003"
+        ]
+      },
+      {
+        "name": "Thunderstorms",
+        "question_count": 12,
+        "sample_ids": [
+          "MET-030",
+          "MET-031",
+          "MET-072"
+        ]
+      },
+      {
+        "name": "Tropical Systems & Monsoon",
+        "question_count": 11,
+        "sample_ids": [
+          "MET-037",
+          "MET-083",
+          "MET-144"
+        ]
+      },
+      {
+        "name": "Visibility & Fog",
+        "question_count": 9,
+        "sample_ids": [
+          "MET-019",
+          "MET-020",
+          "MET-021"
+        ]
+      },
+      {
+        "name": "Winds",
+        "question_count": 14,
+        "sample_ids": [
+          "MET-015",
+          "MET-016",
+          "MET-017"
+        ]
+      }
+    ],
+    "topic_count": 20,
+    "question_count": 213
+  },
+  {
+    "name": "RTR",
+    "slug": "rtr",
+    "meta": {
+      "code": "ICAO DOC 9432",
+      "icon": "\ud83c\udf99\ufe0f",
+      "color": "#51C6C1",
+      "id": "rtr"
+    },
+    "topics": [
+      {
+        "name": "ATC clearances and readback",
+        "question_count": 4,
+        "sample_ids": [
+          "RTR-009",
+          "RTR-010",
+          "RTR-040"
+        ]
+      },
+      {
+        "name": "ATIS",
+        "question_count": 3,
+        "sample_ids": [
+          "RTR-021",
+          "RTR-022",
+          "RTR-046"
+        ]
+      },
+      {
+        "name": "Distress and urgency calls",
+        "question_count": 9,
+        "sample_ids": [
+          "RTR-011",
+          "RTR-012",
+          "RTR-013"
+        ]
+      },
+      {
+        "name": "Frequency management",
+        "question_count": 3,
+        "sample_ids": [
+          "RTR-019",
+          "RTR-020",
+          "RTR-041"
+        ]
+      },
+      {
+        "name": "Lost communication procedures",
+        "question_count": 1,
+        "sample_ids": [
+          "RTR-047"
+        ]
+      },
+      {
+        "name": "Phonetic alphabet",
+        "question_count": 5,
+        "sample_ids": [
+          "RTR-001",
+          "RTR-002",
+          "RTR-003"
+        ]
+      },
+      {
+        "name": "Readability scale",
+        "question_count": 4,
+        "sample_ids": [
+          "RTR-004",
+          "RTR-005",
+          "RTR-032"
+        ]
+      },
+      {
+        "name": "Standard phraseology",
+        "question_count": 8,
+        "sample_ids": [
+          "RTR-006",
+          "RTR-007",
+          "RTR-008"
+        ]
+      },
+      {
+        "name": "Transponder codes",
+        "question_count": 7,
+        "sample_ids": [
+          "RTR-015",
+          "RTR-016",
+          "RTR-017"
+        ]
+      },
+      {
+        "name": "VHF propagation basics",
+        "question_count": 3,
+        "sample_ids": [
+          "RTR-023",
+          "RTR-024",
+          "RTR-042"
+        ]
+      }
+    ],
+    "topic_count": 10,
+    "question_count": 47
+  },
+  {
+    "name": "Technical General",
+    "slug": "technical-general",
+    "meta": {
+      "code": "AGK / ENGINES",
+      "icon": "\u2699\ufe0f",
+      "color": "#69CF9B",
+      "id": "technical-general"
+    },
+    "topics": [
+      {
+        "name": "Aircraft Systems",
+        "question_count": 8,
+        "sample_ids": [
+          "TG-016",
+          "TG-017",
+          "TG-018"
+        ]
+      },
+      {
+        "name": "Airspeed Definitions",
+        "question_count": 6,
+        "sample_ids": [
+          "TG-029",
+          "TG-030",
+          "TG-031"
+        ]
+      },
+      {
+        "name": "Gyroscopic Instruments",
+        "question_count": 6,
+        "sample_ids": [
+          "TG-023",
+          "TG-024",
+          "TG-025"
+        ]
+      },
+      {
+        "name": "Piston Engines",
+        "question_count": 12,
+        "sample_ids": [
+          "TG-007",
+          "TG-008",
+          "TG-009"
+        ]
+      },
+      {
+        "name": "Pitot-Static Instruments",
+        "question_count": 5,
+        "sample_ids": [
+          "TG-019",
+          "TG-020",
+          "TG-021"
+        ]
+      },
+      {
+        "name": "Principles of Flight",
+        "question_count": 14,
+        "sample_ids": [
+          "TG-001",
+          "TG-002",
+          "TG-003"
+        ]
+      },
+      {
+        "name": "Propellers",
+        "question_count": 5,
+        "sample_ids": [
+          "TG-013",
+          "TG-014",
+          "TG-015"
+        ]
+      },
+      {
+        "name": "Weight & Balance",
+        "question_count": 3,
+        "sample_ids": [
+          "TG-027",
+          "TG-028",
+          "TG-049"
+        ]
+      }
+    ],
+    "topic_count": 8,
+    "question_count": 59
+  },
+  {
+    "name": "Technical Specific",
+    "slug": "technical-specific",
+    "meta": {
+      "code": "POH / PERF",
+      "icon": "\ud83d\udee9\ufe0f",
+      "color": "#ECA85B",
+      "id": "technical-specific"
+    },
+    "topics": [
+      {
+        "name": "Airspeed indicator markings",
+        "question_count": 7,
+        "sample_ids": [
+          "TS-006",
+          "TS-007",
+          "TS-008"
+        ]
+      },
+      {
+        "name": "Altimeter setting procedures",
+        "question_count": 6,
+        "sample_ids": [
+          "TS-015",
+          "TS-016",
+          "TS-017"
+        ]
+      },
+      {
+        "name": "Fuel grades and colors",
+        "question_count": 7,
+        "sample_ids": [
+          "TS-011",
+          "TS-012",
+          "TS-013"
+        ]
+      },
+      {
+        "name": "POH sections",
+        "question_count": 5,
+        "sample_ids": [
+          "TS-019",
+          "TS-020",
+          "TS-021"
+        ]
+      },
+      {
+        "name": "Performance charts",
+        "question_count": 3,
+        "sample_ids": [
+          "TS-024",
+          "TS-025",
+          "TS-036"
+        ]
+      },
+      {
+        "name": "V-speeds and their meanings",
+        "question_count": 11,
+        "sample_ids": [
+          "TS-001",
+          "TS-002",
+          "TS-003"
+        ]
+      },
+      {
+        "name": "Weight limits",
+        "question_count": 3,
+        "sample_ids": [
+          "TS-022",
+          "TS-023",
+          "TS-041"
+        ]
+      }
+    ],
+    "topic_count": 7,
+    "question_count": 42
+  }
+]

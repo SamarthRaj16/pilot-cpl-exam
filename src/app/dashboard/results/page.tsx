@@ -7,6 +7,8 @@ import Link from "next/link";
 export default function ResultsPage() {
   const router = useRouter();
   const [result, setResult] = useState<any>(null);
+  const [syllabusMarked, setSyllabusMarked] = useState<Record<string, boolean>>({});
+  const [markingSyllabus, setMarkingSyllabus] = useState(false);
 
   useEffect(() => {
     try {
@@ -28,8 +30,65 @@ export default function ResultsPage() {
   const minutes = Math.floor(durationSeconds / 60);
   const seconds = durationSeconds % 60;
 
+  // Extract unique subject/topic pairs tested in this session
+  const testedTopics: { subject: string; topic: string }[] = [];
+  const seenKeys = new Set<string>();
+
+  reviewItems.forEach((item: any) => {
+    if (item.subject && item.topic) {
+      const key = `${item.subject}:::${item.topic}`;
+      if (!seenKeys.has(key)) {
+        seenKeys.add(key);
+        testedTopics.push({ subject: item.subject, topic: item.topic });
+      }
+    }
+  });
+
+  const handleMarkSyllabus = async (subject: string, topic: string) => {
+    const key = `${subject}:::${topic}`;
+    setMarkingSyllabus(true);
+    try {
+      // 1. Read existing local progress
+      let currentMap: Record<string, any> = {};
+      try {
+        const stored = localStorage.getItem("cpl_syllabus_progress");
+        if (stored) currentMap = JSON.parse(stored);
+      } catch {}
+
+      const existing = currentMap[key] || {
+        subject_name: subject,
+        topic_name: topic,
+        theory_completed: false,
+        practice_completed: false,
+        mock_completed: false,
+      };
+
+      const updated = {
+        ...existing,
+        practice_completed: true,
+        updated_at: new Date().toISOString(),
+      };
+
+      currentMap[key] = updated;
+      localStorage.setItem("cpl_syllabus_progress", JSON.stringify(currentMap));
+
+      // 2. Sync to API
+      await fetch("/api/syllabus", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updated),
+      });
+
+      setSyllabusMarked((prev) => ({ ...prev, [key]: true }));
+    } catch (e) {
+      console.warn("Failed to update syllabus from results", e);
+    } finally {
+      setMarkingSyllabus(false);
+    }
+  };
+
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
+    <div className="max-w-3xl mx-auto space-y-6 pb-12">
       {/* Result Hero Card */}
       <div className="bg-card-primary border border-border-charcoal rounded-2xl p-8 text-center shadow-card space-y-4">
         <div className="text-5xl mb-2">{passed ? "🏆" : "⚠️"}</div>
@@ -45,8 +104,8 @@ export default function ResultsPage() {
           <span
             className={`inline-block px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider ${
               passed
-                ? "bg-brand-green/20 text-brand-green border border-brand-green/30"
-                : "bg-brand-red/20 text-brand-red border border-brand-red/30"
+                ? "bg-semantic-teal/20 text-semantic-teal border border-semantic-teal/30"
+                : "bg-semantic-error/20 text-semantic-error border border-semantic-error/30"
             }`}
           >
             {passed
@@ -60,11 +119,68 @@ export default function ResultsPage() {
         </p>
       </div>
 
+      {/* Syllabus Completion Suggestion Banner (Phase 3 Integration) */}
+      {testedTopics.length > 0 && (
+        <div className="bg-card-primary border border-brand-blue/30 rounded-2xl p-6 shadow-card space-y-3">
+          <div className="flex items-center gap-2">
+            <span className="text-xl">📋</span>
+            <div>
+              <h3 className="text-sm font-bold text-text-primary">
+                Update Syllabus Progress Tracker
+              </h3>
+              <p className="text-xs text-text-secondary">
+                You just practiced questions covering the following DGCA topic(s). Would you like to mark &ldquo;Practice&rdquo; as completed in your Syllabus Tracker?
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-2 pt-2">
+            {testedTopics.map(({ subject, topic }) => {
+              const key = `${subject}:::${topic}`;
+              const isMarked = syllabusMarked[key];
+              return (
+                <div
+                  key={key}
+                  className="flex items-center justify-between p-3 rounded-xl bg-surface-interactive border border-border-charcoal text-xs"
+                >
+                  <div>
+                    <span className="font-bold text-text-primary">{topic}</span>
+                    <span className="text-[10px] text-text-muted ml-2">({subject})</span>
+                  </div>
+                  {isMarked ? (
+                    <span className="text-xs font-bold text-semantic-teal flex items-center gap-1">
+                      ✓ Practice Marked Complete
+                    </span>
+                  ) : (
+                    <button
+                      onClick={() => handleMarkSyllabus(subject, topic)}
+                      disabled={markingSyllabus}
+                      className="px-3 py-1.5 rounded-lg bg-brand-blue text-bg-main text-xs font-bold hover:bg-opacity-90 transition-all disabled:opacity-50"
+                    >
+                      ✓ Mark Practice Complete
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="pt-2 flex justify-end">
+            <Link
+              href="/dashboard/syllabus"
+              className="text-xs font-bold text-brand-blue hover:underline"
+            >
+              View Full Syllabus Tracker →
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* Action Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <Link
           href="/dashboard/review"
-          className="p-3.5 rounded-xl bg-brand-purple hover:bg-brand-purpleDark text-white font-extrabold text-xs text-center shadow-card transition-all flex items-center justify-center gap-1.5"
+          className="p-3.5 rounded-xl bg-brand-blue text-bg-main font-extrabold text-xs text-center shadow-card hover:bg-opacity-90 transition-all flex items-center justify-center gap-1.5"
         >
           🔍 Review All {totalQuestions} Questions
         </Link>
@@ -72,7 +188,7 @@ export default function ResultsPage() {
         {missedCount > 0 && (
           <Link
             href="/dashboard/notebook"
-            className="p-3.5 rounded-xl bg-surface-interactive hover:bg-surface-hover text-brand-orange border border-brand-orange/30 font-bold text-xs text-center transition-all flex items-center justify-center gap-1.5"
+            className="p-3.5 rounded-xl bg-surface-interactive hover:bg-surface-hover text-semantic-warning border border-semantic-warning/30 font-bold text-xs text-center transition-all flex items-center justify-center gap-1.5"
           >
             📓 View {missedCount} in Mistake Notebook
           </Link>
@@ -88,4 +204,3 @@ export default function ResultsPage() {
     </div>
   );
 }
-

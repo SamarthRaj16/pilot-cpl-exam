@@ -62,3 +62,4 @@ All public PostgreSQL tables in `supabase/schema.sql` maintain strict isolation:
 
 1. **Production Supabase Deployment:** When connecting to a production Supabase instance, ensure the `service_role` key is set as an environment secret in the hosting provider (e.g. Vercel dashboard) and never committed to version control.
 2. **Database Grants:** Maintain the `GRANT ALL ON ALL TABLES IN SCHEMA public TO authenticated;` script from `supabase/schema.sql` whenever new tables are created to prevent permission denial errors.
+

@@ -76,3 +76,4 @@ Once all test assertions report `[PASS]`, update connection strings and resume n
 ## 5. Recovery Limitations
 - **Free-Tier Limits:** Standard hosted Supabase projects on the free tier provide daily backups with 7-day retention. Point-In-Time-Recovery (PITR) requires Supabase Pro (WAL archiving enabled) or a dedicated self-hosted PostgreSQL instance.
 - **Client Cache Independence:** Student examination answers in progress are safely preserved in browser local storage (`cpl_active_session`), ensuring zero in-flight data loss during transient database outages.
+

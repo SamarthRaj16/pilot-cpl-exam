@@ -15,6 +15,9 @@ CREATE TABLE IF NOT EXISTS public.profiles (
     avatar_url TEXT,
     study_streak INTEGER NOT NULL DEFAULT 0,
     total_points INTEGER NOT NULL DEFAULT 0,
+    recovered_questions INTEGER NOT NULL DEFAULT 0,
+    revision_limit INTEGER NOT NULL DEFAULT 20,
+    study_preferences JSONB DEFAULT '{"target_exam_date": null, "daily_goal_questions": 30, "preferred_mode": "practice"}'::jsonb,
     last_active_at TIMESTAMPTZ DEFAULT NOW(),
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
@@ -119,6 +122,25 @@ CREATE TABLE IF NOT EXISTS public.mistake_notebook (
     UNIQUE (student_id, question_id)
 );
 
+-- 8b. STUDENT MISTAKES (REVISION QUEUE & PERSISTENCE)
+CREATE TABLE IF NOT EXISTS public.student_mistakes (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    student_id UUID NOT NULL REFERENCES public.profiles(id) ON DELETE CASCADE,
+    question_id TEXT NOT NULL REFERENCES public.questions(id) ON DELETE CASCADE,
+    subject_id TEXT,
+    topic_id TEXT,
+    status TEXT NOT NULL DEFAULT 'unresolved' CHECK (status IN ('unresolved', 'pending_revision', 'resolved', 'ignored')),
+    incorrect_count INTEGER NOT NULL DEFAULT 1,
+    last_incorrect_choice INTEGER,
+    authoritative_answer INTEGER,
+    notes TEXT,
+    recovered_at TIMESTAMPTZ,
+    last_attempted_at TIMESTAMPTZ DEFAULT NOW(),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE (student_id, question_id)
+);
+
 -- 9. SPACED REPETITION (SM-2 ADAPTIVE REVISION)
 CREATE TABLE IF NOT EXISTS public.spaced_repetition (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -204,6 +226,7 @@ ALTER TABLE public.question_exposure_history ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.quiz_attempts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.student_answers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.mistake_notebook ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.student_mistakes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.spaced_repetition ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.bookmarks ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.study_goals ENABLE ROW LEVEL SECURITY;
@@ -247,6 +270,10 @@ CREATE POLICY "Users can manage own answers" ON public.student_answers FOR ALL U
 
 -- Mistake Notebook: Strict student isolation
 CREATE POLICY "Users can manage own mistake notebook" ON public.mistake_notebook FOR ALL USING (auth.uid() = student_id);
+
+-- Student Mistakes (Revision Queue): Strict student isolation & Admin monitoring
+CREATE POLICY "Users can manage own student mistakes" ON public.student_mistakes FOR ALL USING (auth.uid() = student_id);
+CREATE POLICY "Admins can view all student mistakes" ON public.student_mistakes FOR SELECT USING (public.is_admin());
 
 -- Spaced Repetition: Strict student isolation
 CREATE POLICY "Users can manage own spaced repetition" ON public.spaced_repetition FOR ALL USING (auth.uid() = student_id);

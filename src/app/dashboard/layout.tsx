@@ -27,6 +27,18 @@ export default function DashboardLayout({
   const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // 1. Instant hydration from session cache (0ms perceived load time)
+    try {
+      const cached = sessionStorage.getItem("cpl_cached_profile");
+      if (cached) {
+        const p = JSON.parse(cached);
+        if (p.full_name) setStudentName(p.full_name);
+        if (p.role !== undefined) setIsAdmin(p.role === "admin");
+        if (p.total_points !== undefined) setTotalPoints(p.total_points);
+      }
+    } catch {}
+
+    // 2. Background fresh verification
     async function loadUser() {
       try {
         const supabase = createClient();
@@ -45,6 +57,9 @@ export default function DashboardLayout({
             setStudentName(profile.full_name || "Cadet Pilot");
             setIsAdmin(profile.role === "admin");
             setTotalPoints(profile.total_points || 0);
+            try {
+              sessionStorage.setItem("cpl_cached_profile", JSON.stringify(profile));
+            } catch {}
           }
         }
       } catch {

@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import React, { useState, useEffect, useMemo, Suspense } from "react";
 import Link from "next/link";
 import syllabusData from "@/data/syllabusHierarchy.json";
@@ -53,43 +51,38 @@ export default function SyllabusTrackerPage() {
       console.warn("Failed to read local syllabus cache", e);
     }
 
-    // 2. Fetch from Supabase API
+    // 2. Fetch from Supabase API (streamlined single network call)
     async function loadRemoteProgress() {
       try {
-        const supabase = createClient();
-        const {
-          data: { user: authUser },
-        } = await supabase.auth.getUser();
+        const res = await fetch("/api/syllabus");
+        if (res.ok) {
+          const data = await res.json();
+          if (!data.isGuest) {
+            setUser({ id: "authenticated" });
+          }
+          if (Array.isArray(data.progress)) {
+            const remoteMap: Record<string, TopicProgress> = {};
+            data.progress.forEach((item: any) => {
+              const key = `${item.subject_name}:::${item.topic_name}`;
+              remoteMap[key] = {
+                subject_name: item.subject_name,
+                topic_name: item.topic_name,
+                theory_completed: !!item.theory_completed,
+                practice_completed: !!item.practice_completed,
+                mock_completed: !!item.mock_completed,
+                notes: item.notes || null,
+                updated_at: item.updated_at,
+              };
+            });
 
-        if (authUser) {
-          setUser(authUser);
-          const res = await fetch("/api/syllabus");
-          if (res.ok) {
-            const data = await res.json();
-            if (Array.isArray(data.progress)) {
-              const remoteMap: Record<string, TopicProgress> = {};
-              data.progress.forEach((item: any) => {
-                const key = `${item.subject_name}:::${item.topic_name}`;
-                remoteMap[key] = {
-                  subject_name: item.subject_name,
-                  topic_name: item.topic_name,
-                  theory_completed: !!item.theory_completed,
-                  practice_completed: !!item.practice_completed,
-                  mock_completed: !!item.mock_completed,
-                  notes: item.notes || null,
-                  updated_at: item.updated_at,
-                };
-              });
-
-              // Merge local + remote
-              setProgressMap((prev) => {
-                const merged = { ...prev, ...remoteMap };
-                try {
-                  localStorage.setItem("cpl_syllabus_progress", JSON.stringify(merged));
-                } catch {}
-                return merged;
-              });
-            }
+            // Merge local + remote
+            setProgressMap((prev) => {
+              const merged = { ...prev, ...remoteMap };
+              try {
+                localStorage.setItem("cpl_syllabus_progress", JSON.stringify(merged));
+              } catch {}
+              return merged;
+            });
           }
         }
       } catch (err) {

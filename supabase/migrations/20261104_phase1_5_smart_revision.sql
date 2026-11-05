@@ -3,6 +3,41 @@
 -- Smart Question Revision Queue & Multi-Topic Practice Support
 -- ====================================================================
 
+-- 0. Ensure student_mistakes table exists
+CREATE TABLE IF NOT EXISTS public.student_mistakes (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    student_id UUID NOT NULL REFERENCES public.profiles(id) ON DELETE CASCADE,
+    question_id TEXT NOT NULL REFERENCES public.questions(id) ON DELETE CASCADE,
+    subject_id TEXT,
+    topic_id TEXT,
+    status TEXT NOT NULL DEFAULT 'unresolved' CHECK (status IN ('unresolved', 'pending_revision', 'resolved', 'ignored')),
+    incorrect_count INTEGER NOT NULL DEFAULT 1,
+    last_incorrect_choice INTEGER,
+    authoritative_answer INTEGER,
+    notes TEXT,
+    recovered_at TIMESTAMPTZ,
+    last_attempted_at TIMESTAMPTZ DEFAULT NOW(),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    UNIQUE (student_id, question_id)
+);
+
+ALTER TABLE public.student_mistakes ENABLE ROW LEVEL SECURITY;
+
+DO $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM pg_policies WHERE tablename = 'student_mistakes' AND policyname = 'Users can manage own student mistakes'
+    ) THEN
+        CREATE POLICY "Users can manage own student mistakes" ON public.student_mistakes FOR ALL USING (auth.uid() = student_id);
+    END IF;
+    IF NOT EXISTS (
+        SELECT 1 FROM pg_policies WHERE tablename = 'student_mistakes' AND policyname = 'Admins can view all student mistakes'
+    ) THEN
+        CREATE POLICY "Admins can view all student mistakes" ON public.student_mistakes FOR SELECT USING (public.is_admin());
+    END IF;
+END $$;
+
 -- 1. Extend student_mistakes with revision tracking columns
 DO $$
 BEGIN
